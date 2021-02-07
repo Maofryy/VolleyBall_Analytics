@@ -47,7 +47,7 @@ class Set:
         self.timeout1 = df[6]
         self.timeout2 = df[7] 
         
-        print(self.team1 + " vs " + self.team2)
+        """print(self.team1 + " vs " + self.team2)
         print("from " + self.start + " to " + self.end)
         print(team_serving + " to serve.")
         print(self.subs1)
@@ -55,7 +55,7 @@ class Set:
         print(self.serves1)
         print(self.serves2)
         print(self.timeout1)
-        print(self.timeout2)
+        print(self.timeout2)"""
     
     def export_json(self, file):
         jsonStr = json.dumps(self.__dict__)
@@ -80,7 +80,7 @@ def extract_set(file, ref):
     if (test_data[0].columns.size == 1):
         print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
         return 0
-    set_data = []
+    set_data = list()
     # 0 : Team 1 (left)
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
     # 1 : Team 2
@@ -117,24 +117,25 @@ def extract_set(file, ref):
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
     
-    df_to_export = pd.DataFrame(set_data)
-    json_output = df_to_export.to_json()
-    print(json_output)
-    with open("set2.json", 'w') as outfile:
-        outfile.write(json_output)
+    df_to_export = pd.DataFrame({'Set 2':[set_data[0].columns, set_data[1].columns, set_data[2], set_data[3], set_data[4], set_data[5], set_data[6], set_data[7]]})
+    df_to_export = df_to_export.rename(index={0:'Team 1', 1:'Team 2', 2:'Substitutions 1', 3:'Substitutions 2', 4:'Serves 1', 5:'Serves 2', 6:'Timeouts Team 1', 7:'Timeouts Team 2'})
     
     """for dt in set_data:
         print(dt)"""
-    obj = Set()
-    obj.read_df(set_data)
+    #obj = Set()
+    #obj.read_df(set_data)
     
-    return obj
+    return df_to_export
 
-#Set 2
+#Set 2 (73.4, 462.7)
 set2 = extract_set("ffvolley_fdme.php.pdf", (73.4, 462.7))
-#set2.export_json("set2.json")
+#Exporting single set to Json
+json_output = set2.to_json()
+print(json_output)
+with open("set2.json", 'w') as outfile:
+    outfile.write(json_output)
 
-#Set 4 (empty test case)
+#Set 4 (empty test case) (167.8, 461.5)
 #set_data = extract_set("ffvolley_fdme.php.pdf", (167.8, 461.5))
 
 #ref = (73.4, 462.7)
