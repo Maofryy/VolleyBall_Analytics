@@ -1,4 +1,5 @@
 ## Import as table (in dataframe)
+from tempfile import template
 import tabula
 import json
 import pandas as pd
@@ -13,16 +14,14 @@ def extract_set(file, ref):
     if ((not test_data) or (test_data[0].columns.size == 1)):
         print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
         return [0,0,0,0,0,0,0,0]
-    # 0 : Team 1 (left)
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
-    # 1 : Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.8), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
-    #Area template
-    #[(ref[0] + ), (ref[1] + ), (ref[0] + ), (ref[1] + )],
     #Size of columns in the sub and serve table
     column_size = 20
     #Diff between the two teams tables in the first (y) axis
     team_diff = 155.1
+    # 0 : Team 1 (left)
+    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
+    # 1 : Team 2
+    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.8), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
     # 2 : Substitutions Team 1
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0), (ref[0] + 57), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
     # 3 : Substitutions Team 2
@@ -49,19 +48,37 @@ def extract_set(file, ref):
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
     
-    
-    """for dt in set_data:
-        print(dt)"""
-    #obj = Set()
-    #obj.read_df(set_data)
-    
-    return set_data
+    return (set_data)
 
-    #def extract_team()
+def extract_team(file, ref):
+    """ Reads a team and returns the table with player and officiels infos """
+    team_data = list()
+    ## Test if empty (BUT SHOULDNT ?!)
+    column_size = [11.5, 100, 128.2]
+    # 0 : Name
+    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 127.4)], pages='1'))
+    # 1 : Players
+    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 13.7), (ref[1] + 0.0), (ref[0] + 141.8), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    # 2 : Liberos
+    #team_data.append(tabula.read_pdf(file, area=[(ref[0] + 153.7), (ref[1] + 0.0), (ref[0] + 169.9), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 141.1), (ref[1] + 0.0), (ref[0] + 169.9), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    # 3 : Officials
+    #team_data.append(tabula.read_pdf(file, area=[(ref[0] + 181.4), (ref[1] + 0.0), (ref[0] + 215.3), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 169.9), (ref[1] + 0.0), (ref[0] + 215.3), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    
+    #Flattening and cleaning structures
+    team_data[0] = team_data[0][0].columns.values
+    team_data[1] = team_data[1][0]
+    team_data[2] = team_data[2][0]    
+    team_data[2].columns = team_data[1].columns.values 
+    team_data[3] = team_data[3][0]    
+    team_data[3].columns = team_data[1].columns.values 
+
+    return (team_data)
 
 if __name__ == "__main__":
-    
-    ## Extract set data
+    """ Main function of extracting data """
+    ## ----------------------  Extract set data ------------------------------- ##
     #Set 1 (73.4, 127.4)
     set1 = extract_set("ffvolley_fdme.php.pdf", (73.4, 127.4))
     #print(set1)
@@ -82,7 +99,7 @@ if __name__ == "__main__":
     set5 = extract_set("ffvolley_fdme.php.pdf", (261.4, 28.1))
     #print(set5)
 
-
+    # Gathering info into single dataframe
     sets = pd.DataFrame({
         'Team 1 ':[set1[0], set2[0], set3[0], set4[0], set5[0]],
         'Team 2 ':[set1[1], set2[1], set3[1], set4[1], set5[1]],
@@ -93,15 +110,30 @@ if __name__ == "__main__":
         'Timeouts 1 ':[set1[6], set2[6], set3[6], set4[6], set5[6]],
         'Timeouts 2 ':[set1[7], set2[7], set3[7], set4[7], set5[7]],
                         })
-    #sets = sets.rename(index={0:'Set 1', 1:'Set 2', 2:'Set 3', 3:'Set 4', 4:'Set 5'}, level=0)
-    print(sets)
+    #print(sets)
     
-    #Exporting all sets to Json
-    json_output = sets.to_json()
-    #print(json_output)
-    with open("sets.json", 'w') as outfile:
+
+    ## ----------------------  Extract set data ------------------------------- ##
+    #Team A (261, 575.3)
+    teamA = extract_team("ffvolley_fdme.php.pdf", (261, 575.3))
+    #Team B (261, 702.7)
+    teamB = extract_team("ffvolley_fdme.php.pdf", (261, 702.7))
+
+    #Gathering info into single dataframe
+    teams = pd.DataFrame({
+        'TeamA' : [teamA[0], teamA[1], teamA[2], teamA[3]],
+        'TeamB' : [teamB[0], teamB[1], teamB[2], teamB[3]]
+    })
+    print(teams)
+    
+    #Gathering into a Match dataframe
+    match = pd.DataFrame({
+        'Sets' : [sets],
+        'Teams' : [teams]
+    })
+    #Exporting data to Json
+
+    json_output = match.to_json()
+    with open("match.json", 'w') as outfile:
         outfile.write(json_output)
         print("JSON saved.")
-
-    #Set 4 (empty test case) (167.8, 461.5)
-    #set_data = extract_set("ffvolley_fdme.php.pdf", (167.8, 461.5))
