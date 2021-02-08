@@ -4,6 +4,7 @@ import tabula
 import json
 import pandas as pd
 from datetime import datetime
+from dateutil.parser import parse
 
 
 def extract_set(file, ref):
@@ -50,14 +51,40 @@ def extract_set(file, ref):
         'Starting':[team1, team2]
     })
     team_data = team_data.set_index('Index')
-    set_data[0] = team_data
 
     #Time
     # gather the date on the tp right of the file
+    time_data = tabula.read_pdf(file, area=[39.6, 659.5, 49.7, 789.1], pages='1')
+
+    month_dict={
+        'Janvier':'January',
+        'Février': 'February',
+        'Mars': 'March',
+        'Avril': 'April',
+        'Mai': 'May',
+        'Juin': 'June',
+        'Juillet': 'July',
+        'Août': 'August',
+        'Septembre': 'September',
+        'Octobre': 'October',
+        'Novembre':'November',
+        'Décembre':'December'
+        }
+    #ttime = parse(test_string)
+    #print(ttime)
+    time_string = time_data[0].columns.values[0][time_data[0].columns.values[0].index(' ') + 1:]
+    print(time_string)
+    for fr, en in month_dict.items():
+        time_string = time_string.replace(fr, en)
+    start_time = parse(time_string + " " + set_data[0][0].columns[1].split()[1])
+    print(start_time)
     # read the date as DD ... 
     ## Can store in time format but not needed
     #start = datetime.strptime(set_data[0][0].columns[1].split()[1], "%H:%M")
     #end = datetime.strptime(set_data[0][1].columns[1].split()[1], "%H:%M")
+    
+    #Replacing data
+    set_data[0] = team_data
     set_data[1] = set_data[1][0].columns.values
 
     #Substitutions
@@ -113,7 +140,7 @@ if __name__ == "__main__":
     #Set 1 (73.4, 127.4)
     set1 = extract_set(file, (73.4, 127.4))
     #print(set1)
-    #"""
+    """
     #Set 2 (73.4, 462.7)
     set2 = extract_set(file, (73.4, 462.7))
     #print(set2)
