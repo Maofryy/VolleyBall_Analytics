@@ -1,9 +1,10 @@
-## Import as table (in dataframe)
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from tempfile import template
 import tabula
 import json
 import pandas as pd
-#from datetime import datetime
+from datetime import datetime
 
 
 def extract_set(file, ref):
@@ -36,15 +37,38 @@ def extract_set(file, ref):
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + team_diff), (ref[0] + 91.5), (ref[1] + 155 + team_diff)], pages='1'))
     
     # Flattening and cleaning set structure
-    set_data[0] = set_data[0][0].columns.values
+    if (set_data[0][0].columns[1].split()[2] == 'S'):
+        team1 = 'Service'
+        team2 = 'Reception'
+    else:
+        team2 = 'Service'
+        team1 = 'Reception'
+
+    #Teams
+    team_data = pd.DataFrame({
+        'Name':[set_data[0][0].columns[0], set_data[1][0].columns[0]],
+        'Starting':[team1, team2]
+    })
+    print(team_data)
+    set_data[0] = team_data
+
+    #Time
+    # gather the date on the tp right of the file
+    # read the date as DD ... 
+    ## Can store in time format but not needed
+    #start = datetime.strptime(set_data[0][0].columns[1].split()[1], "%H:%M")
+    #end = datetime.strptime(set_data[0][1].columns[1].split()[1], "%H:%M")
     set_data[1] = set_data[1][0].columns.values
 
+    #Substitutions
     set_data[2] = set_data[2][0]
     set_data[3] = set_data[3][0]
 
+    #Serves
     set_data[4] = set_data[4][0]
     set_data[5] = set_data[5][0]
     
+    #Timeouts
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
     
@@ -70,33 +94,39 @@ def extract_team(file, ref):
     team_data[0] = team_data[0][0].columns.values
     team_data[1] = team_data[1][0]
     team_data[2] = team_data[2][0]    
-    team_data[2].columns = team_data[1].columns.values 
     team_data[3] = team_data[3][0]    
+    
+    #team_data[1] = team_data[1].rename(columns={'N°':'Number', 'Nom Prénom':'Name'})
+    #print(team_data[1].columns.values)
+    team_data[2].columns = team_data[1].columns.values 
     team_data[3].columns = team_data[1].columns.values 
 
     return (team_data)
 
 if __name__ == "__main__":
     """ Main function of extracting data """
+    file = "test_EMA.pdf"
+    output = file.split('.')[0]+".json"
+
     ## ----------------------  Extract set data ------------------------------- ##
     #Set 1 (73.4, 127.4)
-    set1 = extract_set("ffvolley_fdme.php.pdf", (73.4, 127.4))
+    set1 = extract_set(file, (73.4, 127.4))
     #print(set1)
 
     #Set 2 (73.4, 462.7)
-    set2 = extract_set("ffvolley_fdme.php.pdf", (73.4, 462.7))
+    set2 = extract_set(file, (73.4, 462.7))
     #print(set2)
 
     #Set 3 (167, 128.2)
-    set3 = extract_set("ffvolley_fdme.php.pdf", (167, 128.2))
+    set3 = extract_set(file, (167, 128.2))
     #print(set3)
 
     #Set 4 (167, 461.5)
-    set4 = extract_set("ffvolley_fdme.php.pdf", (167, 461.5))
+    set4 = extract_set(file, (167, 461.5))
     #print(set4)
 
     #Set 5 (261.4, 28.1)
-    set5 = extract_set("ffvolley_fdme.php.pdf", (261.4, 28.1))
+    set5 = extract_set(file, (261.4, 28.1))
     #print(set5)
 
     # Gathering info into single dataframe
@@ -112,18 +142,24 @@ if __name__ == "__main__":
                         })
     #print(sets)
     
-
+    
     ## ----------------------  Extract set data ------------------------------- ##
     #Team A (261, 575.3)
-    teamA = extract_team("ffvolley_fdme.php.pdf", (261, 575.3))
+    teamA = extract_team(file, (261, 575.3))
     #Team B (261, 702.7)
-    teamB = extract_team("ffvolley_fdme.php.pdf", (261, 702.7))
+    teamB = extract_team(file, (261, 702.7))
 
     #Gathering info into single dataframe
     teams = pd.DataFrame({
-        'TeamA' : [teamA[0], teamA[1], teamA[2], teamA[3]],
-        'TeamB' : [teamB[0], teamB[1], teamB[2], teamB[3]]
+        'Name':[teamA[0], teamB[0]],
+        'Players':[teamA[1], teamB[1]],
+        'Liberos':[teamA[2], teamB[2]],
+        'Officials':[teamA[3], teamB[3]]
     })
+    #teams = pd.DataFrame({
+    #    'TeamA' : [teamA[0], teamA[1], teamA[2], teamA[3]],
+    #    'TeamB' : [teamB[0], teamB[1], teamB[2], teamB[3]]
+    #})
     print(teams)
     
     #Gathering into a Match dataframe
@@ -133,7 +169,9 @@ if __name__ == "__main__":
     })
     #Exporting data to Json
 
-    json_output = match.to_json()
-    with open("match.json", 'w') as outfile:
+    json_output = match.to_json(force_ascii=True)
+    with open(output, encoding='utf-8', mode='w') as outfile:
         outfile.write(json_output)
-        print("JSON saved.")
+        print(output + " saved.")
+
+    
