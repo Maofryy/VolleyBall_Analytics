@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
 from tempfile import template
 import tabula
 import json
@@ -46,10 +45,11 @@ def extract_set(file, ref):
 
     #Teams
     team_data = pd.DataFrame({
+        'Index':['Team1', 'Team2'],
         'Name':[set_data[0][0].columns[0], set_data[1][0].columns[0]],
         'Starting':[team1, team2]
     })
-    print(team_data)
+    team_data = team_data.set_index('Index')
     set_data[0] = team_data
 
     #Time
@@ -71,6 +71,7 @@ def extract_set(file, ref):
     #Timeouts
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
+
     
     return (set_data)
 
@@ -112,7 +113,7 @@ if __name__ == "__main__":
     #Set 1 (73.4, 127.4)
     set1 = extract_set(file, (73.4, 127.4))
     #print(set1)
-
+    #"""
     #Set 2 (73.4, 462.7)
     set2 = extract_set(file, (73.4, 462.7))
     #print(set2)
@@ -131,15 +132,17 @@ if __name__ == "__main__":
 
     # Gathering info into single dataframe
     sets = pd.DataFrame({
-        'Team 1 ':[set1[0], set2[0], set3[0], set4[0], set5[0]],
-        'Team 2 ':[set1[1], set2[1], set3[1], set4[1], set5[1]],
+        'Index' : ['Set 1', 'Set 2', 'Set 3', 'Set 4', 'Set 5'],
+        'Teams  ':[set1[0], set2[0], set3[0], set4[0], set5[0]],
+        'Time ':[set1[1], set2[1], set3[1], set4[1], set5[1]],
         'Substitutions 1 ':[set1[2], set2[2], set3[2], set4[2], set5[2]],
         'Substitutions 2 ':[set1[3], set2[3], set3[3], set4[3], set5[3]],
-        'Serves 1 ':[set1[4], set2[4], set3[1], set4[4], set5[4]],
+        'Serves 1 ':[set1[4], set2[4], set3[4], set4[4], set5[4]],
         'Serves 2 ':[set1[5], set2[5], set3[5], set4[5], set5[5]],
         'Timeouts 1 ':[set1[6], set2[6], set3[6], set4[6], set5[6]],
         'Timeouts 2 ':[set1[7], set2[7], set3[7], set4[7], set5[7]],
-                        })
+                        }).set_index('Index')
+    #print("Sets : \n")
     #print(sets)
     
     
@@ -151,27 +154,29 @@ if __name__ == "__main__":
 
     #Gathering info into single dataframe
     teams = pd.DataFrame({
+        'Index':['Team A', 'Team B'],
         'Name':[teamA[0], teamB[0]],
         'Players':[teamA[1], teamB[1]],
         'Liberos':[teamA[2], teamB[2]],
         'Officials':[teamA[3], teamB[3]]
-    })
+    }).set_index('Index')
     #teams = pd.DataFrame({
     #    'TeamA' : [teamA[0], teamA[1], teamA[2], teamA[3]],
     #    'TeamB' : [teamB[0], teamB[1], teamB[2], teamB[3]]
     #})
-    print(teams)
+    #print(teams)
     
     #Gathering into a Match dataframe
     match = pd.DataFrame({
-        'Sets' : [sets],
-        'Teams' : [teams]
-    })
+        'Index': ['Sets', 'Teams'],
+        'Match': [sets, teams]
+    }).set_index('Index')
     #Exporting data to Json
 
-    json_output = match.to_json(force_ascii=True)
-    with open(output, encoding='utf-8', mode='w') as outfile:
+    json_output = match.to_json(force_ascii=False)
+    #print(json_output)
+    with open(output,'w') as outfile:
         outfile.write(json_output)
         print(output + " saved.")
 
-    
+    #"""
