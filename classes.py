@@ -4,6 +4,25 @@ import tabula
 import pandas as pd
 import datetime
 
+class Title:
+    def __init__(self, div_code, div_name, div_pool, match_number, match_day, city, gym, category, ligue, date):
+        self.div_code = div_code
+        self.div_name = div_name
+        self.div_pool = div_pool
+        self.match_number = match_number
+        self.match_day = match_day
+        self.city = city
+        self.gym = gym
+        self.category = category
+        self.ligue = ligue
+        self.date = date
+
+    def export_json(self):
+        """ export object as a json into the file name passed """
+        jsonStr = json.dumps(self.__dict__, ensure_ascii=False)
+        return (jsonStr)
+
+
 class Set:
     def __init__(self):
         """ Init with zeros"""

@@ -5,7 +5,27 @@ import json
 import pandas as pd
 from datetime import datetime
 from dateutil.parser import parse
+from classes import Title
 
+def translate_month(time_string):
+    month_dict={
+        'Janvier':'January',
+        'Février': 'February',
+        'Mars': 'March',
+        'Avril': 'April',
+        'Mai': 'May',
+        'Juin': 'June',
+        'Juillet': 'July',
+        'Août': 'August',
+        'Septembre': 'September',
+        'Octobre': 'October',
+        'Novembre':'November',
+        'Décembre':'December',
+        'à': 'at'
+        }
+    for fr, en in month_dict.items():
+        time_string = time_string.replace(fr, en)
+    return (time_string)
 
 def extract_set(file, ref):
     """ Reads a set the pdf in file at the passed ref point (top left point just after the "S E T X" column) """
@@ -56,36 +76,20 @@ def extract_set(file, ref):
     # gather the date on the tp right of the file
     time_data = tabula.read_pdf(file, area=[39.6, 659.5, 49.7, 789.1], pages='1')
 
-    month_dict={
-        'Janvier':'January',
-        'Février': 'February',
-        'Mars': 'March',
-        'Avril': 'April',
-        'Mai': 'May',
-        'Juin': 'June',
-        'Juillet': 'July',
-        'Août': 'August',
-        'Septembre': 'September',
-        'Octobre': 'October',
-        'Novembre':'November',
-        'Décembre':'December'
-        }
     #ttime = parse(test_string)
     #print(ttime)
     time_string = time_data[0].columns.values[0][time_data[0].columns.values[0].index(' ') + 1:]
-    print(time_string)
-    for fr, en in month_dict.items():
-        time_string = time_string.replace(fr, en)
+    time_string = translate_month(time_string)
     start_time = parse(time_string + " " + set_data[0][0].columns[1].split()[1])
-    print(start_time)
-    # read the date as DD ... 
-    ## Can store in time format but not needed
-    #start = datetime.strptime(set_data[0][0].columns[1].split()[1], "%H:%M")
-    #end = datetime.strptime(set_data[0][1].columns[1].split()[1], "%H:%M")
+    end_time = parse(time_string + " " + set_data[1][0].columns[1].split()[1])
+
     
     #Replacing data
     set_data[0] = team_data
-    set_data[1] = set_data[1][0].columns.values
+    set_data[1] = pd.DataFrame({
+        'Index':['Start', 'End'],
+        'Time':[start_time, end_time]
+    }).set_index('Index')
 
     #Substitutions
     set_data[2] = set_data[2][0]
@@ -96,10 +100,14 @@ def extract_set(file, ref):
     set_data[5] = set_data[5][0]
     
     #Timeouts
+    #Need to check if its empty
+    #if (set_data[6][0].empty):
+    #    set_data[6] = pd.DataFrame({'T'})
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
 
     
+    print("Successfully parsed set at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
     return (set_data)
 
 def extract_team(file, ref):
@@ -128,19 +136,77 @@ def extract_team(file, ref):
     #print(team_data[1].columns.values)
     team_data[2].columns = team_data[1].columns.values 
     team_data[3].columns = team_data[1].columns.values 
-
+    print("Successfully parsed Team at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
     return (team_data)
+
+def extract_title(file):
+    #ref = 
+    title_data = list()
+    table_data = list()
+
+    # 0 Division: Code, Name, Pool  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
+    table_data.append(tabula.read_pdf(file, area=[25.9, 113.8, 38.9, 429.1], pages='1'))
+    # 1 Match, Day (number) (26.6,692.6,39.6,820.8) 
+    table_data.append(tabula.read_pdf(file, area=[26.6,692.6,39.6,820.8 ], pages='1'))
+    # 2 City (string) (38.2, 115.2,46,295.9)
+    table_data.append(tabula.read_pdf(file, area=[38.2, 115.2,46,295.9 ], pages='1'))
+    # 3 Gym (string) (46.1, 115.2,53.3, 295.9)
+    table_data.append(tabula.read_pdf(file, area=[46.1, 115.2,53.3, 295.9 ], pages='1'))
+    # 4 Category (string) (46.1, 352.8,53.3, 533.5)
+    table_data.append(tabula.read_pdf(file, area=[46.1, 352.8,53.3, 533.5 ], pages='1'))
+    # 5 Ligue (string) (55.4, 1.4,71.3, 163.4)
+    table_data.append(tabula.read_pdf(file, area=[55.4, 1.4,71.3, 163.4 ], pages='1'))
+    # 6 Date (datetime) (38.9, 655.2, 50.4, 821.5)
+    table_data.append(tabula.read_pdf(file, area=[38.9, 655.2, 50.4, 821.5 ], pages='1'))
+
+    #Flatten and clean 
+    div_list = table_data[0][0].columns.values[0].split('-')
+    print(table_data[0][0].columns)
+    match_list = table_data[1][0].columns[0].split('-')
+    # 0 Division_Code  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
+    # 1 Division_Name (string)
+    # 2 Pool (letter) 
+    # 3 Match (number) (26.6,692.6,39.6,820.8) 
+    # 4 Day (number)
+    # 5 City (string) (38.2, 115.2,46,295.9)
+    # 6 Gym (string) (46.1, 115.2,53.3, 295.9)
+    # 7 Category (string) (46.1, 352.8,53.3, 533.5)
+    # 8 Ligue (string) (55.4, 1.4,71.3, 163.4)
+    # 9 Date (datetime string) (38.9, 655.2, 50.4, 821.5)
+    
+    time_string = table_data[6][0].columns.values[0][table_data[6][0].columns.values[0].index(' ') + 1:]
+    print(time_string)
+    time_string = translate_month(time_string)
+    match_time = parse(time_string)
+    print(match_time)
+    title_data = Title(
+        div_list[0],
+        div_list[1].strip(),
+        div_list[2].strip(),
+        match_list[0].split(':')[1].strip(),
+        match_list[1].split(':')[1].strip(),
+        table_data[2][0].columns.values[0].split(':')[1].strip(),
+        table_data[3][0].columns.values[0].split(':')[1].strip(),
+        table_data[4][0].columns.values[0],
+        table_data[5][0].columns.values[0],
+        match_time.strftime("%y-%m-%d %H:%M:%S")
+    )
+    print(title_data.export_json())
+    return (title_data)
 
 if __name__ == "__main__":
     """ Main function of extracting data """
     file = "test_EMA.pdf"
     output = file.split('.')[0]+".json"
 
-    ## ----------------------  Extract set data ------------------------------- ##
+    ## ----------------------  Extract title data  ----------------------------- ##
+    title = extract_title(file)
+
+    ## ----------------------  Extract set data  ------------------------------- ##
     #Set 1 (73.4, 127.4)
     set1 = extract_set(file, (73.4, 127.4))
     #print(set1)
-    """
+    
     #Set 2 (73.4, 462.7)
     set2 = extract_set(file, (73.4, 462.7))
     #print(set2)
@@ -173,7 +239,7 @@ if __name__ == "__main__":
     #print(sets)
     
     
-    ## ----------------------  Extract set data ------------------------------- ##
+    ## ----------------------  Extract team data ------------------------------- ##
     #Team A (261, 575.3)
     teamA = extract_team(file, (261, 575.3))
     #Team B (261, 702.7)
@@ -192,11 +258,14 @@ if __name__ == "__main__":
     #    'TeamB' : [teamB[0], teamB[1], teamB[2], teamB[3]]
     #})
     #print(teams)
-    
+
+
+
+    ## ----------------------  Gather in Match Structure ----------------------- ##
     #Gathering into a Match dataframe
     match = pd.DataFrame({
-        'Index': ['Sets', 'Teams'],
-        'Match': [sets, teams]
+        'Index': ['Title', 'Sets', 'Teams'],
+        'Match': [title.__dict__ ,sets, teams]
     }).set_index('Index')
     #Exporting data to Json
 
