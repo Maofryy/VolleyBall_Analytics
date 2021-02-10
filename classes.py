@@ -4,6 +4,19 @@ import tabula
 import pandas as pd
 import datetime
 
+class Penalty:
+    def __init__(self, type, number, team, set, score):
+        self.type = type
+        self.number = number
+        self.team = team
+        self.set = set
+        self.score = score
+
+    def export_json(self):
+        """ export object as a json into the file name passed """
+        jsonStr = json.dumps(self.__dict__, ensure_ascii=False)
+        return (jsonStr)
+    
 class Title:
     def __init__(self, div_code, div_name, div_pool, match_number, match_day, city, gym, category, ligue, date):
         self.div_code = div_code

@@ -33,7 +33,7 @@ def extract_set(file, ref):
     test_data = tabula.read_pdf(file, area=[[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)]], pages=1)
     set_data = list()
     if ((not test_data) or (test_data[0].columns.size == 1)):
-        print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
+        print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : KO")
         return [0,0,0,0,0,0,0,0]
     #Size of columns in the sub and serve table
     column_size = 20
@@ -107,7 +107,7 @@ def extract_set(file, ref):
     set_data[7] = set_data[7][0]
 
     
-    print("Successfully parsed set at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
+    print("Parsing set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK")
     return (set_data)
 
 def extract_team(file, ref):
@@ -136,7 +136,7 @@ def extract_team(file, ref):
     #print(team_data[1].columns.values)
     team_data[2].columns = team_data[1].columns.values 
     team_data[3].columns = team_data[1].columns.values 
-    print("Successfully parsed Team at (" + str(ref[0]) + ", " + str(ref[1]) + ")")
+    print("Parsing Team at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK")
     return (team_data)
 
 def extract_title(file):
@@ -166,7 +166,7 @@ def extract_title(file):
     # 0 Division_Code  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
     # 1 Division_Name (string)
     # 2 Pool (letter) 
-    # 3 Match (number) (26.6,692.6,39.6,820.8) 
+    # 3 Match (number) (26.6,692.6,39.6,820.8)
     # 4 Day (number)
     # 5 City (string) (38.2, 115.2,46,295.9)
     # 6 Gym (string) (46.1, 115.2,53.3, 295.9)
@@ -191,12 +191,36 @@ def extract_title(file):
         table_data[5][0].columns.values[0],
         match_time.strftime("%y-%m-%d %H:%M:%S")
     )
-    print(title_data.export_json())
+    #print(title_data.export_json())
+    print("Title parsing : OK")
     return (title_data)
 
-if __name__ == "__main__":
-    """ Main function of extracting data """
-    file = "test_EMA.pdf"
+def extract_result(file):
+
+    col = 8
+    winner = 0
+    score = "0/0"
+    for i in range(3):
+        res_data = tabula.read_pdf(file, area=[501 + i*col, 424, 509.8 + i*col, 560.9], pages='1')
+        if(res_data[0].columns.values[0] == 'Vainqueur:'):
+            winner = res_data[0].columns.values[1]
+            score = res_data[0].columns.values[2]
+            break
+    res = pd.DataFrame({
+        'Index':['Winner', 'Score'],
+        'Results':[winner, score]
+    }).set_index('Index')
+    print("Result parsed : OK")
+    return (res)
+
+def extract_penalization(file):
+    ref = [371, 13.5, 515.5, 128.2]
+
+    pen_data = tabula.read_pdf(file, area=ref, pages='1')
+    print(pen_data[0])
+    return (0)
+
+def extract_match(file):
     output = file.split('.')[0]+".json"
 
     ## ----------------------  Extract title data  ----------------------------- ##
@@ -259,13 +283,27 @@ if __name__ == "__main__":
     #})
     #print(teams)
 
+    ## ----------------------  Extract results data ---------------------------- ##
+    # Correct row depends on the number of sets, so might be easier to juste compile the results from the sets results
+    # As it can only be in 3 places, let's just loop through them and store if they start by "Vainqueur"
+    result = extract_result(file)
+    #print(result)
+
+    ## ----------------------  Extract sanctions data -------------------------- ##
+
+    #pen = extract_penalization(file)
 
 
+    ## ----------------------  Extract referees data --------------------------- ##
+    refs = tabula.read_pdf(file, area=[433.4, 129, 504.1, 306.7], columns=[129+23, 129+119, 129+147.5, 129+175.7], pages='1')[0].set_index('Arbitres')
+    #print(refs)
+    
+    
     ## ----------------------  Gather in Match Structure ----------------------- ##
     #Gathering into a Match dataframe
     match = pd.DataFrame({
-        'Index': ['Title', 'Sets', 'Teams'],
-        'Match': [title.__dict__ ,sets, teams]
+        'Index': ['Title', 'Sets', 'Teams', 'Results', 'Referees'],
+        'Match': [title.__dict__ ,sets, teams, result, refs]
     }).set_index('Index')
     #Exporting data to Json
 
@@ -275,4 +313,11 @@ if __name__ == "__main__":
         outfile.write(json_output)
         print(output + " saved.")
 
-    #"""
+    
+    match = 0
+    return (match)
+
+if __name__ == "__main__":
+    """ Main function of extracting data """
+    file = "test_EMA.pdf"
+    match = extract_match(file)
