@@ -1,8 +1,10 @@
-#!/usr/bin/python
+# !/usr/local/bin/python
+# -*- coding: utf-8 -*-
 from tempfile import template
 import tabula
 import json
 import pandas as pd
+import os
 from datetime import datetime
 from dateutil.parser import parse
 from classes import Penalty, Results, Title
@@ -223,8 +225,10 @@ def extract_penalties(file):
     print("Parsing Penalties : OK")
     return (pens)
 
-def extract_match(file):
-    output = file.split('.')[0]+".json"
+def extract_match(filename):
+    
+    file = "./pdf/"+filename+".pdf"
+    output = "./json/"+filename+".json"
     
     
     ## ----------------------  Extract title data  ----------------------------- ##
@@ -306,5 +310,10 @@ def extract_match(file):
 
 if __name__ == "__main__":
     """ Main function of extracting data """
-    file = "test_EMA.pdf"
+    file = "test_EMA"
+
     match = extract_match(file)
+    if (match.empty):
+        print("Extraction failed.")
+    else:
+        print("Extraction successful.")
