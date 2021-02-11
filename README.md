@@ -1,7 +1,11 @@
-# Project Title
+# Volleyball Analytics
 
 Analysis of the french amateur league of Volleyball
 
+## Project description
+
+By gathering all data available in each match sheet of competitive championship of the FFVB
+We propose various analysis to teams and clubs by cross referencing them
 
 <!---
 ## Getting Started
@@ -33,7 +37,7 @@ until finished
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
---->
+
 ## Running the tests
 
 Test are being build at the moment.
@@ -45,7 +49,7 @@ Explain what these tests test and why
 ```
 run unwritten_test TESTS
 ```
-
+--->
 ## Built With
 
 * [Tabula-py](https://pypi.org/project/tabula-py/) - Parsing the PDFs into table data
@@ -55,10 +59,3 @@ run unwritten_test TESTS
 * **Vincent Ferry** - *Initial work* - [Sarou](https://github.com/VincentFerry)
 
 * **Maori Benhassine** - *Initial work* - [Maofryy](https://github.com/Maofryy)
-
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
