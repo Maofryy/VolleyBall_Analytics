@@ -7,7 +7,7 @@ import pandas as pd
 import os
 from datetime import datetime
 from dateutil.parser import parse
-from classes import Penalty, Results, Title
+from .classes import Penalty, Results, Title
 
 def translate_month(time_string):
     """ Translate french litteral dates in english format """
