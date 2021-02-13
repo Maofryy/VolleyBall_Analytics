@@ -117,6 +117,9 @@ def extract_team(file, ref):
     team_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 127.4)], pages='1'))
     # 1 : Players
     team_data.append(tabula.read_pdf(file, area=[(ref[0] + 13.7), (ref[1] + 0.0), (ref[0] + 141.8), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
+    if (team_data[1][0].empty):
+        print("Empty team at ("+str(ref[0])+", "+str(ref[1])+") : KO")
+        return ([0,0,0,0])
     # 2 : Liberos
     team_data.append(tabula.read_pdf(file, area=[(ref[0] + 141.1), (ref[1] + 0.0), (ref[0] + 169.9), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
     # 3 : Officials
@@ -139,6 +142,9 @@ def extract_title(file):
 
     # 0 Division: Code, Name, Pool  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
     table_data.append(tabula.read_pdf(file, area=[25.9, 113.8, 38.9, 429.1], pages='1'))
+    if (table_data[0][0].empty):
+        print("Title Empty : KO")
+        return (pd.DataFrame())
     # 1 Match, Day (number) (26.6,692.6,39.6,820.8) 
     table_data.append(tabula.read_pdf(file, area=[26.6,692.6,39.6,820.8 ], pages='1'))
     # 2 City (string) (38.2, 115.2,46,295.9)
@@ -193,6 +199,9 @@ def extract_result(file):
 
     for i in range(3):
         res_data = tabula.read_pdf(file, area=[501 + i*col, 424, 509.8 + i*col, 560.9], pages='1')
+        if (not res_data):
+            print("Empty results (less than 3 sets error) : KO")
+            return (pd.DataFrame())
         if(res_data[0].columns.values[0] == 'Vainqueur:'):
             winner = res_data[0].columns.values[1]
             score = res_data[0].columns.values[2]
@@ -211,6 +220,7 @@ def extract_penalties(file):
     pens = list()
 
     pen_data = tabula.read_pdf(file, area=ref, pages='1')
+    ##Simulating penalties as didnt find samples yet
     #df = pd.DataFrame({"E":["AE"], "A/B":["B"], "Set":["5"], "Score":["15:15"]})
     #data = pd.concat([pen_data[0], df])
     #df = pd.DataFrame({"A":["17"], "A/B":["A"], "Set":["2"], "Score":["21:23"]})
@@ -226,10 +236,26 @@ def extract_penalties(file):
     return (pens)
 
 def extract_match(filename):
+    filename = "empty_test"
+    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename+".pdf")
+    output = os.path.join(os.path.dirname(__file__), "json/"+filename+".json")
+    pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
+
+    ## Trying to open the input file, return empty dataframe upon failure
+    try :
+        fd = open(file)
+        fd.close()
+    except IOError:
+        print("Input file not accessible")
+        return pd.DataFrame()
     
-    file = "./pdf/"+filename+".pdf"
-    output = "./json/"+filename+".json"
-    
+    ## ----------------------  Check pdf format  ------------------------------- ##
+    #Read the part with static data (87.8, 13.7, 165, 113)
+    # and check with presaved serialized data
+    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
+    format_ref = pd.read_pickle(pickle)
+    if ((not format_check) or (not format_check[0].equals(format_ref))):
+        raise TypeError("Pdf format is wrong.")
     
     ## ----------------------  Extract title data  ----------------------------- ##
     title = extract_title(file)
@@ -290,15 +316,25 @@ def extract_match(filename):
     penalties = pd.DataFrame.from_records([p.to_dict() for p in pens])
 
     ## ----------------------  Extract referees data --------------------------- ##
-    refs = tabula.read_pdf(file, area=[433.4, 129, 504.1, 306.7], columns=[129+23, 129+119, 129+147.5, 129+175.7], pages='1')[0].set_index('Arbitres')
+    refs = tabula.read_pdf(file, area=[433.4, 129, 504.1, 306.7], columns=[152, 248, 276.5, 304.7], pages='1')[0].set_index('Arbitres')
     print("Parsing Referees : OK")
     
 
     ## ----------------------  Gather in Match Structure ----------------------- ##
     #Gathering into a Match dataframe
+    if (title.empty):
+        title_dict = 0
+    else:
+        title_dict = title.__dict__
+    
+    if (result.empty):
+        result_dict = 0
+    else:
+        result_dict = title.__dict__
+    
     match = pd.DataFrame({
         'Index': ['Title', 'Sets', 'Teams', 'Results', 'Referees', 'Penalties'],
-        'Match': [title.__dict__ ,sets, teams, result.__dict__, refs, penalties]
+        'Match': [title_dict ,sets, teams, result_dict, refs, penalties]
     }).set_index('Index')
    
     #Exporting data to Json
@@ -312,7 +348,12 @@ if __name__ == "__main__":
     """ Main function of extracting data """
     file = "test_EMA"
 
-    match = extract_match(file)
+    try:
+        match = extract_match(file)
+    except TypeError:
+        print("Invalid format")
+        exit()
+    print(match)
     if (match.empty):
         print("Extraction failed.")
     else:
