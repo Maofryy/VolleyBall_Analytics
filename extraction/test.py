@@ -13,3 +13,4 @@ class TestClass(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+# Run in root folder : python -m unittest extraction.test
