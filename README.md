@@ -19,23 +19,23 @@ We propose various analysis to teams and clubs by cross referencing them
 
 ## Installation
 
-VirtualBox : https://www.virtualbox.org/
-Vagrant : https://www.vagrantup.com/
-Windows Terminal : https://www.microsoft.com/fr-fr/p/windows-terminal/9n0dx20hk701?rtc=1#activetab=pivot:overviewtab
-Vs Code : https://code.visualstudio.com/
+VirtualBox : https://www.virtualbox.org/  
+Vagrant : https://www.vagrantup.com/  
+Windows Terminal : https://www.microsoft.com/fr-fr/p/windows-terminal/9n0dx20hk701?rtc=1#activetab=pivot:overviewtab  
+Vs Code : https://code.visualstudio.com/  
 
 
-mkdir C:\Users\User\workspace
-cd C:\Users\User\workspace
-git clone https://github.com/Maofryy/VolleyBall_Analytics.git
+mkdir C:\Users\User\workspace  
+cd C:\Users\User\workspace  
+git clone https://github.com/Maofryy/VolleyBall_Analytics.git  
 
 
 ## Usage
 
-cd C:\Users\User\workspace\VolleyBall_Analytics\envdev
-vagrant up // start vm
-vagrant provision // update vm with vagrantFile
-vagrant halt // stop vm
+cd C:\Users\User\workspace\VolleyBall_Analytics\envdev  
+vagrant up // start vm  
+vagrant provision // update vm with vagrantFile  
+vagrant halt // stop vm  
 
 <!---
 ## Getting Started
