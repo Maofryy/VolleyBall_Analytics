@@ -25,17 +25,17 @@ Windows Terminal : https://www.microsoft.com/fr-fr/p/windows-terminal/9n0dx20hk7
 Vs Code : https://code.visualstudio.com/  
 
 
-mkdir C:\Users\User\workspace  
+```mkdir C:\Users\User\workspace  
 cd C:\Users\User\workspace  
-git clone https://github.com/Maofryy/VolleyBall_Analytics.git  
+git clone https://github.com/Maofryy/VolleyBall_Analytics.git ``` 
 
 
 ## Usage
 
-cd C:\Users\User\workspace\VolleyBall_Analytics\envdev  
+```cd C:\Users\User\workspace\VolleyBall_Analytics\envdev  
 vagrant up // start vm  
 vagrant provision // update vm with vagrantFile  
-vagrant halt // stop vm  
+vagrant halt // stop vm```  
 
 <!---
 ## Getting Started
