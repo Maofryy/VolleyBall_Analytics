@@ -7,7 +7,7 @@ import pandas as pd
 import os
 from datetime import datetime
 from dateutil.parser import parse
-from .classes import Penalty, Results, Title
+from .classes import FormatInvalidError, Penalty, Results, Title
 
 def translate_month(time_string):
     """ Translate french litteral dates in english format """
@@ -142,9 +142,9 @@ def extract_title(file):
 
     # 0 Division: Code, Name, Pool  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
     table_data.append(tabula.read_pdf(file, area=[25.9, 113.8, 38.9, 429.1], pages='1'))
-    if (table_data[0][0].empty):
+    if (table_data[0][0].columns[0] == "Poule"):
         print("Title Empty : KO")
-        return (pd.DataFrame())
+        return (Title(0,0,0,0,0,0,0,0,0,0))
     # 1 Match, Day (number) (26.6,692.6,39.6,820.8) 
     table_data.append(tabula.read_pdf(file, area=[26.6,692.6,39.6,820.8 ], pages='1'))
     # 2 City (string) (38.2, 115.2,46,295.9)
@@ -201,7 +201,7 @@ def extract_result(file):
         res_data = tabula.read_pdf(file, area=[501 + i*col, 424, 509.8 + i*col, 560.9], pages='1')
         if (not res_data):
             print("Empty results (less than 3 sets error) : KO")
-            return (pd.DataFrame())
+            return (Results(0, 0))
         if(res_data[0].columns.values[0] == 'Vainqueur:'):
             winner = res_data[0].columns.values[1]
             score = res_data[0].columns.values[2]
@@ -235,28 +235,8 @@ def extract_penalties(file):
     print("Parsing Penalties : OK")
     return (pens)
 
-def extract_match(filename):
-    filename = "empty_test"
-    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename+".pdf")
-    output = os.path.join(os.path.dirname(__file__), "json/"+filename+".json")
-    pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
-
-    ## Trying to open the input file, return empty dataframe upon failure
-    try :
-        fd = open(file)
-        fd.close()
-    except IOError:
-        print("Input file not accessible")
-        return pd.DataFrame()
-    
-    ## ----------------------  Check pdf format  ------------------------------- ##
-    #Read the part with static data (87.8, 13.7, 165, 113)
-    # and check with presaved serialized data
-    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
-    format_ref = pd.read_pickle(pickle)
-    if ((not format_check) or (not format_check[0].equals(format_ref))):
-        raise TypeError("Pdf format is wrong.")
-    
+def extract_match(file, output):
+   
     ## ----------------------  Extract title data  ----------------------------- ##
     title = extract_title(file)
 
@@ -322,15 +302,8 @@ def extract_match(filename):
 
     ## ----------------------  Gather in Match Structure ----------------------- ##
     #Gathering into a Match dataframe
-    if (title.empty):
-        title_dict = 0
-    else:
-        title_dict = title.__dict__
-    
-    if (result.empty):
-        result_dict = 0
-    else:
-        result_dict = title.__dict__
+    title_dict = title.__dict__
+    result_dict = result.__dict__
     
     match = pd.DataFrame({
         'Index': ['Title', 'Sets', 'Teams', 'Results', 'Referees', 'Penalties'],
@@ -344,17 +317,47 @@ def extract_match(filename):
         print(output + " saved.")
     return (match)
 
-if __name__ == "__main__":
-    """ Main function of extracting data """
-    file = "test_EMA"
+def extract_pdf(filename):
+    ## Handle file error, not found, not pdf or cant open it
+    #filename = "empty_test.pdf"
+    print("Extracting data from file : " + filename)
+    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
+    output = os.path.join(os.path.dirname(__file__), "json/"+filename.split('.')[0]+".json")
+    pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
 
-    try:
-        match = extract_match(file)
-    except TypeError:
-        print("Invalid format")
-        exit()
+    ## Trying to open the input file, return empty dataframe upon failure
+    try :
+        fd = open(file)
+        fd.close()
+    except IOError:
+        print("Input file not accessible")
+        return pd.DataFrame()
+    
+    # check for format here
+    # Pass 
+    ## ----------------------  Check pdf format  ------------------------------- ##
+    #Read the part with static data (87.8, 13.7, 165, 113)
+    # and check with presaved serialized data
+    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
+    format_ref = pd.read_pickle(pickle)
+    if ((not format_check) or (not format_check[0].equals(format_ref))):
+        raise FormatInvalidError("Pdf format is wrong.")
+
+    match = extract_match(file, output)
     print(match)
     if (match.empty):
         print("Extraction failed.")
     else:
         print("Extraction successful.")
+    return (match)
+
+
+if __name__ == "__main__":
+    """ Main function of extracting data """
+    file = "test_EMA.pdf"
+    try :
+        pdf = extract_pdf(file)
+    except FormatInvalidError:
+        print("Invalid format")
+        exit()
+     

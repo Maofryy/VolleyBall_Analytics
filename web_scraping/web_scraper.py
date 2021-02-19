@@ -3,23 +3,27 @@ import requests
 from urllib.parse import urljoin
 import csv
 from tqdm import tqdm
+import pandas as pd
 import urllib3
 import webbrowser
+import os
 
-def scrape_urls_nat(SOURCE_URL):
-    """ Scraper of pool's urls for national level"""
-    source = requests.get(SOURCE_URL, verify=False)
-    soup = BeautifulSoup(source.content, 'lxml')
-
-    lst = list()
-    div = soup.find('div')
-    for select in div.findAll('select')[:-1]:
-        for option in select.findAll('option')[1:]:
-            lst.append({'div': option.text.split('\n')[0], 'url': option.get('value')})
-    return (lst)
-
-
-    
+def download_file(download_url, folder):
+    """ Download pdf from url into folder (make sure the folder var ends in a slash)"""
+    # Filename : 
+    #       if links ends with pdf, just split and take the name of pdf
+    #       if not, take the code match, last element after '=' and add ".pdf"
+    if (download_url.endswith(".pdf") or download_url.endswith(".jpg")):
+        filename = download_url.split('/')[-1]
+    else:
+        filename = download_url.split('=')[-1]+".pdf"
+    try:
+        file = open(folder+filename, 'xb')
+        response = requests.get(download_url, verify=False)    
+        file.write(response.content)
+        file.close()
+    except FileExistsError as e:
+        pass
 
 def scrape_pdfs(SOURCE_URL):
     """ Returns list of match sheets pdf of the given [url]"""
@@ -41,30 +45,65 @@ def scrape_pdfs(SOURCE_URL):
     #Can serialize into csv, probably better than directly downloading
 
 
-if __name__ == "__main__":
-    #HTTPS requires certificate, pushing the prbm for later rn: "verify=False"+suppress warning
-    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+def scrape_urls_nat(SOURCE_URL):
+    """ Scraper of pool's urls for national level"""
+    source = requests.get(SOURCE_URL, verify=False)
+    soup = BeautifulSoup(source.content, 'lxml')
 
+    lst = list()
+    div = soup.find('div')
+    for select in div.findAll('select')[:-1]:
+        for option in select.findAll('option')[1:]:
+            lst.append({'div': option.text.split('\n')[0], 'url': option.get('value')})
+    return (lst)
+
+def compile_links(output_file):
+    """ Compiling all urls into an [output_file] csv file """
     # National levels first step : getting all the pool web pages from the index structure they have (only for 2020-2021 ?)
-    url = "https://www.ffvbbeach.org/ffvbapp/resu/seniors/2019-2020/pbscript.htm"
-    url_list_nat = scrape_urls_nat(url)
+    url_nat = "https://www.ffvbbeach.org/ffvbapp/resu/seniors/2019-2020/pbscript.htm"
+    url_list_nat = scrape_urls_nat(url_nat)
     pdfs = list()
-    for pool in tqdm(url_list_nat):
-        #Then for each pull gather the list of pdf's address and compiling it in a list of dict
+    for pool in tqdm(url_list_nat, desc="Getting pdf list"):
+        #Then for each pull gather the list of pdf's address
         pdf_lst = scrape_pdfs(pool['url'])
         for link in pdf_lst:
             pdfs.append({
-                'season': "2020-2021",
-                'div': pool['div'],
+                'season': "2019-2020",
+                'div': pool['div'].replace(' ', '_'),
                 'url': link,
                 })
 
-    with open('links.csv', 'w', encoding='utf8',newline='')  as output_file:
+    #Compiling the list into a csv to hold urls
+    with open(output_file, 'w', encoding='utf8',newline='')  as output_file:
         keys = pdfs[0].keys()
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(pdfs)
 
+    print("National pdf scraped into " + str(output_file))
+ 
+def download_links(input_file):
+    """ Dowloading pdfs from links.csv """
+    links_df = pd.read_csv(input_file)
+
+    for index, link in tqdm(links_df.iterrows(), desc="Dowloading pdfs"):
+        #Create folders if they doesnt exits
+        folder = "..\\data\\" + link['season']+'\\'+link['div']+"\\"
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        download_file(link['url'], folder)
+    print("Data folder updated from " + str(input_file)) 
+
+
+
+if __name__ == "__main__":
+    
+    #HTTPS requires certificate, pushing the prbm for later rn: "verify=False"+suppress warning
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+    compile_links("links.csv")
+    download_links("links.csv")
+   
     """
     ## Extracting pdf's url from pool page
     url = "https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=2020/2021&codent=ABCCS&poule=EMA"

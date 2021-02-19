@@ -4,6 +4,9 @@ import tabula
 import pandas as pd
 import datetime
 
+class FormatInvalidError(Exception):
+    pass
+
 class Results:
     def __init__(self, winner, score):
         self.winner = winner
