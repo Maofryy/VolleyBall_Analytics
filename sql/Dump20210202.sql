@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `club`
 --
 
-CREATE TABLE `club` (
+CREATE TABLE `sport_analytics`.`club` (
   `club_id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL
 ) ;
@@ -38,7 +38,7 @@ CREATE TABLE `club` (
 -- Structure de la table `departement`
 --
 
-CREATE TABLE `departement` (
+CREATE TABLE `sport_analytics`.`departement` (
   `departement_id` int(11) NOT NULL,
   `departement_code` varchar(3) CHARACTER SET utf8 DEFAULT NULL,
   `departement_nom` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `departement` (
 -- Déchargement des données de la table `departement`
 --
 
-INSERT INTO `departement` (`departement_id`, `departement_code`, `departement_nom`, `departement_nom_uppercase`, `departement_slug`, `departement_nom_soundex`) VALUES
+INSERT INTO `sport_analytics`.`departement` (`departement_id`, `departement_code`, `departement_nom`, `departement_nom_uppercase`, `departement_slug`, `departement_nom_soundex`) VALUES
 (1, '01', 'Ain', 'AIN', 'ain', 'A500'),
 (2, '02', 'Aisne', 'AISNE', 'aisne', 'A250'),
 (3, '03', 'Allier', 'ALLIER', 'allier', 'A460'),
@@ -160,7 +160,7 @@ INSERT INTO `departement` (`departement_id`, `departement_code`, `departement_no
 -- Structure de la table `division`
 --
 
-CREATE TABLE `division` (
+CREATE TABLE `sport_analytics`.`division` (
   `division_id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
   `order` int(11) DEFAULT NULL
@@ -172,7 +172,7 @@ CREATE TABLE `division` (
 -- Structure de la table `match`
 --
 
-CREATE TABLE `match` (
+CREATE TABLE `sport_analytics`.`match` (
   `match_id` int(10) UNSIGNED NOT NULL,
   `date_start` date DEFAULT NULL,
   `date_end` date DEFAULT NULL,
@@ -186,7 +186,7 @@ CREATE TABLE `match` (
 -- Structure de la table `match_action`
 --
 
-CREATE TABLE `match_action` (
+CREATE TABLE `sport_analytics`.`match_action` (
   `match_action_id` int(11) NOT NULL,
   `match_action_type` int(11) NOT NULL,
   `player_in` int(11) NOT NULL,
@@ -202,7 +202,7 @@ CREATE TABLE `match_action` (
 -- Structure de la table `match_score`
 --
 
-CREATE TABLE `match_score` (
+CREATE TABLE `sport_analytics`.`match_score` (
   `match_score_id` int(11) NOT NULL,
   `match_id` int(11) NOT NULL,
   `score` text NOT NULL
@@ -214,7 +214,7 @@ CREATE TABLE `match_score` (
 -- Structure de la table `player`
 --
 
-CREATE TABLE `player` (
+CREATE TABLE `sport_analytics`.`player` (
   `player_id` int(11) NOT NULL,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
@@ -227,7 +227,7 @@ CREATE TABLE `player` (
 -- Structure de la table `season`
 --
 
-CREATE TABLE `season` (
+CREATE TABLE `sport_analytics`.`season` (
   `season_id` int(11) NOT NULL,
   `year` text DEFAULT NULL
 ) ;
@@ -236,7 +236,7 @@ CREATE TABLE `season` (
 -- Déchargement des données de la table `season`
 --
 
-INSERT INTO `season` (`season_id`, `year`) VALUES
+INSERT INTO `sport_analytics`.`season` (`season_id`, `year`) VALUES
 (1, '2019/2020');
 
 -- --------------------------------------------------------
@@ -245,7 +245,7 @@ INSERT INTO `season` (`season_id`, `year`) VALUES
 -- Structure de la table `sport`
 --
 
-CREATE TABLE `sport` (
+CREATE TABLE `sport_analytics`.`sport` (
   `sport_id` int(11) NOT NULL,
   `name` text DEFAULT NULL
 ) ;
@@ -254,7 +254,7 @@ CREATE TABLE `sport` (
 -- Déchargement des données de la table `sport`
 --
 
-INSERT INTO `sport` (`sport_id`, `name`) VALUES
+INSERT INTO `sport_analytics`.`sport` (`sport_id`, `name`) VALUES
 (1, 'Volley');
 
 -- --------------------------------------------------------
@@ -263,7 +263,7 @@ INSERT INTO `sport` (`sport_id`, `name`) VALUES
 -- Structure de la table `team`
 --
 
-CREATE TABLE `team` (
+CREATE TABLE `sport_analytics`.`team` (
   `team_id` int(11) NOT NULL,
   `club_id` int(11) DEFAULT NULL,
   `name` varchar(45) DEFAULT NULL,
@@ -278,7 +278,7 @@ CREATE TABLE `team` (
 -- Structure de la table `team_player`
 --
 
-CREATE TABLE `team_player` (
+CREATE TABLE `sport_analytics`.`team_player` (
   `team_player_id` int(11) NOT NULL,
   `team_id` int(11) DEFAULT NULL,
   `player_id` int(11) DEFAULT NULL,
@@ -292,13 +292,13 @@ CREATE TABLE `team_player` (
 --
 -- Index pour la table `club`
 --
-ALTER TABLE `club`
+ALTER TABLE `sport_analytics`.`club`
   ADD PRIMARY KEY (`club_id`);
 
 --
 -- Index pour la table `departement`
 --
-ALTER TABLE `departement`
+ALTER TABLE `sport_analytics`.`departement`
   ADD PRIMARY KEY (`departement_id`),
   ADD KEY `departement_slug` (`departement_slug`),
   ADD KEY `departement_code` (`departement_code`),
@@ -307,55 +307,55 @@ ALTER TABLE `departement`
 --
 -- Index pour la table `division`
 --
-ALTER TABLE `division`
+ALTER TABLE `sport_analytics`.`division`
   ADD PRIMARY KEY (`division_id`);
 
 --
 -- Index pour la table `match`
 --
-ALTER TABLE `match`
+ALTER TABLE `sport_analytics`.`match`
   ADD PRIMARY KEY (`match_id`);
 
 --
 -- Index pour la table `match_action`
 --
-ALTER TABLE `match_action`
+ALTER TABLE `sport_analytics`.`match_action`
   ADD PRIMARY KEY (`match_action_id`);
 
 --
 -- Index pour la table `match_score`
 --
-ALTER TABLE `match_score`
+ALTER TABLE `sport_analytics`.`match_score`
   ADD PRIMARY KEY (`match_score_id`);
 
 --
 -- Index pour la table `player`
 --
-ALTER TABLE `player`
+ALTER TABLE `sport_analytics`.`player`
   ADD PRIMARY KEY (`player_id`);
 
 --
 -- Index pour la table `season`
 --
-ALTER TABLE `season`
+ALTER TABLE `sport_analytics`.`season`
   ADD PRIMARY KEY (`season_id`);
 
 --
 -- Index pour la table `sport`
 --
-ALTER TABLE `sport`
+ALTER TABLE `sport_analytics`.`sport`
   ADD PRIMARY KEY (`sport_id`);
 
 --
 -- Index pour la table `team`
 --
-ALTER TABLE `team`
+ALTER TABLE `sport_analytics`.`team`
   ADD PRIMARY KEY (`team_id`);
 
 --
 -- Index pour la table `team_player`
 --
-ALTER TABLE `team_player`
+ALTER TABLE `sport_analytics`.`team_player`
   ADD PRIMARY KEY (`team_player_id`);
 
 --
@@ -365,7 +365,7 @@ ALTER TABLE `team_player`
 --
 -- AUTO_INCREMENT pour la table `departement`
 --
-ALTER TABLE `departement`
+ALTER TABLE `sport_analytics`.`departement`
   MODIFY `departement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 COMMIT;
 
