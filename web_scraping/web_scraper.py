@@ -44,6 +44,24 @@ def scrape_pdfs(SOURCE_URL):
 
     #Can serialize into csv, probably better than directly downloading
 
+def scrape_matchs(SOURCE_URL):
+    """ Returns the list of al matchs of the given [SOURCE_URL]"""
+    source = requests.get(SOURCE_URL, verify = False).text
+    soup = BeautifulSoup(source, 'lxml')
+    
+    #table_lst = soup.findAll("table", {"cellspacing" : "0"})
+    lst = list()
+    table_list = soup.findAll("table")
+    for table in table_list:
+        for form in table.findAll("form", {"name" : "divers"}):
+            url = form['action']
+            url = url.replace("..", "https://www.ffvbbeach.org/ffvbapp")
+            if (not url.endswith(".php")):
+                lst.append(url)
+    lst = list(set(lst))
+    return (lst)
+
+    #Can serialize into csv, probably better than directly downloading
 
 def scrape_urls_nat(SOURCE_URL):
     """ Scraper of pool's urls for national level"""

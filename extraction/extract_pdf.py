@@ -311,7 +311,7 @@ def extract_match(file, output):
     }).set_index('Index')
    
     #Exporting data to Json
-    json_output = match.to_json(force_ascii=False)
+    json_output = json.dumps(match.to_json(force_ascii=False), ensure_ascii=False)
     with open(output,'w') as outfile:
         outfile.write(json_output)
         print(output + " saved.")
@@ -320,17 +320,19 @@ def extract_match(file, output):
 def extract_pdf(filename):
     ## Handle file error, not found, not pdf or cant open it
     #filename = "empty_test.pdf"
-    print("Extracting data from file : " + filename)
     file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
     output = os.path.join(os.path.dirname(__file__), "json/"+filename.split('.')[0]+".json")
     pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
+    print("Extracting data from file : " + file + " to : "+output)
+
 
     ## Trying to open the input file, return empty dataframe upon failure
     try :
         fd = open(file)
         fd.close()
     except IOError:
-        print("Input file not accessible")
+        print("Input file not accessible :")
+        print(file)
         return pd.DataFrame()
     
     # check for format here
@@ -354,7 +356,7 @@ def extract_pdf(filename):
 
 if __name__ == "__main__":
     """ Main function of extracting data """
-    file = "test_EMA.pdf"
+    file = "sample_test.pdf"
     try :
         pdf = extract_pdf(file)
     except FormatInvalidError:
