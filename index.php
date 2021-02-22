@@ -23,6 +23,7 @@ $referentiel = array(
 	'team' => array(),
 	'player' => array(),
 	'division' => array(),
+	'team_player' => array(),
 );
 $elementsReferentiel = array(
 	'match' => 'code_match',
@@ -30,6 +31,7 @@ $elementsReferentiel = array(
 	'team' => 'name',
 	'player' => 'licence',
 	'division' => 'div_name',
+	'season' => 'year',
 );
 
 foreach ($elementsReferentiel as $table => $column) {
@@ -107,16 +109,34 @@ foreach($files as $file) {
 		//players
 		$players = array();
 		foreach ($teams['Players']['Team A']['Licence'] as $key => $licence) {
-			$players[$licence] = $teams['Players']['Team A']['Nom Prénom'][$key];
+			$players[$licence] = array(
+				"name" => $teams['Players']['Team A']['Nom Prénom'][$key],
+				"team" => $teamAName,
+			);
 		}
 		foreach ($teams['Players']['Team B']['Licence'] as $key => $licence) {
-			$players[$licence] = $teams['Players']['Team A']['Nom Prénom'][$key];
+			$players[$licence] = array(
+				"name" => $teams['Players']['Team B']['Nom Prénom'][$key],
+				"team" => $teamBName,
+			);
 		}
-		foreach ($players as $licence => $fullName) {
+		$title['date'] = "2021-01-30 18:00:00"; // waiting correct date in json
+		$dateMatch = DateTime::createFromFormat('Y-m-d H:i:s', $title['date']);
+		$midSeason = DateTime::createFromFormat('Y-m-d', $dateMatch->format('Y') . '-08-15'); // 15 aout
+		$year = intval($dateMatch->format('Y'));
+
+		if ($dateMatch > $midSeason) {
+			$season = $year . '/' . $year + 1; 
+		} else {
+			$season = $year - 1 . '/' . $year; 
+		}
+		$seasonId = $referentiel['season'][$season];
+
+		foreach ($players as $licence => $player) {
 			if (isset($referentiel['player'][$licence])) {
 				continue;
 			}
-			$names = explode(' ', $fullName);
+			$names = explode(' ', $player['name']);
 			$firstName = array_pop($names);
 			$lastName = implode(' ', $names);
 			$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
@@ -124,6 +144,12 @@ foreach($files as $file) {
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
 			$referentiel['players'][$licence] = $licence;
+
+			// team_players			
+			$sql = sprintf("INSERT INTO sport_analytics.team_player (team_id, player_id, season_id)
+			VALUES('%s', '%s', '%s');", $referentiel['team'][$player['team']], $licence, $seasonId);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
 		}
 
 		/*$sql = sprintf("INSERT INTO sport_analytics.`match`
@@ -131,8 +157,7 @@ foreach($files as $file) {
 		VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');
 		", $title['']);*/
 
-		var_dump($title);die;
-		var_dump($referentiel);die;
+		var_dump('done');die;
   	}
 }
 ?>
