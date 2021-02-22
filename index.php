@@ -24,6 +24,7 @@ $referentiel = array(
 	'player' => array(),
 	'division' => array(),
 	'team_player' => array(),
+	'ligue' => array(),
 );
 $elementsReferentiel = array(
 	'match' => 'code_match',
@@ -32,6 +33,7 @@ $elementsReferentiel = array(
 	'player' => 'licence',
 	'division' => 'div_name',
 	'season' => 'year',
+	'ligue' => 'name',
 );
 
 foreach ($elementsReferentiel as $table => $column) {
@@ -48,9 +50,10 @@ foreach ($elementsReferentiel as $table => $column) {
 
 $files = scandir('extraction/json');
 foreach($files as $file) {
-  	if ($file == "test_EMA.json") { // just for test
+  	if ($file == 'sample_test.json') { // just for test
 		// get datas
     	$json = file_get_contents('extraction/json/' . $file, true);
+		var_dump(Utf8_ansi($json));die;
     	$datas = json_decode($json, true);
 
 		$title = $datas['Match']['Title'];
@@ -74,6 +77,15 @@ foreach($files as $file) {
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
 			$referentiel['division'][$title['div_name']] = $database->lastInsertId();
+		}
+
+		// ligue
+		if (!isset($referentiel['ligue'][$title['ligue']])) {
+			$sql = sprintf("INSERT INTO sport_analytics.ligue (name)
+			VALUES('%s');", $title['ligue']);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+			$referentiel['division'][$title['ligue']] = $database->lastInsertId();
 		}
 
 		// club
@@ -119,9 +131,8 @@ foreach($files as $file) {
 				"name" => $teams['Players']['Team B']['Nom Prénom'][$key],
 				"team" => $teamBName,
 			);
-		}
-		$title['date'] = "2021-01-30 18:00:00"; // waiting correct date in json
-		$dateMatch = DateTime::createFromFormat('Y-m-d H:i:s', $title['date']);
+		}		
+		$dateMatch = DateTime::createFromFormat('y-m-d H:i:s', $title['date']);
 		$midSeason = DateTime::createFromFormat('Y-m-d', $dateMatch->format('Y') . '-08-15'); // 15 aout
 		$year = intval($dateMatch->format('Y'));
 
@@ -159,5 +170,71 @@ foreach($files as $file) {
 
 		var_dump('done');die;
   	}
+}
+
+function Utf8_ansi($valor='') {
+
+    $utf8_ansi2 = array(
+    "\u00c0" =>"À",
+    "\u00c1" =>"Á",
+    "\u00c2" =>"Â",
+    "\u00c3" =>"Ã",
+    "\u00c4" =>"Ä",
+    "\u00c5" =>"Å",
+    "\u00c6" =>"Æ",
+    "\u00c7" =>"Ç",
+    "\u00c8" =>"È",
+    "\u00c9" =>"É",
+    "\u00ca" =>"Ê",
+    "\u00cb" =>"Ë",
+    "\u00cc" =>"Ì",
+    "\u00cd" =>"Í",
+    "\u00ce" =>"Î",
+    "\u00cf" =>"Ï",
+    "\u00d1" =>"Ñ",
+    "\u00d2" =>"Ò",
+    "\u00d3" =>"Ó",
+    "\u00d4" =>"Ô",
+    "\u00d5" =>"Õ",
+    "\u00d6" =>"Ö",
+    "\u00d8" =>"Ø",
+    "\u00d9" =>"Ù",
+    "\u00da" =>"Ú",
+    "\u00db" =>"Û",
+    "\u00dc" =>"Ü",
+    "\u00dd" =>"Ý",
+    "\u00df" =>"ß",
+    "\u00e0" =>"à",
+    "\u00e1" =>"á",
+    "\u00e2" =>"â",
+    "\u00e3" =>"ã",
+    "\u00e4" =>"ä",
+    "\u00e5" =>"å",
+    "\u00e6" =>"æ",
+    "\u00e7" =>"ç",
+    "\u00e8" =>"è",
+    "\u00e9" =>"é",
+    "\u00ea" =>"ê",
+    "\u00eb" =>"ë",
+    "\u00ec" =>"ì",
+    "\u00ed" =>"í",
+    "\u00ee" =>"î",
+    "\u00ef" =>"ï",
+    "\u00f0" =>"ð",
+    "\u00f1" =>"ñ",
+    "\u00f2" =>"ò",
+    "\u00f3" =>"ó",
+    "\u00f4" =>"ô",
+    "\u00f5" =>"õ",
+    "\u00f6" =>"ö",
+    "\u00f8" =>"ø",
+    "\u00f9" =>"ù",
+    "\u00fa" =>"ú",
+    "\u00fb" =>"û",
+    "\u00fc" =>"ü",
+    "\u00fd" =>"ý",
+    "\u00ff" =>"ÿ");
+
+    return strtr($valor, $utf8_ansi2);      
 }
 ?>
