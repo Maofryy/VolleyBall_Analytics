@@ -90,7 +90,7 @@ def extract_set(file, ref):
     set_data[0] = team_data
     set_data[1] = pd.DataFrame({
         'Index':['Start', 'End'],
-        'Time':[start_time, end_time]
+        'Time':[start_time.strftime("%Y-%m-%d %H:%M:%S"), end_time.strftime("%Y-%m-%d %H:%M:%S")]
     }).set_index('Index')
 
     #Substitutions
@@ -186,7 +186,7 @@ def extract_title(file):
         table_data[3][0].columns.values[0].split(':')[1].strip(),
         table_data[4][0].columns.values[0],
         table_data[5][0].columns.values[0],
-        match_time.strftime("%y-%m-%d %H:%M:%S")
+        match_time.strftime("%Y-%m-%d %H:%M:%S")
     )
     print("Title parsing : OK")
     return (title_data)
@@ -311,7 +311,7 @@ def extract_match(file, output):
     }).set_index('Index')
    
     #Exporting data to Json
-    json_output = match.to_json(indent=4, force_ascii=False)
+    json_output = match.to_json(indent=4, force_ascii=True)
     with open(output,'w', encoding='utf-8') as outfile:
         outfile.write(json_output)
         print(output + " saved.")
