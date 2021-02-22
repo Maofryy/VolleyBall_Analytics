@@ -22,19 +22,25 @@ $referentiel = array(
 	'club' => array(),
 	'team' => array(),
 	'player' => array(),
+	'division' => array(),
 );
 $elementsReferentiel = array(
 	'match' => 'code_match',
 	'club' => 'name',
 	'team' => 'name',
 	'player' => 'licence',
+	'division' => 'div_name',
 );
 
 foreach ($elementsReferentiel as $table => $column) {
 	$sql = sprintf("SELECT * FROM `%s`", $table);
 	$result = $database->query($sql);
 	foreach ($result as $value) {
-		$referentiel[$table][$value[$column]] = $value[$table . '_id'];
+		if ($table == 'player') { // exception table player because primary key is licence
+			$referentiel[$table][$value[$column]] = $value['licence'];
+		} else {
+			$referentiel[$table][$value[$column]] = $value[$table . '_id'];
+		}
 	}
 }
 
@@ -58,6 +64,17 @@ foreach($files as $file) {
 
 		$teamAName = $teams['Name']['Team A'][0];
 		$teamBName = $teams['Name']['Team B'][0];
+
+		//division
+		if (!isset($referentiel['division'][$title['div_name']])) {
+			$sql = sprintf("INSERT INTO sport_analytics.division (div_name, div_code)
+			VALUES('%s', '%s');", $title['div_name'], $title['div_code']);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+			$referentiel['division'][$title['div_name']] = $database->lastInsertId();
+		}
+
+		// club
 		if (!isset($referentiel['club'][$teamAName])) {
 			$sql = sprintf("INSERT INTO sport_analytics.club(name)	VALUES('%s')", $teamAName);
 			$stmt = $database->prepare($sql);
@@ -69,6 +86,22 @@ foreach($files as $file) {
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
 			$referentiel['club'][$teamBName] = $database->lastInsertId();
+		}
+
+		// team
+		if (!isset($referentiel['team'][$teamAName])) {
+			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender)
+			VALUES('%s', '%s', '%s')", $referentiel['club'][$teamAName], $teamAName, null);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+			$referentiel['team'][$teamAName] = $database->lastInsertId();
+		}
+		if (!isset($referentiel['team'][$teamBName])) {
+			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender)
+			VALUES('%s', '%s', '%s')", $referentiel['club'][$teamBName], $teamBName, null);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+			$referentiel['team'][$teamBName] = $database->lastInsertId();
 		}
 
 		//players
