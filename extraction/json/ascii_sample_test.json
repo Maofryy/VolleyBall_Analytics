@@ -9,7 +9,7 @@
             "city":"ARLES",
             "gym":"FOURNIER",
             "category":"SENIOR | MASCULIN",
-            "ligue":"Compétitions Nationales SENIORS",
+            "ligue":"Comp\u00e9titions Nationales SENIORS",
             "date":"21-01-30 18:00:00"
         },
         "Sets":{
@@ -478,7 +478,7 @@
             },
             "Players":{
                 "Team A":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":1,
                         "1":2,
                         "2":3,
@@ -491,7 +491,7 @@
                         "9":16,
                         "10":20
                     },
-                    "Nom Prénom":{
+                    "Nom Pr\u00e9nom":{
                         "0":"KARI ADEKE GEORGES",
                         "1":"FAUURA THIERRY",
                         "2":"GUITTET CYRIL",
@@ -502,7 +502,7 @@
                         "7":"BERTHAUT YOHANN",
                         "8":"LATAPIE RABERAIN CLEMENT",
                         "9":"FABRE OLIVIER",
-                        "10":"HILAIRE JÉRÉMY"
+                        "10":"HILAIRE J\u00c9R\u00c9MY"
                     },
                     "Licence":{
                         "0":2018025,
@@ -519,7 +519,7 @@
                     }
                 },
                 "Team B":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":3,
                         "1":5,
                         "2":6,
@@ -531,7 +531,7 @@
                         "8":13,
                         "9":18
                     },
-                    "Nom Prénom":{
+                    "Nom Pr\u00e9nom":{
                         "0":"JACQUEMIN LUC",
                         "1":"KLEIN ALEXANDRE",
                         "2":"RIBLET ROBIN",
@@ -540,7 +540,7 @@
                         "5":"BRANKOVIC PREDRAG",
                         "6":"TOTELE ANTHONY",
                         "7":"PERALTA MARTINEZ BASTIAN",
-                        "8":"MEREL FRANÇOIS",
+                        "8":"MEREL FRAN\u00c7OIS",
                         "9":"CONVER GUILLAUME"
                     },
                     "Licence":{
@@ -559,10 +559,10 @@
             },
             "Liberos":{
                 "Team A":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":4
                     },
-                    "Nom Prénom":{
+                    "Nom Pr\u00e9nom":{
                         "0":"URIOS NICOLAS"
                     },
                     "Licence":{
@@ -570,13 +570,13 @@
                     }
                 },
                 "Team B":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":3,
                         "1":13
                     },
-                    "Nom Prénom":{
+                    "Nom Pr\u00e9nom":{
                         "0":"JACQUEMIN LUC",
-                        "1":"MEREL FRANÇOIS"
+                        "1":"MEREL FRAN\u00c7OIS"
                     },
                     "Licence":{
                         "0":1870981,
@@ -586,13 +586,13 @@
             },
             "Officials":{
                 "Team A":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":"EA",
                         "1":"EB",
                         "2":"EB",
                         "3":"SO"
                     },
-                    "Nom Prénom":{
+                    "Nom Pr\u00e9nom":{
                         "0":"TENO ANGELO",
                         "1":"BERTHAUT YOHANN",
                         "2":"BOUCHERF LOIS",
@@ -606,11 +606,11 @@
                     }
                 },
                 "Team B":{
-                    "N°":{
+                    "N\u00b0":{
                         "0":"EA"
                     },
-                    "Nom Prénom":{
-                        "0":"MEREL FRANÇOIS"
+                    "Nom Pr\u00e9nom":{
+                        "0":"MEREL FRAN\u00c7OIS"
                     },
                     "Licence":{
                         "0":1425671
@@ -623,23 +623,23 @@
             "score":"3\/0"
         },
         "Referees":{
-            "NOM Prénom":{
+            "NOM Pr\u00e9nom":{
                 "1er":"MARSAL JULIEN",
-                "2ème":"PHLIPONEAU BORIS",
+                "2\u00e8me":"PHLIPONEAU BORIS",
                 "Marqueur":"AGUSSOL FANNY",
                 "Marq.Ass":".",
                 "R.Salle":"COLL VALERE"
             },
             "Ligue":{
                 "1er":"LIG_OCC",
-                "2ème":"LIG_PAC",
+                "2\u00e8me":"LIG_PAC",
                 "Marqueur":"LIG_PAC",
                 "Marq.Ass":null,
                 "R.Salle":"LIG_PAC"
             },
             "Licence":{
                 "1er":1513159.0,
-                "2ème":1418558.0,
+                "2\u00e8me":1418558.0,
                 "Marqueur":2412095.0,
                 "Marq.Ass":null,
                 "R.Salle":1805722.0

@@ -311,8 +311,8 @@ def extract_match(file, output):
     }).set_index('Index')
    
     #Exporting data to Json
-    json_output = json.dumps(match.to_json(force_ascii=False), ensure_ascii=False)
-    with open(output,'w') as outfile:
+    json_output = match.to_json(indent=4, force_ascii=False)
+    with open(output,'w', encoding='utf-8') as outfile:
         outfile.write(json_output)
         print(output + " saved.")
     return (match)
