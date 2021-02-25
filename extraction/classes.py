@@ -1,8 +1,5 @@
 import json
-import tabula
-
 import pandas as pd
-import datetime
 
 class FormatInvalidError(Exception):
     pass
@@ -13,7 +10,12 @@ class Results:
         self.score = score
     
     def export_json(self):
-        """ export object as a json into the file name passed """
+        """Export object to json string
+
+        Returns:
+            [string]: json string using json.dumps from the dict of every attributes of the object
+        """
+
         jsonStr = json.dumps(self.__dict__, ensure_ascii=False)
         return (jsonStr)
     
@@ -27,7 +29,12 @@ class Penalty:
         self.score = score
 
     def export_json(self):
-        """ export object as a json into the file name passed """
+        """Export object to json string
+
+        Returns:
+            [string]: json string using json.dumps from the dict of every attributes of the object
+        """
+        
         jsonStr = json.dumps(self.__dict__, ensure_ascii=False)
         return (jsonStr)
 
@@ -57,7 +64,12 @@ class Title:
         self.date = date
 
     def export_json(self):
-        """ export object as a json into the file name passed """
+        """Export object to json string
+
+        Returns:
+            [string]: json string using json.dumps from the dict of every attributes of the object
+        """
+        
         jsonStr = json.dumps(self.__dict__, ensure_ascii=False)
         return (jsonStr)
 
@@ -81,7 +93,7 @@ class Set:
         self.end = 0.0
 
     def read_df(self, df):
-        """ read the datafram in arg into class parameters  """
+        #! Deprecated and unfinished
 
         self.team1 = df[0].columns[0]
         self.team2 = df[1].columns[0]
@@ -109,7 +121,12 @@ class Set:
         self.timeout2 = df[7] 
     
     def export_json(self, file):
-        """ export object as a json into the file name passed """
+        """Export object to json string
+
+        Returns:
+            [string]: json string using json.dumps from the dict of every attributes of the object
+        """
+        
         jsonStr = json.dumps(self.__dict__)
         print(jsonStr)
 
