@@ -16,6 +16,8 @@ try {
   	echo "Connection failed: " . $e->getMessage();
 }
 
+resetDatabase($database);
+
 //set referentiel
 $referentiel = array(
 	'match' => array(),
@@ -129,12 +131,14 @@ foreach($files as $file) {
 
 		//players
 		$players = array();
+		$playersNumber = array();
 		foreach ($teams['Players']['Team A']['Licence'] as $key => $licence) {
 			$players[$licence] = array(
 				"name" => $teams['Players']['Team A']['Nom Prénom'][$key],
 				"team" => $teamAName,
 				"number" => $teams['Players']['Team A']['N°'][$key],
 			);
+			$playersNumber[1][$teams['Players']['Team A']['N°'][$key]] = $licence;
 		}
 		foreach ($teams['Players']['Team B']['Licence'] as $key => $licence) {
 			$players[$licence] = array(
@@ -142,6 +146,7 @@ foreach($files as $file) {
 				"team" => $teamBName,
 				"number" => $teams['Players']['Team B']['N°'][$key],
 			);
+			$playersNumber[2][$teams['Players']['Team B']['N°'][$key]] = $licence;
 		}
 		
 		$dateMatch = DateTime::createFromFormat('Y-m-d H:i:s', $title['date']);
@@ -183,10 +188,11 @@ foreach($files as $file) {
 			", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $title['date'], 'NOW()');
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
+			$referentiel['match'][$title['match_number']] = $database->lastInsertId();
 
 			// match_set_timeout
 			for ($i = 1; $i < 3; $i++) {
-				$timeoutsN = 'Timeouts ' . $i;
+				$timeoutsN = ($i == 1) ? 'Timeouts A': 'Timeouts B';
 				$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
 				foreach ($sets[$timeoutsN] as $setString => $timeout) {
 					$set = substr($setString, -1);
@@ -200,34 +206,99 @@ foreach($files as $file) {
 				}
 			}
 			
-		}
-		/* TO MOVE IN ISSET MATCH AFTER TEST */
-		// match_set_position
-		foreach ($sets["Serves 1"] as $point) {
-			// missing one line for positions
-			//var_dump($point);die;
-		}
-
-		// match_set_substitution
-		for ($i = 1; $i < 3; $i++) {
-			foreach ($sets["Substitutions " . $i] as $setString => $sub) {
-				$set = substr($setString, -1);
-				if (empty($sub)) continue;
-				$positions = array();
-				foreach ($sub as $position => $element) {
-					$positions[$setRomain[$position]] = $element[0];
-				}
-				//var_dump($positions);die;
-				// insert licence in position_*
-				/*$sql = sprintf("INSERT INTO sport_analytics.match_set_position(match_id, `set`, position_1, position_2, position_3, position_4, position_5, position_6)
-					VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", $referentiel['match'][$title['match_number']], $set, $element[0]);
+			// match_set_position
+			for ($i = 1; $i < 3; $i++) {
+				$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
+				$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+				foreach ($sets[$SubstitutionsN] as $setString => $sub) {
+					$set = substr($setString, -1);
+					if (empty($sub)) continue;
+					$positions = array();
+					foreach ($sub as $position => $element) {
+						$number = $element[0];
+						$positions[$setRomain[$position]] = $playersNumber[$i][$number];
+					}
+					$sql = sprintf("INSERT INTO sport_analytics.match_set_position(match_id, team_id, `set`, position_1, position_2, position_3, position_4, position_5, position_6)
+						VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", $referentiel['match'][$title['match_number']], $teamN, $set, $positions[1], $positions[2], $positions[3], $positions[4], $positions[5], $positions[6]);
 					$stmt = $database->prepare($sql);
-					$stmt->execute();*/
+					$stmt->execute();
+				}
 			}
-		}
 
-		var_dump('done');die;
+			// match_set_substitution
+			for ($i = 1; $i < 3; $i++) {
+				$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
+				$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+				foreach ($sets[$SubstitutionsN] as $setString => $positions) {
+					$set = substr($setString, -1);
+					if (empty($positions)) continue;
+					foreach ($positions as $position) {
+						if (!empty($position[2])) {
+							$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
+							VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $referentiel['match'][$title['match_number']], $set, $playersNumber[$teamN][$position[1]], $playersNumber[$teamN][$position[0]], $position[2], $teamN);
+							$stmt = $database->prepare($sql);
+							$stmt->execute();
+						}
+						if (isset($position[3]) && !empty($position[3])) {
+							$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
+							VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $referentiel['match'][$title['match_number']], $set, $playersNumber[$teamN][$position[0]], $playersNumber[$teamN][$position[1]], $position[3], $teamN);
+							$stmt = $database->prepare($sql);
+							$stmt->execute();
+						} 
+					}
+				}
+			}
+
+			// match_set_rotation
+			for ($i = 1; $i < 3; $i++) {
+				$ServesN = ($i == 1) ? 'Serves A': 'Serves B';
+				$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+				foreach ($sets[$ServesN] as $setString => $positions) {
+					$set = substr($setString, -1);
+					if (empty($positions)) continue;
+					foreach ($positions as $position) {
+						foreach ($position as $element) {
+							if ($element === null || $element == 'X') continue;
+							$sql = sprintf("INSERT INTO sport_analytics.match_set_rotation (match_id, `set`, `point`, team_id)
+								VALUES('%s', '%s', '%s', '%s');", $referentiel['match'][$title['match_number']], $set, $element, $teamN);
+							$stmt = $database->prepare($sql);
+							$stmt->execute();
+						}
+					}	
+				}
+			}
+
+		} // end match
+
+		
+
+		echo 'Les données ont correctement été ajoutés.<br>';die;
   	}
+}
+
+function resetDatabase($database) {
+	// just tables that are inserted automatically
+	$tables = array(
+		'match',
+		'team',
+		'player',
+		'team_player',
+		'club',
+		'division',
+		'ligue',
+		'match_set',
+		'match_set_position',
+		'match_set_timeout',
+		'match_set_substitution',
+		'match_set_rotation',
+	);
+
+	foreach ($tables as $table) {
+		$sql = sprintf('TRUNCATE TABLE sport_analytics.`%s`;', $table);
+		$stmt = $database->prepare($sql);
+		$stmt->execute();
+	}
+	echo 'Les tables ont correctement été réinitialisés.<br>';
 }
 
 function Utf8_ansi($valor='') {
