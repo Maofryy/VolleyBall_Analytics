@@ -38,7 +38,7 @@ def translate_month(time_string):
         time_string = time_string.replace(fr, en)
     return (time_string)
 
-def extract_set(file, ref, verbose=False):
+def extract_set(file, ref, set_nb, verbose=False):
     """[Extract one set data]
     Reads a set the pdf in file at the passed ref point (top left point just after the "S E T X" column)
 
@@ -82,17 +82,21 @@ def extract_set(file, ref, verbose=False):
     
     # Flattening and cleaning set structure
     if (set_data[0][0].columns[1].split()[2] == 'S'):
-        team1 = 'Service'
-        team2 = 'Reception'
+        service = ['Service', 'Reception']
     else:
-        team2 = 'Service'
-        team1 = 'Reception'
+        service = ['Reception', 'Service']
 
     #Teams
+    if (set_nb % 2 == 0):
+        a = 1
+        b = 0
+    else :
+        a = 0
+        b = 1
     team_data = pd.DataFrame({
-        'Index':['Team1', 'Team2'],
-        'Name':[set_data[0][0].columns[0], set_data[1][0].columns[0]],
-        'Starting':[team1, team2]
+        'Index':['TeamA', 'TeamB'],
+        'Name':[set_data[a][0].columns[0], set_data[b][0].columns[0]],
+        'Starting':[service[a], service[b]]
     })
     team_data = team_data.set_index('Index')
 
@@ -263,7 +267,7 @@ def extract_result(file, verbose=False):
             winner = res_data[0].columns.values[1]
             score = res_data[0].columns.values[2]
             break
-    print("Parsing Results : OK")
+    print("Parsing Results : OK") if (verbose == True) else 0
     return (Results(winner, score))
 
 def is_penalty(str):
@@ -315,31 +319,31 @@ def extract_match(file, verbose=False):
 
     ## ----------------------  Extract set data  ------------------------------- ##
     #Set 1 (73.4, 127.4)
-    set1 = extract_set(file, (73.4, 127.4), verbose)
+    set1 = extract_set(file, (73.4, 127.4), 1, verbose)
     
     #Set 2 (73.4, 462.7)
-    set2 = extract_set(file, (73.4, 462.7), verbose)
+    set2 = extract_set(file, (73.4, 462.7), 2, verbose)
 
     #Set 3 (167, 128.2)
-    set3 = extract_set(file, (167, 128.2), verbose)
+    set3 = extract_set(file, (167, 128.2), 3, verbose)
 
     #Set 4 (167, 461.5)
-    set4 = extract_set(file, (167, 461.5), verbose)
+    set4 = extract_set(file, (167, 461.5), 4, verbose)
 
     #Set 5 (261.4, 28.1)
-    set5 = extract_set(file, (261.4, 28.1), verbose)
+    set5 = extract_set(file, (261.4, 28.1), 5, verbose)
 
     # Gathering info into single dataframe
     sets = pd.DataFrame({
         'Index' : ['Set 1', 'Set 2', 'Set 3', 'Set 4', 'Set 5'],
         'Teams':[set1[0], set2[0], set3[0], set4[0], set5[0]],
         'Time':[set1[1], set2[1], set3[1], set4[1], set5[1]],
-        'Substitutions 1':[set1[2], set2[2], set3[2], set4[2], set5[2]],
-        'Substitutions 2':[set1[3], set2[3], set3[3], set4[3], set5[3]],
-        'Serves 1':[set1[4], set2[4], set3[4], set4[4], set5[4]],
-        'Serves 2':[set1[5], set2[5], set3[5], set4[5], set5[5]],
-        'Timeouts 1':[set1[6], set2[6], set3[6], set4[6], set5[6]],
-        'Timeouts 2':[set1[7], set2[7], set3[7], set4[7], set5[7]],
+        'Substitutions A':[set1[2], set2[3], set3[2], set4[3], set5[2]],
+        'Substitutions B':[set1[3], set2[2], set3[3], set4[2], set5[3]],
+        'Serves A':[set1[4], set2[5], set3[4], set4[5], set5[4]],
+        'Serves B':[set1[5], set2[4], set3[5], set4[4], set5[5]],
+        'Timeouts A':[set1[6], set2[7], set3[6], set4[7], set5[6]],
+        'Timeouts B':[set1[7], set2[6], set3[7], set4[6], set5[7]],
                         }).set_index('Index')
     
     ## ----------------------  Extract team data ------------------------------- ##
@@ -382,11 +386,18 @@ def extract_match(file, verbose=False):
 
     return (match)
 
-def extract_pdf(filename, verbose=False):
+def check_format(file, pickle):
+    ## ----------------------  Check pdf format  ------------------------------- ##
+    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
+    format_ref = pd.read_pickle(pickle)
+    if ((not format_check) or (not format_check[0].equals(format_ref))):
+        raise FormatInvalidError("Pdf format is wrong.")
+
+def extract_pdf(file, filename, output_folder, verbose=False):
     ## Handle file error, not found, not pdf or cant open it
     #filename = "empty_test.pdf"
-    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
-    output = os.path.join(os.path.dirname(__file__), "json/"+filename.split('.')[0]+".json")
+    #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
+    output = os.path.join(os.path.dirname(__file__), output_folder +filename.split('.')[0]+".json")
     pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
     print("Extracting data from file : " + file) if (verbose == True) else 0
     print("Writing to : " + output) if (verbose == True) else 0
@@ -400,22 +411,13 @@ def extract_pdf(filename, verbose=False):
         print(file)
         return pd.DataFrame()
     
-    ## ----------------------  Check pdf format  ------------------------------- ##
-    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
-    format_ref = pd.read_pickle(pickle)
-    if ((not format_check) or (not format_check[0].equals(format_ref))):
-        raise FormatInvalidError("Pdf format is wrong.")
+    check_format(file, pickle)
 
-    match = extract_match(file, output)
-    print(match)
-    if (match.empty):
-        print("Extraction failed.")
-    else:
-        print("Extraction successful.")
+    match = extract_match(file, verbose)
     
     ## ---------------------  Exporting data to Json  -------------------------- ##
     json_output = match.to_json(indent=4, force_ascii=True)
-    with open(output,'w', encoding='utf-16') as outfile:
+    with open(output,'w', encoding='utf-8') as outfile:
         outfile.write(json_output)
         print(output + " saved.")
     return (match)
@@ -423,9 +425,11 @@ def extract_pdf(filename, verbose=False):
 
 if __name__ == "__main__":
     """ Main function of extracting data """
-    file = "sample_test.pdf"
+    filename = "sample_test.pdf"
+    output_folder = "./json/"
+    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
     try :
-        pdf = extract_pdf(file)
+        pdf = extract_pdf(file, filename, output_folder, True)
     except FormatInvalidError:
         print("Invalid format")
         exit()
