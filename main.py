@@ -14,16 +14,23 @@ import time
 def extract_jsons():
     correct_format_nb = 0
     total_nb = 0
+    valid_files = list()
     for parent, dirnames, filenames in os.walk('./data'):
         print(parent)
-        for fn in tqdm(filenames):
+        for fn in tqdm(filenames, ncols=100):
             if fn.lower().endswith('.pdf'):
                 #found all pdfs
                 total_nb += 1
                 #create folders and subfolders
-                output = os.path.join(os.path.dirname(__file__), "parsed_matches"+parent.split('./data')[1])
-                if not os.path.exists(output):
-                    os.makedirs(output)
+                output_folder = os.path.join(os.path.dirname(__file__), "parsed_matches"+parent.split('./data')[1])
+                if not os.path.exists(output_folder):
+                    print("Creating dir : "+ output_folder)
+                    os.makedirs(output_folder)
+                
+                output = os.path.join(output_folder, fn.split('.pdf')[0]+'.json')
+                if os.path.isfile(output):
+                    correct_format_nb += 1
+                    continue
                 
                 #checking format for stats
                 pickle = os.path.join(os.path.dirname(__file__), "extraction/format.pkl")
@@ -32,7 +39,7 @@ def extract_jsons():
                     # Ignoring Pro league
                     if (fn.startswith('L')):
                         raise classes.FormatInvalidError
-                    extract_pdf.check_format(os.path.join(parent,fn), pickle)
+                    extract_pdf.extract_pdf(os.path.join(parent, fn), output_folder)
                     #time.sleep(0.05)
                     correct_format_nb += 1
                 except classes.FormatInvalidError:

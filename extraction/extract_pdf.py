@@ -32,6 +32,7 @@ def translate_month(time_string):
         'Octobre': 'October',
         'Novembre':'November',
         'Décembre':'December',
+        'Décem':'December',
         'à': 'at'
         }
     for fr, en in month_dict.items():
@@ -94,7 +95,7 @@ def extract_set(file, ref, set_nb, verbose=False):
         a = 0
         b = 1
     team_data = pd.DataFrame({
-        'Index':['TeamA', 'TeamB'],
+        'Index':['Team A', 'Team B'],
         'Name':[set_data[a][0].columns[0], set_data[b][0].columns[0]],
         'Starting':[service[a], service[b]]
     })
@@ -174,6 +175,16 @@ def extract_team(file, ref, verbose=False):
     team_data[2] = team_data[2][0]    
     team_data[3] = team_data[3][0]    
     
+    #print(team_data[1].columns)
+    #If liberos or staff table is empty, fill with none 
+    if (len(team_data[2].columns) == 1):
+        team_data[2]['1'] = None
+        team_data[2]['2'] = None
+    
+    if (len(team_data[3].columns) == 1):
+        team_data[3]['1'] = None
+        team_data[3]['2'] = None
+
     team_data[2].columns = team_data[1].columns.values 
     team_data[3].columns = team_data[1].columns.values 
     print("Parsing Team at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK") if (verbose == True) else 0
@@ -213,6 +224,9 @@ def extract_title(file, verbose = False):
     #Flatten and clean 
     div_list = table_data[0][0].columns.values[0].split('-')
     match_list = table_data[1][0].columns[0].split('-')
+    if (len(div_list) < 3):
+        div_list.append(" ")
+        div_list.append(" ")
     
     # 0 Division_Code  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
     # 1 Division_Name (string)
@@ -392,12 +406,25 @@ def check_format(file, pickle):
     format_ref = pd.read_pickle(pickle)
     if ((not format_check) or (not format_check[0].equals(format_ref))):
         raise FormatInvalidError("Pdf format is wrong.")
+    else:
+        return (True)
 
-def extract_pdf(file, filename, output_folder, verbose=False):
+def extract_pdf(file, output_folder, verbose=False):
+    """Extract match dataframe from pdf
+
+    Args:
+        file (string): path to file
+        output_folder (string): path to output folder
+        verbose (bool, optional): verbose option of program. Defaults to False.
+
+    Returns:
+        pandas.DataFrame = frame containing all interesting data from match sheet
+    """
     ## Handle file error, not found, not pdf or cant open it
     #filename = "empty_test.pdf"
     #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
-    output = os.path.join(os.path.dirname(__file__), output_folder +filename.split('.')[0]+".json")
+    filename = os.path.split(file)[1].split('.pdf')[0]
+    output = os.path.join(output_folder ,filename+".json")
     pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
     print("Extracting data from file : " + file) if (verbose == True) else 0
     print("Writing to : " + output) if (verbose == True) else 0
@@ -419,17 +446,18 @@ def extract_pdf(file, filename, output_folder, verbose=False):
     json_output = match.to_json(indent=4, force_ascii=True)
     with open(output,'w', encoding='utf-8') as outfile:
         outfile.write(json_output)
-        print(output + " saved.")
+        print(output + " saved.") if (verbose == True) else 0
     return (match)
 
 
 if __name__ == "__main__":
     """ Main function of extracting data """
     filename = "sample_test.pdf"
-    output_folder = "./json/"
-    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
+    output_folder = "./parsed_matches/2019-2020/CDF_F.AM.T1"
+    #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
+    file = os.path.join(os.path.dirname(__file__), "../data/2019-2020/CDF_F.AM.T1/CXC002.pdf")
     try :
-        pdf = extract_pdf(file, filename, output_folder, True)
+        pdf = extract_pdf(file, output_folder, True)
     except FormatInvalidError:
         print("Invalid format")
         exit()
