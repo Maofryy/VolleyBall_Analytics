@@ -22,11 +22,13 @@ def translate_month(time_string):
     month_dict={
         'Janvier':'January',
         'Février': 'February',
+        'Fév': 'February',
         'Mars': 'March',
         'Avril': 'April',
         'Mai': 'May',
         'Juin': 'June',
         'Juillet': 'July',
+        'Juil': 'July',
         'Août': 'August',
         'Septembre': 'September',
         'Octobre': 'October',
@@ -55,7 +57,10 @@ def extract_set(file, ref, set_nb, verbose=False):
     #Size of columns in the sub and serve table
     column_size = 20
     #Diff between the two teams tables in the first (y) axis
-    team_diff = 155.1
+    if set_nb == 5:
+        team_diff = 136
+    else:
+        team_diff = 155.1
     
     #Test to see if set isnt empty
     test_data = tabula.read_pdf(file, area=[[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)]], pages=1)
@@ -69,15 +74,26 @@ def extract_set(file, ref, set_nb, verbose=False):
     # 1 : Team 2
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.8), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
     # 2 : Substitutions Team 1
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0), (ref[0] + 57), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
+    if not (set_nb == 5):
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0), (ref[0] + 57), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
+    else:
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0 + 303), (ref[0] + 57), (ref[1] + 118.3 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
     # 3 : Substitutions Team 2
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 15.2), (ref[1] + 0.0 + team_diff), (ref[0] + 57), (ref[1] + 119 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6], pages='1'))
+
     # 4 : Serves Team 1
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0), (ref[0] + 90.8), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
+    if not (set_nb == 5):
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0), (ref[0] + 90.8), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
+    else:
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + 303), (ref[0] + 90.8), (ref[1] + 118.3 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
+
     # 5 : Serves Team 2
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + team_diff), (ref[0] + 90.6), (ref[1] + 118.8 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6],pages='1'))
     # 6 : Time outs Team 1
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3), (ref[0] + 91.5), (ref[1] + 155.1)], pages='1'))
+    if not (set_nb == 5):
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3), (ref[0] + 91.5), (ref[1] + 155.1)], pages='1'))
+    else:
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + 303), (ref[0] + 91.5), (ref[1] + 155.1 + 303)], pages='1'))
     # 7 : Time outs Team 2
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + team_diff), (ref[0] + 91.5), (ref[1] + 155 + team_diff)], pages='1'))
     
@@ -142,6 +158,8 @@ def extract_set(file, ref, set_nb, verbose=False):
     
     print("Parsing set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK") if (verbose == True) else 0
     return (set_data)
+
+
 
 def extract_team(file, ref, verbose=False):
     """Extract data of a team
@@ -361,18 +379,18 @@ def extract_match(file, verbose=False):
                         }).set_index('Index')
     
     ## ----------------------  Extract team data ------------------------------- ##
-    #Team A (261, 575.3)
-    teamA = extract_team(file, (261, 575.3), verbose)
-    #Team B (261, 702.7)
-    teamB = extract_team(file, (261, 702.7), verbose)
+    #Team 1 (261, 575.3)
+    team1 = extract_team(file, (261, 575.3), verbose)
+    #Team 2 (261, 702.7)
+    team2 = extract_team(file, (261, 702.7), verbose)
 
     #Gathering info into single dataframe
     teams = pd.DataFrame({
-        'Index':['Team A', 'Team B'],
-        'Name':[teamA[0], teamB[0]],
-        'Players':[teamA[1], teamB[1]],
-        'Liberos':[teamA[2], teamB[2]],
-        'Officials':[teamA[3], teamB[3]]
+        'Index':['Team 1', 'Team 2'],
+        'Name':[team1[0], team2[0]],
+        'Players':[team1[1], team2[1]],
+        'Liberos':[team1[2], team2[2]],
+        'Officials':[team1[3], team2[3]]
     }).set_index('Index')
     #print(teams)
 

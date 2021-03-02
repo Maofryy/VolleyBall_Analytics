@@ -16,8 +16,7 @@ def extract_jsons():
     total_nb = 0
     valid_files = list()
     for parent, dirnames, filenames in os.walk('./data'):
-        print(parent)
-        for fn in tqdm(filenames, ncols=100):
+        for fn in tqdm(filenames, ncols=90, desc=parent+" :"):
             if fn.lower().endswith('.pdf'):
                 #found all pdfs
                 total_nb += 1
@@ -43,7 +42,7 @@ def extract_jsons():
                     #time.sleep(0.05)
                     correct_format_nb += 1
                 except classes.FormatInvalidError:
-                    print("FormatInvalidError")
+                    print("FormatInvalidError: "+fn)
 
                 #extract json into theses
                 #extract_pdf.extract_pdf(fn, output)
