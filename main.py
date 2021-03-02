@@ -17,9 +17,9 @@ def extract_jsons():
     valid_files = list()
     for parent, dirnames, filenames in os.walk('./data'):
         for fn in tqdm(filenames, ncols=90, desc=parent+" :"):
+            total_nb += 1
             if fn.lower().endswith('.pdf'):
                 #found all pdfs
-                total_nb += 1
                 #create folders and subfolders
                 output_folder = os.path.join(os.path.dirname(__file__), "parsed_matches"+parent.split('./data')[1])
                 if not os.path.exists(output_folder):
@@ -46,6 +46,8 @@ def extract_jsons():
 
                 #extract json into theses
                 #extract_pdf.extract_pdf(fn, output)
+            else :
+                print("FormatInvalidError: "+fn)
         print("Correct format stats : " + str(correct_format_nb) + "/" + str(total_nb))
 
 

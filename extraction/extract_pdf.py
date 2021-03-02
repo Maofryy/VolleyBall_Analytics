@@ -70,9 +70,9 @@ def extract_set(file, ref, set_nb, verbose=False):
         return [0,0,0,0,0,0,0,0]
     
     # 0 : Team 1 (left)
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
+    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 3.6), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
     # 1 : Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.8), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
+    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 3.6), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
     # 2 : Substitutions Team 1
     if not (set_nb == 5):
         set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0), (ref[0] + 57), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
@@ -83,12 +83,12 @@ def extract_set(file, ref, set_nb, verbose=False):
 
     # 4 : Serves Team 1
     if not (set_nb == 5):
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0), (ref[0] + 90.8), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0), (ref[0] + 98.8), (ref[1] + 118.8)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
     else:
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + 303), (ref[0] + 90.8), (ref[1] + 118.3 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
+        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + 303), (ref[0] + 98.8), (ref[1] + 118.8 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
 
     # 5 : Serves Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + team_diff), (ref[0] + 90.6), (ref[1] + 118.8 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6],pages='1'))
+    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + team_diff), (ref[0] + 98.6), (ref[1] + 118.8 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6],pages='1'))
     # 6 : Time outs Team 1
     if not (set_nb == 5):
         set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3), (ref[0] + 91.5), (ref[1] + 155.1)], pages='1'))
@@ -98,7 +98,7 @@ def extract_set(file, ref, set_nb, verbose=False):
     set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + team_diff), (ref[0] + 91.5), (ref[1] + 155 + team_diff)], pages='1'))
     
     # Flattening and cleaning set structure
-    if (set_data[0][0].columns[1].split()[2] == 'S'):
+    if (set_data[0][0].columns[1].split()[-1] == 'S'):
         service = ['Service', 'Reception']
     else:
         service = ['Reception', 'Service']
@@ -140,17 +140,42 @@ def extract_set(file, ref, set_nb, verbose=False):
     #Serves
     set_data[4] = set_data[4][0]
     set_data[5] = set_data[5][0]
+
+    i = 0
+    while (len(set_data[4].columns) < 6):
+        set_data[4][chr(ord('V')+i)] = None
+        i += 1
+
+    i = 0
+    while (len(set_data[5].columns) < 6):
+        set_data[5][chr(ord('V')+i)] = None
+        i += 1
+    
     #Adding correct columns to serve tab
     set_data[4].loc[-1] = set_data[4].columns.values
     set_data[4].index = set_data[4].index + 1
     set_data[4].sort_index(inplace=True)
     set_data[4].columns = ['I', 'II', 'III', 'IV', 'V', 'VI']
+    set_data[4] = set_data[4].replace({
+        'V':None,
+        'W':None,
+        'X':None,
+        'Y':None,
+        'Z':None,
+    })
     
     set_data[5].loc[-1] = set_data[5].columns.values
     set_data[5].index = set_data[5].index + 1
     set_data[5].sort_index(inplace=True)
     set_data[5].columns = ['I', 'II', 'III', 'IV', 'V', 'VI']
-    
+    set_data[5] = set_data[5].replace({
+        'V':None,
+        'W':None,
+        'X':None,
+        'Y':None,
+        'Z':None,
+    })
+
     #Timeouts
     set_data[6] = set_data[6][0]
     set_data[7] = set_data[7][0]
@@ -158,8 +183,6 @@ def extract_set(file, ref, set_nb, verbose=False):
     
     print("Parsing set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK") if (verbose == True) else 0
     return (set_data)
-
-
 
 def extract_team(file, ref, verbose=False):
     """Extract data of a team
@@ -235,7 +258,7 @@ def extract_title(file, verbose = False):
     # 4 Category (string) (46.1, 352.8,53.3, 533.5)
     table_data.append(tabula.read_pdf(file, area=[46.1, 352.8,53.3, 533.5 ], pages='1'))
     # 5 Ligue (string) (55.4, 1.4,71.3, 163.4)
-    table_data.append(tabula.read_pdf(file, area=[55.4, 1.4,71.3, 163.4 ], pages='1'))
+    table_data.append(tabula.read_pdf(file, area=[55.4, 1.4, 71.3, 116.4 ], pages='1'))
     # 6 Date (datetime) (38.9, 655.2, 50.4, 821.5)
     table_data.append(tabula.read_pdf(file, area=[38.9, 655.2, 50.4, 821.5 ], pages='1'))
 
@@ -471,9 +494,9 @@ def extract_pdf(file, output_folder, verbose=False):
 if __name__ == "__main__":
     """ Main function of extracting data """
     filename = "sample_test.pdf"
-    output_folder = "./parsed_matches/2019-2020/CDF_F.AM.T1"
+    output_folder = "./parsed_matches/2019-2020/E.Mas.B"
     #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
-    file = os.path.join(os.path.dirname(__file__), "../data/2019-2020/CDF_F.AM.T1/CXC002.pdf")
+    file = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.B/EMB009.pdf")
     try :
         pdf = extract_pdf(file, output_folder, True)
     except FormatInvalidError:
