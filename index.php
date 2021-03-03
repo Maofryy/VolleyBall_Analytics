@@ -46,6 +46,8 @@ $setRomain = array(
 	'V' => 5,
 	'VI' => 6,
 );
+$countFile = 0;
+$startInsert = new DateTime();
 
 foreach ($elementsReferentiel as $table => $column) {
 	$sql = sprintf("SELECT * FROM `%s`", $table);
@@ -60,13 +62,30 @@ foreach ($elementsReferentiel as $table => $column) {
 }
 //echo '<pre>' . var_export($referentiel, true) . '</pre>'; die;
 
-$files = array_slice(scandir('extraction/json/test_multiple_json'), 2);
+$dir1 = array_slice(scandir('parsed_matches'), 2);
+foreach($dir1 as $dir) {
+	$folders = array_slice(scandir('parsed_matches/'. $dir), 2);
+	foreach($folders as $folder) {
+		$files = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder), 2);
+		foreach($files as $file) {
+			if (is_dir('parsed_matches/'. $dir . '/' . $folder . '/' . $file)) {
+				$files2 = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder . '/' . $file), 2);
+				foreach ($files2 as $file2) {
+					$json = file_get_contents('parsed_matches/'. $dir . '/' . $folder . '/' . $file . '/' . $file2, true);
+					addMatch($json, $files2);
+				}
+			} else {
+				$json = file_get_contents('parsed_matches/'. $dir . '/' . $folder . '/' . $file, true);
+				addMatch($json, $file);
+			}
+		}
+	}
+}
 
-foreach($files as $countFile => $file) {
-	// get datas
-	$json = file_get_contents('extraction/json/test_multiple_json/' . $file, true);
+function addMatch($json, $file) {
+	global $database, $referentiel, $setRomain, $countFile;
 	$datas = json_decode(Utf8_ansi($json), true);
-
+		
 	$title = $datas['Match']['Title'];
 	$sets = $datas['Match']['Sets'];
 	$teams = $datas['Match']['Teams'];
@@ -75,11 +94,14 @@ foreach($files as $countFile => $file) {
 	$penalties = $datas['Match']['Penalties'];
 
 	if ($referentiel['match'] == $title['match_number']) {
-		continue; // match already insert
+		return false; // match already insert
 	}
 
-	$teamAName = $teams['Name']['Team A'][0];
-	$teamBName = $teams['Name']['Team B'][0];
+	$teamAName = str_replace("'", " ", $sets['Teams']['Set 1']['Name']['Team A']);
+	$teamBName = str_replace("'", " ", $sets['Teams']['Set 1']['Name']['Team B']);
+
+	$inversed = (trim($sets['Teams']['Set 1']['Name']['Team A']) != trim(substr($teams['Name']['Team 1'][0], 0, 22)));
+	$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team A']) != trim(substr($teams['Name']['Team 1'][0], 0, 19)));
 
 	//division
 	if (!isset($referentiel['division'][$title['div_name']])) {
@@ -107,7 +129,7 @@ foreach($files as $countFile => $file) {
 		$referentiel['club'][$teamAName] = $database->lastInsertId();
 	}
 	if (!isset($referentiel['club'][$teamBName])) {
-		$sql = sprintf("INSERT INTO sport_analytics.club(name)	VALUES('%s')", $teamBName);
+		$sql = sprintf('INSERT INTO sport_analytics.club(name)	VALUES("%s")', $teamBName);
 		$stmt = $database->prepare($sql);
 		$stmt->execute();
 		$referentiel['club'][$teamBName] = $database->lastInsertId();
@@ -132,21 +154,27 @@ foreach($files as $countFile => $file) {
 	// set table players
 	$players = array();
 	$playersNumber = array();
-	foreach ($teams['Players']['Team A']['Licence'] as $key => $licence) {
+	foreach ($teams['Players']['Team 1']['Licence'] as $key => $licence) {
+		if (!intval($licence)) {
+			$licence = substr($licence, 1, strlen($licence) -1);
+		}
 		$players[$licence] = array(
-			"name" => $teams['Players']['Team A']['Nom Prénom'][$key],
+			"name" => $teams['Players']['Team 1']['Nom Prénom'][$key],
 			"team" => $teamAName,
-			"number" => $teams['Players']['Team A']['N°'][$key],
+			"number" => $teams['Players']['Team 1']['N°'][$key],
 		);
-		$playersNumber[1][$teams['Players']['Team A']['N°'][$key]] = $licence;
+		$playersNumber[($inversed) ? 2 : 1][$teams['Players']['Team 1']['N°'][$key]] = $licence;
 	}
-	foreach ($teams['Players']['Team B']['Licence'] as $key => $licence) {
+	foreach ($teams['Players']['Team 2']['Licence'] as $key => $licence) {
+		if (!intval($licence)) {
+			$licence = substr($licence, 1, strlen($licence) -1);
+		}
 		$players[$licence] = array(
-			"name" => $teams['Players']['Team B']['Nom Prénom'][$key],
+			"name" => $teams['Players']['Team 2']['Nom Prénom'][$key],
 			"team" => $teamBName,
-			"number" => $teams['Players']['Team B']['N°'][$key],
+			"number" => $teams['Players']['Team 2']['N°'][$key],
 		);
-		$playersNumber[2][$teams['Players']['Team B']['N°'][$key]] = $licence;
+		$playersNumber[($inversed) ? 1 : 2][$teams['Players']['Team 2']['N°'][$key]] = $licence;
 	}
 	
 	$dateMatch = DateTime::createFromFormat('Y-m-d H:i:s', $title['date']);
@@ -154,12 +182,12 @@ foreach($files as $countFile => $file) {
 	$year = intval($dateMatch->format('Y'));
 
 	if ($dateMatch > $midSeason) {
-		$season = $year . '/' . $year + 1; 
+		$season = strval($year) . '/' . strval($year + 1); 
 	} else {
-		$season = $year - 1 . '/' . $year; 
+		$season = strval($year - 1) . '/' . strval($year); 
 	}
 	$seasonId = $referentiel['season'][$season];
-
+	
 	// player
 	foreach ($players as $licence => $player) {
 		if (isset($referentiel['player'][$licence])) {
@@ -167,9 +195,12 @@ foreach($files as $countFile => $file) {
 		}
 		$names = explode(' ', $player['name']);
 		$firstName = array_pop($names);
+		$firstName = str_replace("'", " ", $firstName); // pour les ' dans les nom
 		$lastName = implode(' ', $names);
+		$lastName = str_replace("'", " ", $lastName); // pour les ' dans les nom
 		$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
 		VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
+		
 		$stmt = $database->prepare($sql);
 		$stmt->execute();
 		$referentiel['player'][$licence] = $licence;
@@ -190,6 +221,7 @@ foreach($files as $countFile => $file) {
 	$stmt->execute();
 	$referentiel['match'][$title['match_number']] = $database->lastInsertId();
 	$matchId = $referentiel['match'][$title['match_number']];
+	$countFile++;
 
 	// match_set_timeout
 	for ($i = 1; $i < 3; $i++) {
@@ -209,7 +241,13 @@ foreach($files as $countFile => $file) {
 	
 	// match_set_position
 	for ($i = 1; $i < 3; $i++) {
-		$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
+		
+		if ($inversed) {
+			$SubstitutionsN = ($i != 1) ? 'Substitutions A': 'Substitutions B';
+		} else {
+			$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
+		}
+		
 		$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
 		foreach ($sets[$SubstitutionsN] as $setString => $sub) {
 			$set = substr($setString, -1);
@@ -217,10 +255,32 @@ foreach($files as $countFile => $file) {
 			$positions = array();
 			foreach ($sub as $position => $element) {
 				$number = $element[0];
-				if (!isset($playersNumber[$i][$number])) {
-					throw new Exception(sprintf("Aucun numéro %s dans l'équipe %s", $number, ($i == 1) ? $teamAName : $teamBName));
+				
+				$cpt = $i;
+				if ($set != 5 ) {
+					if ($inversed) {
+						if($cpt == 1) {
+							$cpt = 2;
+						} else {
+							$cpt = 1;
+						}
+					}
+				} else {
+					if ($inversed5) {
+						if($cpt == 1) {
+							$cpt = 2;
+						} else {
+							$cpt = 1;
+						}
+					}
 				}
-				$positions[$setRomain[$position]] = $playersNumber[$i][$number];
+				
+				if (!isset($playersNumber[$cpt][$number])) {
+					echo 'Set Numéro : ' . $set;
+					var_dump($file);die;
+					throw new Exception(sprintf("Aucun numéro %s dans l'équipe %s dans le fichier %s", $number, ($i == 1) ? $teamAName : $teamBName, $file));
+				}
+				$positions[$setRomain[$position]] = $playersNumber[$cpt][$number];
 			}
 			$sql = sprintf("INSERT INTO sport_analytics.match_set_position(match_id, team_id, `set`, position_1, position_2, position_3, position_4, position_5, position_6)
 				VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", $matchId, $teamN, $set, $positions[1], $positions[2], $positions[3], $positions[4], $positions[5], $positions[6]);
@@ -231,21 +291,51 @@ foreach($files as $countFile => $file) {
 
 	// match_set_substitution
 	for ($i = 1; $i < 3; $i++) {
-		$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
-		$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+		if ($inversed) {
+			$SubstitutionsN = ($i != 1) ? 'Substitutions A': 'Substitutions B';
+		} else {
+			$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
+		}
+		if ($inversed) {
+			$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+		} else {
+			$teamN = ($i == 1) ? $referentiel['team'][$teamBName] : $referentiel['team'][$teamAName];
+		}
+		
 		foreach ($sets[$SubstitutionsN] as $setString => $positions) {
 			$set = substr($setString, -1);
 			if (empty($positions)) continue;
 			foreach ($positions as $position) {
+				$cpt = $i;
+				if ($set != 5 ) {
+					if ($inversed) {
+						if($cpt == 1) {
+							$cpt = 2;
+						} else {
+							$cpt = 1;
+						}
+					}
+				} else {
+					if ($inversed5) {
+						if($cpt == 1) {
+							$cpt = 2;
+						} else {
+							$cpt = 1;
+						}
+					}
+				}
 				if (!empty($position[2])) {
+					if (!isset($playersNumber[$cpt][$position[1]]) || !isset($playersNumber[$cpt][$position[0]])) {
+						var_dump($file);die;
+					}
 					$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
-					VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $matchId, $set, $playersNumber[$teamN][$position[1]], $playersNumber[$teamN][$position[0]], $position[2], $teamN);
+					VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $matchId, $set, $playersNumber[$cpt][$position[1]], $playersNumber[$cpt][$position[0]], $position[2], $teamN);
 					$stmt = $database->prepare($sql);
 					$stmt->execute();
 				}
 				if (isset($position[3]) && !empty($position[3])) {
 					$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
-					VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $matchId, $set, $playersNumber[$teamN][$position[0]], $playersNumber[$teamN][$position[1]], $position[3], $teamN);
+					VALUES('%s', '%s', '%s', '%s', '%s', '%s');", $matchId, $set, $playersNumber[$cpt][$position[0]], $playersNumber[$cpt][$position[1]], $position[3], $teamN);
 					$stmt = $database->prepare($sql);
 					$stmt->execute();
 				} 
@@ -262,7 +352,7 @@ foreach($files as $countFile => $file) {
 			if (empty($positions)) continue;
 			foreach ($positions as $position) {
 				foreach ($position as $element) {
-					if ($element === null || $element == 'X') continue;
+					if ($element === null || $element == 'X' || $element == 'Unnamed: 0') continue;
 					$sql = sprintf("INSERT INTO sport_analytics.match_set_rotation (match_id, `set`, `point`, team_id)
 						VALUES('%s', '%s', '%s', '%s');", $matchId, $set, $element, $teamN);
 					$stmt = $database->prepare($sql);
@@ -305,13 +395,13 @@ foreach($files as $countFile => $file) {
 			VALUES('%s', '%s', '%s')", $referees['Licence'][$function], $firstName, $lastName);
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
-			$referentiel['players'][$licence] = $licence;
+			$referentiel['players'][$$referees['Licence'][$function]] = $$referees['Licence'][$function];
 		}
 	}
 
 	// match_other_player Liberos
 	for ($i = 1; $i < 3; $i++) {
-		$teamN = ($i == 1) ? 'Team A' : 'Team B';
+		$teamN = ($i == 1) ? 'Team 1' : 'Team 2';
 		foreach ($teams['Liberos'][$teamN]['Licence'] as $licence) {
 			$sql = sprintf("INSERT INTO sport_analytics.match_other_player (match_id, licence, function_id)	VALUES('%s', '%s', '%s');", $matchId, $licence, 'LIB');
 			$stmt = $database->prepare($sql);
@@ -321,7 +411,7 @@ foreach($files as $countFile => $file) {
 
 	// match_other_player Officials
 	for ($i = 1; $i < 3; $i++) {
-		$teamN = ($i == 1) ? 'Team A' : 'Team B';
+		$teamN = ($i == 1) ? 'Team 1' : 'Team 2';
 		$teamNId = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
 		$nb = count($teams['Officials'][$teamN]['N°']);
 		for ($cpt = 0; $cpt < $nb; $cpt++) {
@@ -334,12 +424,15 @@ foreach($files as $countFile => $file) {
 				// player
 				$names = explode(' ', $teams['Officials'][$teamN]['Nom Prénom'][$cpt]);
 				$firstName = array_pop($names);
+				$firstName = str_replace("'", " ", $firstName); // pour les ' dans les nom
 				$lastName = implode(' ', $names);
+				$lastName = str_replace("'", " ", $lastName); // pour les ' dans les nom
 				$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
 				VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
+				
 				$stmt = $database->prepare($sql);
 				$stmt->execute();
-				$referentiel['players'][$licence] = $licence;
+				$referentiel['player'][$licence] = $licence;
 
 				// team_players
 				$sql = sprintf("INSERT INTO sport_analytics.team_player (team_id, player_id, season_id, function_id)
@@ -357,7 +450,9 @@ foreach($files as $countFile => $file) {
 	}
 }
 
-echo $countFile . ' feuille de match ont correctement été ajoutés.<br>';die;
+$endInsert = new Datetime();
+$interval = $startInsert->diff($endInsert);
+echo $countFile . '  matchs ajoutés en ' . $interval->format('%i minutes %s secondes');
 
 function resetDatabase($database) {
 	// just tables that are inserted automatically
