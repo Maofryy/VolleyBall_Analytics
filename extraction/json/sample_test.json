@@ -10,38 +10,40 @@
             "gym":"FOURNIER",
             "category":"SENIOR | MASCULIN",
             "ligue":"Comp\u00e9titions Nationales SENIORS",
-            "date":"2021-01-30 18:00:00"
+            "date":"2021-01-30 18:00:00",
+            "team_1":"VOLLEY-BALL ARLESIEN",
+            "team_2":"STADE ATHLETIQUE SPINALIEN"
         },
         "Sets":{
             "Teams":{
                 "Set 1":{
                     "Name":{
-                        "Team A":"VOLLEY-BALL ARLESIEN",
-                        "Team B":"STADE ATHLETIQUE SPINA"
+                        "Team 1":"VOLLEY-BALL ARLESIEN",
+                        "Team 2":"STADE ATHLETIQUE SPINA"
                     },
                     "Starting":{
-                        "Team A":"Service",
-                        "Team B":"Reception"
+                        "Team 1":"Service",
+                        "Team 2":"Reception"
                     }
                 },
                 "Set 2":{
                     "Name":{
-                        "Team A":"VOLLEY-BALL ARLESIEN",
-                        "Team B":"STADE ATHLETIQUE SPINA"
+                        "Team 1":"VOLLEY-BALL ARLESIEN",
+                        "Team 2":"STADE ATHLETIQUE SPINA"
                     },
                     "Starting":{
-                        "Team A":"Reception",
-                        "Team B":"Service"
+                        "Team 1":"Reception",
+                        "Team 2":"Service"
                     }
                 },
                 "Set 3":{
                     "Name":{
-                        "Team A":"VOLLEY-BALL ARLESIEN",
-                        "Team B":"STADE ATHLETIQUE SPINA"
+                        "Team 1":"VOLLEY-BALL ARLESIEN",
+                        "Team 2":"STADE ATHLETIQUE SPINA"
                     },
                     "Starting":{
-                        "Team A":"Service",
-                        "Team B":"Reception"
+                        "Team 1":"Service",
+                        "Team 2":"Reception"
                     }
                 },
                 "Set 4":0,
@@ -298,9 +300,9 @@
                 },
                 "Set 2":{
                     "I":{
-                        "0":"X",
-                        "1":9,
-                        "2":16
+                        "0":null,
+                        "1":9.0,
+                        "2":16.0
                     },
                     "II":{
                         "0":"1",
@@ -366,9 +368,9 @@
             "Serves B":{
                 "Set 1":{
                     "I":{
-                        "0":"X",
-                        "1":9,
-                        "2":24
+                        "0":null,
+                        "1":9.0,
+                        "2":24.0
                     },
                     "II":{
                         "0":"2",
@@ -430,9 +432,9 @@
                 },
                 "Set 3":{
                     "I":{
-                        "0":"X",
-                        "1":13,
-                        "2":22
+                        "0":null,
+                        "1":13.0,
+                        "2":22.0
                     },
                     "II":{
                         "0":"1",
@@ -505,15 +507,11 @@
         },
         "Teams":{
             "Name":{
-                "Team A":[
-                    "VOLLEY-BALL ARLESIEN"
-                ],
-                "Team B":[
-                    "STADE ATHLETIQUE SPINALIEN"
-                ]
+                "Team 1":"VOLLEY-BALL ARLESIEN",
+                "Team 2":"STADE ATHLETIQUE SPINALIEN"
             },
             "Players":{
-                "Team A":{
+                "Team 1":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -554,7 +552,7 @@
                         "10":2257189
                     }
                 },
-                "Team B":{
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":5,
@@ -594,7 +592,7 @@
                 }
             },
             "Liberos":{
-                "Team A":{
+                "Team 1":{
                     "N\u00b0":{
                         "0":4
                     },
@@ -605,7 +603,7 @@
                         "0":1747353
                     }
                 },
-                "Team B":{
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":13
@@ -621,7 +619,7 @@
                 }
             },
             "Officials":{
-                "Team A":{
+                "Team 1":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB",
@@ -641,7 +639,7 @@
                         "3":2460579
                     }
                 },
-                "Team B":{
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA"
                     },

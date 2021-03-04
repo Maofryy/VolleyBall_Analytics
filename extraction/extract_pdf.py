@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 from tempfile import template
 import tabula
-import json
+import time
 import pandas as pd
 import os
 from datetime import datetime
 from dateutil.parser import parse
-from .classes import FormatInvalidError, Penalty, Results, Title
+from .classes import FormatInvalidError, Penalty, Results, Title, Timer
 
 def translate_month(time_string):
     """Translating time string from french to english
@@ -41,7 +41,33 @@ def translate_month(time_string):
         time_string = time_string.replace(fr, en)
     return (time_string)
 
-def extract_set(file, ref, set_nb, verbose=False):
+def get_set_data(file, ref, set_nb, verbose=False):
+    #Size of columns in the sub and serve table
+    column_size = 20
+    #Diff between the two teams tables in the first (y) axis
+    if set_nb == 5:
+        team_diff = 135
+        set_swap = 303
+    else:
+        team_diff = 155.1
+        set_swap = 0
+    
+    table_data = tabula.read_pdf(file, area=[
+        #[(ref[0] + 3.6), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)],
+        [(ref[0] + 14.0), (ref[1] + 0.0 + set_swap), (ref[0] + 57), (ref[1] + 118.3 + set_swap)], #* +303 pour set 5
+        [(ref[0] + 15.2), (ref[1] + 0.0 + team_diff), (ref[0] + 57), (ref[1] + 119 + team_diff)],
+        [(ref[0] + 56.7), (ref[1] + 0.0 + set_swap), (ref[0] + 98.8), (ref[1] + 118.8 + set_swap)], #* +303 pour set 5
+        [(ref[0] + 56.7), (ref[1] + 0.0 + team_diff), (ref[0] + 98.6), (ref[1] + 118.8 + team_diff)],
+        [(ref[0] + 64.6), (ref[1] + 118.3 + set_swap), (ref[0] + 91.5), (ref[1] + 155.1 + set_swap)], #* +303 pour set 5
+        [(ref[0] + 64.6), (ref[1] + 118.3 + team_diff), (ref[0] + 91.5), (ref[1] + 155 + team_diff)]
+    ],
+    columns=[
+        ref[1] +column_size*1 + set_swap, ref[1] + column_size*2 + set_swap, ref[1] + column_size*3 + set_swap, ref[1] + column_size*4 + set_swap, ref[1] + column_size*5 + set_swap, ref[1] + column_size*6 + set_swap, 
+        ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6],
+    pages='1')
+    return table_data
+
+def extract_set(ref, set_nb, title_data, table_data, verbose=False):
     """[Extract one set data]
     Reads a set the pdf in file at the passed ref point (top left point just after the "S E T X" column)
 
@@ -53,52 +79,56 @@ def extract_set(file, ref, set_nb, verbose=False):
     Returns:
         [List(pandas.DataFrame)]: [List of tables with set data]
     """
-
-    #Size of columns in the sub and serve table
-    column_size = 20
-    #Diff between the two teams tables in the first (y) axis
-    if set_nb == 5:
-        team_diff = 136
-    else:
-        team_diff = 155.1
+    #title_data, table_data = get_set_data(file, ref, set_nb)
     
-    #Test to see if set isnt empty
-    test_data = tabula.read_pdf(file, area=[[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)]], pages=1)
-    set_data = list()
-    if ((not test_data) or (test_data[0].columns.size == 1)):
+    if not title_data or not table_data:
         print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : KO") if (verbose == True) else 0
         return [0,0,0,0,0,0,0,0]
     
-    # 0 : Team 1 (left)
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 3.6), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 154.3)], pages='1'))
-    # 1 : Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 3.6), (ref[1] + 154.5), (ref[0] + 13.7), (ref[1] + 310.6)], pages='1'))
-    # 2 : Substitutions Team 1
-    if not (set_nb == 5):
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0), (ref[0] + 57), (ref[1] + 118.3)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
-    else:
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 14.0), (ref[1] + 0.0 + 303), (ref[0] + 57), (ref[1] + 118.3 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
-    # 3 : Substitutions Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 15.2), (ref[1] + 0.0 + team_diff), (ref[0] + 57), (ref[1] + 119 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6], pages='1'))
+    set_data = list()
+    sep = ""
 
-    # 4 : Serves Team 1
-    if not (set_nb == 5):
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0), (ref[0] + 98.8), (ref[1] + 118.8)], columns=[ref[1] +column_size*1, ref[1] + column_size*2, ref[1] + column_size*3, ref[1] + column_size*4, ref[1] + column_size*5, ref[1] + column_size*6], pages='1'))
-    else:
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + 303), (ref[0] + 98.8), (ref[1] + 118.8 + 303)], columns=[ref[1] +column_size*1 + 303, ref[1] + column_size*2 + 303, ref[1] + column_size*3 + 303, ref[1] + column_size*4 + 303, ref[1] + column_size*5 + 303, ref[1] + column_size*6 + 303], pages='1'))
+    for x in title_data[:-1]:
+        set_data.append(x)
+    for x in table_data:
+        set_data.append(x)
+    set_data.append(title_data[-1])
+    #for x in range(len(set_data)):
+    #    print(x)
+    #    print(set_data[x])
 
-    # 5 : Serves Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 56.7), (ref[1] + 0.0 + team_diff), (ref[0] + 98.6), (ref[1] + 118.8 + team_diff)], columns=[ref[1] + team_diff + column_size*1, ref[1] + team_diff + column_size*2, ref[1] + team_diff + column_size*3, ref[1] + team_diff + column_size*4, ref[1] + team_diff + column_size*5, ref[1] + team_diff + column_size*6],pages='1'))
-    # 6 : Time outs Team 1
-    if not (set_nb == 5):
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3), (ref[0] + 91.5), (ref[1] + 155.1)], pages='1'))
-    else:
-        set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + 303), (ref[0] + 91.5), (ref[1] + 155.1 + 303)], pages='1'))
-    # 7 : Time outs Team 2
-    set_data.append(tabula.read_pdf(file, area=[(ref[0] + 64.6), (ref[1] + 118.3 + team_diff), (ref[0] + 91.5), (ref[1] + 155 + team_diff)], pages='1'))
+
+    lst = sep.join(set_data[0].columns.values)
+    #print("lst: "+str(lst))
+    if (lst == "Début:" or set_data[0].columns.size == 0):
+        print("Empty set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : KO") if (verbose == True) else 0
+        return [0,0,0,0,0,0,0,0]
+    
+    lst = lst.split("Début:")
+    lst[1] = "Début:" + lst[1]
+    set_data[0] = pd.DataFrame(columns = lst)
+
+    lst = sep.join(set_data[1].columns.values).split("Fin:")
+    lst[1] = "Fin:" + lst[1]
+    set_data[1] = pd.DataFrame(columns = lst)
+
+    for i in range(2, 9, 1):
+        for val in set_data[i].columns.values:
+            if val.startswith("Unnamed:") and set_data[i][val].isnull().all():
+                set_data[i] = set_data[i].drop(val, axis=1)
+
+    lst = sep.join(set_data[8].columns.values)
+    set_data[8] = pd.DataFrame(columns = [lst])
+    #for i in [2,3,4,5,6,7]:
+    #    set_data[i] = set_data[i].dropna(axis='columns', how='all')
+    #Add columns for timeout
+    if len(set_data[6].columns) == 0:
+        set_data[6] = pd.DataFrame(columns = ["T"]) 
+    if len(set_data[7].columns) == 0:
+        set_data[7] = pd.DataFrame(columns = ["T"]) 
     
     # Flattening and cleaning set structure
-    if (set_data[0][0].columns[1].split()[-1] == 'S'):
+    if (set_data[0].columns[1].split()[-1] == 'S'):
         service = ['Service', 'Reception']
     else:
         service = ['Reception', 'Service']
@@ -111,20 +141,19 @@ def extract_set(file, ref, set_nb, verbose=False):
         a = 0
         b = 1
     team_data = pd.DataFrame({
-        'Index':['Team A', 'Team B'],
-        'Name':[set_data[a][0].columns[0], set_data[b][0].columns[0]],
+        'Index':['Team 1', 'Team 2'],
+        'Name':[set_data[a].columns[0], set_data[b].columns[0]],
         'Starting':[service[a], service[b]]
     })
     team_data = team_data.set_index('Index')
 
     #Time
     # gather the date on the tp right of the file
-    time_data = tabula.read_pdf(file, area=[39.6, 659.5, 49.7, 789.1], pages='1')
-
-    time_string = time_data[0].columns.values[0][time_data[0].columns.values[0].index(' ') + 1:]
+    time_data = set_data[8]
+    time_string = time_data.columns.values[0][time_data.columns.values[0].index(' ') + 1:]
     time_string = translate_month(time_string)
-    start_time = parse(time_string + " " + set_data[0][0].columns[1].split()[1])
-    end_time = parse(time_string + " " + set_data[1][0].columns[1].split()[1])
+    start_time = parse(time_string + " " + set_data[0].columns[1].split()[1])
+    end_time = parse(time_string + " " + set_data[1].columns[1].split()[1])
     
     #Replacing data
     set_data[0] = team_data
@@ -132,14 +161,6 @@ def extract_set(file, ref, set_nb, verbose=False):
         'Index':['Start', 'End'],
         'Time':[start_time.strftime("%Y-%m-%d %H:%M:%S"), end_time.strftime("%Y-%m-%d %H:%M:%S")]
     }).set_index('Index')
-
-    #Substitutions
-    set_data[2] = set_data[2][0]
-    set_data[3] = set_data[3][0]
-
-    #Serves
-    set_data[4] = set_data[4][0]
-    set_data[5] = set_data[5][0]
 
     i = 0
     while (len(set_data[4].columns) < 6):
@@ -175,16 +196,192 @@ def extract_set(file, ref, set_nb, verbose=False):
         'Y':None,
         'Z':None,
     })
+    del set_data[8]
+    #for x in set_data:
+    #    print(x)
 
-    #Timeouts
-    set_data[6] = set_data[6][0]
-    set_data[7] = set_data[7][0]
-
-    
     print("Parsing set at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK") if (verbose == True) else 0
     return (set_data)
 
-def extract_team(file, ref, verbose=False):
+def extract_4calls(file, verbose=False):
+    #TODO Win 4secs and grab all 4 sets in one query !!! You can do it EASY
+    
+    ref_list = [
+        (73.4, 127.4),
+        (73.4, 462.7),
+        (167, 128.2),
+        (167, 461.5),
+        (261.4, 28.1)
+    ]
+    ref_team = [
+        (261, 575.3),
+        (261, 703.5)
+    ]
+    team_diff = 155
+    set_swap = 303
+    team_diff_5 = 135.1
+    col = 8
+    pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
+    
+    
+    ## ---------- Query with no table -------------- ##
+    query_1 = tabula.read_pdf(file, area=[
+        #* Check Format
+        [87.8, 13.7, 165, 113],
+
+        #* Title Data [0:7]
+        [25.9, 113.8, 38.9, 429.1],
+        [26.6,692.6,39.6,820.8],
+        [38.2, 115.2,46,295.9 ],
+        [46.1, 115.2,53.3, 295.9],
+        [46.1, 352.8,53.3, 533.5 ],
+        [55.4, 1.4, 71.3, 116.4 ],
+        [38.9, 655.2, 50.4, 821.5 ],
+        [55.4, 120.2, 72, 784.8],
+
+        #* Set 1 [8:9]
+        [(ref_list[0][0] + 3.6), (ref_list[0][1] + 0.0), (ref_list[0][0] + 13.7), (ref_list[0][1] + 154.3)], #* -18.3 pour set 5
+        [(ref_list[0][0] + 3.6), (ref_list[0][1] + team_diff), (ref_list[0][0] + 13.7), (ref_list[0][1] + 154.3 + team_diff)],
+
+        #* Set 2 [10:11]
+        [(ref_list[1][0] + 3.6), (ref_list[1][1] + 0.0), (ref_list[1][0] + 13.7), (ref_list[1][1] + 154.3)], #* -18.3 pour set 5
+        [(ref_list[1][0] + 3.6), (ref_list[1][1] + team_diff), (ref_list[1][0] + 13.7), (ref_list[1][1] + 154.3 + team_diff)],
+
+        #* Set 3 [12:13]
+        [(ref_list[2][0] + 3.6), (ref_list[2][1] + 0.0), (ref_list[2][0] + 13.7), (ref_list[2][1] + 154.3)], #* -18.3 pour set 5
+        [(ref_list[2][0] + 3.6), (ref_list[2][1] + team_diff), (ref_list[2][0] + 13.7), (ref_list[2][1] + 154.3 + team_diff)],
+
+        #* Set 4 [14:15]
+        [(ref_list[3][0] + 3.6), (ref_list[3][1] + 0.0), (ref_list[3][0] + 13.7), (ref_list[3][1] + 154.3)], #* -18.3 pour set 5
+        [(ref_list[3][0] + 3.6), (ref_list[3][1] + team_diff), (ref_list[3][0] + 13.7), (ref_list[3][1] + 154.3 + team_diff)],
+
+        #* Time string [16]
+        [39.6, 659.5, 49.7, 789.1],
+
+        #* Teams names [17:18]
+        [(ref_team[0][0] + 0.0), (ref_team[0][1] + 0.0), (ref_team[0][0] + 13.7), (ref_team[0][1] + 127.4)],
+        [(ref_team[1][0] + 0.0), (ref_team[1][1] + 0.0), (ref_team[1][0] + 13.7), (ref_team[1][1] + 127.4)],
+        
+        #* Set 5 [19:20]
+        [(ref_list[4][0] + 3.6), (ref_list[4][1] + 0.0), (ref_list[4][0] + 13.7), (ref_list[4][1] + 154.3)], #* -18.3 pour set 5
+        [(ref_list[4][0] + 3.6), (ref_list[4][1] + team_diff_5), (ref_list[4][0] + 13.7), (ref_list[4][1] + 154.3 + team_diff_5)],
+
+        #        #* Result tab [16-18?]
+        #[501 + 2*col, 424, 509.8 + 2*col, 560.9],
+        #[501 + 1*col, 424, 509.8 + 1*col, 560.9],
+        #[501 + 0*col, 424, 509.8 + 0*col, 560.9],
+        
+    ], pages='1')
+    
+    format_ref = pd.read_pickle(pickle)
+    if (not query_1):
+        raise FormatInvalidError
+    format_check = query_1.pop(0)
+    if (not format_check.equals(format_ref)):
+        raise FormatInvalidError("Pdf format is wrong.")
+    
+    if len(query_1) == 19:
+        #Means that the fifth set is empty
+        query_1.append(0)
+        query_1.append(0)
+    #for x in range(0, len(query_1)):
+    #    print(str(x) + " = "+str(query_1[x]))
+    print("Query 1 done.") if (verbose == True) else 0
+    timer.print_interval(time.time()) if (verbose == True) else 0
+    
+    ## ---------------- 4 Sets tables ------------- ##
+    column_size = 20
+
+    query_2 = tabula.read_pdf(file, area=[
+        #* Set 1 [0:5]
+        [(ref_list[0][0] + 14.0), (ref_list[0][1] + 0.0 ), (ref_list[0][0] + 57), (ref_list[0][1] + 118.3 )], #* +303 pour set 5
+        [(ref_list[0][0] + 15.2), (ref_list[0][1] + 0.0 + team_diff), (ref_list[0][0] + 57), (ref_list[0][1] + 119 + team_diff)],
+        [(ref_list[0][0] + 56.7), (ref_list[0][1] + 0.0 ), (ref_list[0][0] + 98.8), (ref_list[0][1] + 118.8 )], #* +303 pour set 5
+        [(ref_list[0][0] + 56.7), (ref_list[0][1] + 0.0 + team_diff), (ref_list[0][0] + 98.6), (ref_list[0][1] + 118.8 + team_diff)],
+        [(ref_list[0][0] + 64.6), (ref_list[0][1] + 118.3 ), (ref_list[0][0] + 91.5), (ref_list[0][1] + 155.1 )], #* +303 pour set 5
+        [(ref_list[0][0] + 64.6), (ref_list[0][1] + 118.3 + team_diff), (ref_list[0][0] + 91.5), (ref_list[0][1] + 155 + team_diff)],
+
+        #* Set 2 [6:11]
+        [(ref_list[1][0] + 14.0), (ref_list[1][1] + 0.0 ), (ref_list[1][0] + 57), (ref_list[1][1] + 118.3 )], #* +303 pour set 5
+        [(ref_list[1][0] + 15.2), (ref_list[1][1] + 0.0 + team_diff), (ref_list[1][0] + 57), (ref_list[1][1] + 119 + team_diff)],
+        [(ref_list[1][0] + 56.7), (ref_list[1][1] + 0.0 ), (ref_list[1][0] + 98.8), (ref_list[1][1] + 118.8 )], #* +303 pour set 5
+        [(ref_list[1][0] + 56.7), (ref_list[1][1] + 0.0 + team_diff), (ref_list[1][0] + 98.6), (ref_list[1][1] + 118.8 + team_diff)],
+        [(ref_list[1][0] + 64.6), (ref_list[1][1] + 118.3 ), (ref_list[1][0] + 91.5), (ref_list[1][1] + 155.1 )], #* +303 pour set 5
+        [(ref_list[1][0] + 64.6), (ref_list[1][1] + 118.3 + team_diff), (ref_list[1][0] + 91.5), (ref_list[1][1] + 155 + team_diff)],
+
+        #* Set 3 [12:17]
+        [(ref_list[2][0] + 14.0), (ref_list[2][1] + 0.0 ), (ref_list[2][0] + 57), (ref_list[2][1] + 118.3 )], #* +303 pour set 5
+        [(ref_list[2][0] + 15.2), (ref_list[2][1] + 0.0 + team_diff), (ref_list[2][0] + 57), (ref_list[2][1] + 119 + team_diff)],
+        [(ref_list[2][0] + 56.7), (ref_list[2][1] + 0.0 ), (ref_list[2][0] + 98.8), (ref_list[2][1] + 118.8 )], #* +303 pour set 5
+        [(ref_list[2][0] + 56.7), (ref_list[2][1] + 0.0 + team_diff), (ref_list[2][0] + 98.6), (ref_list[2][1] + 118.8 + team_diff)],
+        [(ref_list[2][0] + 64.6), (ref_list[2][1] + 118.3 ), (ref_list[2][0] + 91.5), (ref_list[2][1] + 155.1 )], #* +303 pour set 5
+        [(ref_list[2][0] + 64.6), (ref_list[2][1] + 118.3 + team_diff), (ref_list[2][0] + 91.5), (ref_list[2][1] + 155 + team_diff)],
+
+        #* Set 4 [18:23]
+        [(ref_list[3][0] + 14.0), (ref_list[3][1] + 0.0 ), (ref_list[3][0] + 57), (ref_list[3][1] + 118.3 )], #* +303 pour set 5
+        [(ref_list[3][0] + 15.2), (ref_list[3][1] + 0.0 + team_diff), (ref_list[3][0] + 57), (ref_list[3][1] + 119 + team_diff)],
+        [(ref_list[3][0] + 56.7), (ref_list[3][1] + 0.0 ), (ref_list[3][0] + 98.8), (ref_list[3][1] + 118.8 )], #* +303 pour set 5
+        [(ref_list[3][0] + 56.7), (ref_list[3][1] + 0.0 + team_diff), (ref_list[3][0] + 98.6), (ref_list[3][1] + 118.8 + team_diff)],
+        [(ref_list[3][0] + 64.6), (ref_list[3][1] + 118.3 ), (ref_list[3][0] + 91.5), (ref_list[3][1] + 155.1 )], #* +303 pour set 5
+        [(ref_list[3][0] + 64.6), (ref_list[3][1] + 118.3 + team_diff), (ref_list[3][0] + 91.5), (ref_list[3][1] + 155 + team_diff)],
+
+    ],
+    columns=[
+        ref_list[0][1] +column_size*1 , ref_list[0][1] + column_size*2 , ref_list[0][1] + column_size*3 , ref_list[0][1] + column_size*4 , ref_list[0][1] + column_size*5 , ref_list[0][1] + column_size*6 , 
+        ref_list[0][1] + team_diff + column_size*1, ref_list[0][1] + team_diff + column_size*2, ref_list[0][1] + team_diff + column_size*3, ref_list[0][1] + team_diff + column_size*4, ref_list[0][1] + team_diff + column_size*5, ref_list[0][1] + team_diff + column_size*6,
+        ref_list[1][1] +column_size*1 , ref_list[1][1] + column_size*2 , ref_list[1][1] + column_size*3 , ref_list[1][1] + column_size*4 , ref_list[1][1] + column_size*5 , ref_list[1][1] + column_size*6 , 
+        ref_list[1][1] + team_diff + column_size*1, ref_list[1][1] + team_diff + column_size*2, ref_list[1][1] + team_diff + column_size*3, ref_list[1][1] + team_diff + column_size*4, ref_list[1][1] + team_diff + column_size*5, ref_list[1][1] + team_diff + column_size*6],
+    pages='1')
+    if (len(query_2) == 22):
+        query_2 = query_2[0:20]+[pd.DataFrame()]+[pd.DataFrame()]+query_2[20:22]
+    for i in range(len(query_2)):
+        for val in query_2[i].columns.values:
+            if val.startswith("Unnamed:") and query_2[i][val].isnull().all():
+                query_2[i] = query_2[i].drop(val, axis=1) 
+    print("Query 2 done.") if (verbose == True) else 0
+    timer.print_interval(time.time()) if (verbose == True) else 0
+    
+    ## -------- Query 3 ---------- ##
+    ## Pen, Ref, Res, Teams
+    team_column_size = [11.5, 100, 128.6]
+
+    query_3 = tabula.read_pdf(file, area=[
+        #Team 1 [0:3]
+        [(ref_team[0][0] + 13.7), (ref_team[0][1] + 0.0), (ref_team[0][0] + 141.8), (ref_team[0][1] + 127.4)],
+        [(ref_team[0][0] + 141.1), (ref_team[0][1] + 0.0), (ref_team[0][0] + 169.9), (ref_team[0][1] + 127.4)],
+        [(ref_team[0][0] + 169.9), (ref_team[0][1] + 0.0), (ref_team[0][0] + 215.3), (ref_team[0][1] + 127.4)],
+        
+        #Team 2 [3:6]
+        [(ref_team[1][0] + 13.7), (ref_team[1][1] + 0.0), (ref_team[1][0] + 141.8), (ref_team[1][1] + 127.4)],
+        [(ref_team[1][0] + 141.1), (ref_team[1][1] + 0.0), (ref_team[1][0] + 169.9), (ref_team[1][1] + 127.4)],
+        [(ref_team[1][0] + 169.9), (ref_team[1][1] + 0.0), (ref_team[1][0] + 215.3), (ref_team[1][1] + 127.4)],
+
+        #Pen [6]
+        [371, 13.5, 515.5, 128.2],
+
+        #Ref [7]
+        [433.4, 129, 504.1, 306.7],
+
+        #Res [8]
+        [501 + 2*col, 424, 509.8 + 2*col, 560.9],
+        [501 + 1*col, 424, 509.8 + 1*col, 560.9],
+        [501 + 0*col, 424, 509.8 + 0*col, 560.9],
+
+        ],
+        columns=[
+            152, 248, 276.5, 304.7,
+            ref_team[0][1] + team_column_size[0], ref_team[0][1] + team_column_size[1], ref_team[0][1] + team_column_size[2],
+            ref_team[1][1] + team_column_size[0], ref_team[1][1] + team_column_size[1], ref_team[1][1] + team_column_size[2]
+            ],
+        pages='1')
+    for i in range(len(query_3)):
+            for val in query_3[i].columns.values:
+                if val.startswith("Unnamed:") and query_3[i][val].isnull().all():
+                    query_3[i] = query_3[i].drop(val, axis=1)
+    print("Query 3 done.") if (verbose == True) else 0
+    return (query_1, query_2, query_3)
+
+def extract_team(title_data, table_data, ref, verbose=False):
     """Extract data of a team
 
     Args:
@@ -197,25 +394,20 @@ def extract_team(file, ref, verbose=False):
     """
     
     team_data = list()
-    column_size = [11.5, 100, 128.2]
-    # 0 : Name
-    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 0.0), (ref[1] + 0.0), (ref[0] + 13.7), (ref[1] + 127.4)], pages='1'))
-    # 1 : Players
-    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 13.7), (ref[1] + 0.0), (ref[0] + 141.8), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
-    if (team_data[1][0].empty):
+    for x in title_data:
+        team_data.append(x)
+    for x in table_data:
+        team_data.append(x)
+    
+    
+    for i in range(0, len(team_data)):
+        for val in team_data[i].columns.values:
+            if val.startswith("Unnamed:") and team_data[i][val].isnull().all():
+                team_data[i] = team_data[i].drop(val, axis=1) 
+    team_data[0] = team_data[0].columns.values[0]
+    if (team_data[0] == "xxxxx"):
         print("Empty team at ("+str(ref[0])+", "+str(ref[1])+") : KO") if (verbose == True) else 0
         return ([0,0,0,0])
-    # 2 : Liberos
-    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 141.1), (ref[1] + 0.0), (ref[0] + 169.9), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
-    # 3 : Officials
-    team_data.append(tabula.read_pdf(file, area=[(ref[0] + 169.9), (ref[1] + 0.0), (ref[0] + 215.3), (ref[1] + 127.4)], columns=[ref[1] + column_size[0], ref[1] + column_size[1], ref[1] + column_size[2]] , pages='1'))
-    
-    #Flattening and cleaning structures
-    team_data[0] = team_data[0][0].columns.values
-    team_data[1] = team_data[1][0]
-    team_data[2] = team_data[2][0]    
-    team_data[3] = team_data[3][0]    
-    
     #print(team_data[1].columns)
     #If liberos or staff table is empty, fill with none 
     if (len(team_data[2].columns) == 1):
@@ -227,11 +419,12 @@ def extract_team(file, ref, verbose=False):
         team_data[3]['2'] = None
 
     team_data[2].columns = team_data[1].columns.values 
-    team_data[3].columns = team_data[1].columns.values 
+    team_data[3].columns = team_data[1].columns.values
+
     print("Parsing Team at (" + str(ref[0]) + ", " + str(ref[1]) + ") : OK") if (verbose == True) else 0
     return (team_data)
 
-def extract_title(file, verbose = False):
+def extract_title(table_data, verbose = False):
     """Extract title of the match, division and match details
 
     Args:
@@ -242,29 +435,18 @@ def extract_title(file, verbose = False):
         [classes.Title]: containing gathered data
     """
 
-    table_data = list()
-
-    # 0 Division: Code, Name, Pool  (string) (25.9, 113.8, 38.9, 429.1) # Split('-')
-    table_data.append(tabula.read_pdf(file, area=[25.9, 113.8, 38.9, 429.1], pages='1'))
-    if (table_data[0][0].columns[0] == "Poule"):
+    
+    if (table_data[0].columns[0] == "Poule"):
         print("Title Empty : KO") if (verbose == True) else 0
-        return (Title(0,0,0,0,0,0,0,0,0,0))
-    # 1 Match, Day (number) (26.6,692.6,39.6,820.8) 
-    table_data.append(tabula.read_pdf(file, area=[26.6,692.6,39.6,820.8 ], pages='1'))
-    # 2 City (string) (38.2, 115.2,46,295.9)
-    table_data.append(tabula.read_pdf(file, area=[38.2, 115.2,46,295.9 ], pages='1'))
-    # 3 Gym (string) (46.1, 115.2,53.3, 295.9)
-    table_data.append(tabula.read_pdf(file, area=[46.1, 115.2,53.3, 295.9 ], pages='1'))
-    # 4 Category (string) (46.1, 352.8,53.3, 533.5)
-    table_data.append(tabula.read_pdf(file, area=[46.1, 352.8,53.3, 533.5 ], pages='1'))
-    # 5 Ligue (string) (55.4, 1.4,71.3, 163.4)
-    table_data.append(tabula.read_pdf(file, area=[55.4, 1.4, 71.3, 116.4 ], pages='1'))
-    # 6 Date (datetime) (38.9, 655.2, 50.4, 821.5)
-    table_data.append(tabula.read_pdf(file, area=[38.9, 655.2, 50.4, 821.5 ], pages='1'))
-
-    #Flatten and clean 
-    div_list = table_data[0][0].columns.values[0].split('-')
-    match_list = table_data[1][0].columns[0].split('-')
+        raise FormatInvalidError
+        return (Title(0,0,0,0,0,0,0,0,0,0,0,0))
+    #Flatten and clean
+    for i in range(0, len(table_data)):
+        for val in table_data[i].columns.values:
+            if val.startswith("Unnamed:") and table_data[i][val].isnull().all():
+                table_data[i] = table_data[i].drop(val, axis=1)
+    div_list = table_data[0].columns.values[0].split('-')
+    match_list = table_data[1].columns[0].split('-')
     if (len(div_list) < 3):
         div_list.append(" ")
         div_list.append(" ")
@@ -279,8 +461,7 @@ def extract_title(file, verbose = False):
     # 7 Category (string) (46.1, 352.8,53.3, 533.5)
     # 8 Ligue (string) (55.4, 1.4,71.3, 163.4)
     # 9 Date (datetime string) (38.9, 655.2, 50.4, 821.5)
-    
-    time_string = table_data[6][0].columns.values[0][table_data[6][0].columns.values[0].index(' ') + 1:]
+    time_string = table_data[6].columns.values[0][table_data[6].columns.values[0].index(' ') + 1:]
     time_string = translate_month(time_string)
     match_time = parse(time_string)
     title_data = Title(
@@ -289,16 +470,18 @@ def extract_title(file, verbose = False):
         div_list[2].strip(),
         match_list[0].split(':')[1].strip(),
         match_list[1].split(':')[1].strip(),
-        table_data[2][0].columns.values[0].split(':')[1].strip(),
-        table_data[3][0].columns.values[0].split(':')[1].strip(),
-        table_data[4][0].columns.values[0],
-        table_data[5][0].columns.values[0],
-        match_time.strftime("%Y-%m-%d %H:%M:%S")
+        table_data[2].columns.values[0].split(':')[1].strip(),
+        table_data[3].columns.values[0].split(':')[1].strip(),
+        table_data[4].columns.values[0],
+        table_data[5].columns.values[0],
+        match_time.strftime("%Y-%m-%d %H:%M:%S"),
+        table_data[7].columns.values[0],
+        table_data[7].columns.values[1]
     )
     print("Title parsing : OK") if (verbose == True) else 0
     return (title_data)
 
-def extract_result(file, verbose=False):
+def extract_result(res_data, verbose=False):
     """Extract result of the match, winner and sets score
 
     Args:
@@ -309,21 +492,18 @@ def extract_result(file, verbose=False):
         [classes.Result]: containing winner and score data
     """
     
-    col = 8
     winner = 0
     score = "0/0"
-
-    for i in range(3):
-        res_data = tabula.read_pdf(file, area=[501 + i*col, 424, 509.8 + i*col, 560.9], pages='1')
-        if (not res_data):
-            print("Empty results (less than 3 sets error) : KO") if (verbose == True) else 0
-            return (Results(0, 0))
-        if(res_data[0].columns.values[0] == 'Vainqueur:'):
-            winner = res_data[0].columns.values[1]
-            score = res_data[0].columns.values[2]
-            break
-    print("Parsing Results : OK") if (verbose == True) else 0
-    return (Results(winner, score))
+    
+    if(res_data.columns.values[0].startswith('Vainqueur:')):
+        s = " "
+        winner = s.join(res_data.columns.values[0].split(' ')[1:-1])
+        score = res_data.columns.values[0].split(' ')[-1]
+        print("Parsing Results : OK") if (verbose == True) else 0
+        return (Results(winner, score))
+    else:
+        print("Parsing Results : KO") if (verbose == True) else 0
+        return (Results(0,0))
 
 def is_penalty(str):
     """Check if string is of the correct penalty format
@@ -339,7 +519,7 @@ def is_penalty(str):
         return (True)
     return (False)
 
-def extract_penalties(file):
+def extract_penalties(pen_data):
     """Extract penalties of the match
 
     Args:
@@ -349,15 +529,17 @@ def extract_penalties(file):
         [List(classes.Penalty)]: list of penalties parsed
     """
     
-    ref = [371, 13.5, 515.5, 128.2]
     pens = list()
 
-    pen_data = tabula.read_pdf(file, area=ref, pages='1')
     ##Simulating penalties as didnt find samples yet
     #df = pd.DataFrame({"E":["AE"], "A/B":["B"], "Set":["5"], "Score":["15:15"]})
     #data = pd.concat([pen_data[0], df])
     #df = pd.DataFrame({"A":["17"], "A/B":["A"], "Set":["2"], "Score":["21:23"]})
     #data = pd.concat([data, df])
+    for i in range(0, len(pen_data)):
+        for val in pen_data[i].columns.values:
+            if val.startswith("Unnamed:") and pen_data[i][val].isnull().all():
+                pen_data[i] = pen_data[i].drop(val, axis=1)
     data = pen_data[0]
     if (data.empty == False):
         for i in range(len(data)):
@@ -369,25 +551,52 @@ def extract_penalties(file):
 
 def extract_match(file, verbose=False):
 
+    # ? Optimisation testing 
+    #test = extract_opti_test(file, (73.4, 127.4), 1)
+    timer.print_interval(time.time()) if (verbose == True) else 0
+    query_1, query_2, query_3 = extract_4calls(file)
+    timer.print_interval(time.time()) if (verbose == True) else 0
+    
     ## ----------------------  Extract title data  ----------------------------- ##
-    title = extract_title(file, verbose)
+    table_data = query_1[0:8]
+    title = extract_title(table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     ## ----------------------  Extract set data  ------------------------------- ##
     #Set 1 (73.4, 127.4)
-    set1 = extract_set(file, (73.4, 127.4), 1, verbose)
+    title_data = query_1[8:10] + [query_1[16]]
+    table_data = query_2[0:6]
+
+    set1 = extract_set((73.4, 127.4), 1, title_data, table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
     
     #Set 2 (73.4, 462.7)
-    set2 = extract_set(file, (73.4, 462.7), 2, verbose)
+    title_data = query_1[10:12] + [query_1[16]]
+    table_data = query_2[6:12]
+    set2 = extract_set((73.4, 462.7), 2, title_data, table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     #Set 3 (167, 128.2)
-    set3 = extract_set(file, (167, 128.2), 3, verbose)
+    title_data = query_1[12:14] + [query_1[16]]
+    table_data = query_2[12:18]
+    set3 = extract_set((167, 128.2), 3, title_data, table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     #Set 4 (167, 461.5)
-    set4 = extract_set(file, (167, 461.5), 4, verbose)
+    title_data = query_1[14:16] + [query_1[16]]
+    table_data = query_2[18:24]
+    set4 = extract_set((167, 461.5), 4, title_data, table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     #Set 5 (261.4, 28.1)
-    set5 = extract_set(file, (261.4, 28.1), 5, verbose)
-
+    table_data = get_set_data(file, (261.4, 28.1), 5)
+    if ((not isinstance(query_1[19] , pd.DataFrame)) and query_1[19] == 0):
+        title_data = 0
+    else:
+        title_data = query_1[19:21]+ [query_1[16]]
+    set5 = extract_set((261.4, 28.1), 5, title_data, table_data, verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
+ 
     # Gathering info into single dataframe
     sets = pd.DataFrame({
         'Index' : ['Set 1', 'Set 2', 'Set 3', 'Set 4', 'Set 5'],
@@ -403,9 +612,19 @@ def extract_match(file, verbose=False):
     
     ## ----------------------  Extract team data ------------------------------- ##
     #Team 1 (261, 575.3)
-    team1 = extract_team(file, (261, 575.3), verbose)
+    ref = (261, 575.3)
+    column_size = [11.5, 100, 128.2]
+    title_data = [query_1[17]]
+    table_data = query_3[0:3]
+    team1 = extract_team(title_data, table_data, (261, 575.3), verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
     #Team 2 (261, 702.7)
-    team2 = extract_team(file, (261, 702.7), verbose)
+    ref = (261, 702.7)
+    column_size = [11.5, 100, 128.2]
+    title_data = [query_1[18]]
+    table_data = query_3[3:6]
+    team2 = extract_team(title_data, table_data, (261, 702.7), verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     #Gathering info into single dataframe
     teams = pd.DataFrame({
@@ -418,16 +637,22 @@ def extract_match(file, verbose=False):
     #print(teams)
 
     ## ----------------------  Extract results data ---------------------------- ##
-    result = extract_result(file)
+    col = 8
+    res_data = [query_3[8]]
+    result = extract_result(res_data[0], verbose)
+    timer.print_interval(time.time()) if (verbose == True) else 0
 
     ## ----------------------  Extract penalties data -------------------------- ##
-    pens = extract_penalties(file)
+    pen_data = [query_3[6]]
+    pens = extract_penalties(pen_data)
     penalties = pd.DataFrame.from_records([p.to_dict() for p in pens])
     print("Parsing Penalties : OK") if (verbose == True) else 0
+    timer.print_interval(time.time())if (verbose == True) else 0
     
     ## ----------------------  Extract referees data --------------------------- ##
-    refs = tabula.read_pdf(file, area=[433.4, 129, 504.1, 306.7], columns=[152, 248, 276.5, 304.7], pages='1')[0].set_index('Arbitres')
+    refs = query_3[7].set_index('Arbitres')
     print("Parsing Referees : OK") if (verbose == True) else 0
+    timer.print_interval(time.time())if (verbose == True) else 0
     
     ## ----------------------  Gather in Match Structure ----------------------- ##
     #Gathering into a Match dataframe
@@ -438,17 +663,9 @@ def extract_match(file, verbose=False):
         'Index': ['Title', 'Sets', 'Teams', 'Results', 'Referees', 'Penalties'],
         'Match': [title_dict ,sets, teams, result_dict, refs, penalties]
     }).set_index('Index')
+    timer.print_interval(time.time())if (verbose == True) else 0
 
     return (match)
-
-def check_format(file, pickle):
-    ## ----------------------  Check pdf format  ------------------------------- ##
-    format_check = tabula.read_pdf(file, area=[87.8, 13.7, 165, 113], pages='1')
-    format_ref = pd.read_pickle(pickle)
-    if ((not format_check) or (not format_check[0].equals(format_ref))):
-        raise FormatInvalidError("Pdf format is wrong.")
-    else:
-        return (True)
 
 def extract_pdf(file, output_folder, verbose=False):
     """Extract match dataframe from pdf
@@ -461,16 +678,12 @@ def extract_pdf(file, output_folder, verbose=False):
     Returns:
         pandas.DataFrame = frame containing all interesting data from match sheet
     """
-    ## Handle file error, not found, not pdf or cant open it
-    #filename = "empty_test.pdf"
-    #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
     filename = os.path.split(file)[1].split('.pdf')[0]
     output = os.path.join(output_folder ,filename+".json")
-    pickle = os.path.join(os.path.dirname(__file__), "format.pkl")
     print("Extracting data from file : " + file) if (verbose == True) else 0
     print("Writing to : " + output) if (verbose == True) else 0
 
-    ## Trying to open the input file, return empty dataframe upon failure
+    ## * Trying to open the input file, return empty dataframe upon failure
     try :
         fd = open(file)
         fd.close()
@@ -479,10 +692,7 @@ def extract_pdf(file, output_folder, verbose=False):
         print(file)
         return pd.DataFrame()
     
-    check_format(file, pickle)
-
     match = extract_match(file, verbose)
-    
     ## ---------------------  Exporting data to Json  -------------------------- ##
     json_output = match.to_json(indent=4, force_ascii=True)
     with open(output,'w', encoding='utf-8') as outfile:
@@ -490,15 +700,19 @@ def extract_pdf(file, output_folder, verbose=False):
         print(output + " saved.") if (verbose == True) else 0
     return (match)
 
-
 if __name__ == "__main__":
     """ Main function of extracting data """
     filename = "sample_test.pdf"
-    output_folder = "./parsed_matches/2019-2020/E.Mas.B"
-    #file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
-    file = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.B/EMB009.pdf")
+    #output_folder = "./parsed_matches/2019-2020/E.Fém.B"
+    output_folder = "./extraction/json"
+    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
+    file2 = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Fém.B/EFB018.pdf")
+    file3 = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.B/EMB007.pdf")
+    timer = Timer()
     try :
-        pdf = extract_pdf(file, output_folder, True)
+        pdf = extract_pdf(file, output_folder, False)
+        #pdf = extract_pdf(file2, output_folder, True)
+        #pdf = extract_pdf(file2, output_folder, True)
     except FormatInvalidError:
         print("Invalid format")
         exit()

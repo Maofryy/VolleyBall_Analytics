@@ -1,5 +1,14 @@
 import json
 import pandas as pd
+import time
+
+class Timer:
+    def __init__(self, present=time.time()):
+        self.present = present
+    
+    def print_interval(self, now=time.time(), past=time.time()):
+        print("Seconds elapsed : "+str(round(now - past, 4)) + " since last : " + str(round(now - self.present, 4)))
+        self.present = now
 
 class FormatInvalidError(Exception):
     pass
@@ -51,7 +60,7 @@ class Penalty:
         }
     
 class Title:
-    def __init__(self, div_code, div_name, div_pool, match_number, match_day, city, gym, category, ligue, date):
+    def __init__(self, div_code, div_name, div_pool, match_number, match_day, city, gym, category, ligue, date, team_1, team_2):
         self.div_code = div_code
         self.div_name = div_name
         self.div_pool = div_pool
@@ -62,6 +71,8 @@ class Title:
         self.category = category
         self.ligue = ligue
         self.date = date
+        self.team_1 = team_1
+        self.team_2 = team_2
 
     def export_json(self):
         """Export object to json string
