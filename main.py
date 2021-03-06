@@ -12,7 +12,7 @@ import time
 # Download pdfs into data folder
 
 # Extract jsons from 
-def write_invalid(list, label):
+def list_to_csv(list, label):
     with open(label+".csv", 'w', newline='') as myfile:
      wr = csv.writer(myfile, dialect="excel")
      for item in list:
@@ -36,10 +36,10 @@ def extract_jsons(folder='./data', out_folder='./parsed_matches', all=False):
                 
                 output = os.path.join(output_folder, fn.split('.pdf')[0]+'.json')
                 if os.path.isfile(output):
+                    #TODO Add all option
                     if (not all):
                         correct_format_nb += 1
-                    #TODO Add all option
-                    continue
+                        continue
                 
                 #checking format for stats
                 pickle = os.path.join(os.path.dirname(__file__), "extraction/format.pkl")
@@ -54,7 +54,7 @@ def extract_jsons(folder='./data', out_folder='./parsed_matches', all=False):
                 except classes.FormatInvalidError:
                     print("FormatInvalidError: "+fn)
                     invalid_files.append(fn)
-                    write_invalid(invalid_files, "invalid_files")
+                    list_to_csv(invalid_files, "invalid_files")
                 except KeyboardInterrupt:
                     print('Interrupted')
                     try:
@@ -64,15 +64,17 @@ def extract_jsons(folder='./data', out_folder='./parsed_matches', all=False):
                 except:
                     print("Other Error : "+fn)
                     error_files.append(fn)
-                    write_invalid(error_files, "error_files")
+                    list_to_csv(error_files, "error_files")
 
                 #extract json into theses
                 #extract_pdf.extract_pdf(fn, output)
             else :
                 print("FormatInvalidError: "+fn)
                 invalid_files.append(fn)
-                write_invalid(invalid_files, "invalid_files")
+                list_to_csv(invalid_files, "invalid_files")
         print("Correct format stats : " + str(correct_format_nb) + "/" + str(total_nb))
+        list_to_csv(invalid_files, "invalid_files")
+        list_to_csv(error_files, "error_files")
 
 def print_usage():
     print("Usage: main.py folder [-a, --all] [-o | output_folder] [-h, --help] \n ")
@@ -89,6 +91,7 @@ if __name__ == "__main__":
     # use extract pdf 
     folder = './data'
     output = './parsed_matches'
+    all = False
     #TODO check if folder field is valid
     if (not sys.argv[1]) or (not os.path.exists(sys.argv[1])):
         print("Error folder field invalid.")
@@ -103,14 +106,10 @@ if __name__ == "__main__":
             exit()
         if (opt == '-a' or opt == '--all'):
             all = True
-        print(len(sys.argv[2:]))
-        print(2+i)
         if (opt == '-o') and (len(sys.argv[2:]) > 2+i):
             print(os.path.exists(sys.argv[2+i+1]))
             if (os.path.exists(sys.argv[2+i+1])):
                 output=sys.argv[2+i+1]
         print(opt)
     
-    all = False
-    
-    extract_jsons(folder, output)
+    extract_jsons(folder, output, all)

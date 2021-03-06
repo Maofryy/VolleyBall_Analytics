@@ -277,7 +277,7 @@ def extract_4calls(file, verbose=False):
     if (not query_1):
         raise FormatInvalidError
     format_check = query_1.pop(0)
-    if (not format_check.equals(format_ref)):
+    if (not format_check.equals(format_ref)) or (query_1[8].columns.values[0] == "Début:") or (query_1[10].columns.values[0] == "Début:"):
         raise FormatInvalidError("Pdf format is wrong.")
     
     if len(query_1) == 19:
@@ -366,6 +366,7 @@ def extract_4calls(file, verbose=False):
         [501 + 2*col, 424, 509.8 + 2*col, 560.9],
         [501 + 1*col, 424, 509.8 + 1*col, 560.9],
         [501 + 0*col, 424, 509.8 + 0*col, 560.9],
+        [501 - 1*col, 424, 509.8 - 1*col, 560.9],
 
         ],
         columns=[
@@ -602,12 +603,12 @@ def extract_match(file, verbose=False):
         'Index' : ['Set 1', 'Set 2', 'Set 3', 'Set 4', 'Set 5'],
         'Teams':[set1[0], set2[0], set3[0], set4[0], set5[0]],
         'Time':[set1[1], set2[1], set3[1], set4[1], set5[1]],
-        'Substitutions A':[set1[2], set2[3], set3[2], set4[3], set5[2]],
-        'Substitutions B':[set1[3], set2[2], set3[3], set4[2], set5[3]],
-        'Serves A':[set1[4], set2[5], set3[4], set4[5], set5[4]],
-        'Serves B':[set1[5], set2[4], set3[5], set4[4], set5[5]],
-        'Timeouts A':[set1[6], set2[7], set3[6], set4[7], set5[6]],
-        'Timeouts B':[set1[7], set2[6], set3[7], set4[6], set5[7]],
+        'Substitutions 1':[set1[2], set2[3], set3[2], set4[3], set5[2]],
+        'Substitutions 2':[set1[3], set2[2], set3[3], set4[2], set5[3]],
+        'Serves 1':[set1[4], set2[5], set3[4], set4[5], set5[4]],
+        'Serves 2':[set1[5], set2[4], set3[5], set4[4], set5[5]],
+        'Timeouts 1':[set1[6], set2[7], set3[6], set4[7], set5[6]],
+        'Timeouts 2':[set1[7], set2[6], set3[7], set4[6], set5[7]],
                         }).set_index('Index')
     
     ## ----------------------  Extract team data ------------------------------- ##
@@ -707,12 +708,12 @@ if __name__ == "__main__":
     output_folder = "./extraction/json"
     file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
     file2 = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Fém.B/EFB018.pdf")
-    file3 = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.B/EMB007.pdf")
+    debug = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.A/EMA033.pdf")
     timer = Timer()
     try :
-        pdf = extract_pdf(file, output_folder, False)
+        #pdf = extract_pdf(file, output_folder, False)
         #pdf = extract_pdf(file2, output_folder, True)
-        #pdf = extract_pdf(file2, output_folder, True)
+        pdf = extract_pdf(debug, output_folder, True)
     except FormatInvalidError:
         print("Invalid format")
         exit()
