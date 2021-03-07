@@ -72,9 +72,20 @@ foreach($dir1 as $dir) {
 				$files2 = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder . '/' . $file), 2);
 				foreach ($files2 as $file2) {
 					$json = file_get_contents('parsed_matches/'. $dir . '/' . $folder . '/' . $file . '/' . $file2, true);
+					
 					addMatch($json, $files2);
 				}
 			} else {
+				$errors_match = array(
+				/*	'2FA034.json',
+					'2MA023.json',
+					'2MA032.json',
+					'2MC037.json',
+					'2ME009.json',
+					'3FC022.json',
+					'3FE054.json',*/
+				);
+				if (in_array($file, $errors_match)) continue;
 				$json = file_get_contents('parsed_matches/'. $dir . '/' . $folder . '/' . $file, true);
 				addMatch($json, $file);
 			}
@@ -97,11 +108,11 @@ function addMatch($json, $file) {
 		return false; // match already insert
 	}
 
-	$teamAName = str_replace("'", " ", $sets['Teams']['Set 1']['Name']['Team A']);
-	$teamBName = str_replace("'", " ", $sets['Teams']['Set 1']['Name']['Team B']);
+	$teamAName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 1']));
+	$teamBName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 2']));
 
-	$inversed = (trim($sets['Teams']['Set 1']['Name']['Team A']) != trim(substr($teams['Name']['Team 1'][0], 0, 22)));
-	$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team A']) != trim(substr($teams['Name']['Team 1'][0], 0, 19)));
+	$inversed = (trim($sets['Teams']['Set 1']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 22)));
+	$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 19)));
 
 	//division
 	if (!isset($referentiel['division'][$title['div_name']])) {
@@ -158,6 +169,9 @@ function addMatch($json, $file) {
 		if (!intval($licence)) {
 			$licence = substr($licence, 1, strlen($licence) -1);
 		}
+		if (empty($licence)) {
+			$licence = 0;
+		}
 		$players[$licence] = array(
 			"name" => $teams['Players']['Team 1']['Nom Prénom'][$key],
 			"team" => $teamAName,
@@ -168,6 +182,9 @@ function addMatch($json, $file) {
 	foreach ($teams['Players']['Team 2']['Licence'] as $key => $licence) {
 		if (!intval($licence)) {
 			$licence = substr($licence, 1, strlen($licence) -1);
+		}
+		if (empty($licence)) {
+			$licence = 0;
 		}
 		$players[$licence] = array(
 			"name" => $teams['Players']['Team 2']['Nom Prénom'][$key],
@@ -195,14 +212,15 @@ function addMatch($json, $file) {
 		}
 		$names = explode(' ', $player['name']);
 		$firstName = array_pop($names);
-		$firstName = str_replace("'", " ", $firstName); // pour les ' dans les nom
+		$firstName = str_replace("'", "''", $firstName); // pour les ' dans les nom
 		$lastName = implode(' ', $names);
-		$lastName = str_replace("'", " ", $lastName); // pour les ' dans les nom
+		$lastName = str_replace("'", "''", $lastName); // pour les ' dans les nom
 		$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
 		VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
-		
-		$stmt = $database->prepare($sql);
-		$stmt->execute();
+		if ($licence) {
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+		}
 		$referentiel['player'][$licence] = $licence;
 		
 		// team_players
@@ -213,6 +231,8 @@ function addMatch($json, $file) {
 	}
 
 	// match
+	$title['city'] = str_replace("'", "''", $title['city']);
+	$title['gym'] = str_replace("'", "''", $title['gym']);
 	$sql = sprintf("INSERT INTO sport_analytics.`match`
 	(team_home_id, team_out_id, div_code, div_pool, match_number, match_day, city, gym, category, ligue, date_match, created_at)
 	VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s', %s);
@@ -241,13 +261,11 @@ function addMatch($json, $file) {
 	
 	// match_set_position
 	for ($i = 1; $i < 3; $i++) {
-		
 		if ($inversed) {
 			$SubstitutionsN = ($i != 1) ? 'Substitutions A': 'Substitutions B';
 		} else {
 			$SubstitutionsN = ($i == 1) ? 'Substitutions A': 'Substitutions B';
 		}
-		
 		$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
 		foreach ($sets[$SubstitutionsN] as $setString => $sub) {
 			$set = substr($setString, -1);
@@ -259,7 +277,7 @@ function addMatch($json, $file) {
 				$cpt = $i;
 				if ($set != 5 ) {
 					if ($inversed) {
-						if($cpt == 1) {
+						if ($cpt == 1) {
 							$cpt = 2;
 						} else {
 							$cpt = 1;
@@ -276,7 +294,12 @@ function addMatch($json, $file) {
 				}
 				
 				if (!isset($playersNumber[$cpt][$number])) {
-					echo 'Set Numéro : ' . $set;
+					$br = '</br>';
+					echo 'Set Numéro : ' . $set . $br;
+					echo 'number : ' . $number . $br;
+					echo 'cpt : ' . $cpt . $br;
+					echo 'i :' . $i . $br;
+					var_dump($playersNumber[$cpt]);
 					var_dump($file);die;
 					throw new Exception(sprintf("Aucun numéro %s dans l'équipe %s dans le fichier %s", $number, ($i == 1) ? $teamAName : $teamBName, $file));
 				}
@@ -326,6 +349,8 @@ function addMatch($json, $file) {
 				}
 				if (!empty($position[2])) {
 					if (!isset($playersNumber[$cpt][$position[1]]) || !isset($playersNumber[$cpt][$position[0]])) {
+						var_dump($cpt);
+						var_dump($playersNumber[$cpt]);
 						var_dump($file);die;
 					}
 					$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
@@ -352,7 +377,7 @@ function addMatch($json, $file) {
 			if (empty($positions)) continue;
 			foreach ($positions as $position) {
 				foreach ($position as $element) {
-					if ($element === null || $element == 'X' || $element == 'Unnamed: 0') continue;
+					if ($element === null || $element == 'X' || strlen($element) > 5) continue;
 					$sql = sprintf("INSERT INTO sport_analytics.match_set_rotation (match_id, `set`, `point`, team_id)
 						VALUES('%s', '%s', '%s', '%s');", $matchId, $set, $element, $teamN);
 					$stmt = $database->prepare($sql);
@@ -424,9 +449,9 @@ function addMatch($json, $file) {
 				// player
 				$names = explode(' ', $teams['Officials'][$teamN]['Nom Prénom'][$cpt]);
 				$firstName = array_pop($names);
-				$firstName = str_replace("'", " ", $firstName); // pour les ' dans les nom
+				$firstName = str_replace("'", "''", $firstName); // pour les ' dans les nom
 				$lastName = implode(' ', $names);
-				$lastName = str_replace("'", " ", $lastName); // pour les ' dans les nom
+				$lastName = str_replace("'", "''", $lastName); // pour les ' dans les nom
 				$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
 				VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
 				
