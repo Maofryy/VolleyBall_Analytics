@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA110",
@@ -773,11 +773,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"VOLLEY-BALL ALBIGEOIS"
+                "Team 1":"VOLLEY-BALL ALBIGEOIS",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":5,
+                        "2":7,
+                        "3":8,
+                        "4":11,
+                        "5":12,
+                        "6":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LECOQ STEPHANIE",
+                        "1":"REY JULIE",
+                        "2":"BALFET PAULINE",
+                        "3":"CANCE MAELLE",
+                        "4":"GENIES ANA\u00cfS",
+                        "5":"LEMOUZY MAYARA",
+                        "6":"NIEL CARLA"
+                    },
+                    "Licence":{
+                        "0":1715937,
+                        "1":1845219,
+                        "2":2189778,
+                        "3":1755841,
+                        "4":1955437,
+                        "5":1989698,
+                        "6":2189726
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -820,39 +849,21 @@
                         "10":1849146,
                         "11":1993380
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":5,
-                        "2":7,
-                        "3":8,
-                        "4":11,
-                        "5":12,
-                        "6":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LECOQ STEPHANIE",
-                        "1":"REY JULIE",
-                        "2":"BALFET PAULINE",
-                        "3":"CANCE MAELLE",
-                        "4":"GENIES ANA\u00cfS",
-                        "5":"LEMOUZY MAYARA",
-                        "6":"NIEL CARLA"
-                    },
-                    "Licence":{
-                        "0":1715937,
-                        "1":1845219,
-                        "2":2189778,
-                        "3":1755841,
-                        "4":1955437,
-                        "5":1989698,
-                        "6":2189726
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":6
                     },
@@ -862,21 +873,21 @@
                     "Licence":{
                         "0":1674253
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KADJO ISABELLE"
+                    },
+                    "Licence":{
+                        "0":1103424
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB",
@@ -891,17 +902,6 @@
                         "0":93773,
                         "1":1817353,
                         "2":1993379
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KADJO ISABELLE"
-                    },
-                    "Licence":{
-                        "0":1103424
                     }
                 }
             }

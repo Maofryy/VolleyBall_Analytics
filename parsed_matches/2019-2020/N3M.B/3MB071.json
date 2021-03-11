@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB071",
             "match_day":"12",
             "city":"CLERMONT L\\'HERAULT",
@@ -709,11 +709,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VBC CLERMONTAIS",
-                "Team 2":"AVIGNON VOLLEY BALL 2"
+                "Team 1":"AVIGNON VOLLEY BALL 2",
+                "Team 2":"VBC CLERMONTAIS"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5,
+                        "1":6,
+                        "2":9,
+                        "3":11,
+                        "4":12,
+                        "5":13,
+                        "6":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PURPAN ARNAUD",
+                        "1":"AMET JOSE",
+                        "2":"SEGALIN ADRIEN",
+                        "3":"EL MAKNASY ANIS",
+                        "4":"REYNET JULIEN",
+                        "5":"BENHANIDA CHARLES",
+                        "6":"BELMEHDI AHCENE"
+                    },
+                    "Licence":{
+                        "0":1837616,
+                        "1":962512,
+                        "2":1835285,
+                        "3":2047108,
+                        "4":1547949,
+                        "5":1792220,
+                        "6":2317592
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -747,50 +776,10 @@
                         "7":2241540,
                         "8":1647388
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5,
-                        "1":6,
-                        "2":9,
-                        "3":11,
-                        "4":12,
-                        "5":13,
-                        "6":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PURPAN ARNAUD",
-                        "1":"AMET JOSE",
-                        "2":"SEGALIN ADRIEN",
-                        "3":"EL MAKNASY ANIS",
-                        "4":"REYNET JULIEN",
-                        "5":"BENHANIDA CHARLES",
-                        "6":"BELMEHDI AHCENE"
-                    },
-                    "Licence":{
-                        "0":1837616,
-                        "1":962512,
-                        "2":1835285,
-                        "3":2047108,
-                        "4":1547949,
-                        "5":1792220,
-                        "6":2317592
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VERNAZOBRES GREGOIRE"
-                    },
-                    "Licence":{
-                        "0":2241540
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":20
                     },
@@ -800,24 +789,21 @@
                     "Licence":{
                         "0":2317592
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VERNAZOBRES GREGOIRE"
+                    },
+                    "Licence":{
+                        "0":2241540
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LERDA VERONIQUE",
-                        "1":"GABAUDAN ARNAUD"
-                    },
-                    "Licence":{
-                        "0":996570,
-                        "1":1105662
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -829,6 +815,20 @@
                     "Licence":{
                         "0":1454586,
                         "1":1478926
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LERDA VERONIQUE",
+                        "1":"GABAUDAN ARNAUD"
+                    },
+                    "Licence":{
+                        "0":996570,
+                        "1":1105662
                     }
                 }
             }

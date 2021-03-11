@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA036",
@@ -477,11 +477,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"B\u00c9ZIERS VOLLEY-BALL 2 CFC",
-                "Team 2":"ASS SPORTIVE DE MONACO"
+                "Team 1":"ASS SPORTIVE DE MONACO",
+                "Team 2":"B\u00c9ZIERS VOLLEY-BALL 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":9,
+                        "7":10,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"REBUFFEL MANON",
+                        "1":"GUADDACHE WIEME",
+                        "2":"BAUSSET FRANCE",
+                        "3":"BACHERY HAYAT",
+                        "4":"CHAMEAUX LENA",
+                        "5":"DA MOURA LEAL CELIA",
+                        "6":"HARAGOVA VENDULA",
+                        "7":"GIORDANO MATHILDE",
+                        "8":"HAMZAOUI EVA"
+                    },
+                    "Licence":{
+                        "0":1777045,
+                        "1":1823437,
+                        "2":1556677,
+                        "3":1345937,
+                        "4":1778916,
+                        "5":1611693,
+                        "6":1879131,
+                        "7":1077178,
+                        "8":1338367
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -521,56 +556,10 @@
                         "9":2192047,
                         "10":1922491
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":9,
-                        "7":10,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"REBUFFEL MANON",
-                        "1":"GUADDACHE WIEME",
-                        "2":"BAUSSET FRANCE",
-                        "3":"BACHERY HAYAT",
-                        "4":"CHAMEAUX LENA",
-                        "5":"DA MOURA LEAL CELIA",
-                        "6":"HARAGOVA VENDULA",
-                        "7":"GIORDANO MATHILDE",
-                        "8":"HAMZAOUI EVA"
-                    },
-                    "Licence":{
-                        "0":1777045,
-                        "1":1823437,
-                        "2":1556677,
-                        "3":1345937,
-                        "4":1778916,
-                        "5":1611693,
-                        "6":1879131,
-                        "7":1077178,
-                        "8":1338367
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROMATI SARA"
-                    },
-                    "Licence":{
-                        "0":1863717
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1
                     },
@@ -580,6 +569,17 @@
                     "Licence":{
                         "0":1777045
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROMATI SARA"
+                    },
+                    "Licence":{
+                        "0":1863717
+                    }
                 }
             },
             "Officials":{
@@ -588,10 +588,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BAINVEL ROMUALD"
+                        "0":"HAMZAOUI EVA"
                     },
                     "Licence":{
-                        "0":986222
+                        "0":1338367
                     }
                 },
                 "Team 2":{
@@ -599,10 +599,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"HAMZAOUI EVA"
+                        "0":"BAINVEL ROMUALD"
                     },
                     "Licence":{
-                        "0":1338367
+                        "0":986222
                     }
                 }
             }

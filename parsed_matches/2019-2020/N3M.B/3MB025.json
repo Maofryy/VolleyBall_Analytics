@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB025",
             "match_day":"05",
             "city":"GIGNAC",
@@ -465,46 +465,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"ANNECY VOLLEY BALL"
+                "Team 1":"ANNECY VOLLEY BALL",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":6,
-                        "2":8,
-                        "3":9,
-                        "4":12,
-                        "5":13,
-                        "6":14,
-                        "7":16,
-                        "8":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KULIKOWSKI ROMAIN",
-                        "1":"ABRAHAM BRIAN",
-                        "2":"LAURES ANTHONY",
-                        "3":"LAVERNHE TOM",
-                        "4":"QUIOT FLORENT",
-                        "5":"ARNAUD CLEMENT",
-                        "6":"BERNADOU VALENTIN",
-                        "7":"LEFEBVRE THOMAS",
-                        "8":"DELTELL JORIS"
-                    },
-                    "Licence":{
-                        "0":1895618,
-                        "1":1766432,
-                        "2":1645723,
-                        "3":1945219,
-                        "4":1845996,
-                        "5":1444556,
-                        "6":1806795,
-                        "7":1746889,
-                        "8":1527140
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -538,10 +503,56 @@
                         "7":2076235,
                         "8":1861999
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":6,
+                        "2":8,
+                        "3":9,
+                        "4":12,
+                        "5":13,
+                        "6":14,
+                        "7":16,
+                        "8":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KULIKOWSKI ROMAIN",
+                        "1":"ABRAHAM BRIAN",
+                        "2":"LAURES ANTHONY",
+                        "3":"LAVERNHE TOM",
+                        "4":"QUIOT FLORENT",
+                        "5":"ARNAUD CLEMENT",
+                        "6":"BERNADOU VALENTIN",
+                        "7":"LEFEBVRE THOMAS",
+                        "8":"DELTELL JORIS"
+                    },
+                    "Licence":{
+                        "0":1895618,
+                        "1":1766432,
+                        "2":1645723,
+                        "3":1945219,
+                        "4":1845996,
+                        "5":1444556,
+                        "6":1806795,
+                        "7":1746889,
+                        "8":1527140
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MAUDRY TRISTAN"
+                    },
+                    "Licence":{
+                        "0":1577185
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -554,17 +565,6 @@
                         "0":1845996,
                         "1":1806795
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MAUDRY TRISTAN"
-                    },
-                    "Licence":{
-                        "0":1577185
-                    }
                 }
             },
             "Officials":{
@@ -573,10 +573,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
+                        "0":"BIRRAUX PIERRE"
                     },
                     "Licence":{
-                        "0":1444556
+                        "0":2050932
                     }
                 },
                 "Team 2":{
@@ -584,10 +584,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BIRRAUX PIERRE"
+                        "0":"ARNAUD CLEMENT"
                     },
                     "Licence":{
-                        "0":2050932
+                        "0":1444556
                     }
                 }
             }

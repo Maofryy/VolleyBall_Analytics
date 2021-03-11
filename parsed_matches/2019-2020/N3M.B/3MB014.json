@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB014",
             "match_day":"03",
             "city":"SAINT-ETIENNE",
@@ -440,46 +440,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"ANNECY VOLLEY BALL"
+                "Team 1":"ANNECY VOLLEY BALL",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":8,
-                        "7":11,
-                        "8":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PONCET REMI",
-                        "1":"JOURNAL NICOLAS",
-                        "2":"PONCET JULIEN",
-                        "3":"BENZEGHIBA JESSIM",
-                        "4":"PELTIER ROMEO",
-                        "5":"ZAIMIS PETROS",
-                        "6":"TERZIEV VALENTIN",
-                        "7":"BARRELLON YOHANN",
-                        "8":"BERARD TIM"
-                    },
-                    "Licence":{
-                        "0":1801585,
-                        "1":1108884,
-                        "2":1614899,
-                        "3":1785323,
-                        "4":2048547,
-                        "5":2416024,
-                        "6":2138743,
-                        "7":1699084,
-                        "8":1755081
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -513,21 +478,45 @@
                         "7":2076235,
                         "8":1861999
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":8,
+                        "7":11,
+                        "8":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PONCET REMI",
+                        "1":"JOURNAL NICOLAS",
+                        "2":"PONCET JULIEN",
+                        "3":"BENZEGHIBA JESSIM",
+                        "4":"PELTIER ROMEO",
+                        "5":"ZAIMIS PETROS",
+                        "6":"TERZIEV VALENTIN",
+                        "7":"BARRELLON YOHANN",
+                        "8":"BERARD TIM"
+                    },
+                    "Licence":{
+                        "0":1801585,
+                        "1":1108884,
+                        "2":1614899,
+                        "3":1785323,
+                        "4":2048547,
+                        "5":2416024,
+                        "6":2138743,
+                        "7":1699084,
+                        "8":1755081
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BERARD TIM"
-                    },
-                    "Licence":{
-                        "0":1755081
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3
                     },
@@ -537,6 +526,17 @@
                     "Licence":{
                         "0":1577185
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BERARD TIM"
+                    },
+                    "Licence":{
+                        "0":1755081
+                    }
                 }
             },
             "Officials":{
@@ -545,10 +545,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"YOTOV YURIY"
+                        "0":"BIRRAUX PIERRE"
                     },
                     "Licence":{
-                        "0":1426544
+                        "0":2050932
                     }
                 },
                 "Team 2":{
@@ -556,10 +556,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BIRRAUX PIERRE"
+                        "0":"YOTOV YURIY"
                     },
                     "Licence":{
-                        "0":2050932
+                        "0":1426544
                     }
                 }
             }

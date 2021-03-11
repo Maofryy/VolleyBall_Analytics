@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC084",
             "match_day":"14",
             "city":"MENDE",
@@ -544,11 +544,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MENDE VOLLEY LOZERE 2 CFC",
-                "Team 2":"STADE POITEVIN VOLLEY BEACH 2"
+                "Team 1":"STADE POITEVIN VOLLEY BEACH 2",
+                "Team 2":"MENDE VOLLEY LOZERE 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":5,
+                        "2":9,
+                        "3":10,
+                        "4":11,
+                        "5":12,
+                        "6":13,
+                        "7":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GUEMMOUR DJAMEL-EDDINE",
+                        "1":"HOGER ALEXANDRE",
+                        "2":"KIJOWSKI THOMAS",
+                        "3":"GIGAULT CLEMENT",
+                        "4":"SZUREWSKY PAUL",
+                        "5":"ANCEL THEO",
+                        "6":"GATEAU MAXIME",
+                        "7":"BIRONNEAU REMY"
+                    },
+                    "Licence":{
+                        "0":1673440,
+                        "1":2245737,
+                        "2":1785300,
+                        "3":1834073,
+                        "4":1893934,
+                        "5":1853275,
+                        "6":1715757,
+                        "7":1903885
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":4,
@@ -588,42 +620,21 @@
                         "9":1947267,
                         "10":2102241
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":5,
-                        "2":9,
-                        "3":10,
-                        "4":11,
-                        "5":12,
-                        "6":13,
-                        "7":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GUEMMOUR DJAMEL-EDDINE",
-                        "1":"HOGER ALEXANDRE",
-                        "2":"KIJOWSKI THOMAS",
-                        "3":"GIGAULT CLEMENT",
-                        "4":"SZUREWSKY PAUL",
-                        "5":"ANCEL THEO",
-                        "6":"GATEAU MAXIME",
-                        "7":"BIRONNEAU REMY"
-                    },
-                    "Licence":{
-                        "0":1673440,
-                        "1":2245737,
-                        "2":1785300,
-                        "3":1834073,
-                        "4":1893934,
-                        "5":1853275,
-                        "6":1715757,
-                        "7":1903885
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BIRONNEAU REMY"
+                    },
+                    "Licence":{
+                        "0":1903885
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":13
@@ -636,21 +647,21 @@
                         "0":1221856,
                         "1":1675818
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BIRONNEAU REMY"
-                    },
-                    "Licence":{
-                        "0":1903885
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BRIZOLA DAMASCENO ROGERIO"
+                    },
+                    "Licence":{
+                        "0":1795649
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -662,17 +673,6 @@
                     "Licence":{
                         "0":1091660,
                         "1":1221856
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BRIZOLA DAMASCENO ROGERIO"
-                    },
-                    "Licence":{
-                        "0":1795649
                     }
                 }
             }

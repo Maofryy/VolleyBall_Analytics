@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC020",
@@ -689,11 +689,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"STRASBOURG VOLLEY-BALL",
-                "Team 2":"AL CAUDRY VOLLEY-BALL 2"
+                "Team 1":"AL CAUDRY VOLLEY-BALL 2",
+                "Team 2":"STRASBOURG VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":4,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":13,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FARYNSKI DAWID",
+                        "1":"FORTIN ANTOINE",
+                        "2":"DUMONT MARC",
+                        "3":"GREBACHEV KOSTADIN",
+                        "4":"MELY MAXENCE",
+                        "5":"LOFFLER ALEXIS",
+                        "6":"RAAFATE JEAN BAPTISTE",
+                        "7":"PRUSS BARTOSZ",
+                        "8":"COLLIN ROMAIN"
+                    },
+                    "Licence":{
+                        "0":2406852,
+                        "1":1633312,
+                        "2":2065417,
+                        "3":2256968,
+                        "4":1864733,
+                        "5":1942180,
+                        "6":2204490,
+                        "7":2406853,
+                        "8":1661838
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -730,56 +765,10 @@
                         "8":1987606,
                         "9":2042975
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":4,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":13,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FARYNSKI DAWID",
-                        "1":"FORTIN ANTOINE",
-                        "2":"DUMONT MARC",
-                        "3":"GREBACHEV KOSTADIN",
-                        "4":"MELY MAXENCE",
-                        "5":"LOFFLER ALEXIS",
-                        "6":"RAAFATE JEAN BAPTISTE",
-                        "7":"PRUSS BARTOSZ",
-                        "8":"COLLIN ROMAIN"
-                    },
-                    "Licence":{
-                        "0":2406852,
-                        "1":1633312,
-                        "2":2065417,
-                        "3":2256968,
-                        "4":1864733,
-                        "5":1942180,
-                        "6":2204490,
-                        "7":2406853,
-                        "8":1661838
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SADREDDINE WAHIBE"
-                    },
-                    "Licence":{
-                        "0":1877209
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -789,6 +778,17 @@
                     "Licence":{
                         "0":1661838
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SADREDDINE WAHIBE"
+                    },
+                    "Licence":{
+                        "0":1877209
+                    }
                 }
             },
             "Officials":{
@@ -797,10 +797,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BIGOT MICHEL"
+                        "0":"BOGRAND MATHIEU"
                     },
                     "Licence":{
-                        "0":1365692
+                        "0":1632303
                     }
                 },
                 "Team 2":{
@@ -808,10 +808,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BOGRAND MATHIEU"
+                        "0":"BIGOT MICHEL"
                     },
                     "Licence":{
-                        "0":1632303
+                        "0":1365692
                     }
                 }
             }

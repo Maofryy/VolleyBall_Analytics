@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB037",
             "match_day":"07",
             "city":"GIGNAC",
@@ -479,49 +479,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"ARAGO DE SETE VOLLEY-BALL 3"
+                "Team 1":"ARAGO DE SETE VOLLEY-BALL 3",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":6,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":12,
-                        "6":13,
-                        "7":14,
-                        "8":16,
-                        "9":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KULIKOWSKI ROMAIN",
-                        "1":"ABRAHAM BRIAN",
-                        "2":"GUILLAUTON ALEXIS",
-                        "3":"LAURES ANTHONY",
-                        "4":"LAVERNHE TOM",
-                        "5":"QUIOT FLORENT",
-                        "6":"ARNAUD CLEMENT",
-                        "7":"BERNADOU VALENTIN",
-                        "8":"LEFEBVRE THOMAS",
-                        "9":"DELTELL JORIS"
-                    },
-                    "Licence":{
-                        "0":1895618,
-                        "1":1766432,
-                        "2":1806788,
-                        "3":1645723,
-                        "4":1945219,
-                        "5":1845996,
-                        "6":1444556,
-                        "7":1806795,
-                        "8":1746889,
-                        "9":1527140
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -564,21 +526,48 @@
                         "10":1835655,
                         "11":1882919
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":6,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":12,
+                        "6":13,
+                        "7":14,
+                        "8":16,
+                        "9":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KULIKOWSKI ROMAIN",
+                        "1":"ABRAHAM BRIAN",
+                        "2":"GUILLAUTON ALEXIS",
+                        "3":"LAURES ANTHONY",
+                        "4":"LAVERNHE TOM",
+                        "5":"QUIOT FLORENT",
+                        "6":"ARNAUD CLEMENT",
+                        "7":"BERNADOU VALENTIN",
+                        "8":"LEFEBVRE THOMAS",
+                        "9":"DELTELL JORIS"
+                    },
+                    "Licence":{
+                        "0":1895618,
+                        "1":1766432,
+                        "2":1806788,
+                        "3":1645723,
+                        "4":1945219,
+                        "5":1845996,
+                        "6":1444556,
+                        "7":1806795,
+                        "8":1746889,
+                        "9":1527140
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"QUIOT FLORENT"
-                    },
-                    "Licence":{
-                        "0":1845996
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":5
@@ -591,21 +580,21 @@
                         "0":2056745,
                         "1":2327171
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"QUIOT FLORENT"
+                    },
+                    "Licence":{
+                        "0":1845996
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
-                    },
-                    "Licence":{
-                        "0":1444556
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -617,6 +606,17 @@
                     "Licence":{
                         "0":1459543,
                         "1":1745104
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ARNAUD CLEMENT"
+                    },
+                    "Licence":{
+                        "0":1444556
                     }
                 }
             }

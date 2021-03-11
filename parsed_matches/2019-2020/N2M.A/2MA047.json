@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA047",
@@ -598,11 +598,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AGDE VOLLEY BALL",
-                "Team 2":"ARAGO DE SETE VOLLEY-BALL 2 CF"
+                "Team 1":"ARAGO DE SETE VOLLEY-BALL 2 CF",
+                "Team 2":"AGDE VOLLEY BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":6,
+                        "2":7,
+                        "3":10,
+                        "4":11,
+                        "5":12,
+                        "6":18,
+                        "7":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FOUILLADE HUGO",
+                        "1":"DIOP CHEIKH-AHMADOU-BAMBA",
+                        "2":"COURNEDE LUCAS",
+                        "3":"PICARD TOM",
+                        "4":"VIERA JOSE",
+                        "5":"GOUESSANT BRENDAN",
+                        "6":"COURDAVAULT MATHIS",
+                        "7":"LALISSE REMY"
+                    },
+                    "Licence":{
+                        "0":1827516,
+                        "1":2006043,
+                        "2":1771831,
+                        "3":2301422,
+                        "4":1864303,
+                        "5":1853961,
+                        "6":1952334,
+                        "7":1847276
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -639,42 +671,21 @@
                         "8":1838651,
                         "9":1810154
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":6,
-                        "2":7,
-                        "3":10,
-                        "4":11,
-                        "5":12,
-                        "6":18,
-                        "7":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FOUILLADE HUGO",
-                        "1":"DIOP CHEIKH-AHMADOU-BAMBA",
-                        "2":"COURNEDE LUCAS",
-                        "3":"PICARD TOM",
-                        "4":"VIERA JOSE",
-                        "5":"GOUESSANT BRENDAN",
-                        "6":"COURDAVAULT MATHIS",
-                        "7":"LALISSE REMY"
-                    },
-                    "Licence":{
-                        "0":1827516,
-                        "1":2006043,
-                        "2":1771831,
-                        "3":2301422,
-                        "4":1864303,
-                        "5":1853961,
-                        "6":1952334,
-                        "7":1847276
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FOUILLADE HUGO"
+                    },
+                    "Licence":{
+                        "0":1827516
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":4,
                         "1":5
@@ -687,35 +698,10 @@
                         "0":1379943,
                         "1":1594951
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FOUILLADE HUGO"
-                    },
-                    "Licence":{
-                        "0":1827516
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VAN BRUSSEL DANIEL",
-                        "1":"SUSTEK YVAN"
-                    },
-                    "Licence":{
-                        "0":1908300,
-                        "1":1044064
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -727,6 +713,20 @@
                     "Licence":{
                         "0":491084,
                         "1":1526972
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VAN BRUSSEL DANIEL",
+                        "1":"SUSTEK YVAN"
+                    },
+                    "Licence":{
+                        "0":1908300,
+                        "1":1044064
                     }
                 }
             }

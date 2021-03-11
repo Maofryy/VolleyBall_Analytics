@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC028",
             "match_day":"05",
             "city":"UZEIN",
@@ -514,52 +514,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LESCAR PROMOTION VOLLEY-BALL",
-                "Team 2":"SPORT ATHLETIQUE MERIGNACAIS"
+                "Team 1":"SPORT ATHLETIQUE MERIGNACAIS",
+                "Team 2":"LESCAR PROMOTION VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":5,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":12,
-                        "7":13,
-                        "8":14,
-                        "9":15,
-                        "10":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"OUIKHLEF OTHMANE",
-                        "1":"BRAIN JEROME",
-                        "2":"CASTAINGS THEO",
-                        "3":"SAYUS LAURENT",
-                        "4":"HOURDEL DAMIEN",
-                        "5":"BALI FLORIAN",
-                        "6":"LAYRE FLORIAN",
-                        "7":"SERVAIS CYRIL",
-                        "8":"TOURNIER ALEXANDRE",
-                        "9":"BALI MAXIME",
-                        "10":"DARJOUR REMI"
-                    },
-                    "Licence":{
-                        "0":2063061,
-                        "1":1854885,
-                        "2":2099460,
-                        "3":1344573,
-                        "4":2028431,
-                        "5":2019435,
-                        "6":1975916,
-                        "7":1769992,
-                        "8":1997064,
-                        "9":1990610,
-                        "10":1377380
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -599,10 +558,62 @@
                         "9":1800984,
                         "10":1762682
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":5,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":12,
+                        "7":13,
+                        "8":14,
+                        "9":15,
+                        "10":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"OUIKHLEF OTHMANE",
+                        "1":"BRAIN JEROME",
+                        "2":"CASTAINGS THEO",
+                        "3":"SAYUS LAURENT",
+                        "4":"HOURDEL DAMIEN",
+                        "5":"BALI FLORIAN",
+                        "6":"LAYRE FLORIAN",
+                        "7":"SERVAIS CYRIL",
+                        "8":"TOURNIER ALEXANDRE",
+                        "9":"BALI MAXIME",
+                        "10":"DARJOUR REMI"
+                    },
+                    "Licence":{
+                        "0":2063061,
+                        "1":1854885,
+                        "2":2099460,
+                        "3":1344573,
+                        "4":2028431,
+                        "5":2019435,
+                        "6":1975916,
+                        "7":1769992,
+                        "8":1997064,
+                        "9":1990610,
+                        "10":1377380
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LHERITIER SIMON"
+                    },
+                    "Licence":{
+                        "0":1762682
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":6
@@ -615,21 +626,21 @@
                         "0":1854885,
                         "1":2099460
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LHERITIER SIMON"
-                    },
-                    "Licence":{
-                        "0":1762682
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"OUIKHLEF MOHAMED"
+                    },
+                    "Licence":{
+                        "0":906719
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -641,17 +652,6 @@
                     "Licence":{
                         "0":1482732,
                         "1":2099460
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"OUIKHLEF MOHAMED"
-                    },
-                    "Licence":{
-                        "0":906719
                     }
                 }
             }

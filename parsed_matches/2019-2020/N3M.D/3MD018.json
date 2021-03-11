@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD018",
             "match_day":"03",
             "city":"REZE",
@@ -608,49 +608,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASB REZE 3",
-                "Team 2":"VOLLEY BALL CLUB MALOUIN"
+                "Team 1":"VOLLEY BALL CLUB MALOUIN",
+                "Team 2":"ASB REZE 3"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":11,
-                        "8":14,
-                        "9":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MIERMONT VALENTIN",
-                        "1":"AUDUSSEAU ALEXIS",
-                        "2":"CORVAISIER THOMAS",
-                        "3":"JOUAULT THOMAS",
-                        "4":"GABORIT NOE",
-                        "5":"LIGNON ALIX",
-                        "6":"GOUSSON DRISS",
-                        "7":"BRELLE KILLIAN",
-                        "8":"MAGNIN SIMON",
-                        "9":"QUILICI CYPRIEN"
-                    },
-                    "Licence":{
-                        "0":1875518,
-                        "1":1892339,
-                        "2":1830682,
-                        "3":2188961,
-                        "4":2001431,
-                        "5":1738743,
-                        "6":1776342,
-                        "7":1990280,
-                        "8":2072504,
-                        "9":2142087
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -687,21 +649,48 @@
                         "8":1474539,
                         "9":1553810
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":11,
+                        "8":14,
+                        "9":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MIERMONT VALENTIN",
+                        "1":"AUDUSSEAU ALEXIS",
+                        "2":"CORVAISIER THOMAS",
+                        "3":"JOUAULT THOMAS",
+                        "4":"GABORIT NOE",
+                        "5":"LIGNON ALIX",
+                        "6":"GOUSSON DRISS",
+                        "7":"BRELLE KILLIAN",
+                        "8":"MAGNIN SIMON",
+                        "9":"QUILICI CYPRIEN"
+                    },
+                    "Licence":{
+                        "0":1875518,
+                        "1":1892339,
+                        "2":1830682,
+                        "3":2188961,
+                        "4":2001431,
+                        "5":1738743,
+                        "6":1776342,
+                        "7":1990280,
+                        "8":2072504,
+                        "9":2142087
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":8
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GABORIT NOE"
-                    },
-                    "Licence":{
-                        "0":2001431
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":4
                     },
@@ -711,24 +700,21 @@
                     "Licence":{
                         "0":1339348
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":8
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GABORIT NOE"
+                    },
+                    "Licence":{
+                        "0":2001431
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"COUGNAUD EDGAR",
-                        "1":"LECOMTE CHARLELIE"
-                    },
-                    "Licence":{
-                        "0":1833963,
-                        "1":1835288
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -740,6 +726,20 @@
                     "Licence":{
                         "0":1857365,
                         "1":602847
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"COUGNAUD EDGAR",
+                        "1":"LECOMTE CHARLELIE"
+                    },
+                    "Licence":{
+                        "0":1833963,
+                        "1":1835288
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA006",
             "match_day":"01",
             "city":"CAGNES SUR MER",
@@ -508,11 +508,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"AUBAGNE CARNOUX VOLLEY-BALL"
+                "Team 1":"AUBAGNE CARNOUX VOLLEY-BALL",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":4,
+                        "4":6,
+                        "5":8,
+                        "6":10,
+                        "7":11,
+                        "8":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LAHLALI AKLI",
+                        "1":"TRAMINI CESAR",
+                        "2":"DAMEZ DENIS",
+                        "3":"BELHAOUCI DJAMEL",
+                        "4":"GUITONNEAU LOIC",
+                        "5":"TOUCHARD DAVID",
+                        "6":"BIANCHERI MAXIME",
+                        "7":"ANGOT ARTHUR",
+                        "8":"ROUHIER MATHIAS"
+                    },
+                    "Licence":{
+                        "0":2196909,
+                        "1":1957416,
+                        "2":1185668,
+                        "3":2241132,
+                        "4":1228636,
+                        "5":1994203,
+                        "6":1904181,
+                        "7":2143771,
+                        "8":2096644
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -552,45 +587,21 @@
                         "9":1720166,
                         "10":1966968
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":6,
-                        "5":8,
-                        "6":10,
-                        "7":11,
-                        "8":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LAHLALI AKLI",
-                        "1":"TRAMINI CESAR",
-                        "2":"DAMEZ DENIS",
-                        "3":"BELHAOUCI DJAMEL",
-                        "4":"GUITONNEAU LOIC",
-                        "5":"TOUCHARD DAVID",
-                        "6":"BIANCHERI MAXIME",
-                        "7":"ANGOT ARTHUR",
-                        "8":"ROUHIER MATHIAS"
-                    },
-                    "Licence":{
-                        "0":2196909,
-                        "1":1957416,
-                        "2":1185668,
-                        "3":2241132,
-                        "4":1228636,
-                        "5":1994203,
-                        "6":1904181,
-                        "7":2143771,
-                        "8":2096644
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":6
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GUITONNEAU LOIC"
+                    },
+                    "Licence":{
+                        "0":1228636
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":11
@@ -603,17 +614,6 @@
                         "0":1774713,
                         "1":1176370
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":6
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GUITONNEAU LOIC"
-                    },
-                    "Licence":{
-                        "0":1228636
-                    }
                 }
             },
             "Officials":{
@@ -622,10 +622,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DEMIROVIC ASIM"
+                        "0":"DEULOFEU GUILLEM"
                     },
                     "Licence":{
-                        "0":1567002
+                        "0":2168471
                     }
                 },
                 "Team 2":{
@@ -633,10 +633,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DEULOFEU GUILLEM"
+                        "0":"DEMIROVIC ASIM"
                     },
                     "Licence":{
-                        "0":2168471
+                        "0":1567002
                     }
                 }
             }

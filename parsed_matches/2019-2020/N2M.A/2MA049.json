@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA049",
@@ -751,11 +751,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"NARBONNE VOLLEY 2 CFC",
-                "Team 2":"C.A. BRIVE\/CORREZE VOLLEY"
+                "Team 1":"C.A. BRIVE\/CORREZE VOLLEY",
+                "Team 2":"NARBONNE VOLLEY 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":6,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":13,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"AL JAF MILAD",
+                        "1":"DARDANELLI REMI",
+                        "2":"DUPRE JEAN-CHRISTIAN",
+                        "3":"ANGELY MAX",
+                        "4":"YALA JEAN-CHARLES",
+                        "5":"LE NAOUR VINCENT",
+                        "6":"BALANDZIC NEMANJA",
+                        "7":"SVOB ARIAN",
+                        "8":"BAJIC STEVAN",
+                        "9":"CLAUZEL LOIC"
+                    },
+                    "Licence":{
+                        "0":2298915,
+                        "1":1555348,
+                        "2":2182838,
+                        "3":1084033,
+                        "4":1563045,
+                        "5":1707413,
+                        "6":1675577,
+                        "7":2301896,
+                        "8":1872899,
+                        "9":1420671
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -795,59 +833,10 @@
                         "9":1804548,
                         "10":2041245
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":6,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":13,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"AL JAF MILAD",
-                        "1":"DARDANELLI REMI",
-                        "2":"DUPRE JEAN-CHRISTIAN",
-                        "3":"ANGELY MAX",
-                        "4":"YALA JEAN-CHARLES",
-                        "5":"LE NAOUR VINCENT",
-                        "6":"BALANDZIC NEMANJA",
-                        "7":"SVOB ARIAN",
-                        "8":"BAJIC STEVAN",
-                        "9":"CLAUZEL LOIC"
-                    },
-                    "Licence":{
-                        "0":2298915,
-                        "1":1555348,
-                        "2":2182838,
-                        "3":1084033,
-                        "4":1563045,
-                        "5":1707413,
-                        "6":1675577,
-                        "7":2301896,
-                        "8":1872899,
-                        "9":1420671
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MAILLE BAPTISTE"
-                    },
-                    "Licence":{
-                        "0":2041245
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":10
                     },
@@ -857,6 +846,17 @@
                     "Licence":{
                         "0":1707413
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MAILLE BAPTISTE"
+                    },
+                    "Licence":{
+                        "0":2041245
+                    }
                 }
             },
             "Officials":{
@@ -865,10 +865,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MARTIN TRISTAN"
+                        "0":"DUPRE JEAN-CHRISTIAN"
                     },
                     "Licence":{
-                        "0":257113
+                        "0":2182838
                     }
                 },
                 "Team 2":{
@@ -876,10 +876,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DUPRE JEAN-CHRISTIAN"
+                        "0":"MARTIN TRISTAN"
                     },
                     "Licence":{
-                        "0":2182838
+                        "0":257113
                     }
                 }
             }

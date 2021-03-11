@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB089",
             "match_day":"15",
             "city":"SAINT-ETIENNE",
@@ -681,11 +681,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"ARAGO DE SETE VOLLEY-BALL 3"
+                "Team 1":"ARAGO DE SETE VOLLEY-BALL 3",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":9,
+                        "4":10,
+                        "5":13,
+                        "6":14,
+                        "7":15,
+                        "8":16,
+                        "9":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MARTIN KILLIAN",
+                        "1":"BERTHEUIL TIMEO",
+                        "2":"COUTURIER ANTOINE",
+                        "3":"CASELLI LORENZO",
+                        "4":"ISOIRD ROMAIN",
+                        "5":"CONSTANT MATTHIEU",
+                        "6":"ZAMBRANO UGO",
+                        "7":"BONNEFOND JULES",
+                        "8":"MULLER AXEL",
+                        "9":"ORIOT BENJAMIN"
+                    },
+                    "Licence":{
+                        "0":2048844,
+                        "1":2056745,
+                        "2":1459543,
+                        "3":1793552,
+                        "4":2051689,
+                        "5":2327171,
+                        "6":2039659,
+                        "7":1830418,
+                        "8":1835655,
+                        "9":1882919
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -725,48 +763,21 @@
                         "9":1755081,
                         "10":1752989
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":9,
-                        "4":10,
-                        "5":13,
-                        "6":14,
-                        "7":15,
-                        "8":16,
-                        "9":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MARTIN KILLIAN",
-                        "1":"BERTHEUIL TIMEO",
-                        "2":"COUTURIER ANTOINE",
-                        "3":"CASELLI LORENZO",
-                        "4":"ISOIRD ROMAIN",
-                        "5":"CONSTANT MATTHIEU",
-                        "6":"ZAMBRANO UGO",
-                        "7":"BONNEFOND JULES",
-                        "8":"MULLER AXEL",
-                        "9":"ORIOT BENJAMIN"
-                    },
-                    "Licence":{
-                        "0":2048844,
-                        "1":2056745,
-                        "2":1459543,
-                        "3":1793552,
-                        "4":2051689,
-                        "5":2327171,
-                        "6":2039659,
-                        "7":1830418,
-                        "8":1835655,
-                        "9":1882919
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BERTHEUIL TIMEO"
+                    },
+                    "Licence":{
+                        "0":2056745
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":13
@@ -779,17 +790,6 @@
                         "0":1755081,
                         "1":1752989
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BERTHEUIL TIMEO"
-                    },
-                    "Licence":{
-                        "0":2056745
-                    }
                 }
             },
             "Officials":{
@@ -798,10 +798,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"YOTOV YURIY"
+                        "0":"COUTURIER ANTOINE"
                     },
                     "Licence":{
-                        "0":1426544
+                        "0":1459543
                     }
                 },
                 "Team 2":{
@@ -809,10 +809,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"COUTURIER ANTOINE"
+                        "0":"YOTOV YURIY"
                     },
                     "Licence":{
-                        "0":1459543
+                        "0":1426544
                     }
                 }
             }

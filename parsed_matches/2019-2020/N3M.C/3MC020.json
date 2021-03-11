@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC020",
             "match_day":"04",
             "city":"MENDE",
@@ -467,11 +467,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MENDE VOLLEY LOZERE 2 CFC",
-                "Team 2":"UGS RIOM-CEBAZAT"
+                "Team 1":"UGS RIOM-CEBAZAT",
+                "Team 2":"MENDE VOLLEY LOZERE 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":10,
+                        "6":11,
+                        "7":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SAYAG WILSON",
+                        "1":"PEYRAT BASTIEN",
+                        "2":"DIGNAU KEVIN",
+                        "3":"SAUVAIRE ALEXIS",
+                        "4":"GIROIX JULIEN",
+                        "5":"ROUGE SYLVAIN",
+                        "6":"GENOUD ARNAUD",
+                        "7":"DUPONT PIERRE"
+                    },
+                    "Licence":{
+                        "0":2045179,
+                        "1":2013877,
+                        "2":1401020,
+                        "3":1721282,
+                        "4":1223645,
+                        "5":1127240,
+                        "6":1954198,
+                        "7":1575189
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":4,
@@ -511,42 +543,21 @@
                         "9":1903231,
                         "10":2102241
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":10,
-                        "6":11,
-                        "7":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SAYAG WILSON",
-                        "1":"PEYRAT BASTIEN",
-                        "2":"DIGNAU KEVIN",
-                        "3":"SAUVAIRE ALEXIS",
-                        "4":"GIROIX JULIEN",
-                        "5":"ROUGE SYLVAIN",
-                        "6":"GENOUD ARNAUD",
-                        "7":"DUPONT PIERRE"
-                    },
-                    "Licence":{
-                        "0":2045179,
-                        "1":2013877,
-                        "2":1401020,
-                        "3":1721282,
-                        "4":1223645,
-                        "5":1127240,
-                        "6":1954198,
-                        "7":1575189
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":13
@@ -559,35 +570,10 @@
                         "0":1221856,
                         "1":1675818
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LE BARS JEAN MICHEL",
-                        "1":"KADDOUR SOFIANE"
-                    },
-                    "Licence":{
-                        "0":1091660,
-                        "1":1221856
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -599,6 +585,20 @@
                     "Licence":{
                         "0":1127240,
                         "1":1778699
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LE BARS JEAN MICHEL",
+                        "1":"KADDOUR SOFIANE"
+                    },
+                    "Licence":{
+                        "0":1091660,
+                        "1":1221856
                     }
                 }
             }

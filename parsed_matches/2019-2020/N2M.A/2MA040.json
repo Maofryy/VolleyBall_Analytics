@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA040",
@@ -521,11 +521,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ENT. PUYGOUZON\/CASTELNAU LEVIS",
-                "Team 2":"NARBONNE VOLLEY 2 CFC"
+                "Team 1":"NARBONNE VOLLEY 2 CFC",
+                "Team 2":"ENT. PUYGOUZON\/CASTELNAU LEVIS"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":11,
+                        "7":12,
+                        "8":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BARDOUL SYMON",
+                        "1":"JAMROZ HUGO",
+                        "2":"MAHIEUX MAXENCE",
+                        "3":"BOURQUIN THEO",
+                        "4":"AUFFRAY AMAURY",
+                        "5":"GABIN ALEXANDRE",
+                        "6":"FANIC THOMAS",
+                        "7":"BONNIER QUENTIN",
+                        "8":"MAILLE BAPTISTE"
+                    },
+                    "Licence":{
+                        "0":1972882,
+                        "1":1905201,
+                        "2":1864789,
+                        "3":1820354,
+                        "4":2014242,
+                        "5":2039084,
+                        "6":2108093,
+                        "7":1804548,
+                        "8":2041245
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -565,56 +600,10 @@
                         "9":1877379,
                         "10":1998983
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":11,
-                        "7":12,
-                        "8":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BARDOUL SYMON",
-                        "1":"JAMROZ HUGO",
-                        "2":"MAHIEUX MAXENCE",
-                        "3":"BOURQUIN THEO",
-                        "4":"AUFFRAY AMAURY",
-                        "5":"GABIN ALEXANDRE",
-                        "6":"FANIC THOMAS",
-                        "7":"BONNIER QUENTIN",
-                        "8":"MAILLE BAPTISTE"
-                    },
-                    "Licence":{
-                        "0":1972882,
-                        "1":1905201,
-                        "2":1864789,
-                        "3":1820354,
-                        "4":2014242,
-                        "5":2039084,
-                        "6":2108093,
-                        "7":1804548,
-                        "8":2041245
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":7
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MATUSZEWSKI MATTEO"
-                    },
-                    "Licence":{
-                        "0":2097312
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -624,10 +613,32 @@
                     "Licence":{
                         "0":2041245
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":7
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MATUSZEWSKI MATTEO"
+                    },
+                    "Licence":{
+                        "0":2097312
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MARTIN TRISTAN"
+                    },
+                    "Licence":{
+                        "0":257113
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -639,17 +650,6 @@
                     "Licence":{
                         "0":1056462,
                         "1":992832
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MARTIN TRISTAN"
-                    },
-                    "Licence":{
-                        "0":257113
                     }
                 }
             }

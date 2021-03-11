@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA083",
@@ -602,49 +602,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"B\u00c9ZIERS VOLLEY-BALL 2 CFC"
+                "Team 1":"B\u00c9ZIERS VOLLEY-BALL 2 CFC",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":12,
-                        "8":13,
-                        "9":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROMERO SALDARRIAGA ANA",
-                        "1":"LINASSIER EMELINE",
-                        "2":"PETRIGNANI CECILE",
-                        "3":"TAUREL FANNY",
-                        "4":"GERIN LUCIE",
-                        "5":"PANTALACCI ANAIS",
-                        "6":"NOTOT MARTIN VICTORIA",
-                        "7":"MARTY ZOE",
-                        "8":"RIGOBERT LONG MARIE-NATACHA",
-                        "9":"VANDENBERGHE BILITIS"
-                    },
-                    "Licence":{
-                        "0":2093589,
-                        "1":1802524,
-                        "2":1674253,
-                        "3":1764684,
-                        "4":1709664,
-                        "5":1823159,
-                        "6":1944561,
-                        "7":1993379,
-                        "8":1591301,
-                        "9":1432856
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":5,
@@ -681,21 +643,48 @@
                         "8":2192047,
                         "9":1922491
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":12,
+                        "8":13,
+                        "9":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROMERO SALDARRIAGA ANA",
+                        "1":"LINASSIER EMELINE",
+                        "2":"PETRIGNANI CECILE",
+                        "3":"TAUREL FANNY",
+                        "4":"GERIN LUCIE",
+                        "5":"PANTALACCI ANAIS",
+                        "6":"NOTOT MARTIN VICTORIA",
+                        "7":"MARTY ZOE",
+                        "8":"RIGOBERT LONG MARIE-NATACHA",
+                        "9":"VANDENBERGHE BILITIS"
+                    },
+                    "Licence":{
+                        "0":2093589,
+                        "1":1802524,
+                        "2":1674253,
+                        "3":1764684,
+                        "4":1709664,
+                        "5":1823159,
+                        "6":1944561,
+                        "7":1993379,
+                        "8":1591301,
+                        "9":1432856
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":6
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PETRIGNANI CECILE"
-                    },
-                    "Licence":{
-                        "0":1674253
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":16
                     },
@@ -705,10 +694,32 @@
                     "Licence":{
                         "0":1863717
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":6
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PETRIGNANI CECILE"
+                    },
+                    "Licence":{
+                        "0":1674253
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BAINVEL ROMUALD"
+                    },
+                    "Licence":{
+                        "0":986222
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -720,17 +731,6 @@
                     "Licence":{
                         "0":93773,
                         "1":1817353
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BAINVEL ROMUALD"
-                    },
-                    "Licence":{
-                        "0":986222
                     }
                 }
             }

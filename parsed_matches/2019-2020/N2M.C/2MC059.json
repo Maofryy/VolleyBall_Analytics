@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC059",
@@ -539,11 +539,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UNION SPORTIVE MULHOUSE VOLLE",
-                "Team 2":"ASNIERES VOLLEY 92"
+                "Team 1":"ASNIERES VOLLEY 92",
+                "Team 2":"UNION SPORTIVE MULHOUSE VOLLE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":5,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":11,
+                        "6":13,
+                        "7":14,
+                        "8":15,
+                        "9":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SETTA SAMIR",
+                        "1":"ZORGUI KHERDINE",
+                        "2":"MESSENS GARY",
+                        "3":"BEN RHOUMA YEESSYN",
+                        "4":"BELQASMI M'HAMAD",
+                        "5":"AHMEDOMAR RACHADI",
+                        "6":"SADLI SAMI",
+                        "7":"SHARAF AHMED",
+                        "8":"ZAJAC ALEXANDRE",
+                        "9":"MOHAMED YASSINE"
+                    },
+                    "Licence":{
+                        "0":1911830,
+                        "1":1204875,
+                        "2":1825763,
+                        "3":1998347,
+                        "4":1794692,
+                        "5":2431987,
+                        "6":1905344,
+                        "7":2044098,
+                        "8":1835309,
+                        "9":1938471
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -583,59 +621,10 @@
                         "9":1854755,
                         "10":1971732
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":5,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":11,
-                        "6":13,
-                        "7":14,
-                        "8":15,
-                        "9":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SETTA SAMIR",
-                        "1":"ZORGUI KHERDINE",
-                        "2":"MESSENS GARY",
-                        "3":"BEN RHOUMA YEESSYN",
-                        "4":"BELQASMI M'HAMAD",
-                        "5":"AHMEDOMAR RACHADI",
-                        "6":"SADLI SAMI",
-                        "7":"SHARAF AHMED",
-                        "8":"ZAJAC ALEXANDRE",
-                        "9":"MOHAMED YASSINE"
-                    },
-                    "Licence":{
-                        "0":1911830,
-                        "1":1204875,
-                        "2":1825763,
-                        "3":1998347,
-                        "4":1794692,
-                        "5":2431987,
-                        "6":1905344,
-                        "7":2044098,
-                        "8":1835309,
-                        "9":1938471
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GIONTA HUGO"
-                    },
-                    "Licence":{
-                        "0":1790096
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2
                     },
@@ -645,10 +634,32 @@
                     "Licence":{
                         "0":1911830
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GIONTA HUGO"
+                    },
+                    "Licence":{
+                        "0":1790096
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BELQASMI M'HAMAD"
+                    },
+                    "Licence":{
+                        "0":1794692
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -660,17 +671,6 @@
                     "Licence":{
                         "0":312009,
                         "1":978850
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BELQASMI M'HAMAD"
-                    },
-                    "Licence":{
-                        "0":1794692
                     }
                 }
             }

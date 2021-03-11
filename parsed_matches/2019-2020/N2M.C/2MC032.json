@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC032",
@@ -687,49 +687,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"STRASBOURG VOLLEY-BALL",
-                "Team 2":"UNION SPORTIVE MULHOUSE VOLLEY"
+                "Team 1":"UNION SPORTIVE MULHOUSE VOLLEY",
+                "Team 2":"STRASBOURG VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":5,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":12,
-                        "9":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ARIIHEE TEHEIARII",
-                        "1":"SADREDDINE WAHIBE",
-                        "2":"HOEFFEL JACQUES",
-                        "3":"PY MATTHIEU",
-                        "4":"HOLSENBURGER ANTOINE",
-                        "5":"TISSIER ADAM",
-                        "6":"LAJMI THEO",
-                        "7":"SAIF HUJATULLAH",
-                        "8":"ALLOUI-LANGE ALLAN",
-                        "9":"PINAS LUDOVIC"
-                    },
-                    "Licence":{
-                        "0":2021295,
-                        "1":1877209,
-                        "2":1869342,
-                        "3":1831783,
-                        "4":1908788,
-                        "5":1943937,
-                        "6":1820655,
-                        "7":2301600,
-                        "8":1987606,
-                        "9":2042975
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -769,21 +731,48 @@
                         "9":1971732,
                         "10":2280821
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":5,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":12,
+                        "9":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ARIIHEE TEHEIARII",
+                        "1":"SADREDDINE WAHIBE",
+                        "2":"HOEFFEL JACQUES",
+                        "3":"PY MATTHIEU",
+                        "4":"HOLSENBURGER ANTOINE",
+                        "5":"TISSIER ADAM",
+                        "6":"LAJMI THEO",
+                        "7":"SAIF HUJATULLAH",
+                        "8":"ALLOUI-LANGE ALLAN",
+                        "9":"PINAS LUDOVIC"
+                    },
+                    "Licence":{
+                        "0":2021295,
+                        "1":1877209,
+                        "2":1869342,
+                        "3":1831783,
+                        "4":1908788,
+                        "5":1943937,
+                        "6":1820655,
+                        "7":2301600,
+                        "8":1987606,
+                        "9":2042975
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SADREDDINE WAHIBE"
-                    },
-                    "Licence":{
-                        "0":1877209
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -793,21 +782,21 @@
                     "Licence":{
                         "0":1790096
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SADREDDINE WAHIBE"
+                    },
+                    "Licence":{
+                        "0":1877209
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BIGOT MICHEL"
-                    },
-                    "Licence":{
-                        "0":1365692
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -819,6 +808,17 @@
                     "Licence":{
                         "0":312009,
                         "1":978850
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BIGOT MICHEL"
+                    },
+                    "Licence":{
+                        "0":1365692
                     }
                 }
             }

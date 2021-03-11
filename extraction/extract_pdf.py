@@ -5,8 +5,10 @@ import tabula
 import time
 import pandas as pd
 import os
+import csv
 from datetime import datetime
 from dateutil.parser import parse
+import webbrowser
 from .classes import FormatInvalidError, Penalty, Results, Title, Timer
 
 def translate_month(time_string):
@@ -411,6 +413,8 @@ def extract_team(title_data, table_data, ref, verbose=False):
         return ([0,0,0,0])
     #print(team_data[1].columns)
     #If liberos or staff table is empty, fill with none 
+    if (len(team_data[1]) < 6):
+        raise FormatInvalidError("Wrong number of players (< 6)")
     if (len(team_data[2].columns) == 1):
         team_data[2]['1'] = None
         team_data[2]['2'] = None
@@ -447,6 +451,12 @@ def extract_title(table_data, verbose = False):
             if val.startswith("Unnamed:") and table_data[i][val].isnull().all():
                 table_data[i] = table_data[i].drop(val, axis=1)
     div_list = table_data[0].columns.values[0].split('-')
+    div_list = [s.strip() for s in div_list]
+    if (len(div_list) == 2):
+        div_splt = div_list[1].split(' POULE ')
+        div_list[1] = div_splt[0]
+        div_list.append(str("Poule " + div_splt[1]))
+    
     match_list = table_data[1].columns[0].split('-')
     if (len(div_list) < 3):
         div_list.append(" ")
@@ -628,6 +638,10 @@ def extract_match(file, verbose=False):
     timer.print_interval(time.time()) if (verbose == True) else 0
 
     #Gathering info into single dataframe
+    if (set1[0]['Name'][0] not in team1[0]):
+        team_tmp = team1
+        team1= team2
+        team2 = team_tmp
     teams = pd.DataFrame({
         'Index':['Team 1', 'Team 2'],
         'Name':[team1[0], team2[0]],
@@ -701,20 +715,30 @@ def extract_pdf(file, output_folder, verbose=False):
         print(output + " saved.") if (verbose == True) else 0
     return (match)
 
+def find(name, path):
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            return os.path.join(root, name)
+
 if __name__ == "__main__":
     """ Main function of extracting data """
     filename = "sample_test.pdf"
     #output_folder = "./parsed_matches/2019-2020/E.Fém.B"
     output_folder = "./extraction/json"
-    file = os.path.join(os.path.dirname(__file__), "pdf/"+filename)
-    file2 = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Fém.B/EFB018.pdf")
-    debug = os.path.join(os.path.dirname(__file__), "../data/2019-2020/E.Mas.A/EMA033.pdf")
+    debug = os.path.join(os.path.dirname(__file__), "../data/2019-2020/N3F.C/3FC022.pdf")
     timer = Timer()
-    try :
-        #pdf = extract_pdf(file, output_folder, False)
-        #pdf = extract_pdf(file2, output_folder, True)
-        pdf = extract_pdf(debug, output_folder, True)
-    except FormatInvalidError:
-        print("Invalid format")
-        exit()
-     
+    
+    #? opening error_files:
+    with open('error_files.csv', newline='\n') as f:
+        reader = csv.reader(f)
+        data = list(reader)
+    files = [find(item, './data') for sublist in data for item in sublist]
+
+    for file in files:
+        try :
+            #pdf = extract_pdf(debug, output_folder, False)
+            #webbrowser.open_new(file)
+            pdf = extract_pdf(file, output_folder, False)
+        except FormatInvalidError as e:
+            print("FormatInvalidError : %s at %s" % (str(e), str(file)))
+        

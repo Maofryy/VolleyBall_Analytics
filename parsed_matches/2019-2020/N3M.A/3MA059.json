@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA059",
             "match_day":"10",
             "city":"CAGNES SUR MER",
@@ -595,11 +595,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"FREJUS VAR VOLLEY"
+                "Team 1":"FREJUS VAR VOLLEY",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":7,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GUIZOT THOMAS",
+                        "1":"LAINE GUILLAUME",
+                        "2":"FAY FLORENT",
+                        "3":"DA CRUZ JULIEN",
+                        "4":"GROBERT JEAN-BAPTISTE",
+                        "5":"DECOURT ANGE",
+                        "6":"VIVIER PIERRE",
+                        "7":"HASSAINE TITOUAN",
+                        "8":"VADON GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1428838,
+                        "1":1660598,
+                        "2":1663261,
+                        "3":1596049,
+                        "4":1802436,
+                        "5":1949844,
+                        "6":1647301,
+                        "7":1752895,
+                        "8":1414872
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":4,
@@ -642,45 +677,21 @@
                         "10":1720166,
                         "11":1966968
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":7,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GUIZOT THOMAS",
-                        "1":"LAINE GUILLAUME",
-                        "2":"FAY FLORENT",
-                        "3":"DA CRUZ JULIEN",
-                        "4":"GROBERT JEAN-BAPTISTE",
-                        "5":"DECOURT ANGE",
-                        "6":"VIVIER PIERRE",
-                        "7":"HASSAINE TITOUAN",
-                        "8":"VADON GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1428838,
-                        "1":1660598,
-                        "2":1663261,
-                        "3":1596049,
-                        "4":1802436,
-                        "5":1949844,
-                        "6":1647301,
-                        "7":1752895,
-                        "8":1414872
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":4
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LAINE GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1660598
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":11
@@ -693,17 +704,6 @@
                         "0":1774713,
                         "1":1176370
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":4
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LAINE GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1660598
-                    }
                 }
             },
             "Officials":{
@@ -712,10 +712,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DEMIROVIC ASIM"
+                        "0":"RESPAUT CLAUDE"
                     },
                     "Licence":{
-                        "0":1567002
+                        "0":53884
                     }
                 },
                 "Team 2":{
@@ -723,10 +723,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"RESPAUT CLAUDE"
+                        "0":"DEMIROVIC ASIM"
                     },
                     "Licence":{
-                        "0":53884
+                        "0":1567002
                     }
                 }
             }

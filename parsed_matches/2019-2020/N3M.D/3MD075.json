@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD075",
             "match_day":"13",
             "city":"LAVAL",
@@ -441,43 +441,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASPTT LAVAL",
-                "Team 2":"RENNES ETUDIANTS CLUB"
+                "Team 1":"RENNES ETUDIANTS CLUB",
+                "Team 2":"ASPTT LAVAL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":5,
-                        "2":7,
-                        "3":10,
-                        "4":11,
-                        "5":13,
-                        "6":16,
-                        "7":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"AUBRAS WILL",
-                        "1":"GERBOIN LOUIS",
-                        "2":"CAGNART YANIS",
-                        "3":"MORAND KELIAN",
-                        "4":"DLEER QADIR MAZYAR",
-                        "5":"SIDI ISMA\u00cbL",
-                        "6":"SOUTY AURELIEN",
-                        "7":"MORILLON BENJAMIN"
-                    },
-                    "Licence":{
-                        "0":1952886,
-                        "1":1891750,
-                        "2":2028265,
-                        "3":1989636,
-                        "4":2298916,
-                        "5":2171469,
-                        "6":1918156,
-                        "7":1949468
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -508,21 +476,42 @@
                         "6":1829119,
                         "7":1807080
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":5,
+                        "2":7,
+                        "3":10,
+                        "4":11,
+                        "5":13,
+                        "6":16,
+                        "7":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"AUBRAS WILL",
+                        "1":"GERBOIN LOUIS",
+                        "2":"CAGNART YANIS",
+                        "3":"MORAND KELIAN",
+                        "4":"DLEER QADIR MAZYAR",
+                        "5":"SIDI ISMA\u00cbL",
+                        "6":"SOUTY AURELIEN",
+                        "7":"MORILLON BENJAMIN"
+                    },
+                    "Licence":{
+                        "0":1952886,
+                        "1":1891750,
+                        "2":2028265,
+                        "3":1989636,
+                        "4":2298916,
+                        "5":2171469,
+                        "6":1918156,
+                        "7":1949468
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SOUTY AURELIEN"
-                    },
-                    "Licence":{
-                        "0":1918156
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":12
                     },
@@ -532,10 +521,32 @@
                     "Licence":{
                         "0":1807080
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SOUTY AURELIEN"
+                    },
+                    "Licence":{
+                        "0":1918156
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HALLE ERIC"
+                    },
+                    "Licence":{
+                        "0":1846956
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -547,17 +558,6 @@
                     "Licence":{
                         "0":2067821,
                         "1":351924
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HALLE ERIC"
-                    },
-                    "Licence":{
-                        "0":1846956
                     }
                 }
             }

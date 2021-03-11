@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA035",
             "match_day":"06",
             "city":"CANNES LA BOCCA",
@@ -515,11 +515,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AS CANNES VOLLEY-BALL 3",
-                "Team 2":"GFCA VOLLEY-BALL"
+                "Team 1":"GFCA VOLLEY-BALL",
+                "Team 2":"AS CANNES VOLLEY-BALL 3"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":5,
+                        "2":6,
+                        "3":8,
+                        "4":10,
+                        "5":12,
+                        "6":13,
+                        "7":14,
+                        "8":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FAYOL BENOIT",
+                        "1":"PONZEVERA GILLES",
+                        "2":"GIOVANNAI JORDAN",
+                        "3":"BOIX MARTIN",
+                        "4":"CICCADA GUILLAUME",
+                        "5":"OTTAVY GILLES",
+                        "6":"PETROV DANIEL",
+                        "7":"WEBER PHILIPPE",
+                        "8":"MICHON LAURENT"
+                    },
+                    "Licence":{
+                        "0":1179404,
+                        "1":1709855,
+                        "2":1791881,
+                        "3":1758638,
+                        "4":1446660,
+                        "5":1581477,
+                        "6":1493177,
+                        "7":2200297,
+                        "8":2096193
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -562,45 +597,21 @@
                         "10":1821600,
                         "11":1972107
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":5,
-                        "2":6,
-                        "3":8,
-                        "4":10,
-                        "5":12,
-                        "6":13,
-                        "7":14,
-                        "8":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FAYOL BENOIT",
-                        "1":"PONZEVERA GILLES",
-                        "2":"GIOVANNAI JORDAN",
-                        "3":"BOIX MARTIN",
-                        "4":"CICCADA GUILLAUME",
-                        "5":"OTTAVY GILLES",
-                        "6":"PETROV DANIEL",
-                        "7":"WEBER PHILIPPE",
-                        "8":"MICHON LAURENT"
-                    },
-                    "Licence":{
-                        "0":1179404,
-                        "1":1709855,
-                        "2":1791881,
-                        "3":1758638,
-                        "4":1446660,
-                        "5":1581477,
-                        "6":1493177,
-                        "7":2200297,
-                        "8":2096193
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":10
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CICCADA GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1446660
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":14,
                         "1":17
@@ -613,17 +624,6 @@
                         "0":1878423,
                         "1":1821600
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":10
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CICCADA GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1446660
-                    }
                 }
             },
             "Officials":{
@@ -632,10 +632,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"PRIBANOVIC DUSAN"
+                        "0":"KRATCHKOVSKY NIKOLAI"
                     },
                     "Licence":{
-                        "0":1832874
+                        "0":2087219
                     }
                 },
                 "Team 2":{
@@ -643,10 +643,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"KRATCHKOVSKY NIKOLAI"
+                        "0":"PRIBANOVIC DUSAN"
                     },
                     "Licence":{
-                        "0":2087219
+                        "0":1832874
                     }
                 }
             }

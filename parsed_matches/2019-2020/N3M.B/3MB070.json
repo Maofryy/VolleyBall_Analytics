@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB070",
             "match_day":"12",
             "city":"S\u00c8TE",
@@ -479,11 +479,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ARAGO DE SETE VOLLEY-BALL 3",
-                "Team 2":"ASLJCROIX ARGENT MONTPELLIER"
+                "Team 1":"ASLJCROIX ARGENT MONTPELLIER",
+                "Team 2":"ARAGO DE SETE VOLLEY-BALL 3"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":7,
+                        "4":10,
+                        "5":11,
+                        "6":13,
+                        "7":15,
+                        "8":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CABRERA ALEXY",
+                        "1":"PETIT MAXIME",
+                        "2":"CESCO JULIEN",
+                        "3":"PORQUET THOMAS",
+                        "4":"SEGURA GUILLAUME",
+                        "5":"WAZONE GEORGIO",
+                        "6":"ROMANA KEVIN",
+                        "7":"NGAIOHNY JIMMY",
+                        "8":"WAINEBENGO JACQUES"
+                    },
+                    "Licence":{
+                        "0":2139187,
+                        "1":1787438,
+                        "2":1949079,
+                        "3":1481403,
+                        "4":1440598,
+                        "5":2095043,
+                        "6":1880999,
+                        "7":2034782,
+                        "8":1546423
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -520,45 +555,21 @@
                         "8":1835655,
                         "9":1882919
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":7,
-                        "4":10,
-                        "5":11,
-                        "6":13,
-                        "7":15,
-                        "8":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CABRERA ALEXY",
-                        "1":"PETIT MAXIME",
-                        "2":"CESCO JULIEN",
-                        "3":"PORQUET THOMAS",
-                        "4":"SEGURA GUILLAUME",
-                        "5":"WAZONE GEORGIO",
-                        "6":"ROMANA KEVIN",
-                        "7":"NGAIOHNY JIMMY",
-                        "8":"WAINEBENGO JACQUES"
-                    },
-                    "Licence":{
-                        "0":2139187,
-                        "1":1787438,
-                        "2":1949079,
-                        "3":1481403,
-                        "4":1440598,
-                        "5":2095043,
-                        "6":1880999,
-                        "7":2034782,
-                        "8":1546423
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"WAINEBENGO JACQUES"
+                    },
+                    "Licence":{
+                        "0":1546423
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":5
@@ -571,17 +582,6 @@
                         "0":2056745,
                         "1":2327171
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"WAINEBENGO JACQUES"
-                    },
-                    "Licence":{
-                        "0":1546423
-                    }
                 }
             },
             "Officials":{
@@ -590,10 +590,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"COUTURIER ANTOINE"
+                        "0":"QUIEVREUX THOMAS"
                     },
                     "Licence":{
-                        "0":1459543
+                        "0":1121007
                     }
                 },
                 "Team 2":{
@@ -601,10 +601,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"QUIEVREUX THOMAS"
+                        "0":"COUTURIER ANTOINE"
                     },
                     "Licence":{
-                        "0":1121007
+                        "0":1459543
                     }
                 }
             }

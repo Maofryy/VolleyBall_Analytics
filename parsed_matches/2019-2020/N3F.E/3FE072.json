@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FE ",
-            "div_name":"NATIONALE 3 FEMININE POULE E",
-            "div_pool":"",
+            "div_code":"3FE",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule E",
             "match_number":"3FE072",
             "match_day":"12",
             "city":"REIMS",
@@ -602,11 +602,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"REIMS METROPOLE VOLLEY",
-                "Team 2":"VIE AU GRAND AIR DE ST MAUR"
+                "Team 1":"VIE AU GRAND AIR DE ST MAUR",
+                "Team 2":"REIMS METROPOLE VOLLEY"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":10,
+                        "4":11,
+                        "5":14,
+                        "6":17,
+                        "7":19,
+                        "8":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VERGARI ANNA-RITA",
+                        "1":"GAUTIER LAURA",
+                        "2":"DELOIZY ADELINE",
+                        "3":"CAZIER AXELLE",
+                        "4":"ROVINI FANNY",
+                        "5":"RIOU MILENA",
+                        "6":"GAMELIN CELIA",
+                        "7":"PARFAIT LISA",
+                        "8":"KERDILES MORGANE"
+                    },
+                    "Licence":{
+                        "0":1752708,
+                        "1":2141272,
+                        "2":2416843,
+                        "3":1042687,
+                        "4":2106080,
+                        "5":1992211,
+                        "6":2252935,
+                        "7":1570313,
+                        "8":1337727
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":5,
@@ -646,45 +681,21 @@
                         "9":1905514,
                         "10":1597117
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":10,
-                        "4":11,
-                        "5":14,
-                        "6":17,
-                        "7":19,
-                        "8":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VERGARI ANNA-RITA",
-                        "1":"GAUTIER LAURA",
-                        "2":"DELOIZY ADELINE",
-                        "3":"CAZIER AXELLE",
-                        "4":"ROVINI FANNY",
-                        "5":"RIOU MILENA",
-                        "6":"GAMELIN CELIA",
-                        "7":"PARFAIT LISA",
-                        "8":"KERDILES MORGANE"
-                    },
-                    "Licence":{
-                        "0":1752708,
-                        "1":2141272,
-                        "2":2416843,
-                        "3":1042687,
-                        "4":2106080,
-                        "5":1992211,
-                        "6":2252935,
-                        "7":1570313,
-                        "8":1337727
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KERDILES MORGANE"
+                    },
+                    "Licence":{
+                        "0":1337727
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -697,21 +708,21 @@
                         "0":2186877,
                         "1":1837631
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KERDILES MORGANE"
-                    },
-                    "Licence":{
-                        "0":1337727
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BEZAULT PIERRE"
+                    },
+                    "Licence":{
+                        "0":63495
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -723,17 +734,6 @@
                     "Licence":{
                         "0":1072931,
                         "1":1843778
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BEZAULT PIERRE"
-                    },
-                    "Licence":{
-                        "0":63495
                     }
                 }
             }

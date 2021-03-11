@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC008",
             "match_day":"02",
             "city":"SAINT-ETIENNE",
@@ -620,11 +620,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"VOLLEY BALL CLUB CHAMALIERES 2"
+                "Team 1":"VOLLEY BALL CLUB CHAMALIERES 2",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":9,
+                        "7":12,
+                        "8":13,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MERLE ALEX",
+                        "1":"VILLAUME JEANNE",
+                        "2":"ABDALLAHOUI FATIMA",
+                        "3":"ROUSSET ANAIS",
+                        "4":"GATTAZ MARION",
+                        "5":"PON LECLAINCHE MAELYS",
+                        "6":"PEREZ LISA",
+                        "7":"ZENGADI ANISSA",
+                        "8":"PORET ANAIS",
+                        "9":"MASSEGLIA ELOISE"
+                    },
+                    "Licence":{
+                        "0":1923304,
+                        "1":1954912,
+                        "2":1956962,
+                        "3":1813998,
+                        "4":1875513,
+                        "5":1863205,
+                        "6":1746276,
+                        "7":2349969,
+                        "8":1762731,
+                        "9":2195555
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -667,59 +705,10 @@
                         "10":2027084,
                         "11":2051438
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":9,
-                        "7":12,
-                        "8":13,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MERLE ALEX",
-                        "1":"VILLAUME JEANNE",
-                        "2":"ABDALLAHOUI FATIMA",
-                        "3":"ROUSSET ANAIS",
-                        "4":"GATTAZ MARION",
-                        "5":"PON LECLAINCHE MAELYS",
-                        "6":"PEREZ LISA",
-                        "7":"ZENGADI ANISSA",
-                        "8":"PORET ANAIS",
-                        "9":"MASSEGLIA ELOISE"
-                    },
-                    "Licence":{
-                        "0":1923304,
-                        "1":1954912,
-                        "2":1956962,
-                        "3":1813998,
-                        "4":1875513,
-                        "5":1863205,
-                        "6":1746276,
-                        "7":2349969,
-                        "8":1762731,
-                        "9":2195555
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"IDIR SIHAM"
-                    },
-                    "Licence":{
-                        "0":2051438
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":6
                     },
@@ -729,6 +718,17 @@
                     "Licence":{
                         "0":1875513
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"IDIR SIHAM"
+                    },
+                    "Licence":{
+                        "0":2051438
+                    }
                 }
             },
             "Officials":{
@@ -737,10 +737,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROLIN FABIEN"
+                        "0":"BONNETON GUILLAUME"
                     },
                     "Licence":{
-                        "0":658542
+                        "0":1347848
                     }
                 },
                 "Team 2":{
@@ -748,10 +748,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BONNETON GUILLAUME"
+                        "0":"ROLIN FABIEN"
                     },
                     "Licence":{
-                        "0":1347848
+                        "0":658542
                     }
                 }
             }

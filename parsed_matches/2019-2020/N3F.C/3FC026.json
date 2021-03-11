@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC026",
             "match_day":"05",
             "city":"BRON",
@@ -461,11 +461,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BRON @ LYON LUMIERE",
-                "Team 2":"AVIGNON VOLLEY BALL"
+                "Team 1":"AVIGNON VOLLEY BALL",
+                "Team 2":"VOLLEY BRON @ LYON LUMIERE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":5,
+                        "3":7,
+                        "4":8,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VERRIER MELODIE",
+                        "1":"AMET CELIA",
+                        "2":"MONTOYA MARIE",
+                        "3":"VERNETTE HELENA",
+                        "4":"JOLLY MARGOT",
+                        "5":"BALZE SOLENE",
+                        "6":"MEISSONNIER ELODIE",
+                        "7":"CASTELL SOPHIE",
+                        "8":"MONGUIDI REBECCA"
+                    },
+                    "Licence":{
+                        "0":2149281,
+                        "1":1751185,
+                        "2":1914637,
+                        "3":1861179,
+                        "4":1894507,
+                        "5":1871367,
+                        "6":1418948,
+                        "7":1689521,
+                        "8":2412267
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -508,45 +543,21 @@
                         "10":1891897,
                         "11":2139454
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":5,
-                        "3":7,
-                        "4":8,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VERRIER MELODIE",
-                        "1":"AMET CELIA",
-                        "2":"MONTOYA MARIE",
-                        "3":"VERNETTE HELENA",
-                        "4":"JOLLY MARGOT",
-                        "5":"BALZE SOLENE",
-                        "6":"MEISSONNIER ELODIE",
-                        "7":"CASTELL SOPHIE",
-                        "8":"MONGUIDI REBECCA"
-                    },
-                    "Licence":{
-                        "0":2149281,
-                        "1":1751185,
-                        "2":1914637,
-                        "3":1861179,
-                        "4":1894507,
-                        "5":1871367,
-                        "6":1418948,
-                        "7":1689521,
-                        "8":2412267
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CASTELL SOPHIE"
+                    },
+                    "Licence":{
+                        "0":1689521
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":13
@@ -559,17 +570,6 @@
                         "0":1843666,
                         "1":1976251
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CASTELL SOPHIE"
-                    },
-                    "Licence":{
-                        "0":1689521
-                    }
                 }
             },
             "Officials":{
@@ -578,10 +578,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"GAMOUH MEHDI"
+                        "0":"MEISSONNIER ELODIE"
                     },
                     "Licence":{
-                        "0":2042236
+                        "0":1418948
                     }
                 },
                 "Team 2":{
@@ -589,10 +589,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MEISSONNIER ELODIE"
+                        "0":"GAMOUH MEHDI"
                     },
                     "Licence":{
-                        "0":1418948
+                        "0":2042236
                     }
                 }
             }

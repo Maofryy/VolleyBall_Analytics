@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA008",
@@ -522,52 +522,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"NARBONNE VOLLEY 2 CFC",
-                "Team 2":"T.O.A.C. - T.U.C. VOLLEY-BALL"
+                "Team 1":"T.O.A.C. - T.U.C. VOLLEY-BALL",
+                "Team 2":"NARBONNE VOLLEY 2 CFC"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":8,
-                        "7":11,
-                        "8":12,
-                        "9":13,
-                        "10":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BARDOUL SYMON",
-                        "1":"JAMROZ HUGO",
-                        "2":"MAHIEUX MAXENCE",
-                        "3":"FAGANAS JULIEN",
-                        "4":"BOURQUIN THEO",
-                        "5":"AUFFRAY AMAURY",
-                        "6":"GABIN ALEXANDRE",
-                        "7":"FANIC THOMAS",
-                        "8":"BONNIER QUENTIN",
-                        "9":"MAILLE BAPTISTE",
-                        "10":"COMBETTE LEVY"
-                    },
-                    "Licence":{
-                        "0":1972882,
-                        "1":1905201,
-                        "2":1864789,
-                        "3":1991881,
-                        "4":1820354,
-                        "5":2014242,
-                        "6":2039084,
-                        "7":2108093,
-                        "8":1804548,
-                        "9":2041245,
-                        "10":2304220
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -607,21 +566,51 @@
                         "9":1845627,
                         "10":2088659
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":8,
+                        "7":11,
+                        "8":12,
+                        "9":13,
+                        "10":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BARDOUL SYMON",
+                        "1":"JAMROZ HUGO",
+                        "2":"MAHIEUX MAXENCE",
+                        "3":"FAGANAS JULIEN",
+                        "4":"BOURQUIN THEO",
+                        "5":"AUFFRAY AMAURY",
+                        "6":"GABIN ALEXANDRE",
+                        "7":"FANIC THOMAS",
+                        "8":"BONNIER QUENTIN",
+                        "9":"MAILLE BAPTISTE",
+                        "10":"COMBETTE LEVY"
+                    },
+                    "Licence":{
+                        "0":1972882,
+                        "1":1905201,
+                        "2":1864789,
+                        "3":1991881,
+                        "4":1820354,
+                        "5":2014242,
+                        "6":2039084,
+                        "7":2108093,
+                        "8":1804548,
+                        "9":2041245,
+                        "10":2304220
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MAILLE BAPTISTE"
-                    },
-                    "Licence":{
-                        "0":2041245
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":6
                     },
@@ -631,6 +620,17 @@
                     "Licence":{
                         "0":1803819
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MAILLE BAPTISTE"
+                    },
+                    "Licence":{
+                        "0":2041245
+                    }
                 }
             },
             "Officials":{
@@ -639,10 +639,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MARTIN TRISTAN"
+                        "0":"OGNIER BENOIT"
                     },
                     "Licence":{
-                        "0":257113
+                        "0":1174357
                     }
                 },
                 "Team 2":{
@@ -650,10 +650,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"OGNIER BENOIT"
+                        "0":"MARTIN TRISTAN"
                     },
                     "Licence":{
-                        "0":1174357
+                        "0":257113
                     }
                 }
             }

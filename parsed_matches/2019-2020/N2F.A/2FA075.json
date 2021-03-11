@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA075",
@@ -489,52 +489,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLERO LE CANNET COTE D'AZUR 2",
-                "Team 2":"VOLLEY PRADETAN GARDEEN"
+                "Team 1":"VOLLEY PRADETAN GARDEEN",
+                "Team 2":"VOLERO LE CANNET COTE D'AZUR 2"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":9,
-                        "7":10,
-                        "8":11,
-                        "9":12,
-                        "10":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"AGBOLOSSOU JOYCE",
-                        "1":"PSILA KARINE",
-                        "2":"SEBAN DELPHINE",
-                        "3":"LABORDE LILI",
-                        "4":"FALCON SOLENE",
-                        "5":"ZEGGAGH LALIE",
-                        "6":"HERRERA BLANCO LISET",
-                        "7":"BECHEC LILOUANN",
-                        "8":"BRUN OLIVIA",
-                        "9":"MASSON VIRGINIE",
-                        "10":"CHMIEL KATARZYNA"
-                    },
-                    "Licence":{
-                        "0":1862359,
-                        "1":1405709,
-                        "2":1654258,
-                        "3":1854293,
-                        "4":1886733,
-                        "5":2027472,
-                        "6":2352454,
-                        "7":1892017,
-                        "8":2091867,
-                        "9":1405725,
-                        "10":2389975
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -574,24 +533,51 @@
                         "9":1762591,
                         "10":1802259
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":9,
+                        "7":10,
+                        "8":11,
+                        "9":12,
+                        "10":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"AGBOLOSSOU JOYCE",
+                        "1":"PSILA KARINE",
+                        "2":"SEBAN DELPHINE",
+                        "3":"LABORDE LILI",
+                        "4":"FALCON SOLENE",
+                        "5":"ZEGGAGH LALIE",
+                        "6":"HERRERA BLANCO LISET",
+                        "7":"BECHEC LILOUANN",
+                        "8":"BRUN OLIVIA",
+                        "9":"MASSON VIRGINIE",
+                        "10":"CHMIEL KATARZYNA"
+                    },
+                    "Licence":{
+                        "0":1862359,
+                        "1":1405709,
+                        "2":1654258,
+                        "3":1854293,
+                        "4":1886733,
+                        "5":2027472,
+                        "6":2352454,
+                        "7":1892017,
+                        "8":2091867,
+                        "9":1405725,
+                        "10":2389975
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":5,
-                        "1":10
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LABORDE LILI",
-                        "1":"BECHEC LILOUANN"
-                    },
-                    "Licence":{
-                        "0":1854293,
-                        "1":1892017
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":8,
                         "1":13
@@ -604,6 +590,20 @@
                         "0":1835484,
                         "1":1762591
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":5,
+                        "1":10
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LABORDE LILI",
+                        "1":"BECHEC LILOUANN"
+                    },
+                    "Licence":{
+                        "0":1854293,
+                        "1":1892017
+                    }
                 }
             },
             "Officials":{
@@ -612,10 +612,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MINKOVA RAYNA"
+                        "0":"MATTEI NICOLAS"
                     },
                     "Licence":{
-                        "0":1118980
+                        "0":969514
                     }
                 },
                 "Team 2":{
@@ -623,10 +623,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MATTEI NICOLAS"
+                        "0":"MINKOVA RAYNA"
                     },
                     "Licence":{
-                        "0":969514
+                        "0":1118980
                     }
                 }
             }

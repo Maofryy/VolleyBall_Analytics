@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC060",
             "match_day":"10",
             "city":"SAINT-ETIENNE",
@@ -490,11 +490,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"AMICALE LAIQUE CHAMBERY V.B."
+                "Team 1":"AMICALE LAIQUE CHAMBERY V.B.",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":9,
+                        "6":10,
+                        "7":11,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LARA SEVERINE",
+                        "1":"CROISOT CELINE",
+                        "2":"PUGNOT SABRINA",
+                        "3":"TALLON TALMANT LEIA",
+                        "4":"MERLET MANON",
+                        "5":"BOUSQUET KELLY",
+                        "6":"LARA ELISA",
+                        "7":"CORDEAU CELINE",
+                        "8":"MERTEN ANGELA"
+                    },
+                    "Licence":{
+                        "0":1553531,
+                        "1":1991622,
+                        "2":2038655,
+                        "3":2249314,
+                        "4":1990339,
+                        "5":2209719,
+                        "6":1895214,
+                        "7":1613832,
+                        "8":2189495
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -537,56 +572,10 @@
                         "10":1047309,
                         "11":2027084
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":9,
-                        "6":10,
-                        "7":11,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LARA SEVERINE",
-                        "1":"CROISOT CELINE",
-                        "2":"PUGNOT SABRINA",
-                        "3":"TALLON TALMANT LEIA",
-                        "4":"MERLET MANON",
-                        "5":"BOUSQUET KELLY",
-                        "6":"LARA ELISA",
-                        "7":"CORDEAU CELINE",
-                        "8":"MERTEN ANGELA"
-                    },
-                    "Licence":{
-                        "0":1553531,
-                        "1":1991622,
-                        "2":2038655,
-                        "3":2249314,
-                        "4":1990339,
-                        "5":2209719,
-                        "6":1895214,
-                        "7":1613832,
-                        "8":2189495
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":5
                     },
@@ -596,6 +585,17 @@
                     "Licence":{
                         "0":2038655
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
                 }
             },
             "Officials":{
@@ -604,10 +604,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROLIN FABIEN"
+                        "0":"MERTEN ANGELA"
                     },
                     "Licence":{
-                        "0":658542
+                        "0":2189495
                     }
                 },
                 "Team 2":{
@@ -615,10 +615,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MERTEN ANGELA"
+                        "0":"ROLIN FABIEN"
                     },
                     "Licence":{
-                        "0":2189495
+                        "0":658542
                     }
                 }
             }

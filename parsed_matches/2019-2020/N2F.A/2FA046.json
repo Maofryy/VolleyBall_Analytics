@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA046",
@@ -455,11 +455,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AS.SP. V.B MAUGUIO",
-                "Team 2":"VOLLEY-BALL ALBIGEOIS"
+                "Team 1":"VOLLEY-BALL ALBIGEOIS",
+                "Team 2":"AS.SP. V.B MAUGUIO"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":8,
+                        "5":10,
+                        "6":11,
+                        "7":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SCHAFFER EMELI",
+                        "1":"PIGOT CAMILLE",
+                        "2":"LECOQ STEPHANIE",
+                        "3":"REY JULIE",
+                        "4":"CANCE MAELLE",
+                        "5":"BAWEDIN ANDREA",
+                        "6":"WIERRE LAURA",
+                        "7":"BALFET PAULINE"
+                    },
+                    "Licence":{
+                        "0":1999335,
+                        "1":1952442,
+                        "2":1715937,
+                        "3":1845219,
+                        "4":1755841,
+                        "5":1493690,
+                        "6":1229533,
+                        "7":2189778
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":4,
                         "1":5,
@@ -496,53 +528,10 @@
                         "8":1726281,
                         "9":1894181
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":8,
-                        "5":10,
-                        "6":11,
-                        "7":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SCHAFFER EMELI",
-                        "1":"PIGOT CAMILLE",
-                        "2":"LECOQ STEPHANIE",
-                        "3":"REY JULIE",
-                        "4":"CANCE MAELLE",
-                        "5":"BAWEDIN ANDREA",
-                        "6":"WIERRE LAURA",
-                        "7":"BALFET PAULINE"
-                    },
-                    "Licence":{
-                        "0":1999335,
-                        "1":1952442,
-                        "2":1715937,
-                        "3":1845219,
-                        "4":1755841,
-                        "5":1493690,
-                        "6":1229533,
-                        "7":2189778
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RAKOTOVAO MAEVA"
-                    },
-                    "Licence":{
-                        "0":1490815
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -552,10 +541,32 @@
                     "Licence":{
                         "0":2189778
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RAKOTOVAO MAEVA"
+                    },
+                    "Licence":{
+                        "0":1490815
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KADJO ISABELLE"
+                    },
+                    "Licence":{
+                        "0":1103424
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -567,17 +578,6 @@
                     "Licence":{
                         "0":1178959,
                         "1":1567037
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KADJO ISABELLE"
-                    },
-                    "Licence":{
-                        "0":1103424
                     }
                 }
             }

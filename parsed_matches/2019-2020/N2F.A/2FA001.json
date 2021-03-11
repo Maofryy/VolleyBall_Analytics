@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA001",
@@ -766,11 +766,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY-BALL GRUISSAN",
-                "Team 2":"RACING CLUB DE CANNES 2 CFC"
+                "Team 1":"RACING CLUB DE CANNES 2 CFC",
+                "Team 2":"VOLLEY-BALL GRUISSAN"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5,
+                        "1":6,
+                        "2":8,
+                        "3":10,
+                        "4":13,
+                        "5":14,
+                        "6":16,
+                        "7":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DAVIES NIAMH",
+                        "1":"DIBERT LAUREL",
+                        "2":"FERESIN CLARA",
+                        "3":"REBUFFEL JENNIFER",
+                        "4":"PESCE VALENTINE",
+                        "5":"BELTRANDO ANDREA",
+                        "6":"HIEULLE OTTAVIA",
+                        "7":"CASALI LUDIVINE"
+                    },
+                    "Licence":{
+                        "0":2040583,
+                        "1":2023382,
+                        "2":2097434,
+                        "3":1942564,
+                        "4":1839323,
+                        "5":2415446,
+                        "6":1990488,
+                        "7":1830343
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -813,42 +845,21 @@
                         "10":2126900,
                         "11":2058802
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5,
-                        "1":6,
-                        "2":8,
-                        "3":10,
-                        "4":13,
-                        "5":14,
-                        "6":16,
-                        "7":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DAVIES NIAMH",
-                        "1":"DIBERT LAUREL",
-                        "2":"FERESIN CLARA",
-                        "3":"REBUFFEL JENNIFER",
-                        "4":"PESCE VALENTINE",
-                        "5":"BELTRANDO ANDREA",
-                        "6":"HIEULLE OTTAVIA",
-                        "7":"CASALI LUDIVINE"
-                    },
-                    "Licence":{
-                        "0":2040583,
-                        "1":2023382,
-                        "2":2097434,
-                        "3":1942564,
-                        "4":1839323,
-                        "5":2415446,
-                        "6":1990488,
-                        "7":1830343
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PESCE VALENTINE"
+                    },
+                    "Licence":{
+                        "0":1839323
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":18
@@ -861,32 +872,10 @@
                         "0":1741594,
                         "1":2058802
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PESCE VALENTINE"
-                    },
-                    "Licence":{
-                        "0":1839323
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PAZ FUENTES EDUARDO"
-                    },
-                    "Licence":{
-                        "0":2137458
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -898,6 +887,17 @@
                     "Licence":{
                         "0":773325,
                         "1":2356819
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PAZ FUENTES EDUARDO"
+                    },
+                    "Licence":{
+                        "0":2137458
                     }
                 }
             }

@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA027",
@@ -619,11 +619,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB HYERES\/PIERREFEU",
-                "Team 2":"VOLLEY-BALL GRUISSAN"
+                "Team 1":"VOLLEY-BALL GRUISSAN",
+                "Team 2":"VOLLEY CLUB HYERES\/PIERREFEU"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":5,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":14,
+                        "9":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MERLOZ TIFFANY",
+                        "1":"GANGLOFF LOLA",
+                        "2":"CUTILLAS MANON",
+                        "3":"TORALLA AIMIE",
+                        "4":"TAYSSE LUCIE",
+                        "5":"ALLIOT NOLWEN",
+                        "6":"PRIETO FERIA PAULA",
+                        "7":"MALEK ALEKSANDRA",
+                        "8":"ROUSSEL ELOANE",
+                        "9":"PETIT-BONNAFOUS LOLA"
+                    },
+                    "Licence":{
+                        "0":1895569,
+                        "1":1952937,
+                        "2":2058805,
+                        "3":2022182,
+                        "4":1811729,
+                        "5":1497929,
+                        "6":2407134,
+                        "7":2407135,
+                        "8":2126900,
+                        "9":2058802
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -663,59 +701,10 @@
                         "9":1954392,
                         "10":2049794
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":5,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":14,
-                        "9":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MERLOZ TIFFANY",
-                        "1":"GANGLOFF LOLA",
-                        "2":"CUTILLAS MANON",
-                        "3":"TORALLA AIMIE",
-                        "4":"TAYSSE LUCIE",
-                        "5":"ALLIOT NOLWEN",
-                        "6":"PRIETO FERIA PAULA",
-                        "7":"MALEK ALEKSANDRA",
-                        "8":"ROUSSEL ELOANE",
-                        "9":"PETIT-BONNAFOUS LOLA"
-                    },
-                    "Licence":{
-                        "0":1895569,
-                        "1":1952937,
-                        "2":2058805,
-                        "3":2022182,
-                        "4":1811729,
-                        "5":1497929,
-                        "6":2407134,
-                        "7":2407135,
-                        "8":2126900,
-                        "9":2058802
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PECHEUR CAMILLE"
-                    },
-                    "Licence":{
-                        "0":1664786
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":18
@@ -728,10 +717,32 @@
                         "0":1952937,
                         "1":2058802
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PECHEUR CAMILLE"
+                    },
+                    "Licence":{
+                        "0":1664786
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PAZ FUENTES EDUARDO"
+                    },
+                    "Licence":{
+                        "0":2137458
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -743,17 +754,6 @@
                     "Licence":{
                         "0":1634200,
                         "1":1091204
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PAZ FUENTES EDUARDO"
-                    },
-                    "Licence":{
-                        "0":2137458
                     }
                 }
             }

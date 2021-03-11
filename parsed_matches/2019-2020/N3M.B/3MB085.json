@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB085",
             "match_day":"15",
             "city":"GIGNAC",
@@ -642,11 +642,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"AVIGNON VOLLEY BALL 2"
+                "Team 1":"AVIGNON VOLLEY BALL 2",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":5,
+                        "2":9,
+                        "3":11,
+                        "4":12,
+                        "5":13,
+                        "6":15,
+                        "7":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MULLIE CLEMENT",
+                        "1":"PURPAN ARNAUD",
+                        "2":"SEGALIN ADRIEN",
+                        "3":"EL MAKNASY ANIS",
+                        "4":"REYNET JULIEN",
+                        "5":"BENHANIDA CHARLES",
+                        "6":"VEGI J\u00dcRGEN",
+                        "7":"BELMEHDI AHCENE"
+                    },
+                    "Licence":{
+                        "0":1381081,
+                        "1":1837616,
+                        "2":1835285,
+                        "3":2047108,
+                        "4":1547949,
+                        "5":1792220,
+                        "6":2330605,
+                        "7":2317592
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":6,
@@ -680,53 +712,10 @@
                         "7":1746889,
                         "8":1527140
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":5,
-                        "2":9,
-                        "3":11,
-                        "4":12,
-                        "5":13,
-                        "6":15,
-                        "7":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MULLIE CLEMENT",
-                        "1":"PURPAN ARNAUD",
-                        "2":"SEGALIN ADRIEN",
-                        "3":"EL MAKNASY ANIS",
-                        "4":"REYNET JULIEN",
-                        "5":"BENHANIDA CHARLES",
-                        "6":"VEGI J\u00dcRGEN",
-                        "7":"BELMEHDI AHCENE"
-                    },
-                    "Licence":{
-                        "0":1381081,
-                        "1":1837616,
-                        "2":1835285,
-                        "3":2047108,
-                        "4":1547949,
-                        "5":1792220,
-                        "6":2330605,
-                        "7":2317592
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"QUIOT FLORENT"
-                    },
-                    "Licence":{
-                        "0":1845996
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":20
                     },
@@ -736,21 +725,21 @@
                     "Licence":{
                         "0":2317592
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"QUIOT FLORENT"
+                    },
+                    "Licence":{
+                        "0":1845996
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
-                    },
-                    "Licence":{
-                        "0":1444556
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -762,6 +751,17 @@
                     "Licence":{
                         "0":1454586,
                         "1":1478926
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ARNAUD CLEMENT"
+                    },
+                    "Licence":{
+                        "0":1444556
                     }
                 }
             }

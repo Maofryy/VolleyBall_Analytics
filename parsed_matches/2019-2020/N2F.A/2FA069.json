@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA069",
@@ -585,11 +585,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"B\u00c9ZIERS VOLLEY-BALL 2 CFC",
-                "Team 2":"A.S. DE L'UNION VOLLEY-BALL"
+                "Team 1":"A.S. DE L'UNION VOLLEY-BALL",
+                "Team 2":"B\u00c9ZIERS VOLLEY-BALL 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":8,
+                        "7":9,
+                        "8":11,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CANCEL SAMANTHA",
+                        "1":"DUPIN ANOUK",
+                        "2":"RIQUIER MORCANT BLANCHE",
+                        "3":"SERIEYS OCEANE",
+                        "4":"COLINOT CHARLAINE",
+                        "5":"CARTRON EMMA",
+                        "6":"FABRE JUSTINE",
+                        "7":"VIEILLEDENT HELENE",
+                        "8":"LAMIRAND MARGAUX",
+                        "9":"DELPRAT NADEGE"
+                    },
+                    "Licence":{
+                        "0":1765826,
+                        "1":1805468,
+                        "2":1622167,
+                        "3":1749752,
+                        "4":1843027,
+                        "5":2012753,
+                        "6":1951494,
+                        "7":1648735,
+                        "8":1722357,
+                        "9":1622325
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -629,59 +667,10 @@
                         "9":2192047,
                         "10":1922491
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":8,
-                        "7":9,
-                        "8":11,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CANCEL SAMANTHA",
-                        "1":"DUPIN ANOUK",
-                        "2":"RIQUIER MORCANT BLANCHE",
-                        "3":"SERIEYS OCEANE",
-                        "4":"COLINOT CHARLAINE",
-                        "5":"CARTRON EMMA",
-                        "6":"FABRE JUSTINE",
-                        "7":"VIEILLEDENT HELENE",
-                        "8":"LAMIRAND MARGAUX",
-                        "9":"DELPRAT NADEGE"
-                    },
-                    "Licence":{
-                        "0":1765826,
-                        "1":1805468,
-                        "2":1622167,
-                        "3":1749752,
-                        "4":1843027,
-                        "5":2012753,
-                        "6":1951494,
-                        "7":1648735,
-                        "8":1722357,
-                        "9":1622325
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROMATI SARA"
-                    },
-                    "Licence":{
-                        "0":1863717
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -691,6 +680,17 @@
                     "Licence":{
                         "0":1622325
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROMATI SARA"
+                    },
+                    "Licence":{
+                        "0":1863717
+                    }
                 }
             },
             "Officials":{
@@ -699,10 +699,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BAINVEL ROMUALD"
+                        "0":"DE CLERCQ PATRICK"
                     },
                     "Licence":{
-                        "0":986222
+                        "0":1777368
                     }
                 },
                 "Team 2":{
@@ -710,10 +710,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DE CLERCQ PATRICK"
+                        "0":"BAINVEL ROMUALD"
                     },
                     "Licence":{
-                        "0":1777368
+                        "0":986222
                     }
                 }
             }

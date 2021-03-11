@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC034",
             "match_day":"06",
             "city":"MERIGNAC",
@@ -590,49 +590,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"SPORT ATHLETIQUE MERIGNACAIS",
-                "Team 2":"VOLLEY-BALL PEXINOIS NIORT"
+                "Team 1":"VOLLEY-BALL PEXINOIS NIORT",
+                "Team 2":"SPORT ATHLETIQUE MERIGNACAIS"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":12,
-                        "9":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CLEUET SEBASTIEN",
-                        "1":"MINGOUA STEVE",
-                        "2":"DEYDIER JEAN-BAPTISTE",
-                        "3":"DRUELLES MATHIS",
-                        "4":"BONHOMME JEROME",
-                        "5":"GACON DAMIEN",
-                        "6":"SILVAGNI JOAN",
-                        "7":"VIGILANT BENOIT",
-                        "8":"DEFRANCE QUENTIN",
-                        "9":"LHERITIER SIMON"
-                    },
-                    "Licence":{
-                        "0":1564008,
-                        "1":1613466,
-                        "2":2033128,
-                        "3":2206359,
-                        "4":1475438,
-                        "5":1868548,
-                        "6":1721741,
-                        "7":1839721,
-                        "8":1943782,
-                        "9":1762682
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -669,24 +631,48 @@
                         "8":2138568,
                         "9":2044124
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":12,
+                        "9":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CLEUET SEBASTIEN",
+                        "1":"MINGOUA STEVE",
+                        "2":"DEYDIER JEAN-BAPTISTE",
+                        "3":"DRUELLES MATHIS",
+                        "4":"BONHOMME JEROME",
+                        "5":"GACON DAMIEN",
+                        "6":"SILVAGNI JOAN",
+                        "7":"VIGILANT BENOIT",
+                        "8":"DEFRANCE QUENTIN",
+                        "9":"LHERITIER SIMON"
+                    },
+                    "Licence":{
+                        "0":1564008,
+                        "1":1613466,
+                        "2":2033128,
+                        "3":2206359,
+                        "4":1475438,
+                        "5":1868548,
+                        "6":1721741,
+                        "7":1839721,
+                        "8":1943782,
+                        "9":1762682
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":6,
-                        "1":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DRUELLES MATHIS",
-                        "1":"LHERITIER SIMON"
-                    },
-                    "Licence":{
-                        "0":2206359,
-                        "1":1762682
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":4,
                         "1":13
@@ -699,21 +685,24 @@
                         "0":1907271,
                         "1":2138568
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":6,
+                        "1":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DRUELLES MATHIS",
+                        "1":"LHERITIER SIMON"
+                    },
+                    "Licence":{
+                        "0":2206359,
+                        "1":1762682
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"OUIKHLEF MOHAMED"
-                    },
-                    "Licence":{
-                        "0":906719
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -725,6 +714,17 @@
                     "Licence":{
                         "0":2044124,
                         "1":2010911
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"OUIKHLEF MOHAMED"
+                    },
+                    "Licence":{
+                        "0":906719
                     }
                 }
             }

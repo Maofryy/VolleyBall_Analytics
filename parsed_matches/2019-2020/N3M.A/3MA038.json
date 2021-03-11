@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA038",
             "match_day":"07",
             "city":"MARIGNANE",
@@ -647,52 +647,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MARIGNANE VOLLEY-BALL",
-                "Team 2":"AS CANNES VOLLEY-BALL 3"
+                "Team 1":"AS CANNES VOLLEY-BALL 3",
+                "Team 2":"MARIGNANE VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":13,
-                        "8":14,
-                        "9":17,
-                        "10":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROTAR TEO",
-                        "1":"MERMET FLORENT",
-                        "2":"GUENNOU SYLVAIN",
-                        "3":"TOUPET REMY",
-                        "4":"DUBRAC JONATHAN",
-                        "5":"SEGUIN FREDERIC",
-                        "6":"MOTHE SEBASTIEN",
-                        "7":"MERMET SEBASTIEN",
-                        "8":"PERROT OLIVIER",
-                        "9":"DUMONT SYLVAIN",
-                        "10":"GALLO TITOUAN"
-                    },
-                    "Licence":{
-                        "0":1970093,
-                        "1":1166727,
-                        "2":1230437,
-                        "3":1717399,
-                        "4":1450974,
-                        "5":1388246,
-                        "6":1549335,
-                        "7":1114894,
-                        "8":2106366,
-                        "9":1694494,
-                        "10":2103291
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -732,21 +691,51 @@
                         "9":2037015,
                         "10":1949338
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":13,
+                        "8":14,
+                        "9":17,
+                        "10":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROTAR TEO",
+                        "1":"MERMET FLORENT",
+                        "2":"GUENNOU SYLVAIN",
+                        "3":"TOUPET REMY",
+                        "4":"DUBRAC JONATHAN",
+                        "5":"SEGUIN FREDERIC",
+                        "6":"MOTHE SEBASTIEN",
+                        "7":"MERMET SEBASTIEN",
+                        "8":"PERROT OLIVIER",
+                        "9":"DUMONT SYLVAIN",
+                        "10":"GALLO TITOUAN"
+                    },
+                    "Licence":{
+                        "0":1970093,
+                        "1":1166727,
+                        "2":1230437,
+                        "3":1717399,
+                        "4":1450974,
+                        "5":1388246,
+                        "6":1549335,
+                        "7":1114894,
+                        "8":2106366,
+                        "9":1694494,
+                        "10":2103291
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MERMET SEBASTIEN"
-                    },
-                    "Licence":{
-                        "0":1114894
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14,
                         "1":15
@@ -759,10 +748,32 @@
                         "0":1878423,
                         "1":1821600
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MERMET SEBASTIEN"
+                    },
+                    "Licence":{
+                        "0":1114894
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PRIBANOVIC DUSAN"
+                    },
+                    "Licence":{
+                        "0":1832874
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -774,17 +785,6 @@
                     "Licence":{
                         "0":1388246,
                         "1":2067787
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PRIBANOVIC DUSAN"
-                    },
-                    "Licence":{
-                        "0":1832874
                     }
                 }
             }

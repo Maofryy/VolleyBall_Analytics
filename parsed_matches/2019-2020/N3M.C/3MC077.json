@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC077",
             "match_day":"13",
             "city":"UZEIN",
@@ -500,11 +500,52 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LESCAR PROMOTION VOLLEY-BALL",
-                "Team 2":"UNION SPORTIVE TALENCAISE"
+                "Team 1":"UNION SPORTIVE TALENCAISE",
+                "Team 2":"LESCAR PROMOTION VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":11,
+                        "9":12,
+                        "10":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PLATTEAU STEVEN",
+                        "1":"GARRIGUE MATTEO",
+                        "2":"BARRIERE EMILE",
+                        "3":"PALOMINO NICOLAS",
+                        "4":"LACOMBE CAZAL TOM",
+                        "5":"SEKEME FELEISA",
+                        "6":"BOMPARD LUCAS",
+                        "7":"HAMMEL CEDRIC",
+                        "8":"REQUEDA HUGO",
+                        "9":"BATAILLE MATTHIEU",
+                        "10":"DOMENACH LOUIS"
+                    },
+                    "Licence":{
+                        "0":1598108,
+                        "1":1863180,
+                        "2":2053682,
+                        "3":1611663,
+                        "4":2041829,
+                        "5":2402938,
+                        "6":2040965,
+                        "7":1376976,
+                        "8":1860048,
+                        "9":2052922,
+                        "10":2096563
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -547,51 +588,21 @@
                         "10":1990610,
                         "11":1377380
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":11,
-                        "9":12,
-                        "10":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PLATTEAU STEVEN",
-                        "1":"GARRIGUE MATTEO",
-                        "2":"BARRIERE EMILE",
-                        "3":"PALOMINO NICOLAS",
-                        "4":"LACOMBE CAZAL TOM",
-                        "5":"SEKEME FELEISA",
-                        "6":"BOMPARD LUCAS",
-                        "7":"HAMMEL CEDRIC",
-                        "8":"REQUEDA HUGO",
-                        "9":"BATAILLE MATTHIEU",
-                        "10":"DOMENACH LOUIS"
-                    },
-                    "Licence":{
-                        "0":1598108,
-                        "1":1863180,
-                        "2":2053682,
-                        "3":1611663,
-                        "4":2041829,
-                        "5":2402938,
-                        "6":2040965,
-                        "7":1376976,
-                        "8":1860048,
-                        "9":2052922,
-                        "10":2096563
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":10
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HAMMEL CEDRIC"
+                    },
+                    "Licence":{
+                        "0":1376976
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":6
@@ -604,17 +615,6 @@
                         "0":2099460,
                         "1":2196675
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":10
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HAMMEL CEDRIC"
-                    },
-                    "Licence":{
-                        "0":1376976
-                    }
                 }
             },
             "Officials":{
@@ -623,10 +623,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MANAUT CEDRIC"
+                        "0":"PLATTEAU STEVEN"
                     },
                     "Licence":{
-                        "0":1482732
+                        "0":1598108
                     }
                 },
                 "Team 2":{
@@ -634,10 +634,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"PLATTEAU STEVEN"
+                        "0":"MANAUT CEDRIC"
                     },
                     "Licence":{
-                        "0":1598108
+                        "0":1482732
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD078",
             "match_day":"13",
             "city":"CHANTEPIE",
@@ -486,11 +486,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS VOLLEY BALL CESSON-CHANTE",
-                "Team 2":"ST NAZAIRE VB ATLANTIQUE 3"
+                "Team 1":"ST NAZAIRE VB ATLANTIQUE 3",
+                "Team 2":"UGS VOLLEY BALL CESSON-CHANTE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":9,
+                        "6":10,
+                        "7":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"JAN MORGAN",
+                        "1":"PHILIPPE CHRISTOPHER",
+                        "2":"BOUTRY JULIEN",
+                        "3":"MORVAN NICOLAS",
+                        "4":"MAILLARD OLIVIER",
+                        "5":"NOFONOFO PETELO",
+                        "6":"GRUEL GURVANN",
+                        "7":"GAHAIGNON DORIAN"
+                    },
+                    "Licence":{
+                        "0":1715959,
+                        "1":2239647,
+                        "2":962972,
+                        "3":1672064,
+                        "4":980275,
+                        "5":2034901,
+                        "6":1755402,
+                        "7":2014119
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -533,42 +565,21 @@
                         "10":1799821,
                         "11":1372407
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":9,
-                        "6":10,
-                        "7":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"JAN MORGAN",
-                        "1":"PHILIPPE CHRISTOPHER",
-                        "2":"BOUTRY JULIEN",
-                        "3":"MORVAN NICOLAS",
-                        "4":"MAILLARD OLIVIER",
-                        "5":"NOFONOFO PETELO",
-                        "6":"GRUEL GURVANN",
-                        "7":"GAHAIGNON DORIAN"
-                    },
-                    "Licence":{
-                        "0":1715959,
-                        "1":2239647,
-                        "2":962972,
-                        "3":1672064,
-                        "4":980275,
-                        "5":2034901,
-                        "6":1755402,
-                        "7":2014119
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GAHAIGNON DORIAN"
+                    },
+                    "Licence":{
+                        "0":2014119
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":13
@@ -581,17 +592,6 @@
                         "0":1886132,
                         "1":1799821
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GAHAIGNON DORIAN"
-                    },
-                    "Licence":{
-                        "0":2014119
-                    }
                 }
             },
             "Officials":{
@@ -600,10 +600,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MUSSEAU MIKAEL"
+                        "0":"VALLEE ROGER"
                     },
                     "Licence":{
-                        "0":1083053
+                        "0":1002810
                     }
                 },
                 "Team 2":{
@@ -611,10 +611,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"VALLEE ROGER"
+                        "0":"MUSSEAU MIKAEL"
                     },
                     "Licence":{
-                        "0":1002810
+                        "0":1083053
                     }
                 }
             }

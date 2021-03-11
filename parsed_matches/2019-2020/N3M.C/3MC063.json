@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC063",
             "match_day":"11",
             "city":"MESPLEDE",
@@ -674,11 +674,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LES GENETS DE MESPLEDE",
-                "Team 2":"STADE POITEVIN VOLLEY BEACH 2"
+                "Team 1":"STADE POITEVIN VOLLEY BEACH 2",
+                "Team 2":"LES GENETS DE MESPLEDE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":5,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":12,
+                        "8":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GUEMMOUR DJAMEL EDDINE",
+                        "1":"PLUMER YOANN",
+                        "2":"KOUSSIKOU JEFFERSON",
+                        "3":"MARQUEZ PIERRE",
+                        "4":"CANNESSANT TOM",
+                        "5":"BIRONNEAU REMY",
+                        "6":"GIGAULT CL\u00e9MENT",
+                        "7":"GATEAU MAXIME",
+                        "8":"ANCEL THEO"
+                    },
+                    "Licence":{
+                        "0":1673440,
+                        "1":1688259,
+                        "2":1705686,
+                        "3":1893706,
+                        "4":1969316,
+                        "5":1903885,
+                        "6":1834073,
+                        "7":1715757,
+                        "8":1853275
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -721,45 +756,21 @@
                         "10":1762275,
                         "11":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":5,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":12,
-                        "8":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GUEMMOUR DJAMEL EDDINE",
-                        "1":"PLUMER YOANN",
-                        "2":"KOUSSIKOU JEFFERSON",
-                        "3":"MARQUEZ PIERRE",
-                        "4":"CANNESSANT TOM",
-                        "5":"BIRONNEAU REMY",
-                        "6":"GIGAULT CL\u00e9MENT",
-                        "7":"GATEAU MAXIME",
-                        "8":"ANCEL THEO"
-                    },
-                    "Licence":{
-                        "0":1673440,
-                        "1":1688259,
-                        "2":1705686,
-                        "3":1893706,
-                        "4":1969316,
-                        "5":1903885,
-                        "6":1834073,
-                        "7":1715757,
-                        "8":1853275
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ANCEL THEO"
+                    },
+                    "Licence":{
+                        "0":1853275
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":11,
                         "1":12
@@ -772,21 +783,21 @@
                         "0":1762275,
                         "1":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ANCEL THEO"
-                    },
-                    "Licence":{
-                        "0":1853275
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GOMME JULIEN"
+                    },
+                    "Licence":{
+                        "0":1192719
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -798,17 +809,6 @@
                     "Licence":{
                         "0":2416818,
                         "1":1142431
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GOMME JULIEN"
-                    },
-                    "Licence":{
-                        "0":1192719
                     }
                 }
             }

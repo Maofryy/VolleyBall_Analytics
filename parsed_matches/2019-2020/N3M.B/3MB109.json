@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB109",
             "match_day":"19",
             "city":"GIGNAC",
@@ -601,11 +601,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"U.S. PONTET VOLLEY AVENIR"
+                "Team 1":"U.S. PONTET VOLLEY AVENIR",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":7,
+                        "2":9,
+                        "3":10,
+                        "4":11,
+                        "5":12,
+                        "6":14,
+                        "7":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LIBOM SERGE",
+                        "1":"VANDAM YANNICK",
+                        "2":"CONSTANS PATRICK",
+                        "3":"RIDET HUMBERT AXEL",
+                        "4":"DIJOUD FLORIAN",
+                        "5":"ABDELMALEK JAFFAR",
+                        "6":"PICCIN JORIAN",
+                        "7":"POUVESLE CORENTIN"
+                    },
+                    "Licence":{
+                        "0":1673757,
+                        "1":2153871,
+                        "2":1221683,
+                        "3":1837186,
+                        "4":1508547,
+                        "5":2314954,
+                        "6":2053483,
+                        "7":2102958
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":6,
                         "1":7,
@@ -639,53 +671,10 @@
                         "7":2108694,
                         "8":1746889
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":7,
-                        "2":9,
-                        "3":10,
-                        "4":11,
-                        "5":12,
-                        "6":14,
-                        "7":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LIBOM SERGE",
-                        "1":"VANDAM YANNICK",
-                        "2":"CONSTANS PATRICK",
-                        "3":"RIDET HUMBERT AXEL",
-                        "4":"DIJOUD FLORIAN",
-                        "5":"ABDELMALEK JAFFAR",
-                        "6":"PICCIN JORIAN",
-                        "7":"POUVESLE CORENTIN"
-                    },
-                    "Licence":{
-                        "0":1673757,
-                        "1":2153871,
-                        "2":1221683,
-                        "3":1837186,
-                        "4":1508547,
-                        "5":2314954,
-                        "6":2053483,
-                        "7":2102958
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BERNADOU VALENTIN"
-                    },
-                    "Licence":{
-                        "0":1806795
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":20
                     },
@@ -695,21 +684,21 @@
                     "Licence":{
                         "0":2102958
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BERNADOU VALENTIN"
+                    },
+                    "Licence":{
+                        "0":1806795
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
-                    },
-                    "Licence":{
-                        "0":1444556
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -721,6 +710,17 @@
                     "Licence":{
                         "0":1340244,
                         "1":2049177
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ARNAUD CLEMENT"
+                    },
+                    "Licence":{
+                        "0":1444556
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC050",
             "match_day":"09",
             "city":"MESPLEDE",
@@ -485,11 +485,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LES GENETS DE MESPLEDE",
-                "Team 2":"SPORT ATHLETIQUE MERIGNACAIS"
+                "Team 1":"SPORT ATHLETIQUE MERIGNACAIS",
+                "Team 2":"LES GENETS DE MESPLEDE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":4,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":12,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CLEUET SEBASTIEN",
+                        "1":"DEYDIER JEAN-BAPTISTE",
+                        "2":"DRUELLES MATHIS",
+                        "3":"BONHOMME JEROME",
+                        "4":"GACON DAMIEN",
+                        "5":"SILVAGNI JOAN",
+                        "6":"VIGILANT BENOIT",
+                        "7":"DEFRANCE QUENTIN",
+                        "8":"LOUINEAU CLEMENT"
+                    },
+                    "Licence":{
+                        "0":1564008,
+                        "1":2033128,
+                        "2":2206359,
+                        "3":1475438,
+                        "4":1868548,
+                        "5":1721741,
+                        "6":1839721,
+                        "7":1943782,
+                        "8":1942841
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -529,45 +564,21 @@
                         "9":1762275,
                         "10":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":4,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":12,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CLEUET SEBASTIEN",
-                        "1":"DEYDIER JEAN-BAPTISTE",
-                        "2":"DRUELLES MATHIS",
-                        "3":"BONHOMME JEROME",
-                        "4":"GACON DAMIEN",
-                        "5":"SILVAGNI JOAN",
-                        "6":"VIGILANT BENOIT",
-                        "7":"DEFRANCE QUENTIN",
-                        "8":"LOUINEAU CLEMENT"
-                    },
-                    "Licence":{
-                        "0":1564008,
-                        "1":2033128,
-                        "2":2206359,
-                        "3":1475438,
-                        "4":1868548,
-                        "5":1721741,
-                        "6":1839721,
-                        "7":1943782,
-                        "8":1942841
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":6
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DRUELLES MATHIS"
+                    },
+                    "Licence":{
+                        "0":2206359
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":11,
                         "1":12
@@ -580,21 +591,21 @@
                         "0":1762275,
                         "1":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":6
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DRUELLES MATHIS"
-                    },
-                    "Licence":{
-                        "0":2206359
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"OUIKHLEF MOHAMED"
+                    },
+                    "Licence":{
+                        "0":906719
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -606,17 +617,6 @@
                     "Licence":{
                         "0":2416818,
                         "1":1142431
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"OUIKHLEF MOHAMED"
-                    },
-                    "Licence":{
-                        "0":906719
                     }
                 }
             }

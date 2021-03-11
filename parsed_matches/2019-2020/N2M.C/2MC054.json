@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC054",
@@ -455,46 +455,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MAIZIERES ATHLETIC CLUB VOLLEY",
-                "Team 2":"STRASBOURG VOLLEY-BALL"
+                "Team 1":"STRASBOURG VOLLEY-BALL",
+                "Team 2":"MAIZIERES ATHLETIC CLUB VOLLEY"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"POSSAMAI HUGO",
-                        "1":"FALLET GUILLAUME",
-                        "2":"TOTELE ANTHONY",
-                        "3":"BACHMATIUK MARCIN",
-                        "4":"ULLMANN JEREMY",
-                        "5":"SZYMKOWIAK THIBAULT",
-                        "6":"MROZEK RAPHAEL",
-                        "7":"LOHSTAETTER MAXIME",
-                        "8":"RANDRIANANTENAINA LUKA"
-                    },
-                    "Licence":{
-                        "0":1831521,
-                        "1":1373425,
-                        "2":1810115,
-                        "3":1994985,
-                        "4":1641016,
-                        "5":1812329,
-                        "6":1372045,
-                        "7":1729558,
-                        "8":1869474
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -531,21 +496,45 @@
                         "8":1987606,
                         "9":2042975
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"POSSAMAI HUGO",
+                        "1":"FALLET GUILLAUME",
+                        "2":"TOTELE ANTHONY",
+                        "3":"BACHMATIUK MARCIN",
+                        "4":"ULLMANN JEREMY",
+                        "5":"SZYMKOWIAK THIBAULT",
+                        "6":"MROZEK RAPHAEL",
+                        "7":"LOHSTAETTER MAXIME",
+                        "8":"RANDRIANANTENAINA LUKA"
+                    },
+                    "Licence":{
+                        "0":1831521,
+                        "1":1373425,
+                        "2":1810115,
+                        "3":1994985,
+                        "4":1641016,
+                        "5":1812329,
+                        "6":1372045,
+                        "7":1729558,
+                        "8":1869474
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RANDRIANANTENAINA LUKA"
-                    },
-                    "Licence":{
-                        "0":1869474
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2
                     },
@@ -555,6 +544,17 @@
                     "Licence":{
                         "0":1877209
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RANDRIANANTENAINA LUKA"
+                    },
+                    "Licence":{
+                        "0":1869474
+                    }
                 }
             },
             "Officials":{
@@ -563,10 +563,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MROZEK RAPHAEL"
+                        "0":"BIGOT MICHEL"
                     },
                     "Licence":{
-                        "0":1372045
+                        "0":1365692
                     }
                 },
                 "Team 2":{
@@ -574,10 +574,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BIGOT MICHEL"
+                        "0":"MROZEK RAPHAEL"
                     },
                     "Licence":{
-                        "0":1365692
+                        "0":1372045
                     }
                 }
             }

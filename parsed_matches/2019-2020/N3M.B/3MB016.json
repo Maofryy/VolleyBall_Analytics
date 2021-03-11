@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB016",
             "match_day":"03",
             "city":"LE PONTET",
@@ -798,49 +798,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"U.S. PONTET VOLLEY AVENIR",
-                "Team 2":"VBC CLERMONTAIS"
+                "Team 1":"VBC CLERMONTAIS",
+                "Team 2":"U.S. PONTET VOLLEY AVENIR"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":7,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":13,
-                        "8":14,
-                        "9":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LOPEZ FRANCOIS",
-                        "1":"CAYRIER CYRIL",
-                        "2":"PICCIN JORIAN",
-                        "3":"LIBOM SERGE",
-                        "4":"CONSTANS PATRICK",
-                        "5":"HUMBERT-RIDET DYLAN",
-                        "6":"DIJOUD FLORIAN",
-                        "7":"VITALI ANTOINE",
-                        "8":"ABDELMALEK JAFFAR",
-                        "9":"RIDET HUMBERT AXEL"
-                    },
-                    "Licence":{
-                        "0":2080274,
-                        "1":2246972,
-                        "2":2053483,
-                        "3":1673757,
-                        "4":1221683,
-                        "5":1762370,
-                        "6":1508547,
-                        "7":2187924,
-                        "8":2314954,
-                        "9":1837186
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -877,21 +839,48 @@
                         "8":2241540,
                         "9":1647388
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":7,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":13,
+                        "8":14,
+                        "9":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LOPEZ FRANCOIS",
+                        "1":"CAYRIER CYRIL",
+                        "2":"PICCIN JORIAN",
+                        "3":"LIBOM SERGE",
+                        "4":"CONSTANS PATRICK",
+                        "5":"HUMBERT-RIDET DYLAN",
+                        "6":"DIJOUD FLORIAN",
+                        "7":"VITALI ANTOINE",
+                        "8":"ABDELMALEK JAFFAR",
+                        "9":"RIDET HUMBERT AXEL"
+                    },
+                    "Licence":{
+                        "0":2080274,
+                        "1":2246972,
+                        "2":2053483,
+                        "3":1673757,
+                        "4":1221683,
+                        "5":1762370,
+                        "6":1508547,
+                        "7":2187924,
+                        "8":2314954,
+                        "9":1837186
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":10
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HUMBERT-RIDET DYLAN"
-                    },
-                    "Licence":{
-                        "0":1762370
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -901,21 +890,21 @@
                     "Licence":{
                         "0":2241540
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":10
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HUMBERT-RIDET DYLAN"
+                    },
+                    "Licence":{
+                        "0":1762370
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BRUNEL REMY"
-                    },
-                    "Licence":{
-                        "0":1340244
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -927,6 +916,17 @@
                     "Licence":{
                         "0":1346303,
                         "1":996570
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BRUNEL REMY"
+                    },
+                    "Licence":{
+                        "0":1340244
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB029",
             "match_day":"05",
             "city":"LYON",
@@ -680,46 +680,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"PATRIOTE DE SAINT DENIS",
-                "Team 2":"U.S. PONTET VOLLEY AVENIR"
+                "Team 1":"U.S. PONTET VOLLEY AVENIR",
+                "Team 2":"PATRIOTE DE SAINT DENIS"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":5,
-                        "3":6,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":11,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MOREAU NICOLAS",
-                        "1":"ROUVIERE LEO",
-                        "2":"MARTINEZ NICOLAS",
-                        "3":"CARPENTIER BERTRAND",
-                        "4":"BOMBARON LUCAS",
-                        "5":"HOSNI ISMAEL",
-                        "6":"V\u00c9RICEL MARTIN",
-                        "7":"JEANJEAN HUBERT",
-                        "8":"VIRASSAMY CEDRIC"
-                    },
-                    "Licence":{
-                        "0":1941074,
-                        "1":1800104,
-                        "2":1721858,
-                        "3":1729927,
-                        "4":1861263,
-                        "5":1728378,
-                        "6":1960469,
-                        "7":1741868,
-                        "8":2091078
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -756,21 +721,45 @@
                         "8":2314954,
                         "9":1837186
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":5,
+                        "3":6,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":11,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MOREAU NICOLAS",
+                        "1":"ROUVIERE LEO",
+                        "2":"MARTINEZ NICOLAS",
+                        "3":"CARPENTIER BERTRAND",
+                        "4":"BOMBARON LUCAS",
+                        "5":"HOSNI ISMAEL",
+                        "6":"V\u00c9RICEL MARTIN",
+                        "7":"JEANJEAN HUBERT",
+                        "8":"VIRASSAMY CEDRIC"
+                    },
+                    "Licence":{
+                        "0":1941074,
+                        "1":1800104,
+                        "2":1721858,
+                        "3":1729927,
+                        "4":1861263,
+                        "5":1728378,
+                        "6":1960469,
+                        "7":1741868,
+                        "8":2091078
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":9
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HOSNI ISMAEL"
-                    },
-                    "Licence":{
-                        "0":1728378
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":10
                     },
@@ -780,6 +769,17 @@
                     "Licence":{
                         "0":1762370
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":9
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HOSNI ISMAEL"
+                    },
+                    "Licence":{
+                        "0":1728378
+                    }
                 }
             },
             "Officials":{
@@ -788,10 +788,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MOHAMED ISSA HITAME"
+                        "0":"BRUNEL REMY"
                     },
                     "Licence":{
-                        "0":1768373
+                        "0":1340244
                     }
                 },
                 "Team 2":{
@@ -799,10 +799,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BRUNEL REMY"
+                        "0":"MOHAMED ISSA HITAME"
                     },
                     "Licence":{
-                        "0":1340244
+                        "0":1768373
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC081",
             "match_day":"14",
             "city":"MESPLEDE",
@@ -629,55 +629,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LES GENETS DE MESPLEDE",
-                "Team 2":"LESCAR PROMOTION VOLLEY-BALL"
+                "Team 1":"LESCAR PROMOTION VOLLEY-BALL",
+                "Team 2":"LES GENETS DE MESPLEDE"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":5,
-                        "5":6,
-                        "6":7,
-                        "7":8,
-                        "8":9,
-                        "9":10,
-                        "10":11,
-                        "11":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FEL SWANN",
-                        "1":"JUSTINIANO ZAMBRANO LUIS",
-                        "2":"DABADIE EMILIEN",
-                        "3":"LE GAL YOANN",
-                        "4":"DUFAU BASTIEN",
-                        "5":"SANCHEZ JONATHAN",
-                        "6":"DABADIE CLEMENT",
-                        "7":"BONDET DE LA BERNARDIE STAN",
-                        "8":"OURY THEAU",
-                        "9":"DUCOURNAU CLEMENT",
-                        "10":"MOUSQUES SOULAS BENOIT",
-                        "11":"PARAIGE VINCENT"
-                    },
-                    "Licence":{
-                        "0":1943452,
-                        "1":2406831,
-                        "2":1566148,
-                        "3":2093596,
-                        "4":1606016,
-                        "5":1603241,
-                        "6":1867818,
-                        "7":1858313,
-                        "8":1452942,
-                        "9":1634697,
-                        "10":1762275,
-                        "11":2049969
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -720,24 +676,54 @@
                         "10":1990610,
                         "11":1377380
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":4,
+                        "4":5,
+                        "5":6,
+                        "6":7,
+                        "7":8,
+                        "8":9,
+                        "9":10,
+                        "10":11,
+                        "11":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FEL SWANN",
+                        "1":"JUSTINIANO ZAMBRANO LUIS",
+                        "2":"DABADIE EMILIEN",
+                        "3":"LE GAL YOANN",
+                        "4":"DUFAU BASTIEN",
+                        "5":"SANCHEZ JONATHAN",
+                        "6":"DABADIE CLEMENT",
+                        "7":"BONDET DE LA BERNARDIE STAN",
+                        "8":"OURY THEAU",
+                        "9":"DUCOURNAU CLEMENT",
+                        "10":"MOUSQUES SOULAS BENOIT",
+                        "11":"PARAIGE VINCENT"
+                    },
+                    "Licence":{
+                        "0":1943452,
+                        "1":2406831,
+                        "2":1566148,
+                        "3":2093596,
+                        "4":1606016,
+                        "5":1603241,
+                        "6":1867818,
+                        "7":1858313,
+                        "8":1452942,
+                        "9":1634697,
+                        "10":1762275,
+                        "11":2049969
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":11,
-                        "1":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MOUSQUES SOULAS BENOIT",
-                        "1":"PARAIGE VINCENT"
-                    },
-                    "Licence":{
-                        "0":1762275,
-                        "1":2049969
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":6
@@ -750,10 +736,35 @@
                         "0":2099460,
                         "1":2196675
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":11,
+                        "1":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MOUSQUES SOULAS BENOIT",
+                        "1":"PARAIGE VINCENT"
+                    },
+                    "Licence":{
+                        "0":1762275,
+                        "1":2049969
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MANAUT CEDRIC"
+                    },
+                    "Licence":{
+                        "0":1482732
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -765,17 +776,6 @@
                     "Licence":{
                         "0":2416818,
                         "1":1142431
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MANAUT CEDRIC"
-                    },
-                    "Licence":{
-                        "0":1482732
                     }
                 }
             }

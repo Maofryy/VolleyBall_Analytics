@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA020",
             "match_day":"04",
             "city":"CAGNES SUR MER",
@@ -674,11 +674,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"SALON VOLLEY"
+                "Team 1":"SALON VOLLEY",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":10,
+                        "7":12,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"TIZIOUALOU NESSIM",
+                        "1":"STOLL FRANCK",
+                        "2":"AUBREE ANTOINE",
+                        "3":"PANCALDIE MATHIEU",
+                        "4":"M'BARKI BILAL",
+                        "5":"DJIKE NYABEYE JEDIAEL",
+                        "6":"BOUDEHEDJ AKIM",
+                        "7":"BENBAHOUCHE RYAD",
+                        "8":"BUCHEL ANTHONY"
+                    },
+                    "Licence":{
+                        "0":2414868,
+                        "1":1833531,
+                        "2":1765258,
+                        "3":1991950,
+                        "4":1736645,
+                        "5":2356128,
+                        "6":1964678,
+                        "7":1831985,
+                        "8":2046433
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":4,
@@ -718,45 +753,21 @@
                         "9":1929903,
                         "10":1966968
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":10,
-                        "7":12,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"TIZIOUALOU NESSIM",
-                        "1":"STOLL FRANCK",
-                        "2":"AUBREE ANTOINE",
-                        "3":"PANCALDIE MATHIEU",
-                        "4":"M'BARKI BILAL",
-                        "5":"DJIKE NYABEYE JEDIAEL",
-                        "6":"BOUDEHEDJ AKIM",
-                        "7":"BENBAHOUCHE RYAD",
-                        "8":"BUCHEL ANTHONY"
-                    },
-                    "Licence":{
-                        "0":2414868,
-                        "1":1833531,
-                        "2":1765258,
-                        "3":1991950,
-                        "4":1736645,
-                        "5":2356128,
-                        "6":1964678,
-                        "7":1831985,
-                        "8":2046433
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BENBAHOUCHE RYAD"
+                    },
+                    "Licence":{
+                        "0":1831985
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":11
@@ -769,17 +780,6 @@
                         "0":1774713,
                         "1":1176370
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BENBAHOUCHE RYAD"
-                    },
-                    "Licence":{
-                        "0":1831985
-                    }
                 }
             },
             "Officials":{
@@ -788,10 +788,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DEMIROVIC ASIM"
+                        "0":"TIZIOUALOU LIES"
                     },
                     "Licence":{
-                        "0":1567002
+                        "0":1175281
                     }
                 },
                 "Team 2":{
@@ -799,10 +799,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"TIZIOUALOU LIES"
+                        "0":"DEMIROVIC ASIM"
                     },
                     "Licence":{
-                        "0":1175281
+                        "0":1567002
                     }
                 }
             }

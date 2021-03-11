@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB035",
             "match_day":"06",
             "city":"CLERMONT L\\'HERAULT",
@@ -707,11 +707,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VBC CLERMONTAIS",
-                "Team 2":"ASUL LYON VOLLEY BALL 2"
+                "Team 1":"ASUL LYON VOLLEY BALL 2",
+                "Team 2":"VBC CLERMONTAIS"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":7,
+                        "5":8,
+                        "6":10,
+                        "7":11,
+                        "8":15,
+                        "9":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CHON\u00c9 TH\u00c9O",
+                        "1":"CAPORIONDO LEO",
+                        "2":"BOYER ROMAIN",
+                        "3":"BONDIGUEL PAUL",
+                        "4":"DUVAL PAUL",
+                        "5":"MONCORGE LORENZ",
+                        "6":"VALEFUANIU ROMAIN",
+                        "7":"GAY PAUL",
+                        "8":"REVELLI JAROD",
+                        "9":"GONTHIER GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1942091,
+                        "1":1767397,
+                        "2":1863693,
+                        "3":2107174,
+                        "4":1823896,
+                        "5":2144863,
+                        "6":1969719,
+                        "7":2194718,
+                        "8":1956333,
+                        "9":1945177
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -751,48 +789,21 @@
                         "9":2241540,
                         "10":1647388
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":7,
-                        "5":8,
-                        "6":10,
-                        "7":11,
-                        "8":15,
-                        "9":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CHON\u00c9 TH\u00c9O",
-                        "1":"CAPORIONDO LEO",
-                        "2":"BOYER ROMAIN",
-                        "3":"BONDIGUEL PAUL",
-                        "4":"DUVAL PAUL",
-                        "5":"MONCORGE LORENZ",
-                        "6":"VALEFUANIU ROMAIN",
-                        "7":"GAY PAUL",
-                        "8":"REVELLI JAROD",
-                        "9":"GONTHIER GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1942091,
-                        "1":1767397,
-                        "2":1863693,
-                        "3":2107174,
-                        "4":1823896,
-                        "5":2144863,
-                        "6":1969719,
-                        "7":2194718,
-                        "8":1956333,
-                        "9":1945177
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"REVELLI JAROD"
+                    },
+                    "Licence":{
+                        "0":1956333
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":14,
                         "1":20
@@ -805,35 +816,10 @@
                         "0":2241540,
                         "1":1647388
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"REVELLI JAROD"
-                    },
-                    "Licence":{
-                        "0":1956333
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SANTER JONATHAN",
-                        "1":"LERDA VERONIQUE"
-                    },
-                    "Licence":{
-                        "0":1346303,
-                        "1":996570
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -845,6 +831,20 @@
                     "Licence":{
                         "0":20800,
                         "1":2367669
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SANTER JONATHAN",
+                        "1":"LERDA VERONIQUE"
+                    },
+                    "Licence":{
+                        "0":1346303,
+                        "1":996570
                     }
                 }
             }

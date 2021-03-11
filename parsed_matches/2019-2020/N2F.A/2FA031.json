@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA031",
@@ -768,11 +768,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS LATTES BEAUX ARTS MONTPEL",
-                "Team 2":"US CAGNES VOLLEY-BALL"
+                "Team 1":"US CAGNES VOLLEY-BALL",
+                "Team 2":"UGS LATTES BEAUX ARTS MONTPEL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":13,
+                        "9":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"QUEGUINER NOEMIE",
+                        "1":"ROMERO SALDARRIAGA ANA",
+                        "2":"LINASSIER EMELINE",
+                        "3":"PETRIGNANI CECILE",
+                        "4":"TAUREL FANNY",
+                        "5":"GERIN LUCIE",
+                        "6":"PANTALACCI ANAIS",
+                        "7":"NOTOT-MARTIN VICTORIA",
+                        "8":"RIGOBERT-LONG MARIE-NATACHA",
+                        "9":"VANDENBERGHE BILITIS"
+                    },
+                    "Licence":{
+                        "0":1674850,
+                        "1":2093589,
+                        "2":1802524,
+                        "3":1674253,
+                        "4":1764684,
+                        "5":1709664,
+                        "6":1823159,
+                        "7":1944561,
+                        "8":1591301,
+                        "9":1432856
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -812,59 +850,10 @@
                         "9":1798402,
                         "10":1593764
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":13,
-                        "9":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"QUEGUINER NOEMIE",
-                        "1":"ROMERO SALDARRIAGA ANA",
-                        "2":"LINASSIER EMELINE",
-                        "3":"PETRIGNANI CECILE",
-                        "4":"TAUREL FANNY",
-                        "5":"GERIN LUCIE",
-                        "6":"PANTALACCI ANAIS",
-                        "7":"NOTOT-MARTIN VICTORIA",
-                        "8":"RIGOBERT-LONG MARIE-NATACHA",
-                        "9":"VANDENBERGHE BILITIS"
-                    },
-                    "Licence":{
-                        "0":1674850,
-                        "1":2093589,
-                        "2":1802524,
-                        "3":1674253,
-                        "4":1764684,
-                        "5":1709664,
-                        "6":1823159,
-                        "7":1944561,
-                        "8":1591301,
-                        "9":1432856
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CUFFEL ASTRID"
-                    },
-                    "Licence":{
-                        "0":1941827
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":6
                     },
@@ -874,24 +863,21 @@
                     "Licence":{
                         "0":1674253
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CUFFEL ASTRID"
+                    },
+                    "Licence":{
+                        "0":1941827
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"SO"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BRU GAUTIER",
-                        "1":"SALVAN PHILIPPE"
-                    },
-                    "Licence":{
-                        "0":2037324,
-                        "1":206854
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -903,6 +889,20 @@
                     "Licence":{
                         "0":93773,
                         "1":1817353
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"SO"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BRU GAUTIER",
+                        "1":"SALVAN PHILIPPE"
+                    },
+                    "Licence":{
+                        "0":2037324,
+                        "1":206854
                     }
                 }
             }

@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA074",
@@ -790,11 +790,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB HYERES\/PIERREFEU",
-                "Team 2":"ENT. PUYGOUZON\/CASTELNAU LEVIS"
+                "Team 1":"ENT. PUYGOUZON\/CASTELNAU LEVIS",
+                "Team 2":"VOLLEY CLUB HYERES\/PIERREFEU"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":7,
+                        "5":8,
+                        "6":10,
+                        "7":11,
+                        "8":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROGER LAETITIA",
+                        "1":"VALES AURIANE",
+                        "2":"LAFUENTE LOLA",
+                        "3":"BROGNIET NOA",
+                        "4":"TELLIER DELPHINE",
+                        "5":"SICARD SOPHIE",
+                        "6":"SIEURAC LUCIE",
+                        "7":"BAUX CELIA",
+                        "8":"PUECH MATHILDE"
+                    },
+                    "Licence":{
+                        "0":1517803,
+                        "1":1915953,
+                        "2":2054139,
+                        "3":2048773,
+                        "4":1643763,
+                        "5":1723249,
+                        "6":1845217,
+                        "7":2093206,
+                        "8":1694267
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -831,56 +866,10 @@
                         "8":1664786,
                         "9":2049794
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":7,
-                        "5":8,
-                        "6":10,
-                        "7":11,
-                        "8":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROGER LAETITIA",
-                        "1":"VALES AURIANE",
-                        "2":"LAFUENTE LOLA",
-                        "3":"BROGNIET NOA",
-                        "4":"TELLIER DELPHINE",
-                        "5":"SICARD SOPHIE",
-                        "6":"SIEURAC LUCIE",
-                        "7":"BAUX CELIA",
-                        "8":"PUECH MATHILDE"
-                    },
-                    "Licence":{
-                        "0":1517803,
-                        "1":1915953,
-                        "2":2054139,
-                        "3":2048773,
-                        "4":1643763,
-                        "5":1723249,
-                        "6":1845217,
-                        "7":2093206,
-                        "8":1694267
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PECHEUR CAMILLE"
-                    },
-                    "Licence":{
-                        "0":1664786
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -890,21 +879,21 @@
                     "Licence":{
                         "0":1694267
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PECHEUR CAMILLE"
+                    },
+                    "Licence":{
+                        "0":1664786
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SERVAGEON GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1634200
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -916,6 +905,17 @@
                     "Licence":{
                         "0":1344838,
                         "1":957224
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SERVAGEON GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1634200
                     }
                 }
             }

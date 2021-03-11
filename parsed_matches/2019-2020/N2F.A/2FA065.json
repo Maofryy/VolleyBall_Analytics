@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA065",
@@ -430,11 +430,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AS.SP. V.B MAUGUIO",
-                "Team 2":"RACING CLUB DE CANNES 2 CFC"
+                "Team 1":"RACING CLUB DE CANNES 2 CFC",
+                "Team 2":"AS.SP. V.B MAUGUIO"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5,
+                        "1":6,
+                        "2":8,
+                        "3":9,
+                        "4":13,
+                        "5":16,
+                        "6":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DAVIES NIAMH",
+                        "1":"DIBERT LAUREL",
+                        "2":"FERESIN CLARA",
+                        "3":"KNOL SARAH",
+                        "4":"HIEULLE OTTAVIA",
+                        "5":"CONTI ELEONORA",
+                        "6":"DUMONT FANNY"
+                    },
+                    "Licence":{
+                        "0":2040583,
+                        "1":2023382,
+                        "2":2097434,
+                        "3":2406955,
+                        "4":1990488,
+                        "5":2415401,
+                        "6":1808299
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":6,
@@ -468,50 +497,10 @@
                         "7":1726281,
                         "8":1894181
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5,
-                        "1":6,
-                        "2":8,
-                        "3":9,
-                        "4":13,
-                        "5":16,
-                        "6":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DAVIES NIAMH",
-                        "1":"DIBERT LAUREL",
-                        "2":"FERESIN CLARA",
-                        "3":"KNOL SARAH",
-                        "4":"HIEULLE OTTAVIA",
-                        "5":"CONTI ELEONORA",
-                        "6":"DUMONT FANNY"
-                    },
-                    "Licence":{
-                        "0":2040583,
-                        "1":2023382,
-                        "2":2097434,
-                        "3":2406955,
-                        "4":1990488,
-                        "5":2415401,
-                        "6":1808299
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RAKOTOVAO MAEVA"
-                    },
-                    "Licence":{
-                        "0":1490815
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -521,21 +510,21 @@
                     "Licence":{
                         "0":1990488
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RAKOTOVAO MAEVA"
+                    },
+                    "Licence":{
+                        "0":1490815
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VILLERET YANN"
-                    },
-                    "Licence":{
-                        "0":1178959
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -547,6 +536,17 @@
                     "Licence":{
                         "0":773325,
                         "1":2356819
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VILLERET YANN"
+                    },
+                    "Licence":{
+                        "0":1178959
                     }
                 }
             }

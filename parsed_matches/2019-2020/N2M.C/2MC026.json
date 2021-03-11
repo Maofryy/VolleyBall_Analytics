@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC026",
@@ -674,11 +674,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASNIERES VOLLEY 92",
-                "Team 2":"GRAND NANCY VOLLEY-BALL 2"
+                "Team 1":"GRAND NANCY VOLLEY-BALL 2",
+                "Team 2":"ASNIERES VOLLEY 92"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":10,
+                        "5":12,
+                        "6":13,
+                        "7":14,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ANTOINE R\u00c9MI",
+                        "1":"KIJOWSKI PIERRE YVES",
+                        "2":"FUAHEA CHRISTIAN",
+                        "3":"AURY MAXIME",
+                        "4":"DUMORTIER MARTIN",
+                        "5":"BARBIER GREGOIRE",
+                        "6":"KNAFF ADRIEN",
+                        "7":"HENTZEN FR\u00c9D\u00c9RIC",
+                        "8":"PEQUIGNOT JULIEN"
+                    },
+                    "Licence":{
+                        "0":1593881,
+                        "1":1785299,
+                        "2":1466652,
+                        "3":1892299,
+                        "4":1822511,
+                        "5":2000859,
+                        "6":1997476,
+                        "7":1445500,
+                        "8":1893690
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -718,56 +753,10 @@
                         "9":2157509,
                         "10":1938471
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":10,
-                        "5":12,
-                        "6":13,
-                        "7":14,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ANTOINE R\u00c9MI",
-                        "1":"KIJOWSKI PIERRE YVES",
-                        "2":"FUAHEA CHRISTIAN",
-                        "3":"AURY MAXIME",
-                        "4":"DUMORTIER MARTIN",
-                        "5":"BARBIER GREGOIRE",
-                        "6":"KNAFF ADRIEN",
-                        "7":"HENTZEN FR\u00c9D\u00c9RIC",
-                        "8":"PEQUIGNOT JULIEN"
-                    },
-                    "Licence":{
-                        "0":1593881,
-                        "1":1785299,
-                        "2":1466652,
-                        "3":1892299,
-                        "4":1822511,
-                        "5":2000859,
-                        "6":1997476,
-                        "7":1445500,
-                        "8":1893690
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SETTA SAMIR"
-                    },
-                    "Licence":{
-                        "0":1911830
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":15
                     },
@@ -777,10 +766,32 @@
                     "Licence":{
                         "0":1893690
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SETTA SAMIR"
+                    },
+                    "Licence":{
+                        "0":1911830
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ANGELY PIERRE"
+                    },
+                    "Licence":{
+                        "0":377143
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -792,17 +803,6 @@
                     "Licence":{
                         "0":1794692,
                         "1":1558738
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ANGELY PIERRE"
-                    },
-                    "Licence":{
-                        "0":377143
                     }
                 }
             }

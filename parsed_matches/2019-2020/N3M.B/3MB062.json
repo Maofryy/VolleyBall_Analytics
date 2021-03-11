@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB062",
             "match_day":"11",
             "city":"CLERMONT L\\'HERAULT",
@@ -773,46 +773,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VBC CLERMONTAIS",
-                "Team 2":"PATRIOTE DE SAINT DENIS"
+                "Team 1":"PATRIOTE DE SAINT DENIS",
+                "Team 2":"VBC CLERMONTAIS"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":5,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":14,
-                        "8":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SILVESTRE JEREMY",
-                        "1":"HORTH TYRON",
-                        "2":"RASSEL MATTHIEU",
-                        "3":"BAILLY BENJAMIN",
-                        "4":"CAZOTTES THIBAULT",
-                        "5":"GIPPAL ADRIEN",
-                        "6":"KRISHTOPENKO SERGEY",
-                        "7":"VERNAZOBRES GREGOIRE",
-                        "8":"DAHBI REDOUANE"
-                    },
-                    "Licence":{
-                        "0":1764511,
-                        "1":1985638,
-                        "2":1775160,
-                        "3":1385078,
-                        "4":1438717,
-                        "5":2054065,
-                        "6":2284030,
-                        "7":2241540,
-                        "8":1647388
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -852,21 +817,45 @@
                         "9":2091078,
                         "10":1810322
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":5,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":14,
+                        "8":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SILVESTRE JEREMY",
+                        "1":"HORTH TYRON",
+                        "2":"RASSEL MATTHIEU",
+                        "3":"BAILLY BENJAMIN",
+                        "4":"CAZOTTES THIBAULT",
+                        "5":"GIPPAL ADRIEN",
+                        "6":"KRISHTOPENKO SERGEY",
+                        "7":"VERNAZOBRES GREGOIRE",
+                        "8":"DAHBI REDOUANE"
+                    },
+                    "Licence":{
+                        "0":1764511,
+                        "1":1985638,
+                        "2":1775160,
+                        "3":1385078,
+                        "4":1438717,
+                        "5":2054065,
+                        "6":2284030,
+                        "7":2241540,
+                        "8":1647388
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VERNAZOBRES GREGOIRE"
-                    },
-                    "Licence":{
-                        "0":2241540
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -876,10 +865,32 @@
                     "Licence":{
                         "0":1728378
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VERNAZOBRES GREGOIRE"
+                    },
+                    "Licence":{
+                        "0":2241540
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MOHAMED ISSA HITAME"
+                    },
+                    "Licence":{
+                        "0":1768373
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -891,17 +902,6 @@
                     "Licence":{
                         "0":996570,
                         "1":1105662
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MOHAMED ISSA HITAME"
-                    },
-                    "Licence":{
-                        "0":1768373
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC071",
             "match_day":"12",
             "city":"CHAMALIERES",
@@ -460,11 +460,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL CLUB CHAMALIERES 2",
-                "Team 2":"AMICALE LAIQUE CHAMBERY V.B."
+                "Team 1":"AMICALE LAIQUE CHAMBERY V.B.",
+                "Team 2":"VOLLEY BALL CLUB CHAMALIERES 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":9,
+                        "7":10,
+                        "8":11,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LARA SEVERINE",
+                        "1":"CROISOT CELINE",
+                        "2":"MESSIER SARAH",
+                        "3":"PUGNOT SABRINA",
+                        "4":"TALLON TALMANT LEIA",
+                        "5":"MERLET MANON",
+                        "6":"BOUSQUET KELLY",
+                        "7":"LARA ELISA",
+                        "8":"CORDEAU CELINE",
+                        "9":"MERTEN ANGELA"
+                    },
+                    "Licence":{
+                        "0":1553531,
+                        "1":1991622,
+                        "2":1945059,
+                        "3":2038655,
+                        "4":2249314,
+                        "5":1990339,
+                        "6":2209719,
+                        "7":1895214,
+                        "8":1613832,
+                        "9":2189495
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -504,48 +542,21 @@
                         "9":1762731,
                         "10":2195555
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":9,
-                        "7":10,
-                        "8":11,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LARA SEVERINE",
-                        "1":"CROISOT CELINE",
-                        "2":"MESSIER SARAH",
-                        "3":"PUGNOT SABRINA",
-                        "4":"TALLON TALMANT LEIA",
-                        "5":"MERLET MANON",
-                        "6":"BOUSQUET KELLY",
-                        "7":"LARA ELISA",
-                        "8":"CORDEAU CELINE",
-                        "9":"MERTEN ANGELA"
-                    },
-                    "Licence":{
-                        "0":1553531,
-                        "1":1991622,
-                        "2":1945059,
-                        "3":2038655,
-                        "4":2249314,
-                        "5":1990339,
-                        "6":2209719,
-                        "7":1895214,
-                        "8":1613832,
-                        "9":2189495
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PUGNOT SABRINA"
+                    },
+                    "Licence":{
+                        "0":2038655
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":6,
                         "1":8
@@ -558,17 +569,6 @@
                         "0":1875513,
                         "1":1692143
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PUGNOT SABRINA"
-                    },
-                    "Licence":{
-                        "0":2038655
-                    }
                 }
             },
             "Officials":{
@@ -577,10 +577,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BONNETON GUILLAUME"
+                        "0":"MERTEN ANGELA"
                     },
                     "Licence":{
-                        "0":1347848
+                        "0":2189495
                     }
                 },
                 "Team 2":{
@@ -588,10 +588,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MERTEN ANGELA"
+                        "0":"BONNETON GUILLAUME"
                     },
                     "Licence":{
-                        "0":2189495
+                        "0":1347848
                     }
                 }
             }

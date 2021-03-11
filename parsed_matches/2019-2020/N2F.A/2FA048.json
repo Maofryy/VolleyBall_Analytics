@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA048",
@@ -478,49 +478,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB HYERES\/PIERREFEU",
-                "Team 2":"A.S. DE L'UNION VOLLEY-BALL"
+                "Team 1":"A.S. DE L'UNION VOLLEY-BALL",
+                "Team 2":"VOLLEY CLUB HYERES\/PIERREFEU"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":5,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":12,
-                        "7":13,
-                        "8":16,
-                        "9":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GAUDEL CHLOE",
-                        "1":"ROBEAU LUCIE",
-                        "2":"ALBERT MAELLE",
-                        "3":"COULBAULT LAURE",
-                        "4":"GENNIAUX EMILIE",
-                        "5":"LECHAT MARIE-FRANCE",
-                        "6":"PECHEUR CAMILLE",
-                        "7":"LAFITTE NDAKI MBOULET ANNE-",
-                        "8":"NAPOLI CHIARA",
-                        "9":"MICHELON ERICA"
-                    },
-                    "Licence":{
-                        "0":1342199,
-                        "1":2209325,
-                        "2":2057148,
-                        "3":2141732,
-                        "4":1691898,
-                        "5":1550582,
-                        "6":1664786,
-                        "7":2396113,
-                        "8":1954392,
-                        "9":2049794
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -560,10 +522,59 @@
                         "9":1722357,
                         "10":1622325
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":5,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":12,
+                        "7":13,
+                        "8":16,
+                        "9":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GAUDEL CHLOE",
+                        "1":"ROBEAU LUCIE",
+                        "2":"ALBERT MAELLE",
+                        "3":"COULBAULT LAURE",
+                        "4":"GENNIAUX EMILIE",
+                        "5":"LECHAT MARIE-FRANCE",
+                        "6":"PECHEUR CAMILLE",
+                        "7":"LAFITTE NDAKI MBOULET ANNE-",
+                        "8":"NAPOLI CHIARA",
+                        "9":"MICHELON ERICA"
+                    },
+                    "Licence":{
+                        "0":1342199,
+                        "1":2209325,
+                        "2":2057148,
+                        "3":2141732,
+                        "4":1691898,
+                        "5":1550582,
+                        "6":1664786,
+                        "7":2396113,
+                        "8":1954392,
+                        "9":2049794
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DELPRAT NADEGE"
+                    },
+                    "Licence":{
+                        "0":1622325
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":13
@@ -576,17 +587,6 @@
                         "0":1664786,
                         "1":2396113
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DELPRAT NADEGE"
-                    },
-                    "Licence":{
-                        "0":1622325
-                    }
                 }
             },
             "Officials":{
@@ -595,10 +595,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"SERVAGEON GUILLAUME"
+                        "0":"DE CLERCQ PATRICK"
                     },
                     "Licence":{
-                        "0":1634200
+                        "0":1777368
                     }
                 },
                 "Team 2":{
@@ -606,10 +606,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DE CLERCQ PATRICK"
+                        "0":"SERVAGEON GUILLAUME"
                     },
                     "Licence":{
-                        "0":1777368
+                        "0":1634200
                     }
                 }
             }

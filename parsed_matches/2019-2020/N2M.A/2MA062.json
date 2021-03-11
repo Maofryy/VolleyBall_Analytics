@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA062",
@@ -480,11 +480,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"T.O.A.C. - T.U.C. VOLLEY-BALL",
-                "Team 2":"MONTPELLIER CASTELNAU VOLLEY U"
+                "Team 1":"MONTPELLIER CASTELNAU VOLLEY U",
+                "Team 2":"T.O.A.C. - T.U.C. VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":5,
+                        "3":12,
+                        "4":13,
+                        "5":14,
+                        "6":15,
+                        "7":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PHELUT CORENTIN",
+                        "1":"QUELLEC ZAHIANE",
+                        "2":"OLIVER THOMAS",
+                        "3":"GROSNON QUENTIN",
+                        "4":"LUNARDI SACHA",
+                        "5":"SENDRA ARNAUD",
+                        "6":"GRACA AMAURY",
+                        "7":"PASSET QUENTIN"
+                    },
+                    "Licence":{
+                        "0":2046526,
+                        "1":2036457,
+                        "2":2093689,
+                        "3":1911459,
+                        "4":1869777,
+                        "5":1880259,
+                        "6":1858066,
+                        "7":1899163
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -527,42 +559,21 @@
                         "10":1845627,
                         "11":2088659
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":5,
-                        "3":12,
-                        "4":13,
-                        "5":14,
-                        "6":15,
-                        "7":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PHELUT CORENTIN",
-                        "1":"QUELLEC ZAHIANE",
-                        "2":"OLIVER THOMAS",
-                        "3":"GROSNON QUENTIN",
-                        "4":"LUNARDI SACHA",
-                        "5":"SENDRA ARNAUD",
-                        "6":"GRACA AMAURY",
-                        "7":"PASSET QUENTIN"
-                    },
-                    "Licence":{
-                        "0":2046526,
-                        "1":2036457,
-                        "2":2093689,
-                        "3":1911459,
-                        "4":1869777,
-                        "5":1880259,
-                        "6":1858066,
-                        "7":1899163
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GROSNON QUENTIN"
+                    },
+                    "Licence":{
+                        "0":1911459
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":6,
                         "1":7
@@ -575,21 +586,21 @@
                         "0":1803819,
                         "1":2137538
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GROSNON QUENTIN"
-                    },
-                    "Licence":{
-                        "0":1911459
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GUY ROMAIN"
+                    },
+                    "Licence":{
+                        "0":1369203
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -601,17 +612,6 @@
                     "Licence":{
                         "0":1829907,
                         "1":1174357
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GUY ROMAIN"
-                    },
-                    "Licence":{
-                        "0":1369203
                     }
                 }
             }

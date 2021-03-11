@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA044",
@@ -478,49 +478,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"RACING CLUB DE CANNES 2 CFC",
-                "Team 2":"VOLLEY PRADETAN GARDEEN"
+                "Team 1":"VOLLEY PRADETAN GARDEEN",
+                "Team 2":"RACING CLUB DE CANNES 2 CFC"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":6,
-                        "2":8,
-                        "3":9,
-                        "4":10,
-                        "5":12,
-                        "6":13,
-                        "7":15,
-                        "8":16,
-                        "9":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CASALI LUDIVINE",
-                        "1":"DIBERT LAUREL",
-                        "2":"FERESIN CLARA",
-                        "3":"KNOL SARAH",
-                        "4":"REBUFFEL JENNIFER",
-                        "5":"PESCE VALENTINE",
-                        "6":"HIEULLE OTTAVIA",
-                        "7":"CASTILLO VITAL ISLEN",
-                        "8":"CONTI ELEONORA",
-                        "9":"DUMONT FANNY"
-                    },
-                    "Licence":{
-                        "0":1830343,
-                        "1":2023382,
-                        "2":2097434,
-                        "3":2406955,
-                        "4":1942564,
-                        "5":1839323,
-                        "6":1990488,
-                        "7":2406957,
-                        "8":2415401,
-                        "9":1808299
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -557,24 +519,48 @@
                         "8":1762591,
                         "9":1802259
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":6,
+                        "2":8,
+                        "3":9,
+                        "4":10,
+                        "5":12,
+                        "6":13,
+                        "7":15,
+                        "8":16,
+                        "9":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CASALI LUDIVINE",
+                        "1":"DIBERT LAUREL",
+                        "2":"FERESIN CLARA",
+                        "3":"KNOL SARAH",
+                        "4":"REBUFFEL JENNIFER",
+                        "5":"PESCE VALENTINE",
+                        "6":"HIEULLE OTTAVIA",
+                        "7":"CASTILLO VITAL ISLEN",
+                        "8":"CONTI ELEONORA",
+                        "9":"DUMONT FANNY"
+                    },
+                    "Licence":{
+                        "0":1830343,
+                        "1":2023382,
+                        "2":2097434,
+                        "3":2406955,
+                        "4":1942564,
+                        "5":1839323,
+                        "6":1990488,
+                        "7":2406957,
+                        "8":2415401,
+                        "9":1808299
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12,
-                        "1":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PESCE VALENTINE",
-                        "1":"HIEULLE OTTAVIA"
-                    },
-                    "Licence":{
-                        "0":1839323,
-                        "1":1990488
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":8,
                         "1":13
@@ -587,21 +573,24 @@
                         "0":1835484,
                         "1":1762591
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12,
+                        "1":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PESCE VALENTINE",
+                        "1":"HIEULLE OTTAVIA"
+                    },
+                    "Licence":{
+                        "0":1839323,
+                        "1":1990488
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ANDREIS ALBERTO"
-                    },
-                    "Licence":{
-                        "0":2356819
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -613,6 +602,17 @@
                     "Licence":{
                         "0":969514,
                         "1":2122403
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ANDREIS ALBERTO"
+                    },
+                    "Licence":{
+                        "0":2356819
                     }
                 }
             }

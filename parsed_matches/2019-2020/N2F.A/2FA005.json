@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA005",
@@ -515,49 +515,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"B\u00c9ZIERS VOLLEY-BALL 2 CFC",
-                "Team 2":"ENT. PUYGOUZON\/CASTELNAU LEVIS"
+                "Team 1":"ENT. PUYGOUZON\/CASTELNAU LEVIS",
+                "Team 2":"B\u00c9ZIERS VOLLEY-BALL 2 CFC"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":12,
-                        "7":14,
-                        "8":16,
-                        "9":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CHABOISSANT CALYPSO",
-                        "1":"CHEIKH-BOUKAL AUDREY",
-                        "2":"GREATTI ZOE",
-                        "3":"MARQUIE LOUISE",
-                        "4":"LAFALIZE DEBORAH",
-                        "5":"BRAUNSTEFFER MANON",
-                        "6":"ABBAL-BOURREZ D\u00c9LIA",
-                        "7":"MAURANDY PAULINE",
-                        "8":"ROMATI SARA",
-                        "9":"LEMAN LAURIANE"
-                    },
-                    "Licence":{
-                        "0":1592133,
-                        "1":1897585,
-                        "2":1943590,
-                        "3":1728115,
-                        "4":1941269,
-                        "5":2052185,
-                        "6":2108932,
-                        "7":2142871,
-                        "8":1863717,
-                        "9":1922491
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -594,21 +556,48 @@
                         "8":2093206,
                         "9":1694267
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":12,
+                        "7":14,
+                        "8":16,
+                        "9":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CHABOISSANT CALYPSO",
+                        "1":"CHEIKH-BOUKAL AUDREY",
+                        "2":"GREATTI ZOE",
+                        "3":"MARQUIE LOUISE",
+                        "4":"LAFALIZE DEBORAH",
+                        "5":"BRAUNSTEFFER MANON",
+                        "6":"ABBAL-BOURREZ D\u00c9LIA",
+                        "7":"MAURANDY PAULINE",
+                        "8":"ROMATI SARA",
+                        "9":"LEMAN LAURIANE"
+                    },
+                    "Licence":{
+                        "0":1592133,
+                        "1":1897585,
+                        "2":1943590,
+                        "3":1728115,
+                        "4":1941269,
+                        "5":2052185,
+                        "6":2108932,
+                        "7":2142871,
+                        "8":1863717,
+                        "9":1922491
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROMATI SARA"
-                    },
-                    "Licence":{
-                        "0":1863717
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -618,21 +607,21 @@
                     "Licence":{
                         "0":1694267
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROMATI SARA"
+                    },
+                    "Licence":{
+                        "0":1863717
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BAINVEL ROMUALD"
-                    },
-                    "Licence":{
-                        "0":986222
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -644,6 +633,17 @@
                     "Licence":{
                         "0":1344838,
                         "1":957224
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BAINVEL ROMUALD"
+                    },
+                    "Licence":{
+                        "0":986222
                     }
                 }
             }

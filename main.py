@@ -51,8 +51,8 @@ def extract_jsons(folder='./data', out_folder='./parsed_matches', all=False):
                     extract_pdf.extract_pdf(os.path.join(parent, fn), output_folder)
                     #time.sleep(0.05)
                     correct_format_nb += 1
-                except classes.FormatInvalidError:
-                    print("FormatInvalidError: "+fn)
+                except classes.FormatInvalidError as e:
+                    print("FormatInvalidError: %s at %s" % (str(e), str(fn)))
                     invalid_files.append(fn)
                     list_to_csv(invalid_files, "invalid_files")
                 except KeyboardInterrupt:
@@ -61,7 +61,7 @@ def extract_jsons(folder='./data', out_folder='./parsed_matches', all=False):
                         sys.exit(0)
                     except SystemExit:
                         os._exit(0)   
-                except:
+                except :
                     print("Other Error : "+fn)
                     error_files.append(fn)
                     list_to_csv(error_files, "error_files")
@@ -93,6 +93,8 @@ if __name__ == "__main__":
     output = './parsed_matches'
     all = False
     #TODO check if folder field is valid
+    if (len(sys.argv) < 2):
+        print_usage()
     if (not sys.argv[1]) or (not os.path.exists(sys.argv[1])):
         print("Error folder field invalid.")
         print_usage()
@@ -111,5 +113,5 @@ if __name__ == "__main__":
             if (os.path.exists(sys.argv[2+i+1])):
                 output=sys.argv[2+i+1]
         print(opt)
-    
+
     extract_jsons(folder, output, all)

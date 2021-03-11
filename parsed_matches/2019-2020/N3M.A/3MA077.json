@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA077",
             "match_day":"13",
             "city":"MANDELIEU",
@@ -760,46 +760,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MANDELIEU LA NAPOULE V.B.",
-                "Team 2":"MARIGNANE VOLLEY-BALL"
+                "Team 1":"MARIGNANE VOLLEY-BALL",
+                "Team 2":"MANDELIEU LA NAPOULE V.B."
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":12,
-                        "7":16,
-                        "8":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RODOLFO MATTHIS",
-                        "1":"FORT VALENTIN",
-                        "2":"GAUDINO ANTHONY",
-                        "3":"REY JONATHAN",
-                        "4":"COLLE FREDERIC",
-                        "5":"BIGLER MARIN",
-                        "6":"GRUSZKA SEBASTIEN",
-                        "7":"CHAMPAVIER ANTOINE",
-                        "8":"BERTRAND FRANCK"
-                    },
-                    "Licence":{
-                        "0":1691516,
-                        "1":1830707,
-                        "2":1779199,
-                        "3":1720037,
-                        "4":1593362,
-                        "5":1772951,
-                        "6":1341251,
-                        "7":2192391,
-                        "8":1346420
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":5,
@@ -833,10 +798,56 @@
                         "7":1761185,
                         "8":1166727
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":12,
+                        "7":16,
+                        "8":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RODOLFO MATTHIS",
+                        "1":"FORT VALENTIN",
+                        "2":"GAUDINO ANTHONY",
+                        "3":"REY JONATHAN",
+                        "4":"COLLE FREDERIC",
+                        "5":"BIGLER MARIN",
+                        "6":"GRUSZKA SEBASTIEN",
+                        "7":"CHAMPAVIER ANTOINE",
+                        "8":"BERTRAND FRANCK"
+                    },
+                    "Licence":{
+                        "0":1691516,
+                        "1":1830707,
+                        "2":1779199,
+                        "3":1720037,
+                        "4":1593362,
+                        "5":1772951,
+                        "6":1341251,
+                        "7":2192391,
+                        "8":1346420
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5
                     },
@@ -846,17 +857,6 @@
                     "Licence":{
                         "0":1779199
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -865,10 +865,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DONZION JEAN-CHRISTOPHE"
+                        "0":"ROTAR TEODOR-DUMITRU"
                     },
                     "Licence":{
-                        "0":1639817
+                        "0":2424923
                     }
                 },
                 "Team 2":{
@@ -876,10 +876,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROTAR TEODOR-DUMITRU"
+                        "0":"DONZION JEAN-CHRISTOPHE"
                     },
                     "Licence":{
-                        "0":2424923
+                        "0":1639817
                     }
                 }
             }

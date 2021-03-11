@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC004",
             "match_day":"01",
             "city":"CEBAZAT",
@@ -625,49 +625,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS RIOM-CEBAZAT",
-                "Team 2":"LES GENETS DE MESPLEDE"
+                "Team 1":"LES GENETS DE MESPLEDE",
+                "Team 2":"UGS RIOM-CEBAZAT"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":7,
-                        "6":8,
-                        "7":9,
-                        "8":10,
-                        "9":11
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DIGNAU KEVIN",
-                        "1":"DUPONT PIERRE",
-                        "2":"ROUSSEAU FRANCOIS",
-                        "3":"BIERRY QUENTIN",
-                        "4":"GENOUD ARNAUD",
-                        "5":"PEYRAT BASTIEN",
-                        "6":"MARTIN GUILLAUME",
-                        "7":"ROUGE SYLVAIN",
-                        "8":"GIROIX JULIEN",
-                        "9":"SAUVAIRE ALEXIS"
-                    },
-                    "Licence":{
-                        "0":1401020,
-                        "1":1575189,
-                        "2":1761559,
-                        "3":1949121,
-                        "4":1954198,
-                        "5":2013877,
-                        "6":1343332,
-                        "7":1127240,
-                        "8":1223645,
-                        "9":1721282
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -704,21 +666,48 @@
                         "8":2406831,
                         "9":1762275
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":7,
+                        "6":8,
+                        "7":9,
+                        "8":10,
+                        "9":11
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DIGNAU KEVIN",
+                        "1":"DUPONT PIERRE",
+                        "2":"ROUSSEAU FRANCOIS",
+                        "3":"BIERRY QUENTIN",
+                        "4":"GENOUD ARNAUD",
+                        "5":"PEYRAT BASTIEN",
+                        "6":"MARTIN GUILLAUME",
+                        "7":"ROUGE SYLVAIN",
+                        "8":"GIROIX JULIEN",
+                        "9":"SAUVAIRE ALEXIS"
+                    },
+                    "Licence":{
+                        "0":1401020,
+                        "1":1575189,
+                        "2":1761559,
+                        "3":1949121,
+                        "4":1954198,
+                        "5":2013877,
+                        "6":1343332,
+                        "7":1127240,
+                        "8":1223645,
+                        "9":1721282
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -728,24 +717,21 @@
                     "Licence":{
                         "0":1762275
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROUGE SYLVAIN",
-                        "1":"RICHETIN MATHIEU"
-                    },
-                    "Licence":{
-                        "0":1127240,
-                        "1":1778699
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -757,6 +743,20 @@
                     "Licence":{
                         "0":2416818,
                         "1":1142431
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROUGE SYLVAIN",
+                        "1":"RICHETIN MATHIEU"
+                    },
+                    "Licence":{
+                        "0":1127240,
+                        "1":1778699
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FE ",
-            "div_name":"NATIONALE 3 FEMININE POULE E",
-            "div_pool":"",
+            "div_code":"3FE",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule E",
             "match_number":"3FE077",
             "match_day":"13",
             "city":"HARNES",
@@ -431,11 +431,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB HARNES 2",
-                "Team 2":"BEAUVAIS OISE UC VOLLEY"
+                "Team 1":"BEAUVAIS OISE UC VOLLEY",
+                "Team 2":"VOLLEY CLUB HARNES 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":9,
+                        "6":11,
+                        "7":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DAVEAUX JULIE",
+                        "1":"SINOQUET BOURAYA C\u00c9LIA",
+                        "2":"FOUQUES SOLENE",
+                        "3":"VASSEUR JUSTINE",
+                        "4":"MIGEOT ADELINE",
+                        "5":"KHATIR SALIHA",
+                        "6":"BELLICAUD CAROLE",
+                        "7":"EICHELBERGER PAULINE"
+                    },
+                    "Licence":{
+                        "0":1530629,
+                        "1":2146266,
+                        "2":1846284,
+                        "3":1863678,
+                        "4":1990518,
+                        "5":2252258,
+                        "6":1081794,
+                        "7":1646295
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -469,53 +501,10 @@
                         "7":1904160,
                         "8":1784535
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":9,
-                        "6":11,
-                        "7":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DAVEAUX JULIE",
-                        "1":"SINOQUET BOURAYA C\u00c9LIA",
-                        "2":"FOUQUES SOLENE",
-                        "3":"VASSEUR JUSTINE",
-                        "4":"MIGEOT ADELINE",
-                        "5":"KHATIR SALIHA",
-                        "6":"BELLICAUD CAROLE",
-                        "7":"EICHELBERGER PAULINE"
-                    },
-                    "Licence":{
-                        "0":1530629,
-                        "1":2146266,
-                        "2":1846284,
-                        "3":1863678,
-                        "4":1990518,
-                        "5":2252258,
-                        "6":1081794,
-                        "7":1646295
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"WILKOWSKI FLORINE"
-                    },
-                    "Licence":{
-                        "0":1784535
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":6
                     },
@@ -525,10 +514,32 @@
                     "Licence":{
                         "0":1863678
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"WILKOWSKI FLORINE"
+                    },
+                    "Licence":{
+                        "0":1784535
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SLIWINSKI LIDIE"
+                    },
+                    "Licence":{
+                        "0":1175273
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -540,17 +551,6 @@
                     "Licence":{
                         "0":1718343,
                         "1":958448
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SLIWINSKI LIDIE"
-                    },
-                    "Licence":{
-                        "0":1175273
                     }
                 }
             }

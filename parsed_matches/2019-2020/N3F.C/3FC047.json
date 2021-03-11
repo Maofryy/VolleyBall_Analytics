@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC047",
             "match_day":"08",
             "city":"SAINT-ETIENNE",
@@ -603,11 +603,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"ANNEMASSE VOLLEY 74"
+                "Team 1":"ANNEMASSE VOLLEY 74",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":5,
+                        "3":8,
+                        "4":11,
+                        "5":12,
+                        "6":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GEX-FABRY MARLENE",
+                        "1":"DUPANLOUP JADE",
+                        "2":"DALLEAU RAVAKA",
+                        "3":"POULIN VIRGINIE",
+                        "4":"DARCILLON ELWYNAH",
+                        "5":"SIKORSKA AGNIESZKA",
+                        "6":"DUMONT SARAH"
+                    },
+                    "Licence":{
+                        "0":1892911,
+                        "1":1865587,
+                        "2":1876283,
+                        "3":1783562,
+                        "4":2319946,
+                        "5":2273278,
+                        "6":2091402
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -650,39 +679,21 @@
                         "10":2027084,
                         "11":2051438
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":5,
-                        "3":8,
-                        "4":11,
-                        "5":12,
-                        "6":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GEX-FABRY MARLENE",
-                        "1":"DUPANLOUP JADE",
-                        "2":"DALLEAU RAVAKA",
-                        "3":"POULIN VIRGINIE",
-                        "4":"DARCILLON ELWYNAH",
-                        "5":"SIKORSKA AGNIESZKA",
-                        "6":"DUMONT SARAH"
-                    },
-                    "Licence":{
-                        "0":1892911,
-                        "1":1865587,
-                        "2":1876283,
-                        "3":1783562,
-                        "4":2319946,
-                        "5":2273278,
-                        "6":2091402
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -692,17 +703,6 @@
                     "Licence":{
                         "0":2051438
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -711,10 +711,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROLIN FABIEN"
+                        "0":"MIHAYLOV DANAIL"
                     },
                     "Licence":{
-                        "0":658542
+                        "0":1795321
                     }
                 },
                 "Team 2":{
@@ -722,10 +722,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MIHAYLOV DANAIL"
+                        "0":"ROLIN FABIEN"
                     },
                     "Licence":{
-                        "0":1795321
+                        "0":658542
                     }
                 }
             }

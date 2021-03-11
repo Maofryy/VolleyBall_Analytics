@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB049",
             "match_day":"09",
             "city":"GIGNAC",
@@ -492,11 +492,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"VBC CLERMONTAIS"
+                "Team 1":"VBC CLERMONTAIS",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":6,
+                        "5":9,
+                        "6":10,
+                        "7":11,
+                        "8":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HORTH TYRON",
+                        "1":"MARTY GAUTIER",
+                        "2":"RASSEL MATTHIEU",
+                        "3":"BAILLY BENJAMIN",
+                        "4":"MILHAU THEO",
+                        "5":"CAZOTTES THIBAULT",
+                        "6":"GIPPAL ADRIEN",
+                        "7":"KRISHTOPENKO SERGEY",
+                        "8":"DAHBI REDOUANE"
+                    },
+                    "Licence":{
+                        "0":1985638,
+                        "1":2198958,
+                        "2":1775160,
+                        "3":1385078,
+                        "4":1814444,
+                        "5":1438717,
+                        "6":2054065,
+                        "7":2284030,
+                        "8":1647388
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":6,
@@ -536,45 +571,21 @@
                         "9":1746889,
                         "10":1527140
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":6,
-                        "5":9,
-                        "6":10,
-                        "7":11,
-                        "8":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HORTH TYRON",
-                        "1":"MARTY GAUTIER",
-                        "2":"RASSEL MATTHIEU",
-                        "3":"BAILLY BENJAMIN",
-                        "4":"MILHAU THEO",
-                        "5":"CAZOTTES THIBAULT",
-                        "6":"GIPPAL ADRIEN",
-                        "7":"KRISHTOPENKO SERGEY",
-                        "8":"DAHBI REDOUANE"
-                    },
-                    "Licence":{
-                        "0":1985638,
-                        "1":2198958,
-                        "2":1775160,
-                        "3":1385078,
-                        "4":1814444,
-                        "5":1438717,
-                        "6":2054065,
-                        "7":2284030,
-                        "8":1647388
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -587,17 +598,6 @@
                         "0":1845996,
                         "1":1806795
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -606,10 +606,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
+                        "0":"LERDA VERONIQUE"
                     },
                     "Licence":{
-                        "0":1444556
+                        "0":996570
                     }
                 },
                 "Team 2":{
@@ -617,10 +617,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"LERDA VERONIQUE"
+                        "0":"ARNAUD CLEMENT"
                     },
                     "Licence":{
-                        "0":996570
+                        "0":1444556
                     }
                 }
             }

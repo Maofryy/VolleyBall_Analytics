@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA071",
             "match_day":"12",
             "city":"CANNES",
@@ -607,11 +607,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AS CANNES VOLLEY-BALL 3",
-                "Team 2":"OLYMPIQUES ANTIBES JUAN PINS"
+                "Team 1":"OLYMPIQUES ANTIBES JUAN PINS",
+                "Team 2":"AS CANNES VOLLEY-BALL 3"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":5,
+                        "2":6,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":13,
+                        "7":18,
+                        "8":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BAYER MARC",
+                        "1":"BRIERE LOIC",
+                        "2":"JOUFFROY THOMAS",
+                        "3":"MANUSAUAKI MATHIEU",
+                        "4":"ATHAYDE LOPES JULIO",
+                        "5":"AMADIEU OLIVIER",
+                        "6":"VERRECCHIA AURELIEN",
+                        "7":"ICKOWICZ CEDRIC",
+                        "8":"BORTOLOSSI THOMAS"
+                    },
+                    "Licence":{
+                        "0":1582769,
+                        "1":1844303,
+                        "2":1686699,
+                        "3":2034563,
+                        "4":2302608,
+                        "5":1392107,
+                        "6":1640909,
+                        "7":1736589,
+                        "8":1724046
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -654,45 +689,21 @@
                         "10":1949338,
                         "11":1972107
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":5,
-                        "2":6,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":13,
-                        "7":18,
-                        "8":19
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BAYER MARC",
-                        "1":"BRIERE LOIC",
-                        "2":"JOUFFROY THOMAS",
-                        "3":"MANUSAUAKI MATHIEU",
-                        "4":"ATHAYDE LOPES JULIO",
-                        "5":"AMADIEU OLIVIER",
-                        "6":"VERRECCHIA AURELIEN",
-                        "7":"ICKOWICZ CEDRIC",
-                        "8":"BORTOLOSSI THOMAS"
-                    },
-                    "Licence":{
-                        "0":1582769,
-                        "1":1844303,
-                        "2":1686699,
-                        "3":2034563,
-                        "4":2302608,
-                        "5":1392107,
-                        "6":1640909,
-                        "7":1736589,
-                        "8":1724046
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BORTOLOSSI THOMAS"
+                    },
+                    "Licence":{
+                        "0":1724046
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":15
@@ -705,21 +716,21 @@
                         "0":1878423,
                         "1":1821600
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":19
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BORTOLOSSI THOMAS"
-                    },
-                    "Licence":{
-                        "0":1724046
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ATHUIL JONATHAN"
+                    },
+                    "Licence":{
+                        "0":1436158
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -731,17 +742,6 @@
                     "Licence":{
                         "0":1832874,
                         "1":1455499
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ATHUIL JONATHAN"
-                    },
-                    "Licence":{
-                        "0":1436158
                     }
                 }
             }

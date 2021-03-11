@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD089",
             "match_day":"15",
             "city":"CHANTEPIE",
@@ -490,49 +490,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS VOLLEY BALL CESSON-CHANTE",
-                "Team 2":"E.SP. CANTON DE PIPRIAC V.B."
+                "Team 1":"E.SP. CANTON DE PIPRIAC V.B.",
+                "Team 2":"UGS VOLLEY BALL CESSON-CHANTE"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":13,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LUBBERS MATEO",
-                        "1":"GERARD ROMAIN",
-                        "2":"BENOIT VALENTIN",
-                        "3":"DI MARINO LUCA",
-                        "4":"AGEORGES BENJAMIN",
-                        "5":"FLAGEUL THOMAS",
-                        "6":"GASCUEL THIBAULT",
-                        "7":"BRIEND YANN",
-                        "8":"PIACENZA LUCAS",
-                        "9":"BONNIN LEO"
-                    },
-                    "Licence":{
-                        "0":1993627,
-                        "1":2322219,
-                        "2":1955598,
-                        "3":1755614,
-                        "4":2093934,
-                        "5":2189762,
-                        "6":2186178,
-                        "7":2038656,
-                        "8":1799821,
-                        "9":1372407
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":3,
@@ -569,21 +531,48 @@
                         "8":1828468,
                         "9":1661199
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":13,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LUBBERS MATEO",
+                        "1":"GERARD ROMAIN",
+                        "2":"BENOIT VALENTIN",
+                        "3":"DI MARINO LUCA",
+                        "4":"AGEORGES BENJAMIN",
+                        "5":"FLAGEUL THOMAS",
+                        "6":"GASCUEL THIBAULT",
+                        "7":"BRIEND YANN",
+                        "8":"PIACENZA LUCAS",
+                        "9":"BONNIN LEO"
+                    },
+                    "Licence":{
+                        "0":1993627,
+                        "1":2322219,
+                        "2":1955598,
+                        "3":1755614,
+                        "4":2093934,
+                        "5":2189762,
+                        "6":2186178,
+                        "7":2038656,
+                        "8":1799821,
+                        "9":1372407
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PIACENZA LUCAS"
-                    },
-                    "Licence":{
-                        "0":1799821
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1
                     },
@@ -593,21 +582,21 @@
                     "Licence":{
                         "0":2017155
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PIACENZA LUCAS"
+                    },
+                    "Licence":{
+                        "0":1799821
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MUSSEAU MIKAEL"
-                    },
-                    "Licence":{
-                        "0":1083053
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -619,6 +608,17 @@
                     "Licence":{
                         "0":1548834,
                         "1":2190684
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MUSSEAU MIKAEL"
+                    },
+                    "Licence":{
+                        "0":1083053
                     }
                 }
             }

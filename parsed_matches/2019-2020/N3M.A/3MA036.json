@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA036",
             "match_day":"06",
             "city":"FREJUS",
@@ -509,11 +509,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"FREJUS VAR VOLLEY",
-                "Team 2":"MARIGNANE VOLLEY-BALL"
+                "Team 1":"MARIGNANE VOLLEY-BALL",
+                "Team 2":"FREJUS VAR VOLLEY"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":5,
+                        "2":8,
+                        "3":9,
+                        "4":10,
+                        "5":11,
+                        "6":13,
+                        "7":14,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"TOUPET REMY",
+                        "1":"MERMET FLORENT",
+                        "2":"MANNINA BRUNO",
+                        "3":"DUBRAC JONATHAN",
+                        "4":"GALLO TITOUAN",
+                        "5":"MOTHE SEBASTIEN",
+                        "6":"MERMET SEBASTIEN",
+                        "7":"PERROT OLIVIER",
+                        "8":"BOZZARELLI DORIAN"
+                    },
+                    "Licence":{
+                        "0":1717399,
+                        "1":1166727,
+                        "2":1401579,
+                        "3":1450974,
+                        "4":2103291,
+                        "5":1549335,
+                        "6":1114894,
+                        "7":2106366,
+                        "8":2067787
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -553,56 +588,10 @@
                         "9":1414872,
                         "10":2312697
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":5,
-                        "2":8,
-                        "3":9,
-                        "4":10,
-                        "5":11,
-                        "6":13,
-                        "7":14,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"TOUPET REMY",
-                        "1":"MERMET FLORENT",
-                        "2":"MANNINA BRUNO",
-                        "3":"DUBRAC JONATHAN",
-                        "4":"GALLO TITOUAN",
-                        "5":"MOTHE SEBASTIEN",
-                        "6":"MERMET SEBASTIEN",
-                        "7":"PERROT OLIVIER",
-                        "8":"BOZZARELLI DORIAN"
-                    },
-                    "Licence":{
-                        "0":1717399,
-                        "1":1166727,
-                        "2":1401579,
-                        "3":1450974,
-                        "4":2103291,
-                        "5":1549335,
-                        "6":1114894,
-                        "7":2106366,
-                        "8":2067787
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":4
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LAINE GUILLAUME"
-                    },
-                    "Licence":{
-                        "0":1660598
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -612,6 +601,17 @@
                     "Licence":{
                         "0":1114894
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":4
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LAINE GUILLAUME"
+                    },
+                    "Licence":{
+                        "0":1660598
+                    }
                 }
             },
             "Officials":{
@@ -620,10 +620,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"RESPAUT CLAUDE"
+                        "0":"ROTAR TEODOR-DUMITRU"
                     },
                     "Licence":{
-                        "0":53884
+                        "0":2424923
                     }
                 },
                 "Team 2":{
@@ -631,10 +631,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROTAR TEODOR-DUMITRU"
+                        "0":"RESPAUT CLAUDE"
                     },
                     "Licence":{
-                        "0":2424923
+                        "0":53884
                     }
                 }
             }

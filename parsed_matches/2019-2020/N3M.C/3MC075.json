@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC075",
             "match_day":"13",
             "city":"RIOM",
@@ -613,11 +613,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS RIOM-CEBAZAT",
-                "Team 2":"VOLLEY BALMA QUINT FONSEGRIVES"
+                "Team 1":"VOLLEY BALMA QUINT FONSEGRIVES",
+                "Team 2":"UGS RIOM-CEBAZAT"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":5,
+                        "4":7,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LANOTTE THOMAS",
+                        "1":"HAMOU FABRICE",
+                        "2":"BOULANGER BENJAMIN",
+                        "3":"LE MAITRE SEBASTIEN",
+                        "4":"EBOUMA MOTO ARSENE",
+                        "5":"BESAND NICOLAS",
+                        "6":"BERTRAND JULIEN",
+                        "7":"GREBILLE QUENTIN",
+                        "8":"ADDE JULIEN"
+                    },
+                    "Licence":{
+                        "0":1679827,
+                        "1":1786448,
+                        "2":2046520,
+                        "3":1761093,
+                        "4":2422460,
+                        "5":1852720,
+                        "6":2305067,
+                        "7":2242425,
+                        "8":1342049
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":3,
@@ -657,56 +692,10 @@
                         "9":1127240,
                         "10":1575189
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":5,
-                        "4":7,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LANOTTE THOMAS",
-                        "1":"HAMOU FABRICE",
-                        "2":"BOULANGER BENJAMIN",
-                        "3":"LE MAITRE SEBASTIEN",
-                        "4":"EBOUMA MOTO ARSENE",
-                        "5":"BESAND NICOLAS",
-                        "6":"BERTRAND JULIEN",
-                        "7":"GREBILLE QUENTIN",
-                        "8":"ADDE JULIEN"
-                    },
-                    "Licence":{
-                        "0":1679827,
-                        "1":1786448,
-                        "2":2046520,
-                        "3":1761093,
-                        "4":2422460,
-                        "5":1852720,
-                        "6":2305067,
-                        "7":2242425,
-                        "8":1342049
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROUGE SYLVAIN"
-                    },
-                    "Licence":{
-                        "0":1127240
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":5
                     },
@@ -716,10 +705,32 @@
                     "Licence":{
                         "0":1761093
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROUGE SYLVAIN"
+                    },
+                    "Licence":{
+                        "0":1127240
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LANOTTE THOMAS"
+                    },
+                    "Licence":{
+                        "0":1679827
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -731,17 +742,6 @@
                     "Licence":{
                         "0":1127240,
                         "1":1778699
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LANOTTE THOMAS"
-                    },
-                    "Licence":{
-                        "0":1679827
                     }
                 }
             }

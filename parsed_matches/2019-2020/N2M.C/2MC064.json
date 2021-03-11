@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC064",
@@ -626,52 +626,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB DE CAMBRAI 2",
-                "Team 2":"REIMS METROPOLE VOLLEY"
+                "Team 1":"REIMS METROPOLE VOLLEY",
+                "Team 2":"VOLLEY CLUB DE CAMBRAI 2"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":10,
-                        "8":11,
-                        "9":12,
-                        "10":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PEPIN TINAEL",
-                        "1":"MALANDAIN VICTOR",
-                        "2":"PERRIN IVAN",
-                        "3":"ONDRUSEK ROMAN",
-                        "4":"KADI HUGO",
-                        "5":"BOUTIER CLEMENT",
-                        "6":"CARETTE BENOIT",
-                        "7":"LABIK MILOS",
-                        "8":"TEUIRA-HIOE TINIRAU GUILLAU",
-                        "9":"KALUZNY JURAJ",
-                        "10":"DECIMA MATHIEU"
-                    },
-                    "Licence":{
-                        "0":1875298,
-                        "1":1901677,
-                        "2":1013132,
-                        "3":1902878,
-                        "4":1633314,
-                        "5":1515376,
-                        "6":2187542,
-                        "7":2414242,
-                        "8":2302571,
-                        "9":2414240,
-                        "10":1716655
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -711,24 +670,51 @@
                         "9":2408684,
                         "10":1875091
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":10,
+                        "8":11,
+                        "9":12,
+                        "10":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PEPIN TINAEL",
+                        "1":"MALANDAIN VICTOR",
+                        "2":"PERRIN IVAN",
+                        "3":"ONDRUSEK ROMAN",
+                        "4":"KADI HUGO",
+                        "5":"BOUTIER CLEMENT",
+                        "6":"CARETTE BENOIT",
+                        "7":"LABIK MILOS",
+                        "8":"TEUIRA-HIOE TINIRAU GUILLAU",
+                        "9":"KALUZNY JURAJ",
+                        "10":"DECIMA MATHIEU"
+                    },
+                    "Licence":{
+                        "0":1875298,
+                        "1":1901677,
+                        "2":1013132,
+                        "3":1902878,
+                        "4":1633314,
+                        "5":1515376,
+                        "6":2187542,
+                        "7":2414242,
+                        "8":2302571,
+                        "9":2414240,
+                        "10":1716655
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":12,
-                        "1":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KALUZNY JURAJ",
-                        "1":"DECIMA MATHIEU"
-                    },
-                    "Licence":{
-                        "0":2414240,
-                        "1":1716655
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -741,6 +727,20 @@
                         "0":1890075,
                         "1":2304945
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12,
+                        "1":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KALUZNY JURAJ",
+                        "1":"DECIMA MATHIEU"
+                    },
+                    "Licence":{
+                        "0":2414240,
+                        "1":1716655
+                    }
                 }
             },
             "Officials":{
@@ -749,10 +749,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ONDRUSEK ROMAN"
+                        "0":"AUZOU GILLES"
                     },
                     "Licence":{
-                        "0":1902878
+                        "0":1072931
                     }
                 },
                 "Team 2":{
@@ -760,10 +760,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"AUZOU GILLES"
+                        "0":"ONDRUSEK ROMAN"
                     },
                     "Licence":{
-                        "0":1072931
+                        "0":1902878
                     }
                 }
             }

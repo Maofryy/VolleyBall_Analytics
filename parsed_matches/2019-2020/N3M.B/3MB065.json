@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB065",
             "match_day":"11",
             "city":"LYON",
@@ -455,11 +455,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASUL LYON VOLLEY BALL 2",
-                "Team 2":"U.S. PONTET VOLLEY AVENIR"
+                "Team 1":"U.S. PONTET VOLLEY AVENIR",
+                "Team 2":"ASUL LYON VOLLEY BALL 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":7,
+                        "1":8,
+                        "2":9,
+                        "3":10,
+                        "4":11,
+                        "5":12,
+                        "6":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VANDAM YANNICK",
+                        "1":"HUMBERT RIDET DYLAN",
+                        "2":"CONSTANS PATRICK",
+                        "3":"RIDET HUMBERT AXEL",
+                        "4":"DIJOUD FLORIAN",
+                        "5":"ABDELMALEK JAFFAR",
+                        "6":"VITALI ANTOINE"
+                    },
+                    "Licence":{
+                        "0":2153871,
+                        "1":1762370,
+                        "2":1221683,
+                        "3":1837186,
+                        "4":1508547,
+                        "5":2314954,
+                        "6":2187924
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":4,
                         "1":5,
@@ -493,50 +522,10 @@
                         "7":1945177,
                         "8":1719835
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":7,
-                        "1":8,
-                        "2":9,
-                        "3":10,
-                        "4":11,
-                        "5":12,
-                        "6":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VANDAM YANNICK",
-                        "1":"HUMBERT RIDET DYLAN",
-                        "2":"CONSTANS PATRICK",
-                        "3":"RIDET HUMBERT AXEL",
-                        "4":"DIJOUD FLORIAN",
-                        "5":"ABDELMALEK JAFFAR",
-                        "6":"VITALI ANTOINE"
-                    },
-                    "Licence":{
-                        "0":2153871,
-                        "1":1762370,
-                        "2":1221683,
-                        "3":1837186,
-                        "4":1508547,
-                        "5":2314954,
-                        "6":2187924
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"REVELLI JAROD"
-                    },
-                    "Licence":{
-                        "0":1956333
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":8
                     },
@@ -546,10 +535,32 @@
                     "Licence":{
                         "0":1762370
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"REVELLI JAROD"
+                    },
+                    "Licence":{
+                        "0":1956333
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BRUNEL REMY"
+                    },
+                    "Licence":{
+                        "0":1340244
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -561,17 +572,6 @@
                     "Licence":{
                         "0":20800,
                         "1":2367669
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BRUNEL REMY"
-                    },
-                    "Licence":{
-                        "0":1340244
                     }
                 }
             }

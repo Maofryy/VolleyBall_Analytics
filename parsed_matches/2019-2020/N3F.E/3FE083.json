@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FE ",
-            "div_name":"NATIONALE 3 FEMININE POULE E",
-            "div_pool":"",
+            "div_code":"3FE",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule E",
             "match_number":"3FE083",
             "match_day":"14",
             "city":"REIMS",
@@ -630,49 +630,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"REIMS METROPOLE VOLLEY",
-                "Team 2":"VOLLEY-BALL DE MILLY LA FORET"
+                "Team 1":"VOLLEY-BALL DE MILLY LA FORET",
+                "Team 2":"REIMS METROPOLE VOLLEY"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":5,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":11,
-                        "7":12,
-                        "8":14,
-                        "9":19
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BROCHOT CAROLINE",
-                        "1":"PAULIN JESSICA",
-                        "2":"GUINGEL-MARIANETTI PAOLA",
-                        "3":"MORVAIS MANON",
-                        "4":"RIVIERE JULIETTE",
-                        "5":"REPPEL ANG\u00c8LE",
-                        "6":"CROIBIEN VALENTINE",
-                        "7":"CATKIN GIZEM",
-                        "8":"CAMUS LAURINE",
-                        "9":"DESSOYE NATHALIE"
-                    },
-                    "Licence":{
-                        "0":1698484,
-                        "1":1784671,
-                        "2":2095224,
-                        "3":2012994,
-                        "4":1947862,
-                        "5":2118913,
-                        "6":2271776,
-                        "7":2186877,
-                        "8":1837631,
-                        "9":1597117
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -709,10 +671,59 @@
                         "8":1552078,
                         "9":2023711
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":5,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":11,
+                        "7":12,
+                        "8":14,
+                        "9":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BROCHOT CAROLINE",
+                        "1":"PAULIN JESSICA",
+                        "2":"GUINGEL-MARIANETTI PAOLA",
+                        "3":"MORVAIS MANON",
+                        "4":"RIVIERE JULIETTE",
+                        "5":"REPPEL ANG\u00c8LE",
+                        "6":"CROIBIEN VALENTINE",
+                        "7":"CATKIN GIZEM",
+                        "8":"CAMUS LAURINE",
+                        "9":"DESSOYE NATHALIE"
+                    },
+                    "Licence":{
+                        "0":1698484,
+                        "1":1784671,
+                        "2":2095224,
+                        "3":2012994,
+                        "4":1947862,
+                        "5":2118913,
+                        "6":2271776,
+                        "7":2186877,
+                        "8":1837631,
+                        "9":1597117
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MULAS LAURA"
+                    },
+                    "Licence":{
+                        "0":2141257
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -725,35 +736,10 @@
                         "0":2186877,
                         "1":1837631
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MULAS LAURA"
-                    },
-                    "Licence":{
-                        "0":2141257
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"AUZOU GILLES",
-                        "1":"ASKRI DJAMEL"
-                    },
-                    "Licence":{
-                        "0":1072931,
-                        "1":1843778
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -765,6 +751,20 @@
                     "Licence":{
                         "0":1641862,
                         "1":1921592
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"AUZOU GILLES",
+                        "1":"ASKRI DJAMEL"
+                    },
+                    "Licence":{
+                        "0":1072931,
+                        "1":1843778
                     }
                 }
             }

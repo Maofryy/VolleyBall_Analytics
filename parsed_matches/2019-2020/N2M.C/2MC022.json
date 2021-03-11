@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC022",
@@ -485,49 +485,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AL CAUDRY VOLLEY-BALL 2",
-                "Team 2":"REIMS METROPOLE VOLLEY"
+                "Team 1":"REIMS METROPOLE VOLLEY",
+                "Team 2":"AL CAUDRY VOLLEY-BALL 2"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":7,
-                        "4":8,
-                        "5":9,
-                        "6":10,
-                        "7":11,
-                        "8":13,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LEPAN ALEXANDRE",
-                        "1":"FARYNSKI DAWID",
-                        "2":"FORTIN ANTOINE",
-                        "3":"DUMONT MARC",
-                        "4":"GREBACHEV KOSTADIN",
-                        "5":"MELY MAXENCE",
-                        "6":"LOFFLER ALEXIS",
-                        "7":"RAAFATE JEAN BAPTISTE",
-                        "8":"PRUSS BARTOSZ",
-                        "9":"COLLIN ROMAIN"
-                    },
-                    "Licence":{
-                        "0":1890001,
-                        "1":2406852,
-                        "2":1633312,
-                        "3":2065417,
-                        "4":2256968,
-                        "5":1864733,
-                        "6":1942180,
-                        "7":2204490,
-                        "8":2406853,
-                        "9":1661838
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -567,21 +529,48 @@
                         "9":2408684,
                         "10":1875091
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":7,
+                        "4":8,
+                        "5":9,
+                        "6":10,
+                        "7":11,
+                        "8":13,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LEPAN ALEXANDRE",
+                        "1":"FARYNSKI DAWID",
+                        "2":"FORTIN ANTOINE",
+                        "3":"DUMONT MARC",
+                        "4":"GREBACHEV KOSTADIN",
+                        "5":"MELY MAXENCE",
+                        "6":"LOFFLER ALEXIS",
+                        "7":"RAAFATE JEAN BAPTISTE",
+                        "8":"PRUSS BARTOSZ",
+                        "9":"COLLIN ROMAIN"
+                    },
+                    "Licence":{
+                        "0":1890001,
+                        "1":2406852,
+                        "2":1633312,
+                        "3":2065417,
+                        "4":2256968,
+                        "5":1864733,
+                        "6":1942180,
+                        "7":2204490,
+                        "8":2406853,
+                        "9":1661838
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"COLLIN ROMAIN"
-                    },
-                    "Licence":{
-                        "0":1661838
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -594,6 +583,17 @@
                         "0":1890075,
                         "1":2304945
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"COLLIN ROMAIN"
+                    },
+                    "Licence":{
+                        "0":1661838
+                    }
                 }
             },
             "Officials":{
@@ -602,10 +602,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BOGRAND MATHIEU"
+                        "0":"AUZOU GILLES"
                     },
                     "Licence":{
-                        "0":1632303
+                        "0":1072931
                     }
                 },
                 "Team 2":{
@@ -613,10 +613,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"AUZOU GILLES"
+                        "0":"BOGRAND MATHIEU"
                     },
                     "Licence":{
-                        "0":1072931
+                        "0":1632303
                     }
                 }
             }

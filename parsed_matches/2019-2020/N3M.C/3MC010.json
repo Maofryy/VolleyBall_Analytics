@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MC ",
-            "div_name":"NATIONALE 3 MASCULINE POULE C",
-            "div_pool":"",
+            "div_code":"3MC",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule C",
             "match_number":"3MC010",
             "match_day":"02",
             "city":"MESPLEDE",
@@ -687,11 +687,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"LES GENETS DE MESPLEDE",
-                "Team 2":"T.O.A.C. - T.U.C. VOLLEY-BALL"
+                "Team 1":"T.O.A.C. - T.U.C. VOLLEY-BALL",
+                "Team 2":"LES GENETS DE MESPLEDE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":5,
+                        "3":7,
+                        "4":8,
+                        "5":10,
+                        "6":17,
+                        "7":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SEGOND LEO",
+                        "1":"BACON_BALZA JULES",
+                        "2":"GIUBERGIA YOHAN",
+                        "3":"ABBOUB DJAMEL",
+                        "4":"ROUMIEUX THIBAULT",
+                        "5":"RABENJAMINA FREDERIC",
+                        "6":"SIRIEIX LEO",
+                        "7":"GRAU VICTOR"
+                    },
+                    "Licence":{
+                        "0":1901182,
+                        "1":1845136,
+                        "2":1616843,
+                        "3":2157013,
+                        "4":2009248,
+                        "5":1917722,
+                        "6":2221294,
+                        "7":1890078
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -731,42 +763,21 @@
                         "9":1762275,
                         "10":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":5,
-                        "3":7,
-                        "4":8,
-                        "5":10,
-                        "6":17,
-                        "7":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SEGOND LEO",
-                        "1":"BACON_BALZA JULES",
-                        "2":"GIUBERGIA YOHAN",
-                        "3":"ABBOUB DJAMEL",
-                        "4":"ROUMIEUX THIBAULT",
-                        "5":"RABENJAMINA FREDERIC",
-                        "6":"SIRIEIX LEO",
-                        "7":"GRAU VICTOR"
-                    },
-                    "Licence":{
-                        "0":1901182,
-                        "1":1845136,
-                        "2":1616843,
-                        "3":2157013,
-                        "4":2009248,
-                        "5":1917722,
-                        "6":2221294,
-                        "7":1890078
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GIUBERGIA YOHAN"
+                    },
+                    "Licence":{
+                        "0":1616843
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":13,
                         "1":14
@@ -779,21 +790,21 @@
                         "0":1762275,
                         "1":1734149
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GIUBERGIA YOHAN"
-                    },
-                    "Licence":{
-                        "0":1616843
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LEMAINTEC KEVIN"
+                    },
+                    "Licence":{
+                        "0":1914657
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB",
@@ -808,17 +819,6 @@
                         "0":2416818,
                         "1":1142431,
                         "2":1370700
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LEMAINTEC KEVIN"
-                    },
-                    "Licence":{
-                        "0":1914657
                     }
                 }
             }

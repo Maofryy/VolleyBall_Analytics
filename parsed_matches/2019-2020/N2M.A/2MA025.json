@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA025",
@@ -777,55 +777,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"T.O.A.C. - T.U.C. VOLLEY-BALL",
-                "Team 2":"C.A. BRIVE\/CORREZE VOLLEY"
+                "Team 1":"C.A. BRIVE\/CORREZE VOLLEY",
+                "Team 2":"T.O.A.C. - T.U.C. VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":6,
-                        "3":7,
-                        "4":8,
-                        "5":13,
-                        "6":14,
-                        "7":16,
-                        "8":17,
-                        "9":18,
-                        "10":19,
-                        "11":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MOUEZY MATTHIEU",
-                        "1":"D'HOLLANDER PAUL",
-                        "2":"PINEAU LOUIS",
-                        "3":"BOISSINOT AXEL",
-                        "4":"IMAR ROBIN",
-                        "5":"TEL STRIDJI",
-                        "6":"LARRIEU CYRIL",
-                        "7":"EL KHALDOUNI SELIM",
-                        "8":"DOUMBIA ABDEL-AZIZ",
-                        "9":"ASSANI-VIGNAU TITOUAN",
-                        "10":"TOURNIER VIVIEN",
-                        "11":"PICHON TITOUAN"
-                    },
-                    "Licence":{
-                        "0":1845544,
-                        "1":2015474,
-                        "2":1803819,
-                        "3":2137538,
-                        "4":1773356,
-                        "5":2101626,
-                        "6":2061476,
-                        "7":2056759,
-                        "8":1930198,
-                        "9":2209829,
-                        "10":1845627,
-                        "11":2088659
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":3,
@@ -868,10 +824,65 @@
                         "10":1420671,
                         "11":1823234
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":6,
+                        "3":7,
+                        "4":8,
+                        "5":13,
+                        "6":14,
+                        "7":16,
+                        "8":17,
+                        "9":18,
+                        "10":19,
+                        "11":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MOUEZY MATTHIEU",
+                        "1":"D'HOLLANDER PAUL",
+                        "2":"PINEAU LOUIS",
+                        "3":"BOISSINOT AXEL",
+                        "4":"IMAR ROBIN",
+                        "5":"TEL STRIDJI",
+                        "6":"LARRIEU CYRIL",
+                        "7":"EL KHALDOUNI SELIM",
+                        "8":"DOUMBIA ABDEL-AZIZ",
+                        "9":"ASSANI-VIGNAU TITOUAN",
+                        "10":"TOURNIER VIVIEN",
+                        "11":"PICHON TITOUAN"
+                    },
+                    "Licence":{
+                        "0":1845544,
+                        "1":2015474,
+                        "2":1803819,
+                        "3":2137538,
+                        "4":1773356,
+                        "5":2101626,
+                        "6":2061476,
+                        "7":2056759,
+                        "8":1930198,
+                        "9":2209829,
+                        "10":1845627,
+                        "11":2088659
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":10
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LE NAOUR VINCENT"
+                    },
+                    "Licence":{
+                        "0":1707413
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":6,
                         "1":7
@@ -884,21 +895,21 @@
                         "0":1803819,
                         "1":2137538
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":10
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LE NAOUR VINCENT"
-                    },
-                    "Licence":{
-                        "0":1707413
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DUPRE JEAN-CHRISTIAN"
+                    },
+                    "Licence":{
+                        "0":2182838
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -910,17 +921,6 @@
                     "Licence":{
                         "0":1174357,
                         "1":1829907
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DUPRE JEAN-CHRISTIAN"
-                    },
-                    "Licence":{
-                        "0":2182838
                     }
                 }
             }

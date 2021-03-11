@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA021",
@@ -615,11 +615,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY-BALL GRUISSAN",
-                "Team 2":"PAYS D'AIX VENELLES V.B. 2"
+                "Team 1":"PAYS D'AIX VENELLES V.B. 2",
+                "Team 2":"VOLLEY-BALL GRUISSAN"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":11,
+                        "7":12,
+                        "8":13,
+                        "9":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VILLEDIEU CHIARA",
+                        "1":"RAQUIN LOU",
+                        "2":"MICHEL ANGELE",
+                        "3":"BLAZIKOWSKI CYRIELLE",
+                        "4":"DORNIC MARTINAYA",
+                        "5":"MAGNANI CHLOE",
+                        "6":"ARMANDO JENIFER",
+                        "7":"PYVOVAROVA ALINA",
+                        "8":"WOLTER ALICE",
+                        "9":"BESNEHARD CASSIOPEE"
+                    },
+                    "Licence":{
+                        "0":2003754,
+                        "1":1900471,
+                        "2":1631856,
+                        "3":2097475,
+                        "4":2128747,
+                        "5":1998364,
+                        "6":1997001,
+                        "7":1884946,
+                        "8":1963316,
+                        "9":1875507
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -662,48 +700,21 @@
                         "10":2126900,
                         "11":2058802
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":11,
-                        "7":12,
-                        "8":13,
-                        "9":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VILLEDIEU CHIARA",
-                        "1":"RAQUIN LOU",
-                        "2":"MICHEL ANGELE",
-                        "3":"BLAZIKOWSKI CYRIELLE",
-                        "4":"DORNIC MARTINAYA",
-                        "5":"MAGNANI CHLOE",
-                        "6":"ARMANDO JENIFER",
-                        "7":"PYVOVAROVA ALINA",
-                        "8":"WOLTER ALICE",
-                        "9":"BESNEHARD CASSIOPEE"
-                    },
-                    "Licence":{
-                        "0":2003754,
-                        "1":1900471,
-                        "2":1631856,
-                        "3":2097475,
-                        "4":2128747,
-                        "5":1998364,
-                        "6":1997001,
-                        "7":1884946,
-                        "8":1963316,
-                        "9":1875507
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":8
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MAGNANI CHLOE"
+                    },
+                    "Licence":{
+                        "0":1998364
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":18
@@ -716,17 +727,6 @@
                         "0":1741594,
                         "1":2058802
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":8
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MAGNANI CHLOE"
-                    },
-                    "Licence":{
-                        "0":1998364
-                    }
                 }
             },
             "Officials":{
@@ -735,10 +735,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"PAZ FUENTES EDUARDO"
+                        "0":"VERNIER PATRICIA"
                     },
                     "Licence":{
-                        "0":2137458
+                        "0":959038
                     }
                 },
                 "Team 2":{
@@ -746,10 +746,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"VERNIER PATRICIA"
+                        "0":"PAZ FUENTES EDUARDO"
                     },
                     "Licence":{
-                        "0":959038
+                        "0":2137458
                     }
                 }
             }

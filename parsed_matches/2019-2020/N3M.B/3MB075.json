@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB075",
             "match_day":"13",
             "city":"MONTPELLIER",
@@ -467,11 +467,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASLJCROIX ARGENT MONTPELLIER",
-                "Team 2":"VBC CLERMONTAIS"
+                "Team 1":"VBC CLERMONTAIS",
+                "Team 2":"ASLJCROIX ARGENT MONTPELLIER"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3,
+                        "1":4,
+                        "2":5,
+                        "3":6,
+                        "4":9,
+                        "5":10,
+                        "6":11,
+                        "7":14,
+                        "8":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MARTY GAUTIER",
+                        "1":"RASSEL MATTHIEU",
+                        "2":"BAILLY BENJAMIN",
+                        "3":"MILHAU THEO",
+                        "4":"CAZOTTES THIBAULT",
+                        "5":"GIPPAL ADRIEN",
+                        "6":"KRISHTOPENKO SERGEY",
+                        "7":"VERNAZOBRES GREGOIRE",
+                        "8":"DAHBI REDOUANE"
+                    },
+                    "Licence":{
+                        "0":2198958,
+                        "1":1775160,
+                        "2":1385078,
+                        "3":1814444,
+                        "4":1438717,
+                        "5":2054065,
+                        "6":2284030,
+                        "7":2241540,
+                        "8":1647388
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -511,56 +546,10 @@
                         "9":1861814,
                         "10":1546423
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3,
-                        "1":4,
-                        "2":5,
-                        "3":6,
-                        "4":9,
-                        "5":10,
-                        "6":11,
-                        "7":14,
-                        "8":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MARTY GAUTIER",
-                        "1":"RASSEL MATTHIEU",
-                        "2":"BAILLY BENJAMIN",
-                        "3":"MILHAU THEO",
-                        "4":"CAZOTTES THIBAULT",
-                        "5":"GIPPAL ADRIEN",
-                        "6":"KRISHTOPENKO SERGEY",
-                        "7":"VERNAZOBRES GREGOIRE",
-                        "8":"DAHBI REDOUANE"
-                    },
-                    "Licence":{
-                        "0":2198958,
-                        "1":1775160,
-                        "2":1385078,
-                        "3":1814444,
-                        "4":1438717,
-                        "5":2054065,
-                        "6":2284030,
-                        "7":2241540,
-                        "8":1647388
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"WAINEBENGO JACQUES"
-                    },
-                    "Licence":{
-                        "0":1546423
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -570,6 +559,17 @@
                     "Licence":{
                         "0":2241540
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"WAINEBENGO JACQUES"
+                    },
+                    "Licence":{
+                        "0":1546423
+                    }
                 }
             },
             "Officials":{
@@ -578,10 +578,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"QUIEVREUX THOMAS"
+                        "0":"LERDA VERONIQUE"
                     },
                     "Licence":{
-                        "0":1121007
+                        "0":996570
                     }
                 },
                 "Team 2":{
@@ -589,10 +589,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"LERDA VERONIQUE"
+                        "0":"QUIEVREUX THOMAS"
                     },
                     "Licence":{
-                        "0":996570
+                        "0":1121007
                     }
                 }
             }

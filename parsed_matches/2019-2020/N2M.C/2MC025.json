@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC025",
@@ -527,49 +527,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASNIERES VOLLEY 92",
-                "Team 2":"STRASBOURG UNIVERSITE CLUB"
+                "Team 1":"STRASBOURG UNIVERSITE CLUB",
+                "Team 2":"ASNIERES VOLLEY 92"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":4,
-                        "2":5,
-                        "3":7,
-                        "4":8,
-                        "5":10,
-                        "6":13,
-                        "7":14,
-                        "8":16,
-                        "9":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SETTA SAMIR",
-                        "1":"EMILE MO\u00efSE",
-                        "2":"ZORGUI KHERDINE",
-                        "3":"BEN RHOUMA YEESSYN",
-                        "4":"DEBARLE MEHDI",
-                        "5":"BEN BOUZID BILEL",
-                        "6":"SALDI SAMI",
-                        "7":"SHARAF AHMED",
-                        "8":"LELO SHUNGU PARFAIT",
-                        "9":"MOHAMED YASSINE"
-                    },
-                    "Licence":{
-                        "0":1911830,
-                        "1":1963380,
-                        "2":1204875,
-                        "3":1998347,
-                        "4":2130914,
-                        "5":2110962,
-                        "6":1905344,
-                        "7":2044098,
-                        "8":2157509,
-                        "9":1938471
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":4,
@@ -612,21 +574,48 @@
                         "10":1035976,
                         "11":1816781
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":4,
+                        "2":5,
+                        "3":7,
+                        "4":8,
+                        "5":10,
+                        "6":13,
+                        "7":14,
+                        "8":16,
+                        "9":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SETTA SAMIR",
+                        "1":"EMILE MO\u00efSE",
+                        "2":"ZORGUI KHERDINE",
+                        "3":"BEN RHOUMA YEESSYN",
+                        "4":"DEBARLE MEHDI",
+                        "5":"BEN BOUZID BILEL",
+                        "6":"SALDI SAMI",
+                        "7":"SHARAF AHMED",
+                        "8":"LELO SHUNGU PARFAIT",
+                        "9":"MOHAMED YASSINE"
+                    },
+                    "Licence":{
+                        "0":1911830,
+                        "1":1963380,
+                        "2":1204875,
+                        "3":1998347,
+                        "4":2130914,
+                        "5":2110962,
+                        "6":1905344,
+                        "7":2044098,
+                        "8":2157509,
+                        "9":1938471
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SETTA SAMIR"
-                    },
-                    "Licence":{
-                        "0":1911830
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":11,
                         "1":17
@@ -639,6 +628,17 @@
                         "0":1549965,
                         "1":1816781
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SETTA SAMIR"
+                    },
+                    "Licence":{
+                        "0":1911830
+                    }
                 }
             },
             "Officials":{
@@ -647,10 +647,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BELQASMI M'HAMED"
+                        "0":"FALSETTI FREDERIC"
                     },
                     "Licence":{
-                        "0":1794692
+                        "0":1014358
                     }
                 },
                 "Team 2":{
@@ -658,10 +658,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"FALSETTI FREDERIC"
+                        "0":"BELQASMI M'HAMED"
                     },
                     "Licence":{
-                        "0":1014358
+                        "0":1794692
                     }
                 }
             }

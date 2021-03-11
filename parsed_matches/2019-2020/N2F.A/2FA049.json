@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA049",
@@ -493,11 +493,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLERO LE CANNET COTE D'AZUR 2",
-                "Team 2":"PAYS D'AIX VENELLES V.B. 2"
+                "Team 1":"PAYS D'AIX VENELLES V.B. 2",
+                "Team 2":"VOLERO LE CANNET COTE D'AZUR 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":4,
+                        "4":6,
+                        "5":7,
+                        "6":9,
+                        "7":11,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BESNEHARD CASSIOP\u00e9E",
+                        "1":"RAQUIN LOU",
+                        "2":"BLAZIKOWSKI CYRIELLE",
+                        "3":"MICHEL ANGELE",
+                        "4":"VILLEDIEU CHIARA",
+                        "5":"WOLTER ALICE",
+                        "6":"HERNANDEZ VIOLAINE",
+                        "7":"ARMANDO JENIFER",
+                        "8":"DORNIC MARTINAYA"
+                    },
+                    "Licence":{
+                        "0":1875507,
+                        "1":1900471,
+                        "2":2097475,
+                        "3":1631856,
+                        "4":2003754,
+                        "5":1963316,
+                        "6":2179444,
+                        "7":1997001,
+                        "8":2128747
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -537,45 +572,21 @@
                         "9":1405725,
                         "10":2389975
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":6,
-                        "5":7,
-                        "6":9,
-                        "7":11,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BESNEHARD CASSIOP\u00e9E",
-                        "1":"RAQUIN LOU",
-                        "2":"BLAZIKOWSKI CYRIELLE",
-                        "3":"MICHEL ANGELE",
-                        "4":"VILLEDIEU CHIARA",
-                        "5":"WOLTER ALICE",
-                        "6":"HERNANDEZ VIOLAINE",
-                        "7":"ARMANDO JENIFER",
-                        "8":"DORNIC MARTINAYA"
-                    },
-                    "Licence":{
-                        "0":1875507,
-                        "1":1900471,
-                        "2":2097475,
-                        "3":1631856,
-                        "4":2003754,
-                        "5":1963316,
-                        "6":2179444,
-                        "7":1997001,
-                        "8":2128747
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RAQUIN LOU"
+                    },
+                    "Licence":{
+                        "0":1900471
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":5,
                         "1":10
@@ -588,17 +599,6 @@
                         "0":1854293,
                         "1":1892017
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RAQUIN LOU"
-                    },
-                    "Licence":{
-                        "0":1900471
-                    }
                 }
             },
             "Officials":{
@@ -607,10 +607,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MINKOVA RAYNA"
+                        "0":"REY LUDOVIC"
                     },
                     "Licence":{
-                        "0":1118980
+                        "0":1838683
                     }
                 },
                 "Team 2":{
@@ -618,10 +618,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"REY LUDOVIC"
+                        "0":"MINKOVA RAYNA"
                     },
                     "Licence":{
-                        "0":1838683
+                        "0":1118980
                     }
                 }
             }

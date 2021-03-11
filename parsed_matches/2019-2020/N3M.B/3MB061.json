@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB061",
             "match_day":"11",
             "city":"GIGNAC",
@@ -631,11 +631,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY BALL DE GIGNAC",
-                "Team 2":"ASBAM MONTPELLIER"
+                "Team 1":"ASBAM MONTPELLIER",
+                "Team 2":"VOLLEY BALL DE GIGNAC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":4,
+                        "4":7,
+                        "5":9,
+                        "6":11,
+                        "7":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"NOMA\u00cf LENY",
+                        "1":"BERGAME RYAN",
+                        "2":"SITBON LOIC",
+                        "3":"BARTUZEL TOM",
+                        "4":"CASTEL JULES",
+                        "5":"VALENTIN SAM",
+                        "6":"MAITUKU GALUTAUAVA",
+                        "7":"BECASSIS ELIOTT"
+                    },
+                    "Licence":{
+                        "0":2042892,
+                        "1":1773102,
+                        "2":1820447,
+                        "3":1966255,
+                        "4":1981762,
+                        "5":2096586,
+                        "6":2305831,
+                        "7":1811736
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":6,
@@ -672,42 +704,21 @@
                         "8":1746889,
                         "9":1527140
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":7,
-                        "5":9,
-                        "6":11,
-                        "7":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"NOMA\u00cf LENY",
-                        "1":"BERGAME RYAN",
-                        "2":"SITBON LOIC",
-                        "3":"BARTUZEL TOM",
-                        "4":"CASTEL JULES",
-                        "5":"VALENTIN SAM",
-                        "6":"MAITUKU GALUTAUAVA",
-                        "7":"BECASSIS ELIOTT"
-                    },
-                    "Licence":{
-                        "0":2042892,
-                        "1":1773102,
-                        "2":1820447,
-                        "3":1966255,
-                        "4":1981762,
-                        "5":2096586,
-                        "6":2305831,
-                        "7":1811736
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"NOMA\u00cf LENY"
+                    },
+                    "Licence":{
+                        "0":2042892
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -720,17 +731,6 @@
                         "0":1845996,
                         "1":1806795
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"NOMA\u00cf LENY"
-                    },
-                    "Licence":{
-                        "0":2042892
-                    }
                 }
             },
             "Officials":{
@@ -739,10 +739,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
+                        "0":"BARTUZEL WLADIMIR"
                     },
                     "Licence":{
-                        "0":1444556
+                        "0":1179483
                     }
                 },
                 "Team 2":{
@@ -750,10 +750,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BARTUZEL WLADIMIR"
+                        "0":"ARNAUD CLEMENT"
                     },
                     "Licence":{
-                        "0":1179483
+                        "0":1444556
                     }
                 }
             }

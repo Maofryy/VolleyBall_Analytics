@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FE ",
-            "div_name":"NATIONALE 3 FEMININE POULE E",
-            "div_pool":"",
+            "div_code":"3FE",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule E",
             "match_number":"3FE041",
             "match_day":"07",
             "city":"HARNES",
@@ -496,11 +496,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB HARNES 2",
-                "Team 2":"SPORTING CLUB PARIS VOLLEY"
+                "Team 1":"SPORTING CLUB PARIS VOLLEY",
+                "Team 2":"VOLLEY CLUB HARNES 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":10,
+                        "6":12,
+                        "7":13,
+                        "8":14,
+                        "9":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"COMYN FLAVIE",
+                        "1":"JOVIC DRAGANA",
+                        "2":"DRULA JULIA",
+                        "3":"NEVEU MARIE",
+                        "4":"RAMBOANIAINA AINA",
+                        "5":"MARC CAMILLE",
+                        "6":"BATISSE FLORA",
+                        "7":"SAUVEUR SARAH",
+                        "8":"DURUPT CLOE",
+                        "9":"FROMENT HELENE"
+                    },
+                    "Licence":{
+                        "0":1341308,
+                        "1":1596235,
+                        "2":1699514,
+                        "3":1672129,
+                        "4":1542184,
+                        "5":1990859,
+                        "6":1461068,
+                        "7":1868517,
+                        "8":1831060,
+                        "9":1657782
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -543,48 +581,21 @@
                         "10":1849967,
                         "11":1904159
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":10,
-                        "6":12,
-                        "7":13,
-                        "8":14,
-                        "9":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"COMYN FLAVIE",
-                        "1":"JOVIC DRAGANA",
-                        "2":"DRULA JULIA",
-                        "3":"NEVEU MARIE",
-                        "4":"RAMBOANIAINA AINA",
-                        "5":"MARC CAMILLE",
-                        "6":"BATISSE FLORA",
-                        "7":"SAUVEUR SARAH",
-                        "8":"DURUPT CLOE",
-                        "9":"FROMENT HELENE"
-                    },
-                    "Licence":{
-                        "0":1341308,
-                        "1":1596235,
-                        "2":1699514,
-                        "3":1672129,
-                        "4":1542184,
-                        "5":1990859,
-                        "6":1461068,
-                        "7":1868517,
-                        "8":1831060,
-                        "9":1657782
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FROMENT HELENE"
+                    },
+                    "Licence":{
+                        "0":1657782
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":13,
                         "1":16
@@ -597,21 +608,21 @@
                         "0":1784535,
                         "1":1904159
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FROMENT HELENE"
-                    },
-                    "Licence":{
-                        "0":1657782
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"SAGUAS BRAVO MIGUEL"
+                    },
+                    "Licence":{
+                        "0":2204027
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -623,17 +634,6 @@
                     "Licence":{
                         "0":1718343,
                         "1":958448
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"SAGUAS BRAVO MIGUEL"
-                    },
-                    "Licence":{
-                        "0":2204027
                     }
                 }
             }

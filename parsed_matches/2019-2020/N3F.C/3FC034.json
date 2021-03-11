@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC034",
             "match_day":"06",
             "city":"SAINT-ETIENNE",
@@ -576,11 +576,40 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
-                "Team 2":"ISTRES PROVENCE VOLLEY 2"
+                "Team 1":"ISTRES PROVENCE VOLLEY 2",
+                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":8,
+                        "2":10,
+                        "3":11,
+                        "4":12,
+                        "5":13,
+                        "6":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DIOUF TSHILANDA",
+                        "1":"BERLIET SOPHIE",
+                        "2":"MORVAN-ELLUL ELODIE",
+                        "3":"LUCAS SANDRINE",
+                        "4":"AGOSTI ESTELLE",
+                        "5":"KEHIHA CELIA",
+                        "6":"BERLIET JULIE"
+                    },
+                    "Licence":{
+                        "0":2010554,
+                        "1":1045756,
+                        "2":2240443,
+                        "3":1347546,
+                        "4":1971048,
+                        "5":2186803,
+                        "6":1340269
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -623,39 +652,21 @@
                         "10":2027084,
                         "11":2051438
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":8,
-                        "2":10,
-                        "3":11,
-                        "4":12,
-                        "5":13,
-                        "6":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"DIOUF TSHILANDA",
-                        "1":"BERLIET SOPHIE",
-                        "2":"MORVAN-ELLUL ELODIE",
-                        "3":"LUCAS SANDRINE",
-                        "4":"AGOSTI ESTELLE",
-                        "5":"KEHIHA CELIA",
-                        "6":"BERLIET JULIE"
-                    },
-                    "Licence":{
-                        "0":2010554,
-                        "1":1045756,
-                        "2":2240443,
-                        "3":1347546,
-                        "4":1971048,
-                        "5":2186803,
-                        "6":1340269
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -665,17 +676,6 @@
                     "Licence":{
                         "0":2051438
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -684,10 +684,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROLIN FABIEN"
+                        "0":"PICARD PHILIPPE"
                     },
                     "Licence":{
-                        "0":658542
+                        "0":714527
                     }
                 },
                 "Team 2":{
@@ -695,10 +695,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"PICARD PHILIPPE"
+                        "0":"ROLIN FABIEN"
                     },
                     "Licence":{
-                        "0":714527
+                        "0":658542
                     }
                 }
             }

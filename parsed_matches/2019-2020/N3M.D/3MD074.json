@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD074",
             "match_day":"13",
             "city":"REZE",
@@ -784,11 +784,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASB REZE 3",
-                "Team 2":"C.P.B. RENNES 35"
+                "Team 1":"C.P.B. RENNES 35",
+                "Team 2":"ASB REZE 3"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":10,
+                        "6":13,
+                        "7":15,
+                        "8":16
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"TOIBOURANI EL-FAHAD",
+                        "1":"MAILLOT OLIVIER",
+                        "2":"LE CLAINCHE PAUL",
+                        "3":"COLOMBEL FRANCOIS",
+                        "4":"L HOSTIS MAEL",
+                        "5":"LUBBERS TIMOTE",
+                        "6":"COMBETTES NICOLAS",
+                        "7":"MAURICE LEO",
+                        "8":"CHARAUD PIERRE"
+                    },
+                    "Licence":{
+                        "0":2364191,
+                        "1":1725361,
+                        "2":1731294,
+                        "3":2410434,
+                        "4":1863189,
+                        "5":1842100,
+                        "6":1367632,
+                        "7":1871148,
+                        "8":1592508
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -831,56 +866,10 @@
                         "10":2072504,
                         "11":2142087
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":10,
-                        "6":13,
-                        "7":15,
-                        "8":16
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"TOIBOURANI EL-FAHAD",
-                        "1":"MAILLOT OLIVIER",
-                        "2":"LE CLAINCHE PAUL",
-                        "3":"COLOMBEL FRANCOIS",
-                        "4":"L HOSTIS MAEL",
-                        "5":"LUBBERS TIMOTE",
-                        "6":"COMBETTES NICOLAS",
-                        "7":"MAURICE LEO",
-                        "8":"CHARAUD PIERRE"
-                    },
-                    "Licence":{
-                        "0":2364191,
-                        "1":1725361,
-                        "2":1731294,
-                        "3":2410434,
-                        "4":1863189,
-                        "5":1842100,
-                        "6":1367632,
-                        "7":1871148,
-                        "8":1592508
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":8
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GABORIT NOE"
-                    },
-                    "Licence":{
-                        "0":2001431
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":15
                     },
@@ -890,6 +879,17 @@
                     "Licence":{
                         "0":1871148
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":8
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GABORIT NOE"
+                    },
+                    "Licence":{
+                        "0":2001431
+                    }
                 }
             },
             "Officials":{
@@ -898,10 +898,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"COUGNAUD EDGAR"
+                        "0":"COMBETTES NICOLAS"
                     },
                     "Licence":{
-                        "0":1833963
+                        "0":1367632
                     }
                 },
                 "Team 2":{
@@ -909,10 +909,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"COMBETTES NICOLAS"
+                        "0":"COUGNAUD EDGAR"
                     },
                     "Licence":{
-                        "0":1367632
+                        "0":1833963
                     }
                 }
             }

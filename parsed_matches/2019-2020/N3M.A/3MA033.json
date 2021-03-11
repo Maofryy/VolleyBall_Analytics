@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA033",
             "match_day":"06",
             "city":"CAGNES SUR MER",
@@ -688,46 +688,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"US CAGNES VOLLEY-BALL",
-                "Team 2":"MANDELIEU LA NAPOULE V.B."
+                "Team 1":"MANDELIEU LA NAPOULE V.B.",
+                "Team 2":"US CAGNES VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":4,
-                        "2":7,
-                        "3":9,
-                        "4":10,
-                        "5":11,
-                        "6":12,
-                        "7":14,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RAMBAUD JORDAN",
-                        "1":"LEROUX JULIEN",
-                        "2":"PARMENTIER ADRIEN",
-                        "3":"HOFF ARNAUD",
-                        "4":"RABBIA MATHIEU",
-                        "5":"PHAM MINH SON",
-                        "6":"MASSACRIER NICOLAS",
-                        "7":"LIEBERT ANTOINE",
-                        "8":"MAGAR JEREMY"
-                    },
-                    "Licence":{
-                        "0":1774713,
-                        "1":1712740,
-                        "2":1768016,
-                        "3":1872368,
-                        "4":1833318,
-                        "5":1176370,
-                        "6":1769269,
-                        "7":1715423,
-                        "8":1480576
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":4,
@@ -761,10 +726,56 @@
                         "7":2192391,
                         "8":1346420
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":4,
+                        "2":7,
+                        "3":9,
+                        "4":10,
+                        "5":11,
+                        "6":12,
+                        "7":14,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RAMBAUD JORDAN",
+                        "1":"LEROUX JULIEN",
+                        "2":"PARMENTIER ADRIEN",
+                        "3":"HOFF ARNAUD",
+                        "4":"RABBIA MATHIEU",
+                        "5":"PHAM MINH SON",
+                        "6":"MASSACRIER NICOLAS",
+                        "7":"LIEBERT ANTOINE",
+                        "8":"MAGAR JEREMY"
+                    },
+                    "Licence":{
+                        "0":1774713,
+                        "1":1712740,
+                        "2":1768016,
+                        "3":1872368,
+                        "4":1833318,
+                        "5":1176370,
+                        "6":1769269,
+                        "7":1715423,
+                        "8":1480576
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":5
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GAUDINO ANTHONY"
+                    },
+                    "Licence":{
+                        "0":1779199
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":11
@@ -777,17 +788,6 @@
                         "0":1774713,
                         "1":1176370
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":5
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GAUDINO ANTHONY"
-                    },
-                    "Licence":{
-                        "0":1779199
-                    }
                 }
             },
             "Officials":{
@@ -796,10 +796,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DEMIROVIC ASIM"
+                        "0":"DONZION JEAN-CHRISTOPHE"
                     },
                     "Licence":{
-                        "0":1567002
+                        "0":1639817
                     }
                 },
                 "Team 2":{
@@ -807,10 +807,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"DONZION JEAN-CHRISTOPHE"
+                        "0":"DEMIROVIC ASIM"
                     },
                     "Licence":{
-                        "0":1639817
+                        "0":1567002
                     }
                 }
             }

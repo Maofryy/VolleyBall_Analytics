@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC056",
@@ -459,11 +459,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AL CAUDRY VOLLEY-BALL 2",
-                "Team 2":"GRAND NANCY VOLLEY-BALL 2"
+                "Team 1":"GRAND NANCY VOLLEY-BALL 2",
+                "Team 2":"AL CAUDRY VOLLEY-BALL 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":5,
+                        "3":6,
+                        "4":10,
+                        "5":11,
+                        "6":12,
+                        "7":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ANTOINE R\u00c9MI",
+                        "1":"KIJOWSKI PIERRE-YVES",
+                        "2":"BAIRI ZAKARIA",
+                        "3":"AURY MAXIME",
+                        "4":"DUMORTIER MARTIN",
+                        "5":"PEQUIGNOT JULIEN",
+                        "6":"BARBIER GREGOIRE",
+                        "7":"HENTZEN FR\u00c9D\u00c9RIC"
+                    },
+                    "Licence":{
+                        "0":1593881,
+                        "1":1785299,
+                        "2":1859474,
+                        "3":1892299,
+                        "4":1822511,
+                        "5":1893690,
+                        "6":2000859,
+                        "7":1445500
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":4,
@@ -500,42 +532,21 @@
                         "8":2406853,
                         "9":1864733
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":5,
-                        "3":6,
-                        "4":10,
-                        "5":11,
-                        "6":12,
-                        "7":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ANTOINE R\u00c9MI",
-                        "1":"KIJOWSKI PIERRE-YVES",
-                        "2":"BAIRI ZAKARIA",
-                        "3":"AURY MAXIME",
-                        "4":"DUMORTIER MARTIN",
-                        "5":"PEQUIGNOT JULIEN",
-                        "6":"BARBIER GREGOIRE",
-                        "7":"HENTZEN FR\u00c9D\u00c9RIC"
-                    },
-                    "Licence":{
-                        "0":1593881,
-                        "1":1785299,
-                        "2":1859474,
-                        "3":1892299,
-                        "4":1822511,
-                        "5":1893690,
-                        "6":2000859,
-                        "7":1445500
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":16
                     },
@@ -545,17 +556,6 @@
                     "Licence":{
                         "0":1864733
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -564,10 +564,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BOGRAND MATHIEU"
+                        "0":"ANGELY PIERRE"
                     },
                     "Licence":{
-                        "0":1632303
+                        "0":377143
                     }
                 },
                 "Team 2":{
@@ -575,10 +575,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ANGELY PIERRE"
+                        "0":"BOGRAND MATHIEU"
                     },
                     "Licence":{
-                        "0":377143
+                        "0":1632303
                     }
                 }
             }

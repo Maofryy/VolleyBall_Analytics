@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC023",
@@ -491,11 +491,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"VOLLEY CLUB DE CAMBRAI 2",
-                "Team 2":"UNION SPORTIVE MULHOUSE VOLLEY"
+                "Team 1":"UNION SPORTIVE MULHOUSE VOLLEY",
+                "Team 2":"VOLLEY CLUB DE CAMBRAI 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":4,
+                        "2":7,
+                        "3":10,
+                        "4":11,
+                        "5":13,
+                        "6":14,
+                        "7":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"WALCH PIERRE",
+                        "1":"MEBAREK FALOUTI ZAKARYA",
+                        "2":"SEVEN HASSAN",
+                        "3":"BUZE THIBAULT",
+                        "4":"PANOU ISAAC",
+                        "5":"POZZI CHRISTIAN",
+                        "6":"ASSIRELLI YANN",
+                        "7":"FUHRMANN NICOLAS"
+                    },
+                    "Licence":{
+                        "0":1592101,
+                        "1":1925174,
+                        "2":1850654,
+                        "3":1860751,
+                        "4":1853871,
+                        "5":1760389,
+                        "6":1854755,
+                        "7":2280821
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -538,42 +570,21 @@
                         "10":2414240,
                         "11":1716655
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":4,
-                        "2":7,
-                        "3":10,
-                        "4":11,
-                        "5":13,
-                        "6":14,
-                        "7":19
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"WALCH PIERRE",
-                        "1":"MEBAREK FALOUTI ZAKARYA",
-                        "2":"SEVEN HASSAN",
-                        "3":"BUZE THIBAULT",
-                        "4":"PANOU ISAAC",
-                        "5":"POZZI CHRISTIAN",
-                        "6":"ASSIRELLI YANN",
-                        "7":"FUHRMANN NICOLAS"
-                    },
-                    "Licence":{
-                        "0":1592101,
-                        "1":1925174,
-                        "2":1850654,
-                        "3":1860751,
-                        "4":1853871,
-                        "5":1760389,
-                        "6":1854755,
-                        "7":2280821
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ASSIRELLI YANN"
+                    },
+                    "Licence":{
+                        "0":1854755
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":15
@@ -586,17 +597,6 @@
                         "0":2414240,
                         "1":1716655
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ASSIRELLI YANN"
-                    },
-                    "Licence":{
-                        "0":1854755
-                    }
                 }
             },
             "Officials":{
@@ -605,10 +605,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ONDRUSEK ROMAN"
+                        "0":"HAUSWALD CEDRIC"
                     },
                     "Licence":{
-                        "0":1902878
+                        "0":312009
                     }
                 },
                 "Team 2":{
@@ -616,10 +616,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"HAUSWALD CEDRIC"
+                        "0":"ONDRUSEK ROMAN"
                     },
                     "Licence":{
-                        "0":312009
+                        "0":1902878
                     }
                 }
             }

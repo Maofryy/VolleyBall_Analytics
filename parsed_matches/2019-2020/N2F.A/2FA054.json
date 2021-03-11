@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA054",
@@ -644,11 +644,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"B\u00c9ZIERS VOLLEY-BALL 2 CFC",
-                "Team 2":"VOLLEY CLUB HYERES\/PIERREFEU"
+                "Team 1":"VOLLEY CLUB HYERES\/PIERREFEU",
+                "Team 2":"B\u00c9ZIERS VOLLEY-BALL 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":5,
+                        "3":7,
+                        "4":8,
+                        "5":10,
+                        "6":14,
+                        "7":16,
+                        "8":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GAUDEL CHLOE",
+                        "1":"ROBEAU LUCIE",
+                        "2":"ALBERT MAELLE",
+                        "3":"COULBAULT LAURE",
+                        "4":"GENNIAUX EMILIE",
+                        "5":"GUIEYSSE AUDREY",
+                        "6":"FRIGANT MARJORIE",
+                        "7":"NAPOLI CHIARA",
+                        "8":"MICHELON ERICA"
+                    },
+                    "Licence":{
+                        "0":1342199,
+                        "1":2209325,
+                        "2":2057148,
+                        "3":2141732,
+                        "4":1691898,
+                        "5":1409582,
+                        "6":1471900,
+                        "7":1954392,
+                        "8":2049794
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":3,
@@ -688,56 +723,10 @@
                         "9":2142871,
                         "10":1922491
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":5,
-                        "3":7,
-                        "4":8,
-                        "5":10,
-                        "6":14,
-                        "7":16,
-                        "8":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"GAUDEL CHLOE",
-                        "1":"ROBEAU LUCIE",
-                        "2":"ALBERT MAELLE",
-                        "3":"COULBAULT LAURE",
-                        "4":"GENNIAUX EMILIE",
-                        "5":"GUIEYSSE AUDREY",
-                        "6":"FRIGANT MARJORIE",
-                        "7":"NAPOLI CHIARA",
-                        "8":"MICHELON ERICA"
-                    },
-                    "Licence":{
-                        "0":1342199,
-                        "1":2209325,
-                        "2":2057148,
-                        "3":2141732,
-                        "4":1691898,
-                        "5":1409582,
-                        "6":1471900,
-                        "7":1954392,
-                        "8":2049794
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MAURANDY PAULINE"
-                    },
-                    "Licence":{
-                        "0":2142871
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":14
                     },
@@ -747,6 +736,17 @@
                     "Licence":{
                         "0":1471900
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MAURANDY PAULINE"
+                    },
+                    "Licence":{
+                        "0":2142871
+                    }
                 }
             },
             "Officials":{
@@ -755,10 +755,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BAINVEL ROMUALD"
+                        "0":"SERVAGEON GUILLAUME"
                     },
                     "Licence":{
-                        "0":986222
+                        "0":1634200
                     }
                 },
                 "Team 2":{
@@ -766,10 +766,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"SERVAGEON GUILLAUME"
+                        "0":"BAINVEL ROMUALD"
                     },
                     "Licence":{
-                        "0":1634200
+                        "0":986222
                     }
                 }
             }

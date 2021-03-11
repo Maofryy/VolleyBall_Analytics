@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB087",
             "match_day":"15",
             "city":"LE PONTET",
@@ -802,46 +802,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"U.S. PONTET VOLLEY AVENIR",
-                "Team 2":"ASBAM MONTPELLIER"
+                "Team 1":"ASBAM MONTPELLIER",
+                "Team 2":"U.S. PONTET VOLLEY AVENIR"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":7,
-                        "2":8,
-                        "3":9,
-                        "4":10,
-                        "5":11,
-                        "6":12,
-                        "7":13,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LIBOM SERGE",
-                        "1":"VANDAM YANNICK",
-                        "2":"HUMBERT RIDET DYLAN",
-                        "3":"CONSTANS PATRICK",
-                        "4":"RIDET HUMBERT AXEL",
-                        "5":"DIJOUD FLORIAN",
-                        "6":"ABDELMALEK JAFFAR",
-                        "7":"POUVESLE CORENTIN",
-                        "8":"PICCIN JORIAN"
-                    },
-                    "Licence":{
-                        "0":1673757,
-                        "1":2153871,
-                        "2":1762370,
-                        "3":1221683,
-                        "4":1837186,
-                        "5":1508547,
-                        "6":2314954,
-                        "7":2102958,
-                        "8":2053483
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -875,21 +840,45 @@
                         "7":2096586,
                         "8":2042892
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":7,
+                        "2":8,
+                        "3":9,
+                        "4":10,
+                        "5":11,
+                        "6":12,
+                        "7":13,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LIBOM SERGE",
+                        "1":"VANDAM YANNICK",
+                        "2":"HUMBERT RIDET DYLAN",
+                        "3":"CONSTANS PATRICK",
+                        "4":"RIDET HUMBERT AXEL",
+                        "5":"DIJOUD FLORIAN",
+                        "6":"ABDELMALEK JAFFAR",
+                        "7":"POUVESLE CORENTIN",
+                        "8":"PICCIN JORIAN"
+                    },
+                    "Licence":{
+                        "0":1673757,
+                        "1":2153871,
+                        "2":1762370,
+                        "3":1221683,
+                        "4":1837186,
+                        "5":1508547,
+                        "6":2314954,
+                        "7":2102958,
+                        "8":2053483
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":8
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HUMBERT RIDET DYLAN"
-                    },
-                    "Licence":{
-                        "0":1762370
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1
                     },
@@ -899,6 +888,17 @@
                     "Licence":{
                         "0":1953954
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":8
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HUMBERT RIDET DYLAN"
+                    },
+                    "Licence":{
+                        "0":1762370
+                    }
                 }
             },
             "Officials":{
@@ -907,10 +907,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BRUNEL REMY"
+                        "0":"BARTUZEL WLADIMIR"
                     },
                     "Licence":{
-                        "0":1340244
+                        "0":1179483
                     }
                 },
                 "Team 2":{
@@ -918,10 +918,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"BARTUZEL WLADIMIR"
+                        "0":"BRUNEL REMY"
                     },
                     "Licence":{
-                        "0":1179483
+                        "0":1340244
                     }
                 }
             }

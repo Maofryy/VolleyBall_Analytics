@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA090",
             "match_day":"15",
             "city":"",
@@ -500,11 +500,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"GFCA VOLLEY-BALL",
-                "Team 2":"MARIGNANE VOLLEY-BALL"
+                "Team 1":"MARIGNANE VOLLEY-BALL",
+                "Team 2":"GFCA VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":5,
+                        "2":6,
+                        "3":11,
+                        "4":13,
+                        "5":14,
+                        "6":16,
+                        "7":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROTAR TEO",
+                        "1":"ROTAR TEODOR-DUMITRU",
+                        "2":"FABRETTI ERIC",
+                        "3":"MOTHE SEBASTIEN",
+                        "4":"MERMET SEBASTIEN",
+                        "5":"PERROT OLIVIER",
+                        "6":"MERMET FLORENT",
+                        "7":"DUMONT SYLVAIN"
+                    },
+                    "Licence":{
+                        "0":1970093,
+                        "1":2424923,
+                        "2":2214762,
+                        "3":1549335,
+                        "4":1114894,
+                        "5":2106366,
+                        "6":1166727,
+                        "7":1694494
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":4,
                         "1":5,
@@ -547,42 +579,21 @@
                         "10":2096193,
                         "11":1954156
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":5,
-                        "2":6,
-                        "3":11,
-                        "4":13,
-                        "5":14,
-                        "6":16,
-                        "7":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROTAR TEO",
-                        "1":"ROTAR TEODOR-DUMITRU",
-                        "2":"FABRETTI ERIC",
-                        "3":"MOTHE SEBASTIEN",
-                        "4":"MERMET SEBASTIEN",
-                        "5":"PERROT OLIVIER",
-                        "6":"MERMET FLORENT",
-                        "7":"DUMONT SYLVAIN"
-                    },
-                    "Licence":{
-                        "0":1970093,
-                        "1":2424923,
-                        "2":2214762,
-                        "3":1549335,
-                        "4":1114894,
-                        "5":2106366,
-                        "6":1166727,
-                        "7":1694494
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+
+                    },
+                    "Nom Pr\u00e9nom":{
+
+                    },
+                    "Licence":{
+
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":10
                     },
@@ -592,17 +603,6 @@
                     "Licence":{
                         "0":1446660
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-
-                    },
-                    "Nom Pr\u00e9nom":{
-
-                    },
-                    "Licence":{
-
-                    }
                 }
             },
             "Officials":{
@@ -611,10 +611,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"KRATCHKOVSKY NIKOLAI"
+                        "0":"ROTAR TEODOR-DUMITRU"
                     },
                     "Licence":{
-                        "0":2087219
+                        "0":2424923
                     }
                 },
                 "Team 2":{
@@ -622,10 +622,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ROTAR TEODOR-DUMITRU"
+                        "0":"KRATCHKOVSKY NIKOLAI"
                     },
                     "Licence":{
-                        "0":2424923
+                        "0":2087219
                     }
                 }
             }

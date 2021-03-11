@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA078",
@@ -597,46 +597,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"UGS LATTES BEAUX ARTS MONTPEL",
-                "Team 2":"ASS SPORTIVE DE MONACO"
+                "Team 1":"ASS SPORTIVE DE MONACO",
+                "Team 2":"UGS LATTES BEAUX ARTS MONTPEL"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":5,
-                        "4":8,
-                        "5":10,
-                        "6":14,
-                        "7":17,
-                        "8":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD TOSCANE",
-                        "1":"FRABOULET CAMILLE",
-                        "2":"GIRARD JUSTINE",
-                        "3":"REBICHON PAULINE",
-                        "4":"BAILLETTE LEONIE",
-                        "5":"SEIDENBINDER CLEMENTINE",
-                        "6":"CUFFEL ASTRID",
-                        "7":"BONNIN ANGELE",
-                        "8":"MAYOUD LEA"
-                    },
-                    "Licence":{
-                        "0":1917004,
-                        "1":1651186,
-                        "2":1812614,
-                        "3":1842858,
-                        "4":1882816,
-                        "5":1685882,
-                        "6":1941827,
-                        "7":1798402,
-                        "8":1593764
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -673,21 +638,45 @@
                         "8":1879131,
                         "9":1077178
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":5,
+                        "4":8,
+                        "5":10,
+                        "6":14,
+                        "7":17,
+                        "8":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ARNAUD TOSCANE",
+                        "1":"FRABOULET CAMILLE",
+                        "2":"GIRARD JUSTINE",
+                        "3":"REBICHON PAULINE",
+                        "4":"BAILLETTE LEONIE",
+                        "5":"SEIDENBINDER CLEMENTINE",
+                        "6":"CUFFEL ASTRID",
+                        "7":"BONNIN ANGELE",
+                        "8":"MAYOUD LEA"
+                    },
+                    "Licence":{
+                        "0":1917004,
+                        "1":1651186,
+                        "2":1812614,
+                        "3":1842858,
+                        "4":1882816,
+                        "5":1685882,
+                        "6":1941827,
+                        "7":1798402,
+                        "8":1593764
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CUFFEL ASTRID"
-                    },
-                    "Licence":{
-                        "0":1941827
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1
                     },
@@ -697,10 +686,32 @@
                     "Licence":{
                         "0":1777045
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CUFFEL ASTRID"
+                    },
+                    "Licence":{
+                        "0":1941827
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"HAMZAOUI EVA"
+                    },
+                    "Licence":{
+                        "0":1338367
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -712,17 +723,6 @@
                     "Licence":{
                         "0":2037324,
                         "1":206854
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"HAMZAOUI EVA"
-                    },
-                    "Licence":{
-                        "0":1338367
                     }
                 }
             }

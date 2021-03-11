@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB012",
             "match_day":"02",
             "city":"LYON",
@@ -628,11 +628,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASUL LYON VOLLEY BALL 2",
-                "Team 2":"CLUB ATHLETIQUE DE ST ETIENNE"
+                "Team 1":"CLUB ATHLETIQUE DE ST ETIENNE",
+                "Team 2":"ASUL LYON VOLLEY BALL 2"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":4,
+                        "4":6,
+                        "5":7,
+                        "6":8,
+                        "7":10,
+                        "8":11,
+                        "9":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PLANO ROMAIN",
+                        "1":"PONCET JULIEN",
+                        "2":"JOURNAL NICOLAS",
+                        "3":"PONCET REMI",
+                        "4":"PELTIER ROMEO",
+                        "5":"ZAIMIS PETROS",
+                        "6":"TERZIEV VALENTIN",
+                        "7":"LALAMI MEHDI",
+                        "8":"BARRELLON YOHANN",
+                        "9":"BERARD TIM"
+                    },
+                    "Licence":{
+                        "0":1420294,
+                        "1":1614899,
+                        "2":1108884,
+                        "3":1801585,
+                        "4":2048547,
+                        "5":2416024,
+                        "6":2138743,
+                        "7":1921691,
+                        "8":1699084,
+                        "9":1755081
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -672,59 +710,10 @@
                         "9":2127270,
                         "10":2417163
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":6,
-                        "5":7,
-                        "6":8,
-                        "7":10,
-                        "8":11,
-                        "9":12
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PLANO ROMAIN",
-                        "1":"PONCET JULIEN",
-                        "2":"JOURNAL NICOLAS",
-                        "3":"PONCET REMI",
-                        "4":"PELTIER ROMEO",
-                        "5":"ZAIMIS PETROS",
-                        "6":"TERZIEV VALENTIN",
-                        "7":"LALAMI MEHDI",
-                        "8":"BARRELLON YOHANN",
-                        "9":"BERARD TIM"
-                    },
-                    "Licence":{
-                        "0":1420294,
-                        "1":1614899,
-                        "2":1108884,
-                        "3":1801585,
-                        "4":2048547,
-                        "5":2416024,
-                        "6":2138743,
-                        "7":1921691,
-                        "8":1699084,
-                        "9":1755081
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":4
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BOYER ROMAIN"
-                    },
-                    "Licence":{
-                        "0":1863693
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":12
                     },
@@ -734,10 +723,32 @@
                     "Licence":{
                         "0":1755081
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":4
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BOYER ROMAIN"
+                    },
+                    "Licence":{
+                        "0":1863693
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"YOTOV YURIY"
+                    },
+                    "Licence":{
+                        "0":1426544
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -749,17 +760,6 @@
                     "Licence":{
                         "0":20800,
                         "1":2367669
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"YOTOV YURIY"
-                    },
-                    "Licence":{
-                        "0":1426544
                     }
                 }
             }

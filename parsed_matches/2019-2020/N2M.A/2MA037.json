@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA037",
@@ -539,11 +539,46 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"T.O.A.C. - T.U.C. VOLLEY-BALL",
-                "Team 2":"UGS ROYAN\/SAINTES OCEAN VB"
+                "Team 1":"UGS ROYAN\/SAINTES OCEAN VB",
+                "Team 2":"T.O.A.C. - T.U.C. VOLLEY-BALL"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":3,
+                        "3":5,
+                        "4":7,
+                        "5":8,
+                        "6":9,
+                        "7":14,
+                        "8":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BONNO WILSON",
+                        "1":"MICHENEAU DAVID",
+                        "2":"GAZEAU NICOLAS",
+                        "3":"CARLU CYRIL",
+                        "4":"MARREC JEROME",
+                        "5":"EN NAKHAI SALAH-EDDINE",
+                        "6":"ALLEIX LUCAS",
+                        "7":"NEGRIER MAXIME",
+                        "8":"ALLEIX GREGORY"
+                    },
+                    "Licence":{
+                        "0":2036117,
+                        "1":1860476,
+                        "2":1070207,
+                        "3":1800228,
+                        "4":1791071,
+                        "5":2410085,
+                        "6":1939047,
+                        "7":2001269,
+                        "8":1028725
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -586,56 +621,10 @@
                         "10":1845627,
                         "11":2088659
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":5,
-                        "4":7,
-                        "5":8,
-                        "6":9,
-                        "7":14,
-                        "8":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BONNO WILSON",
-                        "1":"MICHENEAU DAVID",
-                        "2":"GAZEAU NICOLAS",
-                        "3":"CARLU CYRIL",
-                        "4":"MARREC JEROME",
-                        "5":"EN NAKHAI SALAH-EDDINE",
-                        "6":"ALLEIX LUCAS",
-                        "7":"NEGRIER MAXIME",
-                        "8":"ALLEIX GREGORY"
-                    },
-                    "Licence":{
-                        "0":2036117,
-                        "1":1860476,
-                        "2":1070207,
-                        "3":1800228,
-                        "4":1791071,
-                        "5":2410085,
-                        "6":1939047,
-                        "7":2001269,
-                        "8":1028725
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":6
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PINEAU LOUIS"
-                    },
-                    "Licence":{
-                        "0":1803819
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":15
                     },
@@ -645,10 +634,35 @@
                     "Licence":{
                         "0":1028725
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":6
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PINEAU LOUIS"
+                    },
+                    "Licence":{
+                        "0":1803819
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"ROLAND PATRICK",
+                        "1":"ALLEIX GREGORY"
+                    },
+                    "Licence":{
+                        "0":430496,
+                        "1":1028725
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB",
@@ -666,20 +680,6 @@
                         "1":1829907,
                         "2":1914657,
                         "3":2056759
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"ROLAND PATRICK",
-                        "1":"ALLEIX GREGORY"
-                    },
-                    "Licence":{
-                        "0":430496,
-                        "1":1028725
                     }
                 }
             }

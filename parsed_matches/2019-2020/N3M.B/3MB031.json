@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MB ",
-            "div_name":"NATIONALE 3 MASCULINE POULE B",
-            "div_pool":"",
+            "div_code":"3MB",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule B",
             "match_number":"3MB031",
             "match_day":"06",
             "city":"MONTPELLIER",
@@ -577,11 +577,52 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"ASLJCROIX ARGENT MONTPELLIER",
-                "Team 2":"VOLLEY BALL DE GIGNAC"
+                "Team 1":"VOLLEY BALL DE GIGNAC",
+                "Team 2":"ASLJCROIX ARGENT MONTPELLIER"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":6,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":12,
+                        "6":13,
+                        "7":14,
+                        "8":15,
+                        "9":16,
+                        "10":17
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"KULIKOWSKI ROMAIN",
+                        "1":"ABRAHAM BRIAN",
+                        "2":"GUILLAUTON ALEXIS",
+                        "3":"LAURES ANTHONY",
+                        "4":"LAVERNHE TOM",
+                        "5":"QUIOT FLORENT",
+                        "6":"ARNAUD CLEMENT",
+                        "7":"BERNADOU VALENTIN",
+                        "8":"TORCHIN PAUL",
+                        "9":"LEFEBVRE THOMAS",
+                        "10":"DELTELL JORIS"
+                    },
+                    "Licence":{
+                        "0":1895618,
+                        "1":1766432,
+                        "2":1806788,
+                        "3":1645723,
+                        "4":1945219,
+                        "5":1845996,
+                        "6":1444556,
+                        "7":1806795,
+                        "8":2108694,
+                        "9":1746889,
+                        "10":1527140
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -624,62 +665,10 @@
                         "10":2034782,
                         "11":1546423
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":6,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":12,
-                        "6":13,
-                        "7":14,
-                        "8":15,
-                        "9":16,
-                        "10":17
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"KULIKOWSKI ROMAIN",
-                        "1":"ABRAHAM BRIAN",
-                        "2":"GUILLAUTON ALEXIS",
-                        "3":"LAURES ANTHONY",
-                        "4":"LAVERNHE TOM",
-                        "5":"QUIOT FLORENT",
-                        "6":"ARNAUD CLEMENT",
-                        "7":"BERNADOU VALENTIN",
-                        "8":"TORCHIN PAUL",
-                        "9":"LEFEBVRE THOMAS",
-                        "10":"DELTELL JORIS"
-                    },
-                    "Licence":{
-                        "0":1895618,
-                        "1":1766432,
-                        "2":1806788,
-                        "3":1645723,
-                        "4":1945219,
-                        "5":1845996,
-                        "6":1444556,
-                        "7":1806795,
-                        "8":2108694,
-                        "9":1746889,
-                        "10":1527140
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"WAINEBENGO JACQUES"
-                    },
-                    "Licence":{
-                        "0":1546423
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -692,6 +681,17 @@
                         "0":1845996,
                         "1":1806795
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"WAINEBENGO JACQUES"
+                    },
+                    "Licence":{
+                        "0":1546423
+                    }
                 }
             },
             "Officials":{
@@ -700,10 +700,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"QUIEVREUX THOMAS"
+                        "0":"ARNAUD CLEMENT"
                     },
                     "Licence":{
-                        "0":1121007
+                        "0":1444556
                     }
                 },
                 "Team 2":{
@@ -711,10 +711,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"ARNAUD CLEMENT"
+                        "0":"QUIEVREUX THOMAS"
                     },
                     "Licence":{
-                        "0":1444556
+                        "0":1121007
                     }
                 }
             }

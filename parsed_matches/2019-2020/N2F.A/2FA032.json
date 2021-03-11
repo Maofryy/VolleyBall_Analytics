@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2FA ",
+            "div_code":"2FA",
             "div_name":"NATIONALE 2 FEMININE",
             "div_pool":"POULE A",
             "match_number":"2FA032",
@@ -459,46 +459,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"AS.SP. V.B MAUGUIO",
-                "Team 2":"VOLLEY PRADETAN GARDEEN"
+                "Team 1":"VOLLEY PRADETAN GARDEEN",
+                "Team 2":"AS.SP. V.B MAUGUIO"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":4,
-                        "1":5,
-                        "2":6,
-                        "3":8,
-                        "4":10,
-                        "5":12,
-                        "6":15,
-                        "7":17,
-                        "8":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LONGUET LAURA",
-                        "1":"GOUX AURELIE",
-                        "2":"ROLLAND AGATHE",
-                        "3":"PASTOR CHARLOTTE",
-                        "4":"LUSSON OPHELIE",
-                        "5":"MISTRAL CAMILLE",
-                        "6":"RAKOTOVAO MAEVA",
-                        "7":"CHALAUX CLAUDIA",
-                        "8":"DREYER LAURA"
-                    },
-                    "Licence":{
-                        "0":1477180,
-                        "1":1444532,
-                        "2":1866824,
-                        "3":1369184,
-                        "4":1722150,
-                        "5":2040132,
-                        "6":1490815,
-                        "7":1726281,
-                        "8":1894181
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -535,21 +500,45 @@
                         "8":1672297,
                         "9":1802259
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":4,
+                        "1":5,
+                        "2":6,
+                        "3":8,
+                        "4":10,
+                        "5":12,
+                        "6":15,
+                        "7":17,
+                        "8":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LONGUET LAURA",
+                        "1":"GOUX AURELIE",
+                        "2":"ROLLAND AGATHE",
+                        "3":"PASTOR CHARLOTTE",
+                        "4":"LUSSON OPHELIE",
+                        "5":"MISTRAL CAMILLE",
+                        "6":"RAKOTOVAO MAEVA",
+                        "7":"CHALAUX CLAUDIA",
+                        "8":"DREYER LAURA"
+                    },
+                    "Licence":{
+                        "0":1477180,
+                        "1":1444532,
+                        "2":1866824,
+                        "3":1369184,
+                        "4":1722150,
+                        "5":2040132,
+                        "6":1490815,
+                        "7":1726281,
+                        "8":1894181
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":15
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RAKOTOVAO MAEVA"
-                    },
-                    "Licence":{
-                        "0":1490815
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":8
                     },
@@ -559,24 +548,21 @@
                     "Licence":{
                         "0":1835484
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":15
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RAKOTOVAO MAEVA"
+                    },
+                    "Licence":{
+                        "0":1490815
+                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA",
-                        "1":"EB"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"VILLERET YANN",
-                        "1":"KUCK WOLFGANG"
-                    },
-                    "Licence":{
-                        "0":1178959,
-                        "1":1567037
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -588,6 +574,20 @@
                     "Licence":{
                         "0":969514,
                         "1":2122403
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VILLERET YANN",
+                        "1":"KUCK WOLFGANG"
+                    },
+                    "Licence":{
+                        "0":1178959,
+                        "1":1567037
                     }
                 }
             }

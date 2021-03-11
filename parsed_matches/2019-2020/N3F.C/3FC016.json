@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3FC ",
-            "div_name":"NATIONALE 3 FEMININE POULE C",
-            "div_pool":"",
+            "div_code":"3FC",
+            "div_name":"NATIONALE 3 FEMININE",
+            "div_pool":"Poule C",
             "match_number":"3FC016",
             "match_day":"03",
             "city":"LE PONTET",
@@ -594,11 +594,43 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"U.S. PONTET VOLLEY AVENIR",
-                "Team 2":"AMICALE LAIQUE CHAMBERY V.B."
+                "Team 1":"AMICALE LAIQUE CHAMBERY V.B.",
+                "Team 2":"U.S. PONTET VOLLEY AVENIR"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":6,
+                        "1":7,
+                        "2":8,
+                        "3":9,
+                        "4":10,
+                        "5":11,
+                        "6":13,
+                        "7":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"TALLON-TALMANT LEIA",
+                        "1":"MERLET MANON",
+                        "2":"JOURDAN LULA",
+                        "3":"BOUSQUET KELLY",
+                        "4":"LARA ELISA",
+                        "5":"CORDEAU CELINE",
+                        "6":"PUGNOT SABRINA",
+                        "7":"MERTEN ANGELA"
+                    },
+                    "Licence":{
+                        "0":2249314,
+                        "1":1990339,
+                        "2":2151357,
+                        "3":2209719,
+                        "4":1895214,
+                        "5":1613832,
+                        "6":2038655,
+                        "7":2189495
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":2,
                         "1":3,
@@ -635,53 +667,10 @@
                         "8":1582797,
                         "9":1527756
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":6,
-                        "1":7,
-                        "2":8,
-                        "3":9,
-                        "4":10,
-                        "5":11,
-                        "6":13,
-                        "7":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"TALLON-TALMANT LEIA",
-                        "1":"MERLET MANON",
-                        "2":"JOURDAN LULA",
-                        "3":"BOUSQUET KELLY",
-                        "4":"LARA ELISA",
-                        "5":"CORDEAU CELINE",
-                        "6":"PUGNOT SABRINA",
-                        "7":"MERTEN ANGELA"
-                    },
-                    "Licence":{
-                        "0":2249314,
-                        "1":1990339,
-                        "2":2151357,
-                        "3":2209719,
-                        "4":1895214,
-                        "5":1613832,
-                        "6":2038655,
-                        "7":2189495
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"PENNEC ALICE"
-                    },
-                    "Licence":{
-                        "0":1582797
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":13
                     },
@@ -691,6 +680,17 @@
                     "Licence":{
                         "0":2038655
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"PENNEC ALICE"
+                    },
+                    "Licence":{
+                        "0":1582797
+                    }
                 }
             },
             "Officials":{
@@ -699,10 +699,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"STANICKI JONATHAN"
+                        "0":"MERTEN ANGELA"
                     },
                     "Licence":{
-                        "0":1507536
+                        "0":2189495
                     }
                 },
                 "Team 2":{
@@ -710,10 +710,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"MERTEN ANGELA"
+                        "0":"STANICKI JONATHAN"
                     },
                     "Licence":{
-                        "0":2189495
+                        "0":1507536
                     }
                 }
             }

@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MC ",
+            "div_code":"2MC",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE C",
             "match_number":"2MC042",
@@ -496,52 +496,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"REIMS METROPOLE VOLLEY",
-                "Team 2":"ACBB"
+                "Team 1":"ACBB",
+                "Team 2":"REIMS METROPOLE VOLLEY"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":2,
-                        "1":3,
-                        "2":7,
-                        "3":8,
-                        "4":9,
-                        "5":10,
-                        "6":12,
-                        "7":14,
-                        "8":15,
-                        "9":19,
-                        "10":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"TERRIERE L\u00c9O",
-                        "1":"TRIQUENEAUX MATHIEU",
-                        "2":"BRUNEAU MARTIN",
-                        "3":"LERAY YOHANN",
-                        "4":"GAYOL ROMAIN",
-                        "5":"BROCHOT NICOLAS",
-                        "6":"HOUDET NICOLAS",
-                        "7":"RANDRIANAINA AMBROISE",
-                        "8":"DARIVON GREGORY",
-                        "9":"BLANC MATHIAS",
-                        "10":"SOUALEM BILLEL"
-                    },
-                    "Licence":{
-                        "0":1880102,
-                        "1":1595455,
-                        "2":1654991,
-                        "3":2051262,
-                        "4":1416427,
-                        "5":1615868,
-                        "6":1890075,
-                        "7":2304945,
-                        "8":1798527,
-                        "9":1875091,
-                        "10":2408684
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -584,10 +543,62 @@
                         "10":1380826,
                         "11":1754830
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":7,
+                        "3":8,
+                        "4":9,
+                        "5":10,
+                        "6":12,
+                        "7":14,
+                        "8":15,
+                        "9":19,
+                        "10":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"TERRIERE L\u00c9O",
+                        "1":"TRIQUENEAUX MATHIEU",
+                        "2":"BRUNEAU MARTIN",
+                        "3":"LERAY YOHANN",
+                        "4":"GAYOL ROMAIN",
+                        "5":"BROCHOT NICOLAS",
+                        "6":"HOUDET NICOLAS",
+                        "7":"RANDRIANAINA AMBROISE",
+                        "8":"DARIVON GREGORY",
+                        "9":"BLANC MATHIAS",
+                        "10":"SOUALEM BILLEL"
+                    },
+                    "Licence":{
+                        "0":1880102,
+                        "1":1595455,
+                        "2":1654991,
+                        "3":2051262,
+                        "4":1416427,
+                        "5":1615868,
+                        "6":1890075,
+                        "7":2304945,
+                        "8":1798527,
+                        "9":1875091,
+                        "10":2408684
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CECCALDI ENZO"
+                    },
+                    "Licence":{
+                        "0":1863936
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":14
@@ -600,21 +611,21 @@
                         "0":1890075,
                         "1":2304945
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CECCALDI ENZO"
-                    },
-                    "Licence":{
-                        "0":1863936
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FOCARD BAPTISTE"
+                    },
+                    "Licence":{
+                        "0":2116904
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -626,17 +637,6 @@
                     "Licence":{
                         "0":1072931,
                         "1":1887435
-                    }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FOCARD BAPTISTE"
-                    },
-                    "Licence":{
-                        "0":2116904
                     }
                 }
             }

@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MD ",
-            "div_name":"NATIONALE 3 MASCULINE POULE D",
-            "div_pool":"",
+            "div_code":"3MD",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule D",
             "match_number":"3MD038",
             "match_day":"07",
             "city":"SAINT-QUAY-PORTRIEUX",
@@ -509,46 +509,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"GOELO COTES D'ARMOR VOLLEY-BA",
-                "Team 2":"RENNES ETUDIANTS CLUB"
+                "Team 1":"RENNES ETUDIANTS CLUB",
+                "Team 2":"GOELO COTES D'ARMOR VOLLEY-BA"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":2,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":8,
-                        "6":10,
-                        "7":13,
-                        "8":14
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"LETERTRE AXEL",
-                        "1":"PAUTRIC MORIN EWENN",
-                        "2":"MONFORT L\u00c9RY",
-                        "3":"ROBERT GILDWIN",
-                        "4":"DUFRESNE BAPTISTE",
-                        "5":"JACOB FRANCOIS",
-                        "6":"CHARTIER NICOLAS",
-                        "7":"COUDRON TRISTAN",
-                        "8":"PICHON BASTIEN"
-                    },
-                    "Licence":{
-                        "0":1972598,
-                        "1":1797121,
-                        "2":2093018,
-                        "3":2038487,
-                        "4":2013324,
-                        "5":1827672,
-                        "6":2029554,
-                        "7":2038482,
-                        "8":1894323
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -582,21 +547,45 @@
                         "7":2063748,
                         "8":1807080
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":2,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":8,
+                        "6":10,
+                        "7":13,
+                        "8":14
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"LETERTRE AXEL",
+                        "1":"PAUTRIC MORIN EWENN",
+                        "2":"MONFORT L\u00c9RY",
+                        "3":"ROBERT GILDWIN",
+                        "4":"DUFRESNE BAPTISTE",
+                        "5":"JACOB FRANCOIS",
+                        "6":"CHARTIER NICOLAS",
+                        "7":"COUDRON TRISTAN",
+                        "8":"PICHON BASTIEN"
+                    },
+                    "Licence":{
+                        "0":1972598,
+                        "1":1797121,
+                        "2":2093018,
+                        "3":2038487,
+                        "4":2013324,
+                        "5":1827672,
+                        "6":2029554,
+                        "7":2038482,
+                        "8":1894323
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":13
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"COUDRON TRISTAN"
-                    },
-                    "Licence":{
-                        "0":2038482
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":18
                     },
@@ -606,6 +595,17 @@
                     "Licence":{
                         "0":1807080
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":13
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"COUDRON TRISTAN"
+                    },
+                    "Licence":{
+                        "0":2038482
+                    }
                 }
             },
             "Officials":{
@@ -614,10 +614,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"CAUDAL KEVIN"
+                        "0":"HALLE ERIC"
                     },
                     "Licence":{
-                        "0":1612830
+                        "0":1846956
                     }
                 },
                 "Team 2":{
@@ -625,10 +625,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"HALLE ERIC"
+                        "0":"CAUDAL KEVIN"
                     },
                     "Licence":{
-                        "0":1846956
+                        "0":1612830
                     }
                 }
             }

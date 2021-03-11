@@ -1,7 +1,7 @@
 {
     "Match":{
         "Title":{
-            "div_code":"2MA ",
+            "div_code":"2MA",
             "div_name":"NATIONALE 2 MASCULINE",
             "div_pool":"POULE A",
             "match_number":"2MA058",
@@ -521,11 +521,49 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"NARBONNE VOLLEY 2 CFC",
-                "Team 2":"ARAGO DE SETE VOLLEY-BALL 2 CF"
+                "Team 1":"ARAGO DE SETE VOLLEY-BALL 2 CF",
+                "Team 2":"NARBONNE VOLLEY 2 CFC"
             },
             "Players":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":7,
+                        "5":10,
+                        "6":11,
+                        "7":12,
+                        "8":18,
+                        "9":20
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"FOUILLADE HUGO",
+                        "1":"CARRENO ANTOINE",
+                        "2":"SOCRIER LENNY",
+                        "3":"DIOP CHEIKH-AHMADOU-BAMBA",
+                        "4":"COURNEDE LUCAS",
+                        "5":"PICARD TOM",
+                        "6":"VIERA JOSE",
+                        "7":"GOUESSANT BRENDAN",
+                        "8":"COURDAVAULT MATHIS",
+                        "9":"LALISSE REMY"
+                    },
+                    "Licence":{
+                        "0":1827516,
+                        "1":1820983,
+                        "2":2228554,
+                        "3":2006043,
+                        "4":1771831,
+                        "5":2301422,
+                        "6":1864303,
+                        "7":1853961,
+                        "8":1952334,
+                        "9":1847276
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":1,
                         "1":2,
@@ -565,48 +603,21 @@
                         "9":1804548,
                         "10":2041245
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":7,
-                        "5":10,
-                        "6":11,
-                        "7":12,
-                        "8":18,
-                        "9":20
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"FOUILLADE HUGO",
-                        "1":"CARRENO ANTOINE",
-                        "2":"SOCRIER LENNY",
-                        "3":"DIOP CHEIKH-AHMADOU-BAMBA",
-                        "4":"COURNEDE LUCAS",
-                        "5":"PICARD TOM",
-                        "6":"VIERA JOSE",
-                        "7":"GOUESSANT BRENDAN",
-                        "8":"COURDAVAULT MATHIS",
-                        "9":"LALISSE REMY"
-                    },
-                    "Licence":{
-                        "0":1827516,
-                        "1":1820983,
-                        "2":2228554,
-                        "3":2006043,
-                        "4":1771831,
-                        "5":2301422,
-                        "6":1864303,
-                        "7":1853961,
-                        "8":1952334,
-                        "9":1847276
-                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
+                    "N\u00b0":{
+                        "0":3
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"CARRENO ANTOINE"
+                    },
+                    "Licence":{
+                        "0":1820983
+                    }
+                },
+                "Team 2":{
                     "N\u00b0":{
                         "0":12,
                         "1":13
@@ -619,32 +630,10 @@
                         "0":1804548,
                         "1":2041245
                     }
-                },
-                "Team 2":{
-                    "N\u00b0":{
-                        "0":3
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"CARRENO ANTOINE"
-                    },
-                    "Licence":{
-                        "0":1820983
-                    }
                 }
             },
             "Officials":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":"EA"
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"MARTIN TRISTAN"
-                    },
-                    "Licence":{
-                        "0":257113
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":"EA",
                         "1":"EB"
@@ -656,6 +645,17 @@
                     "Licence":{
                         "0":1076454,
                         "1":1526972
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MARTIN TRISTAN"
+                    },
+                    "Licence":{
+                        "0":257113
                     }
                 }
             }

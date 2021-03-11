@@ -1,9 +1,9 @@
 {
     "Match":{
         "Title":{
-            "div_code":"3MA ",
-            "div_name":"NATIONALE 3 MASCULINE POULE A",
-            "div_pool":"",
+            "div_code":"3MA",
+            "div_name":"NATIONALE 3 MASCULINE",
+            "div_pool":"Poule A",
             "match_number":"3MA012",
             "match_day":"02",
             "city":"MOUGINS",
@@ -707,46 +707,11 @@
         },
         "Teams":{
             "Name":{
-                "Team 1":"MUNICIPAL OLYMPIQUE MOUGINS",
-                "Team 2":"GFCA VOLLEY-BALL"
+                "Team 1":"GFCA VOLLEY-BALL",
+                "Team 2":"MUNICIPAL OLYMPIQUE MOUGINS"
             },
             "Players":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":1,
-                        "1":3,
-                        "2":4,
-                        "3":6,
-                        "4":9,
-                        "5":12,
-                        "6":13,
-                        "7":15,
-                        "8":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"RICHAND ROMAIN",
-                        "1":"CICOREA VINCENT",
-                        "2":"HARDY QUENTIN",
-                        "3":"BIANCONE THIBAULT",
-                        "4":"STOCKE ARTHUR",
-                        "5":"CHARBONNEL ADRIEN",
-                        "6":"PASTORELLO ALEXANDRE",
-                        "7":"PACE MATTHIEU",
-                        "8":"BLANC ENZO"
-                    },
-                    "Licence":{
-                        "0":1953966,
-                        "1":1846300,
-                        "2":1990408,
-                        "3":2033549,
-                        "4":2039401,
-                        "5":2093277,
-                        "6":0,
-                        "7":2241180,
-                        "8":2051575
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":3,
                         "1":5,
@@ -786,21 +751,45 @@
                         "9":2201559,
                         "10":2096193
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":3,
+                        "2":4,
+                        "3":6,
+                        "4":9,
+                        "5":12,
+                        "6":13,
+                        "7":15,
+                        "8":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"RICHAND ROMAIN",
+                        "1":"CICOREA VINCENT",
+                        "2":"HARDY QUENTIN",
+                        "3":"BIANCONE THIBAULT",
+                        "4":"STOCKE ARTHUR",
+                        "5":"CHARBONNEL ADRIEN",
+                        "6":"PASTORELLO ALEXANDRE",
+                        "7":"PACE MATTHIEU",
+                        "8":"BLANC ENZO"
+                    },
+                    "Licence":{
+                        "0":1953966,
+                        "1":1846300,
+                        "2":1990408,
+                        "3":2033549,
+                        "4":2039401,
+                        "5":2093277,
+                        "6":0,
+                        "7":2241180,
+                        "8":2051575
+                    }
                 }
             },
             "Liberos":{
                 "Team 1":{
-                    "N\u00b0":{
-                        "0":18
-                    },
-                    "Nom Pr\u00e9nom":{
-                        "0":"BLANC ENZO"
-                    },
-                    "Licence":{
-                        "0":2051575
-                    }
-                },
-                "Team 2":{
                     "N\u00b0":{
                         "0":10
                     },
@@ -810,6 +799,17 @@
                     "Licence":{
                         "0":1446660
                     }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":18
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BLANC ENZO"
+                    },
+                    "Licence":{
+                        "0":2051575
+                    }
                 }
             },
             "Officials":{
@@ -818,10 +818,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"HARDY QUENTIN"
+                        "0":"KRATCHKOVSKY NIKOLAI"
                     },
                     "Licence":{
-                        "0":1990408
+                        "0":2087219
                     }
                 },
                 "Team 2":{
@@ -829,10 +829,10 @@
                         "0":"EA"
                     },
                     "Nom Pr\u00e9nom":{
-                        "0":"KRATCHKOVSKY NIKOLAI"
+                        "0":"HARDY QUENTIN"
                     },
                     "Licence":{
-                        "0":2087219
+                        "0":1990408
                     }
                 }
             }
