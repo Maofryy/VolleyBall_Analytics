@@ -1,4 +1,3 @@
-<?php phpinfo();?>
 Bienvenue Mao sur la vm : <b>Volleyball Analytics.</b>
 <br>
 Lancer le refresh des données : <a href="/initDatabase.php"> Refresh</a>

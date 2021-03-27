@@ -255,6 +255,19 @@ CREATE TABLE `team_player` (
 ) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+CREATE TABLE `sport_analytics`.`match_set_rotation` (`match_id` int(11) NOT NULL,`set` int(11) NOT NULL,`point` int(11) NOT NULL,`team_id` int(11) NOT NULL);
+CREATE TABLE `sport_analytics`.`match_set_details` (`match_id` int(11) NOT NULL,`set` int(11) NOT NULL,`date_start` datetime NOT NULL,`date_end` datetime NOT NULL);
+CREATE TABLE `sport_analytics`.`match_other_player` (`match_id` int(11) NOT NULL,`licence` int(11) NOT NULL,`function_id` varchar(45) NOT NULL);
+use sport_analytics;
+
+GRANT ALL PRIVILEGES ON 
+sport_analytics.* 
+TO 
+root@192.168.33.1 
+IDENTIFIED BY 
+'root';
+
+FLUSH PRIVILEGES;
 --
 -- Dumping routines for database 'sport_analytics'
 --

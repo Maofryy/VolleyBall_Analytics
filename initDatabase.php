@@ -426,6 +426,7 @@ function addMatch($json, $file, &$errors_match) {
 				$referentiel['players'][$$referees['Licence'][$function]] = $$referees['Licence'][$function];
 			}
 		}
+		
 
 		// match_other_player Liberos
 		for ($i = 1; $i < 3; $i++) {
