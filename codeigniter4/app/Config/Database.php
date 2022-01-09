@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => '',
+        'database' => 'sport_analytics',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

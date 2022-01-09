@@ -120,3 +120,201 @@ CRITICAL - 2022-01-09 12:01:02 --> syntax error, unexpected variable "$sql"
 #3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-01-09 12:59:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 12:59:54 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-01-09 13:00:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'match' at line 1
+CRITICAL - 2022-01-09 13:00:58 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-01-09 13:03:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'match' at line 1
+CRITICAL - 2022-01-09 13:03:15 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-01-09 13:04:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'match' at line 1
+CRITICAL - 2022-01-09 13:04:23 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 13:06:16 --> Undefined variable $datas
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\players.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(19): view('players', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-09 13:06:21 --> Undefined variable $players
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\players.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(19): view('players', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-09 13:07:09 --> Undefined variable $players
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\players.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(19): view('players', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-09 13:11:57 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(19): view('players', Array)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 13:12:10 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(19): view('players', Array)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 14:51:05 --> Cannot call constructor
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(802): App\Controllers\Players->__construct()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 14:51:12 --> Cannot call constructor
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(802): App\Controllers\Players->__construct()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 14:51:13 --> Cannot call constructor
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(802): App\Controllers\Players->__construct()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 14:51:13 --> Cannot call constructor
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(802): App\Controllers\Players->__construct()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(403): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-09 14:53:44 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Matc...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Matc...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-09 14:54:25 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Matc...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Matc...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-09 14:54:26 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Matc...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Matc...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-09 14:55:03 --> Class "App\Models\Model" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(264): include_once()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Play...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Play...')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 14:55:05 --> Class "App\Models\Model" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(264): include_once()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Play...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Play...')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 14:55:21 --> Class "App\Models\Model" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(264): include_once()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Play...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Play...')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 14:55:22 --> Class "App\Models\Model" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(264): include_once()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Play...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Play...')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 15:10:43 --> Class "App\Models\Model" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(264): include_once()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Play...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Play...')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-09 15:35:25 --> foreach() argument must be of type array|object, null given
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\players.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\xampp\\htdocs...', 27)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('players', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(20): view('players', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

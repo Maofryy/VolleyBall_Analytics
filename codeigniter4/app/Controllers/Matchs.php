@@ -7,10 +7,9 @@ class Matchs extends BaseController
     public function index()
     {
         try {
-            $this->load->database();
-            $sql = $this->database->query('SELECT * FROM ligue');
-            $matchs = $sql->result();
-            var_dump('allo ?');die;
+            $db = \Config\Database::connect();
+            $sql = $db->query('SELECT * FROM match');
+            $matchs = $sql->getResult();
         } catch (\Exception $e) {
             die($e->getMessage());
         }
