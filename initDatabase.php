@@ -6,12 +6,13 @@ error_reporting(E_ALL);
 // Connexion to database
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 
 try {
   	$database = new PDO("mysql:host=$servername;dbname=sport_analytics", $username, $password);
   	// set the PDO error mode to exception
   	$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	 
 } catch(PDOException $e) {
   	echo "Connection failed: " . $e->getMessage();
 }
@@ -105,7 +106,8 @@ function addMatch($json, $file, &$errors_match) {
 		$teamBName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 2']));
 
 		$inversed = (trim($sets['Teams']['Set 1']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 22)));
-		$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 19)));
+		//$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 19)));
+		$inversed5 = false; // ON DEBUGERA PLUS TARD J AI OUBLIE CE QUE C ETAIS
 
 		if ($file == 'COF002.json') {
 			//var_dump($inversed);die;
