@@ -1,0 +1,140 @@
+CRITICAL - 2022-01-10 12:05:40 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:06:01 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:06:14 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:06:19 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:06:20 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:07:01 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Match')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Match')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 12:08:07 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Matc...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Matc...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-10 12:08:12 --> syntax error, unexpected token "match", expecting identifier
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Matc...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Matc...')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-10 12:08:32 --> Class "App\Models\Matchs" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-10 12:08:47 --> Undefined variable $players
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\matchs.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('matchs', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(19): view('matchs', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-10 12:09:12 --> Undefined property: stdClass::$first_name
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\matchs.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('matchs', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(19): view('matchs', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-01-10 16:41:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.name as team1name,
+            t2.name as team2name
+        FROM
+        ...' at line 6
+CRITICAL - 2022-01-10 16:41:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(14): App\Models\Matchs->getMatchsList()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 16:41:47 --> Undefined property: stdClass::$date_match
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\matchs.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('matchs', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(19): view('matchs', Array)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-01-10 16:44:06 --> syntax error, unexpected token "}", expecting ";" or "{"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('matchs')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('matchs')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 16:48:10 --> Undefined variable $id
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->index()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 16:51:25 --> Undefined variable $match
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->detail('1')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-10 16:52:01 --> Invalid file: match.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('match.php')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('match', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Matchs.php(34): view('match', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Matchs->detail('2FA001')
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Matchs))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

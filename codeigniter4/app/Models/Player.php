@@ -38,4 +38,21 @@ class Player extends Model
         ');
         return $sql->getResult();
     }
+
+    public function getPlayersFromTeam($team_id)
+    {
+        $sql = $this->db->query('
+        SELECT
+            licence,
+            first_name,
+            last_name,
+            tp.number
+        FROM
+            `player` AS p
+        LEFT JOIN team_player tp ON
+            p.licence = tp.player_id
+       WHERE team_id = ?;
+        ', [$team_id]);
+        return $sql->getResult();
+    }
 }

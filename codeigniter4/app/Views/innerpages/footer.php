@@ -49,8 +49,7 @@
     <!--<script src="../../template/vendor/jquery-easing/jquery.easing.min.js"></script>-->
 
     <!-- Custom scripts for all pages-->
-    <script src="../../template/js/sb-admin-2.min.js"></script>
-
+    <script src="<?= substr(base_url(),0 ,-12) . "template/js/sb-admin-2.min.js"?>"></script>
 </body>
 
 </html>

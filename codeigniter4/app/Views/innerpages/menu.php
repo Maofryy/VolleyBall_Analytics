@@ -31,7 +31,7 @@
 
    <!-- Nav Item - Tables -->
    <li class="nav-item">
-        <a class="nav-link" href="match">
+        <a class="nav-link" href="matchs">
         <i class="fas fa-volleyball-ball"></i>
             <span>Matchs</span></a>
     </li>
