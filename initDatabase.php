@@ -70,6 +70,7 @@ foreach($dir1 as $dir) {
 	foreach($folders as $folder) {
 		$files = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder), 2);
 		foreach($files as $file) {
+			if($file != 'PMAA010.json') continue;
 			if (is_dir('parsed_matches/'. $dir . '/' . $folder . '/' . $file)) {
 				$files2 = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder . '/' . $file), 2);
 				foreach ($files2 as $file2) {
@@ -204,6 +205,19 @@ function addMatch($json, $file, &$errors_match) {
 		}
 		$seasonId = $referentiel['season'][$season];
 		
+		// match
+		$title['city'] = str_replace("'", "''", $title['city']);
+		$title['city'] = str_replace("\\", "", $title['city']);
+		$title['gym'] = str_replace("'", "''", $title['gym']);
+		$sql = sprintf("INSERT INTO sport_analytics.`match`
+		(team_home_id, team_out_id, div_code, div_pool, match_number, match_day, city, gym, category, ligue, winner_team_id, score, date_match, created_at)
+		VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s', %s);
+		", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $referentiel['team'][$results['winner']], $results['score'], $title['date'], 'NOW()');
+		$stmt = $database->prepare($sql);
+		$stmt->execute();
+		$referentiel['match'][$title['match_number']] = $database->lastInsertId();
+		$matchId = $referentiel['match'][$title['match_number']];
+
 		// player
 		foreach ($players as $licence => $player) {
 			if (isset($referentiel['player'][$licence])) {
@@ -223,24 +237,11 @@ function addMatch($json, $file, &$errors_match) {
 			$referentiel['player'][$licence] = $licence;
 			
 			// team_players
-			$sql = sprintf("INSERT INTO sport_analytics.team_player (team_id, player_id, season_id, `number`)
-			VALUES('%s', '%s', '%s', '%s');", $referentiel['team'][$player['team']], $licence, $seasonId, $player['number']);
+			$sql = sprintf("INSERT INTO sport_analytics.team_player (match_id, team_id, player_id, season_id, `number`)
+			VALUES('%s', '%s', '%s', '%s', '%s');", $matchId, $referentiel['team'][$player['team']], $licence, $seasonId, $player['number']);
 			$stmt = $database->prepare($sql);
-			$stmt->execute();
+			$stmt->execute();		
 		}
-
-		// match
-		$title['city'] = str_replace("'", "''", $title['city']);
-		$title['city'] = str_replace("\\", "", $title['city']);
-		$title['gym'] = str_replace("'", "''", $title['gym']);
-		$sql = sprintf("INSERT INTO sport_analytics.`match`
-		(team_home_id, team_out_id, div_code, div_pool, match_number, match_day, city, gym, category, ligue, date_match, created_at)
-		VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s', %s);
-		", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $title['date'], 'NOW()');
-		$stmt = $database->prepare($sql);
-		$stmt->execute();
-		$referentiel['match'][$title['match_number']] = $database->lastInsertId();
-		$matchId = $referentiel['match'][$title['match_number']];
 
 		// match_set_timeout
 		for ($i = 1; $i < 3; $i++) {
@@ -466,8 +467,8 @@ function addMatch($json, $file, &$errors_match) {
 					$referentiel['player'][$licence] = $licence;
 
 					// team_players
-					$sql = sprintf("INSERT INTO sport_analytics.team_player (team_id, player_id, season_id, function_id)
-					VALUES('%s', '%s', '%s', '%s');", $teamNId, $licence, $seasonId, $function);
+					$sql = sprintf("INSERT INTO sport_analytics.team_player (match_id, team_id, player_id, season_id, function_id)
+					VALUES('%s', '%s', '%s', '%s', '%s');", $matchId, $teamNId, $licence, $seasonId, $function);
 					$stmt = $database->prepare($sql);
 					$stmt->execute();
 				} else {
