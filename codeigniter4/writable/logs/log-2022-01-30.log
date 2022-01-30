@@ -1,0 +1,27 @@
+CRITICAL - 2022-01-30 07:24:50 --> syntax error, unexpected token "<"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('test', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Test.php(18): view('test', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Test->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-30 07:40:32 --> Unmatched ')'
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('test/test', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Test.php(18): view('test/test', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Test->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-30 11:53:24 --> Invalid file: register.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('register', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(14): view('register')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->register()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

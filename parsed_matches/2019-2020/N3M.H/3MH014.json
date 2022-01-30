@@ -1,0 +1,635 @@
+{
+    "Match":{
+        "Title":{
+            "div_code":"3MH ",
+            "div_name":"NATIONALE 3 MASCULINE POULE H",
+            "div_pool":"",
+            "match_number":"3MH014",
+            "match_day":"03",
+            "city":"BESAN\u00c7ON",
+            "gym":"MALCOMBE",
+            "category":"SENIOR | MASCULIN",
+            "ligue":"Comp\u00e9titions Nationales SENIORS",
+            "date":"2019-10-27 14:00:00",
+            "team_1":"BESANCON VOLLEY-BALL",
+            "team_2":"MDPA RUELISHEIM"
+        },
+        "Sets":{
+            "Teams":{
+                "Set 1":{
+                    "Name":{
+                        "Team 1":"BESANCON VOLLEY-BALL",
+                        "Team 2":"MDPA RUELISHEIM"
+                    },
+                    "Starting":{
+                        "Team 1":"Service",
+                        "Team 2":"Reception"
+                    }
+                },
+                "Set 2":{
+                    "Name":{
+                        "Team 1":"BESANCON VOLLEY-BALL",
+                        "Team 2":"MDPA RUELISHEIM"
+                    },
+                    "Starting":{
+                        "Team 1":"Reception",
+                        "Team 2":"Service"
+                    }
+                },
+                "Set 3":{
+                    "Name":{
+                        "Team 1":"BESANCON VOLLEY-BALL",
+                        "Team 2":"MDPA RUELISHEIM"
+                    },
+                    "Starting":{
+                        "Team 1":"Service",
+                        "Team 2":"Reception"
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Time":{
+                "Set 1":{
+                    "Time":{
+                        "Start":"2019-10-27 13:59:00",
+                        "End":"2019-10-27 14:21:00"
+                    }
+                },
+                "Set 2":{
+                    "Time":{
+                        "Start":"2019-10-27 14:25:00",
+                        "End":"2019-10-27 14:50:00"
+                    }
+                },
+                "Set 3":{
+                    "Time":{
+                        "Start":"2019-10-27 14:53:00",
+                        "End":"2019-10-27 15:20:00"
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Substitutions 1":{
+                "Set 1":{
+                    "I":{
+                        "0":18
+                    },
+                    "II":{
+                        "0":13
+                    },
+                    "III":{
+                        "0":5
+                    },
+                    "IV":{
+                        "0":7
+                    },
+                    "V":{
+                        "0":14
+                    },
+                    "VI":{
+                        "0":4
+                    }
+                },
+                "Set 2":{
+                    "I":{
+                        "0":"4",
+                        "1":"11",
+                        "2":"15:11"
+                    },
+                    "II":{
+                        "0":"18",
+                        "1":"9",
+                        "2":"10:8"
+                    },
+                    "III":{
+                        "0":1.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "IV":{
+                        "0":5.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "V":{
+                        "0":12.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":14.0,
+                        "1":null,
+                        "2":null
+                    }
+                },
+                "Set 3":{
+                    "I":{
+                        "0":"18",
+                        "1":"9",
+                        "2":"22:17"
+                    },
+                    "II":{
+                        "0":7.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "III":{
+                        "0":5.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "IV":{
+                        "0":13.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "V":{
+                        "0":14.0,
+                        "1":null,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":11.0,
+                        "1":null,
+                        "2":null
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Substitutions 2":{
+                "Set 1":{
+                    "I":{
+                        "0":9
+                    },
+                    "II":{
+                        "0":3
+                    },
+                    "III":{
+                        "0":11
+                    },
+                    "IV":{
+                        "0":2
+                    },
+                    "V":{
+                        "0":4
+                    },
+                    "VI":{
+                        "0":10
+                    }
+                },
+                "Set 2":{
+                    "I":{
+                        "0":3
+                    },
+                    "II":{
+                        "0":11
+                    },
+                    "III":{
+                        "0":2
+                    },
+                    "IV":{
+                        "0":4
+                    },
+                    "V":{
+                        "0":10
+                    },
+                    "VI":{
+                        "0":9
+                    }
+                },
+                "Set 3":{
+                    "I":{
+                        "0":9
+                    },
+                    "II":{
+                        "0":3
+                    },
+                    "III":{
+                        "0":2
+                    },
+                    "IV":{
+                        "0":11
+                    },
+                    "V":{
+                        "0":4
+                    },
+                    "VI":{
+                        "0":10
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Serves 1":{
+                "Set 1":{
+                    "I":{
+                        "0":"1",
+                        "1":14,
+                        "2":25
+                    },
+                    "II":{
+                        "0":"3",
+                        "1":15.0,
+                        "2":null
+                    },
+                    "III":{
+                        "0":"4",
+                        "1":16.0,
+                        "2":null
+                    },
+                    "IV":{
+                        "0":"6",
+                        "1":20.0,
+                        "2":null
+                    },
+                    "V":{
+                        "0":"11",
+                        "1":22.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"12",
+                        "1":23.0,
+                        "2":null
+                    }
+                },
+                "Set 2":{
+                    "I":{
+                        "0":null,
+                        "1":11.0,
+                        "2":20.0
+                    },
+                    "II":{
+                        "0":"1",
+                        "1":12,
+                        "2":23
+                    },
+                    "III":{
+                        "0":"7",
+                        "1":14,
+                        "2":24
+                    },
+                    "IV":{
+                        "0":"8",
+                        "1":16,
+                        "2":25
+                    },
+                    "V":{
+                        "0":"9",
+                        "1":17.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"10",
+                        "1":18.0,
+                        "2":null
+                    }
+                },
+                "Set 3":{
+                    "I":{
+                        "0":"0",
+                        "1":9,
+                        "2":22
+                    },
+                    "II":{
+                        "0":"1",
+                        "1":10,
+                        "2":24
+                    },
+                    "III":{
+                        "0":"4",
+                        "1":11,
+                        "2":25
+                    },
+                    "IV":{
+                        "0":"5",
+                        "1":13.0,
+                        "2":null
+                    },
+                    "V":{
+                        "0":"7",
+                        "1":14.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"8",
+                        "1":15.0,
+                        "2":null
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Serves 2":{
+                "Set 1":{
+                    "I":{
+                        "0":null,
+                        "1":7.0,
+                        "2":15.0
+                    },
+                    "II":{
+                        "0":"1",
+                        "1":10.0,
+                        "2":null
+                    },
+                    "III":{
+                        "0":"2",
+                        "1":11.0,
+                        "2":null
+                    },
+                    "IV":{
+                        "0":"3",
+                        "1":12.0,
+                        "2":null
+                    },
+                    "V":{
+                        "0":"4",
+                        "1":13.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"6",
+                        "1":14.0,
+                        "2":null
+                    }
+                },
+                "Set 2":{
+                    "I":{
+                        "0":"0",
+                        "1":9,
+                        "2":18
+                    },
+                    "II":{
+                        "0":"1",
+                        "1":10,
+                        "2":19
+                    },
+                    "III":{
+                        "0":"4",
+                        "1":11,
+                        "2":20
+                    },
+                    "IV":{
+                        "0":"5",
+                        "1":12.0,
+                        "2":null
+                    },
+                    "V":{
+                        "0":"6",
+                        "1":13.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"8",
+                        "1":16.0,
+                        "2":null
+                    }
+                },
+                "Set 3":{
+                    "I":{
+                        "0":null,
+                        "1":6.0,
+                        "2":16.0
+                    },
+                    "II":{
+                        "0":"1",
+                        "1":10,
+                        "2":20
+                    },
+                    "III":{
+                        "0":"2",
+                        "1":11,
+                        "2":22
+                    },
+                    "IV":{
+                        "0":"3",
+                        "1":12.0,
+                        "2":null
+                    },
+                    "V":{
+                        "0":"4",
+                        "1":13.0,
+                        "2":null
+                    },
+                    "VI":{
+                        "0":"5",
+                        "1":14.0,
+                        "2":null
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Timeouts 1":{
+                "Set 1":{
+                    "T":{
+                        "0":"14:10"
+                    }
+                },
+                "Set 2":{
+                    "T":{
+                        "0":"18:16"
+                    }
+                },
+                "Set 3":{
+                    "T":{
+                        "0":"9:10",
+                        "1":"22:19"
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            },
+            "Timeouts 2":{
+                "Set 1":{
+                    "T":{
+                        "0":"4:11",
+                        "1":"12:20"
+                    }
+                },
+                "Set 2":{
+                    "T":{
+                        "0":"1:5",
+                        "1":"16:20"
+                    }
+                },
+                "Set 3":{
+                    "T":{
+                        "0":"16:20",
+                        "1":"16:22"
+                    }
+                },
+                "Set 4":0,
+                "Set 5":0
+            }
+        },
+        "Teams":{
+            "Name":{
+                "Team 1":"BESANCON VOLLEY-BALL",
+                "Team 2":"MDPA RUELISHEIM"
+            },
+            "Players":{
+                "Team 1":{
+                    "N\u00b0":{
+                        "0":1,
+                        "1":4,
+                        "2":5,
+                        "3":7,
+                        "4":9,
+                        "5":11,
+                        "6":12,
+                        "7":13,
+                        "8":14,
+                        "9":15,
+                        "10":18,
+                        "11":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BEAUVOIS VINCENT",
+                        "1":"LOUVET YANN",
+                        "2":"AUGUSTE FREDY",
+                        "3":"FERAL NATHAN",
+                        "4":"MARTIN ALEXANDRE",
+                        "5":"NAFZIGER BAPTISTE",
+                        "6":"RAMAYE MATHIS",
+                        "7":"MEUTERLOS LUCAS",
+                        "8":"SELMANI ADMIR",
+                        "9":"VUILLEMIN LUCAS",
+                        "10":"AMBS CEDRIC",
+                        "11":"JEANPIERRE ANTONIN"
+                    },
+                    "Licence":{
+                        "0":2247056,
+                        "1":2313303,
+                        "2":1489473,
+                        "3":2197004,
+                        "4":2156652,
+                        "5":1878243,
+                        "6":2304540,
+                        "7":2191941,
+                        "8":2044619,
+                        "9":1834228,
+                        "10":1181072,
+                        "11":1978105
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":2,
+                        "1":3,
+                        "2":4,
+                        "3":9,
+                        "4":10,
+                        "5":11,
+                        "6":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"DE LA FUENTE NICOLAS",
+                        "1":"MALESZA ST\u00c9PHANE",
+                        "2":"FISCHER JEAN-REN\u00c9",
+                        "3":"BROUSSIER DAMIEN",
+                        "4":"PIGEOT J\u00c9R\u00d4ME",
+                        "5":"BECKER FRAN\u00c7OIS",
+                        "6":"MALESZA OLIVIER"
+                    },
+                    "Licence":{
+                        "0":1939766,
+                        "1":1357653,
+                        "2":1403357,
+                        "3":1181004,
+                        "4":974445,
+                        "5":1676601,
+                        "6":1436292
+                    }
+                }
+            },
+            "Liberos":{
+                "Team 1":{
+                    "N\u00b0":{
+                        "0":15,
+                        "1":19
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"VUILLEMIN LUCAS",
+                        "1":"JEANPIERRE ANTONIN"
+                    },
+                    "Licence":{
+                        "0":1834228,
+                        "1":1978105
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":12
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"MALESZA OLIVIER"
+                    },
+                    "Licence":{
+                        "0":1436292
+                    }
+                }
+            },
+            "Officials":{
+                "Team 1":{
+                    "N\u00b0":{
+                        "0":"EA",
+                        "1":"EB"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"BOUCHIKHI MOHAMED",
+                        "1":"BOURSEILLER HUGO"
+                    },
+                    "Licence":{
+                        "0":1796145,
+                        "1":1832249
+                    }
+                },
+                "Team 2":{
+                    "N\u00b0":{
+                        "0":"EA"
+                    },
+                    "Nom Pr\u00e9nom":{
+                        "0":"GENET LAPUJADE YANN"
+                    },
+                    "Licence":{
+                        "0":1812390
+                    }
+                }
+            }
+        },
+        "Results":{
+            "winner":"BESANCON VOLLEY-BALL",
+            "score":"3\/0"
+        },
+        "Referees":{
+            "NOM Pr\u00e9nom":{
+                "1er":"TODOROV KRASSIMIR",
+                "2\u00e8me":"SUAREZ MIGUEL-ANGEL",
+                "Marqueur":"BERTHEAU FARAH",
+                "Marq.Ass":".",
+                "R.Salle":"MARCHAL FABIEN"
+            },
+            "Ligue":{
+                "1er":"LIG_ARA",
+                "2\u00e8me":"LIG_BFC",
+                "Marqueur":"LIG_BFC",
+                "Marq.Ass":null,
+                "R.Salle":"LIG_BFC"
+            },
+            "Licence":{
+                "1er":1209497.0,
+                "2\u00e8me":1689722.0,
+                "Marqueur":1692617.0,
+                "Marq.Ass":null,
+                "R.Salle":1478767.0
+            }
+        },
+        "Penalties":{
+
+        }
+    }
+}

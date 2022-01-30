@@ -15,7 +15,7 @@ class Test extends BaseController
         echo view('innerpages/header');
         echo view('innerpages/menu');
         echo view('innerpages/top_header');
-        echo view('test', $datas);
+        echo view('test/test', $datas);
         echo view('innerpages/footer');
     }
 }
