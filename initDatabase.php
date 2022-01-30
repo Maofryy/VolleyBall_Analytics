@@ -70,7 +70,7 @@ foreach($dir1 as $dir) {
 	foreach($folders as $folder) {
 		$files = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder), 2);
 		foreach($files as $file) {
-			if($file != 'PMAA010.json') continue;
+			//if($file != 'PMAA010.json') continue;
 			if (is_dir('parsed_matches/'. $dir . '/' . $folder . '/' . $file)) {
 				$files2 = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder . '/' . $file), 2);
 				foreach ($files2 as $file2) {
