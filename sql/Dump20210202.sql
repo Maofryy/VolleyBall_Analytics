@@ -377,11 +377,11 @@ COMMIT;
 
 use sport_analytics;
 
-GRANT ALL PRIVILEGES ON 
+/*GRANT ALL PRIVILEGES ON 
 sport_analytics.* 
 TO 
 root@192.168.33.1 
 IDENTIFIED BY 
 'root';
 
-FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;*/

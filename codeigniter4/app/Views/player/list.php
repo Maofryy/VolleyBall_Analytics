@@ -1,14 +1,6 @@
-<?php require_once('header.php'); ?>
-
-<?php require_once('menu.php');?>
-
-<?php require_once('top_header.php');?>
- 
- <div class="container-fluid">
+<div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-800">Joueurs</h1>
-
-       <!-- DataTales Example -->
-       <div class="card shadow mb-4">
+    <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Liste des joueurs</h6>
         </div>
@@ -41,13 +33,6 @@
     </div>
 </div>
 
-<!-- Bootstrap core JavaScript-->
-<script src="../../template/vendor/jquery/jquery.min.js"></script>
-<script src="../../template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="../../template/vendor/jquery-easing/jquery.easing.min.js"></script>
-
 <!-- Page level plugins -->
 <script src="../../template/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../../template/vendor/datatables/dataTables.bootstrap4.min.js"></script>
@@ -57,4 +42,3 @@
         $('#players').DataTable();
     });
 </script>
-<?php require_once('footer.php');?>

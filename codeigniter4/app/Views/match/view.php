@@ -56,6 +56,7 @@
                         <?= '<td>' . $team->first_name . '</td>'?>
                         <?= '<td>' . $team->last_name . '</td>'?>
                         <?= '<td>' . $team->licence . '</td>'?>
+                        <?= '<td>' . showPlayerFunction($team->function_id) . '</td>'?>
                     </tr>
                     <?php endforeach;?>
                     </table>
@@ -63,7 +64,10 @@
             </div>
         </div>
 
-        <div>SCORE</div>
+        <div class="row d-flex flex-column align-self-start">
+            <div>Vainquer : <?php echo ($match->t1id == $match->winner_team_id) ? $match->team1name : $match->team2name;?></div>
+            <div>Score : <?php echo $match->score;?></div>
+        </div>
 
         <div class="row col-4">
             <div class="card mb-4">
@@ -78,6 +82,7 @@
                         <?= '<td>' . $team->first_name . '</td>'?>
                         <?= '<td>' . $team->last_name . '</td>'?>
                         <?= '<td>' . $team->licence . '</td>'?>
+                        <?= '<td>' . showPlayerFunction($team->function_id) . '</td>'?>
                     </tr>
                     <?php endforeach;?>
                     </table>
@@ -87,12 +92,6 @@
     </div>
 </div>
 
-
-<!-- Bootstrap core JavaScript-->
-<script src="<?= substr(base_url(),0 ,-12) . "template/vendor/jquery/jquery.min.js"?>"></script>
-<script src="<?= substr(base_url(),0 ,-12) . "template/vendor/bootstrap/js/bootstrap.bundle.min.js"?>"></script>
-
-<!-- Core plugin JavaScript-->
 <script src="<?= substr(base_url(),0 ,-12) . "template/vendor/jquery-easing/jquery.easing.min.js"?>"></script>
 
 <script type="text/javascript">

@@ -17,6 +17,10 @@ class Players extends BaseController
         } catch (\Exception $e) {
             die($e->getMessage());
         }
-        return view('players', $datas);
+        echo view('innerpages/header');
+        echo view('innerpages/menu');
+        echo view('innerpages/top_header');
+        echo view('player/list', $datas);
+        echo view('innerpages/footer');
     }
 }

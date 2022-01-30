@@ -29,27 +29,34 @@ class Matchs extends BaseController
      */
     public function view($code)
     {
-      
+        helper("Display"); // loading helper
         $datas = array();
 
         $matchsModel = new \App\Models\Matchs();
         $playerModel = new \App\Models\Player();
 
         $datas['match'] = $matchsModel->getMatch($code);
+        $datas['substitutions'] = $matchsModel->getSubstitutions($code);
+        if (empty($datas['match']))
+        {
+            return sprintf("Aucun match au numéro %s n'a été enregistré.", $code);
+        }
+        
         $teams_id = array($datas['match']->t1id, $datas['match']->t2id);
         foreach($teams_id as $key => $id)
         {
-            var_dump($id);
-            $datas['team' . $key+1] = $playerModel->getPlayersFromTeam($id);
+            $datas['team' . $key+1] = $playerModel->getPlayersFromMatch($code, $id);
+            
         }
+
+        // reformat date
+        $date = \DateTime::createFromFormat("Y-m-d H:i:s", $datas['match']->date_match);
+        //$datas['match']->date_match = $date->format('l d F') . ' à ' . $date->format('H') . 'h' . $date->format('i');
        
         $datas['title'] = 'Match ' . $code;
         $datas['pathpdf'] = $this->getPathMatchPdf($code);        
 
-        // reformat date
-        $date = \DateTime::createFromFormat("Y-m-d H:i:s", $datas['match']->date_match);
-        $datas['match']->date_match = $date->format('l d F') . ' à ' . $date->format('H') . 'h' . $date->format('i');
-
+       
         echo view('innerpages/header');
         echo view('innerpages/menu');
         echo view('innerpages/top_header');
