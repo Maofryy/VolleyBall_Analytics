@@ -31,14 +31,14 @@
 
    <!-- Nav Item - Tables -->
    <li class="nav-item">
-        <a class="nav-link" href="matchs">
+        <a class="nav-link" href="<?= base_url() . '/public/matchs'?>">
         <i class="fas fa-volleyball-ball"></i>
             <span>Matchs</span></a>
     </li>
 
      <!-- Nav Item - Tables -->
    <li class="nav-item">
-        <a class="nav-link" href="players">
+        <a class="nav-link" href="<?= base_url() . '/public/players'?>">
         <i class="fas fa-male"></i>
             <span>Joueurs</span></a>
     </li>

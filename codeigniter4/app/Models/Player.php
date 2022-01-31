@@ -59,6 +59,9 @@ class Player extends Model
         return $sql->getResult();
     }
 
+    /**
+     * 
+     */
     public function getPlayersFromMatch($match_id, $team_id = null)
     {
 
@@ -82,7 +85,9 @@ class Player extends Model
             $query .= ' AND tp.team_id = ?';
             $params[] = $team_id;
         }
-        $query .= " ORDER BY tp.number;";
+        $query .= "
+        group by p.licence
+        ORDER BY tp.number;";
         $sql = $this->db->query($query, $params);        
         return $sql->getResult();
     }

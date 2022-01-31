@@ -70,7 +70,7 @@ foreach($dir1 as $dir) {
 	foreach($folders as $folder) {
 		$files = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder), 2);
 		foreach($files as $file) {
-			//if($file != 'PMAA010.json') continue;
+			//if ($file != "2MA023.json")continue;
 			if (is_dir('parsed_matches/'. $dir . '/' . $folder . '/' . $file)) {
 				$files2 = array_slice(scandir('parsed_matches/'. $dir . '/' . $folder . '/' . $file), 2);
 				foreach ($files2 as $file2) {
@@ -89,7 +89,6 @@ foreach($dir1 as $dir) {
 function addMatch($json, $file, &$errors_match) {
 	try {
 		global $database, $referentiel, $setRomain, $countFile;
-		$database->beginTransaction();
 		$datas = json_decode(Utf8_ansi($json), true);
 			
 		$title = $datas['Match']['Title'];
@@ -107,13 +106,13 @@ function addMatch($json, $file, &$errors_match) {
 		$teamBName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 2']));
 
 		$inversed = (trim($sets['Teams']['Set 1']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 22)));
-		//$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 19)));
-		$inversed5 = false; // ON DEBUGERA PLUS TARD J AI OUBLIE CE QUE C ETAIS
-
-		if ($file == 'COF002.json') {
-			//var_dump($inversed);die;
+		$inversed5 = false;
+		if (!empty($sets['Teams']['Set 5']))
+		{
+			$inversed5 = (trim($sets['Teams']['Set 5']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 19)));
 		}
-
+		
+		$database->beginTransaction();
 		//division
 		if (!isset($referentiel['division'][$title['div_name']])) {
 			$sql = sprintf("INSERT INTO sport_analytics.division (div_name, div_code)
@@ -205,6 +204,26 @@ function addMatch($json, $file, &$errors_match) {
 		}
 		$seasonId = $referentiel['season'][$season];
 		
+		if (substr(str_replace("''", "'",$teamAName), 0, 10) == substr($results['winner'], 0, 10))
+		{
+			$winnerName = $teamAName;
+		}
+		else if(substr(str_replace("''", "'",$teamBName), 0, 10) == substr($results['winner'], 0, 10))
+		{
+			$winnerName =  $teamBName;
+		}
+		else
+		{
+			/*var_dump(substr($teamAName, 0, 10));
+			var_dump(substr($teamBName, 0, 10));
+			var_dump(substr($results['winner'], 0, 10));
+			var_dump($file);
+			var_dump($json);
+			var_dump($winnerName);
+			die;*/
+			throw new Exception(sprintf("Erreur lors de la récupération du vainqueur du match, fichier : %s", $file));
+		}
+
 		// match
 		$title['city'] = str_replace("'", "''", $title['city']);
 		$title['city'] = str_replace("\\", "", $title['city']);
@@ -212,7 +231,7 @@ function addMatch($json, $file, &$errors_match) {
 		$sql = sprintf("INSERT INTO sport_analytics.`match`
 		(team_home_id, team_out_id, div_code, div_pool, match_number, match_day, city, gym, category, ligue, winner_team_id, score, date_match, created_at)
 		VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s', %s);
-		", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $referentiel['team'][$results['winner']], $results['score'], $title['date'], 'NOW()');
+		", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $referentiel['team'][$winnerName], $results['score'], $title['date'], 'NOW()');
 		$stmt = $database->prepare($sql);
 		$stmt->execute();
 		$referentiel['match'][$title['match_number']] = $database->lastInsertId();
@@ -276,7 +295,6 @@ function addMatch($json, $file, &$errors_match) {
 				$positions = array();
 				foreach ($sub as $position => $element) {
 					$number = $element[0];
-					
 					$cpt = $i;
 					if ($set != 5 ) {
 						if ($inversed) {
@@ -296,15 +314,6 @@ function addMatch($json, $file, &$errors_match) {
 						}
 					}
 					if (!isset($playersNumber[$cpt][$number])) {
-						/*if ($file == "2MA023.json") {
-							$br = '</br>';
-						echo 'Set Numéro : ' . $set . $br;
-						echo 'number : ' . $number . $br;
-						echo 'cpt : ' . $cpt . $br;
-						echo 'i :' . $i . $br;
-						var_dump($playersNumber[$cpt]);
-						var_dump($file);die;
-						}*/
 						throw new Exception(sprintf("Aucun numéro %s dans l'équipe %s dans le fichier %s", $number, ($i == 1) ? $teamAName : $teamBName, $file));
 					}
 					
@@ -354,9 +363,6 @@ function addMatch($json, $file, &$errors_match) {
 					}
 					if (!empty($position[2])) {
 						if (!isset($playersNumber[$cpt][$position[1]]) || !isset($playersNumber[$cpt][$position[0]])) {
-							/*var_dump($cpt);
-							var_dump($playersNumber[$cpt]);
-							var_dump($file);die;*/
 							throw new Exception("Erreur de numéro");
 						}
 						$sql = sprintf("INSERT INTO sport_analytics.match_set_substitution(match_id, `set`, licence_in, licence_out, score, team_id)
