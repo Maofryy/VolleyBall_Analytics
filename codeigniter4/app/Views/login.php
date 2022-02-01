@@ -41,14 +41,19 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Vous revoilà !</h1>
                                     </div>
-                                    <form class="user">
+                                    <?php if(session()->getFlashdata('msg')):?>
+                                        <div class="alert alert-warning">
+                                        <?= session()->getFlashdata('msg') ?>
+                                        </div>
+                                    <?php endif;?>
+                                    <form class="user" action="<?php echo base_url(); ?>/public/Login/connexion" method="post">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                                id="exampleInputEmail" aria-describedby="emailHelp" name="email"
+                                                placeholder="Entrer une adresse email ...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user" name="password"
                                                 id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         <div class="form-group">
@@ -57,9 +62,9 @@
                                                 <label class="custom-control-label" for="customCheck">Rester connecté</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Connexion
+                                    </button>
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Connexion avec Google
