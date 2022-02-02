@@ -23,9 +23,20 @@
     <!-- Custom styles for this page -->
     <link href="<?= substr(base_url(),0 ,-12) . "template/vendor/datatables/dataTables.bootstrap4.min.css"?>" rel="stylesheet">
 
+    <!-- Search bar -->
+    <link  rel="stylesheet"  href="https://unpkg.com/@trevoreyre/autocomplete-js/dist/style.css"/>
+
 </head>
 
 <body id="page-top">
     <!-- Bootstrap core JavaScript-->
-    <script src="../../template/vendor/jquery/jquery.min.js"></script>
-    <script src="../../template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= substr(base_url(),0 ,-12) . "template/vendor/jquery/jquery.min.js";?>"></script>
+    <script src="<?= substr(base_url(),0 ,-12) . "template/vendor/bootstrap/js/bootstrap.bundle.min.js";?>"></script>
+
+    <!-- Search Bar -->
+    <script src="https://unpkg.com/@trevoreyre/autocomplete-js"></script>
+    <script type="text/javascript">
+        // define php var to javascript file
+        var base_url = "<?= substr(base_url(),0 ,-12) ?>";
+    </script>
+    <script src="<?= base_url() . '/public/js/searchbar.js';?>"></script>

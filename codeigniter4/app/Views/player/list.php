@@ -10,7 +10,6 @@
                     <thead>
                         <tr>
                             <th>Nom</th>
-                            <th>Prénom</th>
                             <th>Licence</th>
                             <th>Numéro</th>
                             <th>Equipe</th>
@@ -19,8 +18,7 @@
                     <tbody>
                         <?php foreach($players as $player): ?>
                             <tr>
-                                <td><?= $player->first_name; ?></td>
-                                <td><?= $player->last_name; ?></td>
+                                <td><a href="<?= base_url() . '/public/Players/view/' . $player->licence;?>"><?= $player->first_name . ' ' . $player->last_name; ?></a></td>
                                 <td><?= $player->licence; ?></td>
                                 <td><?= $player->number; ?></td>
                                 <td><?= $player->team_name; ?></td>

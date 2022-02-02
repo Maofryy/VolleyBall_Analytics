@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Users extends BaseController
 {
-    public function index()
+    public function me()
     {
         echo view('innerpages/header');
         echo view('innerpages/menu');
         echo view('innerpages/top_header');
-        echo view('home');
+        echo view('users/me');
         echo view('innerpages/footer');
     }
 }

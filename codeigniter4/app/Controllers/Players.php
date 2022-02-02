@@ -23,4 +23,15 @@ class Players extends BaseController
         echo view('player/list', $datas);
         echo view('innerpages/footer');
     }
+
+    public function view($licence)
+    {
+        $datas = array();
+        
+        echo view('innerpages/header');
+        echo view('innerpages/menu');
+        echo view('innerpages/top_header');
+        echo view('player/view', $datas);
+        echo view('innerpages/footer');
+    }
 }

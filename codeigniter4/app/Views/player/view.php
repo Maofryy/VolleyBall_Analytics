@@ -1,0 +1,1 @@
+Vue d'un joueur
