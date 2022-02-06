@@ -21,31 +21,10 @@
 <body>
   <h1>Vue Demo #1</h1>
   <div id="vapp">
+    {{display}}
       <colored-box class="red" v-show="display == 'redbox'"></colored-box>
       <colored-box class="green" v-show="display == 'greenbox'"></colored-box>
   </div>
-  <script type="module" src="<?= base_url().'/public/js/test.js';?>"></script>
-<script type="module">
-Vue.component('ColoredBox', {
-  template: "<div class=\"box\"><button v-on:click=\"toggleMe()\">Toggle Now</button></div>",
-  methods: {
-    toggleMe() {
-      this.$root.toggleBox()
-    }
-  }
-})
-
-const vueApp = new Vue({
-  el: '#vapp',
-  data: { 
-   display: 'redbox' 
-  },
-  methods: {
-    toggleBox() {
-      this.display == 'redbox' ? this.display = 'greenbox' : this.display = 'redbox'
-    }
-  }
-})
-</script>
 </body>
+<script src="<?= base_url()?>/dist/test.js"></script>
 </html>

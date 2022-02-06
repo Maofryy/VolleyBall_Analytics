@@ -1,0 +1,9 @@
+CRITICAL - 2022-02-04 14:12:35 --> Invalid file: player/list2.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('player/list2.ph...')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('player/list2', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Players.php(43): view('player/list2')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Players->index()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Players))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

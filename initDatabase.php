@@ -1,6 +1,7 @@
 <?php
+ini_set('max_execution_time', 0);
 ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
 
 // Connexion to database
@@ -239,21 +240,20 @@ function addMatch($json, $file, &$errors_match) {
 
 		// player
 		foreach ($players as $licence => $player) {
-			if (isset($referentiel['player'][$licence])) {
-				continue;
+			if (!isset($referentiel['player'][$licence])) {
+				$names = explode(' ', $player['name']);
+				$firstName = array_pop($names);
+				$firstName = str_replace("'", "''", $firstName); // pour les ' dans les nom
+				$lastName = implode(' ', $names);
+				$lastName = str_replace("'", "''", $lastName); // pour les ' dans les nom
+				$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
+				VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
+				if ($licence) {
+					$stmt = $database->prepare($sql);
+					$stmt->execute();
+				}
+				$referentiel['player'][$licence] = $licence;
 			}
-			$names = explode(' ', $player['name']);
-			$firstName = array_pop($names);
-			$firstName = str_replace("'", "''", $firstName); // pour les ' dans les nom
-			$lastName = implode(' ', $names);
-			$lastName = str_replace("'", "''", $lastName); // pour les ' dans les nom
-			$sql = sprintf("INSERT INTO sport_analytics.player (licence, first_name, last_name)
-			VALUES('%s', '%s', '%s')", $licence, $firstName, $lastName);
-			if ($licence) {
-				$stmt = $database->prepare($sql);
-				$stmt->execute();
-			}
-			$referentiel['player'][$licence] = $licence;
 			
 			// team_players
 			$sql = sprintf("INSERT INTO sport_analytics.team_player (match_id, team_id, player_id, season_id, `number`)

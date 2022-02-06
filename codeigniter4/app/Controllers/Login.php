@@ -22,8 +22,9 @@ class Login extends BaseController
 
     public function connexion()
     {
+        var_dump('allo');die;
         $session = session();
-
+       
         $userModel = new \App\Models\Users();
 
         $email = $this->request->getVar('email');
@@ -47,10 +48,12 @@ class Login extends BaseController
                 ];
 
                 $session->set($ses_data);
+                var_dump('test3');die;
                 return redirect()->to(base_url() . '/public/Home');
             }
             else
             {
+                var_dump('test');die;
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to(base_url() . '/public/Login');
             }
@@ -58,6 +61,7 @@ class Login extends BaseController
         }
         else
         {
+            var_dump('test2');die;
             $session->setFlashdata('msg', 'Email does not exist.');
             return redirect()->to(base_url() . '/public/Login');
         }

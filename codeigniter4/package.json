@@ -1,5 +1,21 @@
 {
+  "scripts": {
+    "watch": "webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
   "dependencies": {
-    "vue": "^2.6.14"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.41",
+    "vue": "^2.6.14",
+    "vue-tables-2": "^2.3.5",
+    "vuetable-2": "^2.0.0-beta.4"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.1.0",
+    "vue-loader": "^15.9.7",
+    "vue-template-compiler": "^2.6.14"
   }
 }

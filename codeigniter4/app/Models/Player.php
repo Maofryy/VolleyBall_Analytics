@@ -113,4 +113,29 @@ class Player extends Model
         
         return $sql->getResult();
     }
+
+    public function getPlayersListAjax($page, $sort, $perPage)
+    {
+        $sort = str_replace('|', ' ', $sort);
+        
+        $sql = $this->db->query('
+        SELECT
+            licence,
+            first_name,
+            last_name
+           /* tp.number,
+            t.name as team_name*/
+        FROM
+            `player` AS p
+        /*LEFT JOIN team_player tp ON
+            p.licence = tp.player_id
+        LEFT JOIN team t ON
+            tp.team_id = t.team_id*/
+        WHERE 1=1
+        ORDER BY ?
+        LIMIT ?, ?;
+        ', [$sort, $page, $perPage]);
+        
+        return $sql->getResult();
+    }
 }

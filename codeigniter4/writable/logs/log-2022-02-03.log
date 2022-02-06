@@ -1,0 +1,10 @@
+CRITICAL - 2022-02-03 15:18:50 --> Class "Config\AppFiltersCors" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('test', 'before')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-02-03 15:19:01 --> Class "App\Filters\AppFiltersCors" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('test', 'before')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}

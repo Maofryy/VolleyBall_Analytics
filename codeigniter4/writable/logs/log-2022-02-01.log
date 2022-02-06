@@ -1,0 +1,80 @@
+CRITICAL - 2022-02-01 11:46:03 --> Invalid file: signup.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('signup', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(55): view('signup', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-01 11:46:19 --> Invalid file: signup.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('signup', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(55): view('signup', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-01 11:47:04 --> Invalid file: signup.php
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('signup', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(55): view('signup', Array)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-01 11:51:18 --> Class "App\Controllers\UserModel" not found
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-01 11:51:52 --> There is no data to insert.
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(50): CodeIgniter\BaseModel->save(Array)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-02-01 11:54:19 --> Unknown column 'firstname' in 'field list'
+ERROR - 2022-02-01 11:54:31 --> Unknown column 'firstname' in 'field list'
+CRITICAL - 2022-02-01 12:00:58 -->  route cannot be found while reverse-routing.
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(52): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->createAccount()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-01 12:17:04 --> syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('register', Array, true)
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(15): view('register')
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->register()
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-01 12:21:11 --> syntax error, unexpected variable "$authenticatePassword"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Login/connexion')
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Login/connexion')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-01 16:08:30 --> Undefined variable $session
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\innerpages\top_header.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 179)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('innerpages/top_...', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Home.php(13): view('innerpages/top_...')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
