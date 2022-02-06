@@ -12933,10 +12933,7 @@ var app = new (vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_2___default())({
         sortField: 'licence'
       }
     ],*/
-    fields: [{
-      name: 'nickname',
-      callback: 'allcap'
-    }],
+    fields: ['name', 'email', 'birthdate', 'gender'],
     links: {
       "pagination": {
         "total": 2,
@@ -12956,11 +12953,9 @@ var app = new (vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_2___default())({
     VuetablePagination: (vue_pagination_2__WEBPACK_IMPORTED_MODULE_1___default())
   },
   methods: {
-    onPaginationData: function onPaginationData(paginationData) {
-      this.$refs.pagination.setPaginationData(paginationData);
+    onPaginationData: function onPaginationData(paginationData) {//this.$refs.pagination.setPaginationData(paginationData)
     },
-    onChangePage: function onChangePage(page) {
-      this.$refs.vuetable.changePage(page);
+    onChangePage: function onChangePage(page) {//this.$refs.vuetable.changePage(page)
     }
   }
 });

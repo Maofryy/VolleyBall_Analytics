@@ -22,12 +22,7 @@ let app = new Vue({
         sortField: 'licence'
       }
     ],*/
-    fields:[
-      {
-        name: 'nickname',
-        callback: 'allcap'
-      },
-    ],
+    fields:['name', 'email', 'birthdate', 'gender'],
     links: {
       "pagination": {
         "total": 2,
@@ -48,10 +43,10 @@ let app = new Vue({
   },
   methods: {
     onPaginationData (paginationData) {
-      this.$refs.pagination.setPaginationData(paginationData)
+      //this.$refs.pagination.setPaginationData(paginationData)
     },
     onChangePage (page) {
-      this.$refs.vuetable.changePage(page)
+      //this.$refs.vuetable.changePage(page)
     }
   }
 })

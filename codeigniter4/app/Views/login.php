@@ -1,3 +1,5 @@
+<?php
+//var_dump($this);die;?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,6 +49,7 @@
                                         </div>
                                     <?php endif;?>
                                     <form class="user" action="<?php echo base_url(); ?>/public/Login/connexion" method="post">
+                                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp" name="email"
@@ -64,7 +67,7 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Connexion
-                                    </button>
+                                        </button>
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Connexion avec Google

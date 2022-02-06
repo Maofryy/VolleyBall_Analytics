@@ -22,7 +22,6 @@ class Login extends BaseController
 
     public function connexion()
     {
-        var_dump('allo');die;
         $session = session();
        
         $userModel = new \App\Models\Users();
@@ -39,21 +38,19 @@ class Login extends BaseController
             if($authenticatePassword)
             {
                 $ses_data = [
-                    'user_id' => $data['id'],
-                    'firstname' => $data['firstname'],
-                    'lastname' => $data['lastname'],
+                    'user_id' => $data['user_id'],
+                    'first_name' => $data['first_name'],
+                    'last_name' => $data['last_name'],
                     'pseudo' => $data['pseudo'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
 
                 $session->set($ses_data);
-                var_dump('test3');die;
                 return redirect()->to(base_url() . '/public/Home');
             }
             else
             {
-                var_dump('test');die;
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to(base_url() . '/public/Login');
             }
@@ -61,8 +58,7 @@ class Login extends BaseController
         }
         else
         {
-            var_dump('test2');die;
-            $session->setFlashdata('msg', 'Email does not exist.');
+            $session->setFlashdata('msg', 'Email does not exist.');var_dump('test1');die;
             return redirect()->to(base_url() . '/public/Login');
         }
     }
@@ -83,8 +79,8 @@ class Login extends BaseController
             $userModel = new \App\Models\Users();
 
             $data = [
-                'firstname'     => $this->request->getVar('firstname'),
-                'lastname'     => $this->request->getVar('lastname'),
+                'first_name'     => $this->request->getVar('firstname'),
+                'last_name'     => $this->request->getVar('lastname'),
                 'email'    => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];

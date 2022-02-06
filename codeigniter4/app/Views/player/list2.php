@@ -21,9 +21,9 @@
                     pagination-path=""
                 ></vuetable>
                
-                <vuetable-pagination ref="pagination"
+                <!--<vuetable-pagination ref="pagination"
                     @vuetable-pagination:change-page="onChangePage"
-                ></vuetable-pagination>
+                ></vuetable-pagination>-->
                 
             </div>
         </div>
