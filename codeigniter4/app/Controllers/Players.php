@@ -27,6 +27,9 @@ class Players extends BaseController
     public function view($licence)
     {
         $datas = array();
+        $datas['first_name'] = "Maofryy";
+        $datas['licence'] = "123456";
+
         
         echo view('innerpages/header');
         echo view('innerpages/menu');

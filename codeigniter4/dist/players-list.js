@@ -12938,7 +12938,7 @@ var app = new (vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_2___default())({
       "pagination": {
         "total": 2,
         "num_results": 2,
-        "per_page": 10,
+        "per_page": 5,
         "num_pages": 1,
         "current_page": 1,
         "skip": 0,

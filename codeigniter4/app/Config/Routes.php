@@ -37,6 +37,7 @@ $routes->get('/Accueil', 'Home::index', ["filter" => "authGuard"]);
 $routes->get('/Inscription', 'Login::register');
 $routes->get('/Connexion', 'Login::index');
 $routes->get('/forgot-password', 'Login::forgotPassword');
+$routes->get('/dev', 'Maofryy::index');
 
 /*
  * --------------------------------------------------------------------

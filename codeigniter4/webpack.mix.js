@@ -14,4 +14,5 @@ let mix = require('laravel-mix');
 mix.js('public/vuejs/src/app.js', './dist/').vue();
 mix.js('public/vuejs/src/test/test.js', './dist/').vue();
 mix.js('public/vuejs/src/player/players-list.js', './dist/').vue();
+mix.js('public/vuejs/src/player/player-info.js', './dist/').vue();
 mix.setResourceRoot('../');

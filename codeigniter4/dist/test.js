@@ -46,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.box[data-v-82f017c2] {\r\n      height: 200px;\r\n      width: 200px; \r\n      text-align: center;\n}\n.red[data-v-82f017c2] {\r\n      background-color: red;\n}\n.green[data-v-82f017c2] {\r\n      background-color: green;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.box[data-v-82f017c2] {\n      height: 200px;\n      width: 200px; \n      text-align: center;\n}\n.red[data-v-82f017c2] {\n      background-color: red;\n}\n.green[data-v-82f017c2] {\n      background-color: green;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
