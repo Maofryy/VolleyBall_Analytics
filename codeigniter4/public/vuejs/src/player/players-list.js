@@ -35,7 +35,7 @@ let app = new Vue({
       "pagination": {
         "total": 2,
         "num_results": 2,
-        "per_page": 10,
+        "per_page": 5,
         "num_pages": 1,
         "current_page": 1,
         "skip": 0,
