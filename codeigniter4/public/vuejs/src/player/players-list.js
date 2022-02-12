@@ -5,6 +5,14 @@ import VuetablePagination  from 'vue-pagination-2'
 let app = new Vue({
   el: '#vapp',
   data: { 
+    page: 1,
+    sortOrder: [
+      {
+          field: 'name',
+          sortField: 'name',
+          direction: 'asc'
+      }
+    ],
     /*fields: [
       {
         title: 'Prénom',
@@ -42,11 +50,8 @@ let app = new Vue({
     VuetablePagination
   },
   methods: {
-    onPaginationData (paginationData) {
-      //this.$refs.pagination.setPaginationData(paginationData)
-    },
     onChangePage (page) {
-      //this.$refs.vuetable.changePage(page)
+      this.$refs.vuetable.changePage(page)
     }
   }
 })

@@ -86,7 +86,7 @@ class Login extends BaseController
             ];
 
             $userModel->save($data);
-
+            $this->sendValidationMail($this->request->getVar('email'));
             return redirect()->to(base_url() . '/public/Login');
         } else {
             $data['validation'] = $this->validator;
@@ -99,5 +99,28 @@ class Login extends BaseController
         $session = session();
         $session->destroy();
         return redirect()->to(base_url() . '/public/Login');
+    }
+
+    private function sendValidationMail($to)
+    { 
+        $to = $this->request->getVar('mailTo');
+        $subject = 'subject';
+        $message = 'message';
+        
+        $email = \Config\Services::email();
+        $email->setTo("ferry.v@hotmail.fr");
+        $email->setFrom("noreply.vb.stats@gmail.com", 'Confirm Registration');
+        
+        $email->setSubject($subject);
+        $email->setMessage($message);
+        if ($email->send()) 
+		{
+            echo 'Email successfully sent';die;
+        } 
+		else 
+		{
+            $data = $email->printDebugger(['headers']);
+            print_r($data);die;
+        }
     }
 }

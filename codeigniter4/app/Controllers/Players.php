@@ -6,7 +6,7 @@ use CodeIgniter\Model\Player;
 class Players extends BaseController
 {
 
-    /*public function index()
+    public function index()
     {
         try {
             $datas = array();
@@ -22,7 +22,7 @@ class Players extends BaseController
         echo view('innerpages/top_header');
         echo view('player/list', $datas);
         echo view('innerpages/footer');
-    }*/
+    }
 
     public function view($licence)
     {
@@ -35,14 +35,14 @@ class Players extends BaseController
         echo view('innerpages/footer');
     }
     
-    public function index()
+    /*public function index()
     {
         echo view('innerpages/header');
         echo view('innerpages/menu');
         echo view('innerpages/top_header');
         echo view('player/list2');
         echo view('innerpages/footer');
-    }
+    }*/
 
     public function playerListAjax()
     {

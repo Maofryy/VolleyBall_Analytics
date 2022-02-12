@@ -16,17 +16,22 @@
                 <vuetable ref="vuetable"
                     api-url="https://vuetable.ratiw.net/api/users"
                     :fields="fields"
-                    @vuetable:pagination-data="onPaginationData"
-                    class="table table-bordered"
                     pagination-path=""
+                    :per-page="5"
+                    :sort-order="sortOrder"
+                    @vuetable:pagination-data="onPaginationData"
                 ></vuetable>
                
-                <!--<vuetable-pagination ref="pagination"
-                    @vuetable-pagination:change-page="onChangePage"
-                ></vuetable-pagination>-->
+                <vuetable-pagination ref="pagination"
+                    :records="500"
+                    :value="10"
+                    v-model="page"
+                    theme="bootstrap4"
+                ></vuetable-pagination>
                 
             </div>
         </div>
     </div>
 </div>
+
 <script src="<?= base_url()?>/dist/players-list.js"></script>

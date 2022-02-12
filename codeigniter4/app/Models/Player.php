@@ -34,7 +34,8 @@ class Player extends Model
             LEFT JOIN team_player tp ON
                 p.licence = tp.player_id
             LEFT JOIN team t ON
-                tp.team_id = t.team_id;
+                tp.team_id = t.team_id
+            LIMIT 100;
         ");
         return $sql->getResult();
     }
