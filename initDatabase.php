@@ -56,13 +56,25 @@ foreach ($elementsReferentiel as $table => $column) {
 	$sql = sprintf("SELECT * FROM `%s`", $table);
 	$result = $database->query($sql);
 	foreach ($result as $value) {
-		if ($table == 'player') { // exception table player because primary key is licence
+		if ($table == 'player') // exception table player because primary key is licence
+        { 
 			$referentiel[$table][$value[$column]] = $value['licence'];
-		} else {
+		}
+        else if ($table == 'team') // exception table team because primary is concat name|gender|category
+        {
+            $concat_name = $value['name'] . '|' . $value['gender'] . '|' . $value['category'];
+            $referentiel[$table][$value[$column]] = $concat_name;
+        }
+        else
+        {
 			$referentiel[$table][$value[$column]] = $value[$table . '_id'];
 		}
 	}
 }
+
+/*initHistoClub();
+die;*/
+
 //echo '<pre>' . var_export($referentiel, true) . '</pre>'; die;
 
 $dir1 = array_slice(scandir('parsed_matches'), 2);
@@ -98,6 +110,13 @@ function addMatch($json, $file, &$errors_match) {
 		$results = $datas['Match']['Results'];
 		$referees = $datas['Match']['Referees'];
 		$penalties = $datas['Match']['Penalties'];
+        $explode_category = explode("|", $title['category']);
+        if (empty($explode_category))
+        {
+            throw new Exception(sprintf("Erreur de la donnée catégorie lors du match : %s", $file));
+        }
+        $category = $explode_category[0];
+        $gender = $explode_category[1];
 
 		if ($referentiel['match'] == $title['match_number']) {
 			return false; // match already insert
@@ -105,6 +124,8 @@ function addMatch($json, $file, &$errors_match) {
 
 		$teamAName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 1']));
 		$teamBName = trim($firstName = str_replace("'", "''", $teams['Name']['Team 2']));
+        $concatTeamAName = $teamAName . '|' . $gender . '|' . $category;
+        $concatTeamBName = $teamBName . '|' . $gender . '|' . $category;
 
 		$inversed = (trim($sets['Teams']['Set 1']['Name']['Team 1']) != trim(substr($teams['Name']['Team 1'], 0, 22)));
 		$inversed5 = false;
@@ -133,7 +154,7 @@ function addMatch($json, $file, &$errors_match) {
 		}
 
 		// club
-		if (!isset($referentiel['club'][$teamAName])) {
+		/*if (!isset($referentiel['club'][$teamAName])) {
 			$sql = sprintf("INSERT INTO sport_analytics.club(name)	VALUES('%s')", $teamAName);
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
@@ -144,22 +165,26 @@ function addMatch($json, $file, &$errors_match) {
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
 			$referentiel['club'][$teamBName] = $database->lastInsertId();
-		}
+		}*/
 
 		// team
-		if (!isset($referentiel['team'][$teamAName])) {
-			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender)
-			VALUES('%s', '%s', '%s')", $referentiel['club'][$teamAName], $teamAName, null);
+		if (!isset($referentiel['team'][$concatTeamAName]))
+        {
+            $clubId = getClubId($teamAName);
+			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender, category)
+			VALUES('%s', '%s', '%s', '%s')", $clubId, $teamAName, $gender, $category);
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
-			$referentiel['team'][$teamAName] = $database->lastInsertId();
+			$referentiel['team'][$concatTeamAName] = $database->lastInsertId();
 		}
-		if (!isset($referentiel['team'][$teamBName])) {
-			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender)
-			VALUES('%s', '%s', '%s')", $referentiel['club'][$teamBName], $teamBName, null);
+		if (!isset($referentiel['team'][$concatTeamBName]))
+        {
+            $clubId = getClubId($teamBName);
+			$sql = sprintf("INSERT INTO sport_analytics.team (club_id, name, gender, category)
+			VALUES('%s', '%s', '%s', '%s')", $clubId, $teamBName, $gender, $category);
 			$stmt = $database->prepare($sql);
 			$stmt->execute();
-			$referentiel['team'][$teamBName] = $database->lastInsertId();
+			$referentiel['team'][$concatTeamBName] = $database->lastInsertId();
 		}
 
 		// set table players
@@ -207,11 +232,11 @@ function addMatch($json, $file, &$errors_match) {
 		
 		if (substr(str_replace("''", "'",$teamAName), 0, 10) == substr($results['winner'], 0, 10))
 		{
-			$winnerName = $teamAName;
+			$winnerName = $teamAName . '|' . $gender . '|' . $category;;
 		}
 		else if(substr(str_replace("''", "'",$teamBName), 0, 10) == substr($results['winner'], 0, 10))
 		{
-			$winnerName =  $teamBName;
+			$winnerName =  $teamBName . '|' . $gender . '|' . $category;;
 		}
 		else
 		{
@@ -232,7 +257,7 @@ function addMatch($json, $file, &$errors_match) {
 		$sql = sprintf("INSERT INTO sport_analytics.`match`
 		(team_home_id, team_out_id, div_code, div_pool, match_number, match_day, city, gym, category, ligue, winner_team_id, score, date_match, created_at)
 		VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s', %s);
-		", $referentiel['team'][$teamAName], $referentiel['team'][$teamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $referentiel['team'][$winnerName], $results['score'], $title['date'], 'NOW()');
+		", $referentiel['team'][$concatTeamAName], $referentiel['team'][$concatTeamBName], $title['div_code'], $title['div_pool'], $title['match_number'], $title['match_day'], $title['city'], $title['gym'], $title['category'], $title['ligue'], $referentiel['team'][$winnerName], $results['score'], $title['date'], 'NOW()');
 		$stmt = $database->prepare($sql);
 		$stmt->execute();
 		$referentiel['match'][$title['match_number']] = $database->lastInsertId();
@@ -257,7 +282,7 @@ function addMatch($json, $file, &$errors_match) {
 			
 			// team_players
 			$sql = sprintf("INSERT INTO sport_analytics.team_player (match_id, team_id, player_id, season_id, `number`)
-			VALUES('%s', '%s', '%s', '%s', '%s');", $matchId, $referentiel['team'][$player['team']], $licence, $seasonId, $player['number']);
+			VALUES('%s', '%s', '%s', '%s', '%s');", $matchId, $referentiel['team'][$player['team'] . '|' . $gender . '|' . $category], $licence, $seasonId, $player['number']);
 			$stmt = $database->prepare($sql);
 			$stmt->execute();		
 		}
@@ -265,7 +290,7 @@ function addMatch($json, $file, &$errors_match) {
 		// match_set_timeout
 		for ($i = 1; $i < 3; $i++) {
 			$timeoutsN = ($i == 1) ? 'Timeouts 1': 'Timeouts 2';
-			$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+			$teamN = ($i == 1) ? $referentiel['team'][$concatTeamAName] : $referentiel['team'][$concatTeamBName];
 			if (!isset($sets[$timeoutsN])) {
 				var_dump($sets);die;
 			}
@@ -288,7 +313,7 @@ function addMatch($json, $file, &$errors_match) {
 			} else {
 				$SubstitutionsN = ($i == 1) ? 'Substitutions 1': 'Substitutions 2';
 			}
-			$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+			$teamN = ($i == 1) ? $referentiel['team'][$concatTeamAName] : $referentiel['team'][$concatTeamBName];
 			foreach ($sets[$SubstitutionsN] as $setString => $sub) {
 				$set = substr($setString, -1);
 				if (empty($sub)) continue;
@@ -334,9 +359,9 @@ function addMatch($json, $file, &$errors_match) {
 				$SubstitutionsN = ($i == 1) ? 'Substitutions 1': 'Substitutions 2';
 			}
 			if ($inversed) {
-				$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+				$teamN = ($i == 1) ? $referentiel['team'][$concatTeamAName] : $referentiel['team'][$concatTeamBName];
 			} else {
-				$teamN = ($i == 1) ? $referentiel['team'][$teamBName] : $referentiel['team'][$teamAName];
+				$teamN = ($i == 1) ? $referentiel['team'][$concatTeamBName] : $referentiel['team'][$concatTeamAName];
 			}
 			
 			foreach ($sets[$SubstitutionsN] as $setString => $positions) {
@@ -383,7 +408,7 @@ function addMatch($json, $file, &$errors_match) {
 		// match_set_rotation
 		for ($i = 1; $i < 3; $i++) {
 			$ServesN = ($i == 1) ? 'Serves 1': 'Serves 2';
-			$teamN = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+			$teamN = ($i == 1) ? $referentiel['team'][$concatTeamAName] : $referentiel['team'][$concatTeamBName];
 			foreach ($sets[$ServesN] as $setString => $positions) {
 				$set = substr($setString, -1);
 				if (empty($positions)) continue;
@@ -450,7 +475,7 @@ function addMatch($json, $file, &$errors_match) {
 		// match_other_player Officials
 		for ($i = 1; $i < 3; $i++) {
 			$teamN = ($i == 1) ? 'Team 1' : 'Team 2';
-			$teamNId = ($i == 1) ? $referentiel['team'][$teamAName] : $referentiel['team'][$teamBName];
+			$teamNId = ($i == 1) ? $referentiel['team'][$concatTeamAName] : $referentiel['team'][$concatTeamBName];
 			$nb = count($teams['Officials'][$teamN]['N°']);
 			for ($cpt = 0; $cpt < $nb; $cpt++) {
 				$licence = $teams['Officials'][$teamN]['Licence'][$cpt];
@@ -515,7 +540,6 @@ function resetDatabase($database) {
 		'team',
 		'player',
 		'team_player',
-		'club',
 		'division',
 		'ligue',
 		'match_set_position',
@@ -524,6 +548,8 @@ function resetDatabase($database) {
 		'match_set_rotation',
 		'match_set_details',
 		'match_other_player',
+		//'club', //On enlève les clubs car on les insert avant grâce au scrap de l'historique.
+		//'club_licence_histo'
 	);
 
 	foreach ($tables as $table) {
@@ -598,5 +624,86 @@ function Utf8_ansi($valor='') {
     "\u00ff" =>"ÿ");
 
     return strtr($valor, $utf8_ansi2);      
+}
+
+function initHistoClub()
+{
+	global $database, $referentiel;
+	//$json = file_get_contents('./histo_club_2017_2018.json'); //9
+	//$json = file_get_contents('./histo_club_2018_2019.json'); //10
+	//$json = file_get_contents('./histo_club_2019_2020.json'); // 11
+	//$json = file_get_contents('./histo_club_2020_2021.json'); // 12
+	$json = file_get_contents('./histo_club_2021_2022.json'); // saison 13
+	$datas = json_decode($json);
+	foreach($datas as $data)
+	{
+		if(!isset($referentiel['club'][$data->name]))
+		{
+			// insert club
+			$data->name = str_replace("'", "''", $data->name);
+			$data->comite = str_replace("'", "''", $data->comite);
+			$data->ligue = str_replace("'", "''", $data->ligue);
+			$sql = sprintf("INSERT INTO sport_analytics.club(name, comite, ligue)	VALUES('%s','%s','%s')", $data->name, $data->comite, $data->ligue);
+			$stmt = $database->prepare($sql);
+			$stmt->execute();
+			$referentiel['club'][$data->name] = $database->lastInsertId();
+		}
+		
+
+		// insert histo
+		$sql = sprintf("INSERT INTO sport_analytics.club_licence_histo(club_id, saison_id, total_m, total_f, jeune_m, jeune_f) VALUES('%s',13,'%s','%s','%s','%s')",
+			$referentiel['club'][$data->name], $data->total_m, $data->total_f, $data->jeune_m, $data->jeune_f
+		);
+		$stmt = $database->prepare($sql);
+		$stmt->execute();
+	}
+}
+
+/**
+ * Si la team n'est pas déjà enregistré, on cherche le matching
+ */
+function getClubId($teamName)
+{
+	global $database, $referentiel;
+
+    $result = [];
+    $clubs = array_keys($referentiel['club']);
+	$shortest = 999;
+	
+    foreach ($clubs as $club)
+    {    
+        // On enlève les mots Volley ball car ça ruine le matching
+        $temp_club = $club;
+        $temp_team = $teamName;
+        /*$temp_club = str_replace("Volley-ball", "", $club);
+        $temp_club = str_replace("Volley", "", $club);
+        $temp_team = str_replace("Volley-ball", "", $team['name']);
+        $temp_team = str_replace("Volley", "", $team['name']);*/
+
+        // calcule la distance avec le mot mis en entrée et le mot courant
+        $lev = levenshtein($temp_club, $temp_team);
+
+        // cherche une correspondance exacte
+        if ($lev == 0) {
+            // le mot le plus près est celui-ci (correspondance exacte)
+            $closest = $club;
+            $shortest = 0;
+            break;
+        }
+
+        // Si la distance est plus petite que la prochaine distance trouvée
+        // OU, si le prochain mot le plus près n'a pas encore été trouvé
+        if ($lev <= $shortest) {
+            // définition du mot le plus près ainsi que la distance
+            $closest  = $club;
+            $shortest = $lev;
+        }
+    }
+    if ($shortest >= 2) // on met un debug large à 2 au début
+    {
+        echo sprintf("Attention l'équipe %s a été rattaché au club %s", $teamName, $closest);
+		echo "<br>";
+    }	
+    return $referentiel['club'][$closest];
 }
 ?>
