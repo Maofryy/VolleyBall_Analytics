@@ -31,7 +31,13 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index', ["filter" => "authGuard"]);
+$routes->get('/Home', 'Home::index', ["filter" => "authGuard"]);
+$routes->get('/Accueil', 'Home::index', ["filter" => "authGuard"]);
+$routes->get('/Inscription', 'Login::register');
+$routes->get('/Connexion', 'Login::index');
+$routes->get('/forgot-password', 'Login::forgotPassword');
+$routes->get('/dev', 'Maofryy::index');
 
 /*
  * --------------------------------------------------------------------

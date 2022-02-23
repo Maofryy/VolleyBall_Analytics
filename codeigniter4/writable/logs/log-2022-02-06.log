@@ -1,0 +1,82 @@
+CRITICAL - 2022-02-06 09:37:02 --> Undefined property: CodeIgniter\View\View::$security
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(9): view('login')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 09:37:05 --> Undefined property: CodeIgniter\View\View::$security
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(9): view('login')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 09:38:07 --> Undefined property: CodeIgniter\View\View::$secutity
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\login.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 2)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(9): view('login')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 09:38:08 --> Undefined property: CodeIgniter\View\View::$secutity
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\login.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 2)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(9): view('login')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 09:38:09 --> Undefined property: CodeIgniter\View\View::$secutity
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Views\login.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 2)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(9): view('login')
+#5 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#6 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-06 09:45:27 --> Undefined array key "id"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 41)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->connexion()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 09:46:11 --> Undefined array key "id"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 41)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->connexion()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 09:46:25 --> Undefined array key "firstname"
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\app\Controllers\Login.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 42)
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Login->connexion()
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 09:47:08 --> Call to undefined method App\Controllers\Home::session()
+#0 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\VolleyBall_Analytics\codeigniter4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

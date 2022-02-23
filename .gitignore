@@ -1,2 +1,16 @@
 settings.json
 *.pyc
+codeigniter/writable
+
+codeigniter4/*/config/development
+codeigniter4/*/logs/log-*.php
+codeigniter4/!*/logs/index.html
+codeigniter4/*/cache/*
+codeigniter4/!system/cache/*
+codeigniter4/!*/cache/index.html
+codeigniter4/!*/cache/.htaccess
+codeigniter4/
+codeigniter4/user_guide_src/build/*
+codeigniter4/user_guide_src/cilexer/build/*
+codeigniter4/user_guide_src/cilexer/dist/*
+codeigniter4/user_guide_src/cilexer/pycilexer.egg-info/*

@@ -6,11 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('home');
-    }
-    
-    public function welcome()
-    {
-        return view('welcome_message');
+        echo view('innerpages/header');
+        echo view('innerpages/menu');
+        echo view('innerpages/top_header');
+        echo view('home');
+        echo view('innerpages/footer');
     }
 }
